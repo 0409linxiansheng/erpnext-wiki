@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wiki VERSION\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
-"POT-Creation-Date: 2026-10-13 19:15+0806\n"
-"PO-Revision-Date: 2026-10-13 19:15+0806\n"
+"POT-Creation-Date: 2026-10-13 20:43+0806\n"
+"PO-Revision-Date: 2026-10-13 20:43+0806\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: developers@frappe.io\n"
 "MIME-Version: 1.0\n"
@@ -148,6 +148,7 @@ msgstr ""
 #: frontend/src/pages/AllSpaces.vue:349
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
+#: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
 msgid "All"
 msgstr ""
 
@@ -191,7 +192,7 @@ msgstr ""
 msgid "Analytics"
 msgstr ""
 
-#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:215
+#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:216
 msgid "Another page with the route '{0}' already exists: {1}"
 msgstr ""
 
@@ -673,10 +674,12 @@ msgstr ""
 #. Label of the content (Code) field in DocType 'Wiki Document'
 #. Label of the content (Markdown Editor) field in DocType 'Wiki Page'
 #. Label of the content (Code) field in DocType 'Wiki Page Revision'
+#. Label of the content (Text) field in DocType 'Wiki Snippet'
 #: wiki/frappe_wiki/doctype/wiki_content_blob/wiki_content_blob.json
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
 #: wiki/wiki/doctype/wiki_page_revision/wiki_page_revision.json
+#: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
 msgid "Content"
 msgstr ""
 
@@ -1277,6 +1280,11 @@ msgstr ""
 msgid "External URL"
 msgstr ""
 
+#. Description of the 'Keywords' (Data) field in DocType 'Wiki Snippet'
+#: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
+msgid "Extra terms the snippet picker matches on, besides the title."
+msgstr ""
+
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:252
 msgid "Failed to delete the space"
 msgstr ""
@@ -1719,7 +1727,9 @@ msgid "Keep Your Changes"
 msgstr ""
 
 #. Label of the meta_keywords (Small Text) field in DocType 'Wiki Page'
+#. Label of the keywords (Data) field in DocType 'Wiki Snippet'
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
+#: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
 msgid "Keywords"
 msgstr ""
 
@@ -1881,6 +1891,11 @@ msgstr ""
 #. Option for the 'Trigger' (Select) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 msgid "Manual"
+msgstr ""
+
+#. Description of the 'Content' (Text) field in DocType 'Wiki Snippet'
+#: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
+msgid "Markdown, inserted at the cursor exactly as stored — no node, no syntax of its own."
 msgstr ""
 
 #: frontend/src/components/MobileAppMenu.vue:3
@@ -2447,11 +2462,11 @@ msgid "Page actions"
 msgstr ""
 
 #: wiki/api/og_image.py:87 wiki/api/og_image.py:236 wiki/api/og_image.py:488
-#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:444
-#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:453
-#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:463
-#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:1134
-#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:1146
+#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:445
+#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:454
+#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:464
+#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:1139
+#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:1151
 msgid "Page not found"
 msgstr ""
 
@@ -2883,6 +2898,11 @@ msgstr ""
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1471
 msgid "Requested changes: {0}"
+msgstr ""
+
+#. Description of the 'Wiki Space' (Link) field in DocType 'Wiki Snippet'
+#: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
+msgid "Reserved for space-shared snippets. The field exists so sharing is additive; v1 neither sets nor reads it."
 msgstr ""
 
 #. Label of the resolution (Select) field in DocType 'Wiki Merge Conflict'
@@ -3437,6 +3457,7 @@ msgstr ""
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 #: wiki/wiki/doctype/wiki_page_revision/wiki_page_revision.json
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
+#: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "System Manager"
 msgstr ""
@@ -3576,6 +3597,7 @@ msgstr ""
 #. Label of the title (Small Text) field in DocType 'Wiki Document'
 #. Label of the title (Small Text) field in DocType 'Wiki Revision Item'
 #. Label of the title (Data) field in DocType 'Wiki Page'
+#. Label of the title (Data) field in DocType 'Wiki Snippet'
 #: frontend/src/components/PageSettingsPanel.vue:42
 #: frontend/src/components/WikiDocumentList.vue:112
 #: frontend/src/components/WikiDocumentList.vue:182
@@ -3586,6 +3608,7 @@ msgstr ""
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
+#: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
 msgid "Title"
 msgstr ""
 
@@ -4070,6 +4093,11 @@ msgstr ""
 msgid "Wiki Sidebars"
 msgstr ""
 
+#. Name of a DocType
+#: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
+msgid "Wiki Snippet"
+msgstr ""
+
 #. Label of the wiki_space (Link) field in DocType 'Wiki Change Request'
 #. Label of the wiki_space (Link) field in DocType 'Wiki Document'
 #. Label of the wiki_space (Link) field in DocType 'Wiki Revision'
@@ -4078,6 +4106,7 @@ msgstr ""
 #. Label of the wiki_space (Link) field in DocType 'Wiki Git Sync Log'
 #. Label of the section_break_vefv (Section Break) field in DocType 'Wiki
 #. Settings'
+#. Label of the wiki_space (Link) field in DocType 'Wiki Snippet'
 #. Name of a DocType
 #. Label of a shortcut in the Wiki Workspace
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
@@ -4086,6 +4115,7 @@ msgstr ""
 #: wiki/wiki/doctype/wiki_app_switcher_list_table/wiki_app_switcher_list_table.json
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
+#: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 #: wiki/wiki/report/wiki_broken_links/wiki_broken_links.js:8
 #: wiki/wiki/workspace/wiki/wiki.json
@@ -4174,15 +4204,15 @@ msgstr ""
 msgid "You don't have permission to access the Wiki."
 msgstr ""
 
-#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:776
+#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:781
 msgid "You don't have permission to delete child document: {0}"
 msgstr ""
 
-#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:766
+#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:771
 msgid "You don't have permission to delete this document"
 msgstr ""
 
-#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:737
+#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:742
 msgid "You don't have permission to edit this page"
 msgstr ""
 
