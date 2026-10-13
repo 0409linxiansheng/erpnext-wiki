@@ -81,9 +81,17 @@ for: 898 translated and 1 explicitly marked keep-as-is (a pure HTML snippet with
 no prose). Delivered in six batches of ~150, each compiled and committed as it
 landed, so the site never sat on a half-applied catalog.
 
-**Phase 3 — prove it.** A test that fails if the catalog rots: every `msgid` that
-the extractor finds has a `msgstr` (or an explicit, listed exception). Without it,
-new English strings creep back in and nobody notices.
+**Phase 3 — prove it — DONE (2026-10-13).**
+`wiki/wiki/test_i18n_coverage.py` asserts that every `msgid` in `main.pot` has a
+`msgstr` in `zh.po`, and that no translation is orphaned (its source string gone).
+Both directions were verified by breaking them: blanking one entry fails the run,
+restoring it passes.
+
+Entries that must stay English are marked `msgstr == msgid` rather than listed in
+an allowlist — the marker travels with the entry, so it cannot rot separately.
+The one piece of discipline left is regenerating `main.pot`
+(`bench generate-pot-file --app wiki`) when strings change; the test then names
+exactly what is new and untranslated.
 
 **Phase 4 — the second language is possible.** `create-po-file de` (or any code)
 produces a working catalog with no code change. This is the actual acceptance test
