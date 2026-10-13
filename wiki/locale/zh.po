@@ -45,7 +45,7 @@ msgstr "7 天"
 
 #: frontend/src/pages/Overview.vue:197
 msgid "90 days"
-msgstr ""
+msgstr "90 天"
 
 #. Content of the 'Compare' (HTML) field in DocType 'Wiki Page Patch'
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
@@ -90,7 +90,7 @@ msgstr "空间在创建时连接 GitHub。已连接的空间在编辑器中为�
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:481
 msgid "A tab must stay at the top level. Remove the tab flag first to move it."
-msgstr ""
+msgstr "标签必须保持在顶层。移动前请先取消标签标记。"
 
 #. Label of the allow_contributions (Check) field in DocType 'Wiki Space'
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:94
@@ -170,7 +170,7 @@ msgstr "其全部页面"
 
 #: frontend/src/pages/Overview.vue:257
 msgid "All spaces"
-msgstr ""
+msgstr "全部空间"
 
 #. Label of the allow_guest (Check) field in DocType 'Wiki Page'
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
@@ -195,11 +195,11 @@ msgstr "分析"
 
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:215
 msgid "Another page with the route '{0}' already exists: {1}"
-msgstr ""
+msgstr "已存在使用路径 '{0}' 的另一个页面：{1}"
 
 #: wiki/templates/wiki/includes/feedback_widget.html:44
 msgid "Anything you'd like to add?"
-msgstr ""
+msgstr "还有什么想补充的？"
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:19
 msgid "App ID"
@@ -252,7 +252,7 @@ msgstr ""
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1443
 msgid "Approved this change request."
-msgstr ""
+msgstr "已批准此变更请求。"
 
 #: frontend/src/components/SpaceModeStrip.vue:148
 msgid "Approved! Ready to merge."
@@ -274,11 +274,11 @@ msgstr "确定要删除此项吗"
 
 #: wiki/templates/wiki/document.html:57 wiki/templates/wiki/document.html:71
 msgid "Ask ChatGPT about this page"
-msgstr ""
+msgstr "向 ChatGPT 询问此页面"
 
 #: wiki/templates/wiki/document.html:58 wiki/templates/wiki/document.html:72
 msgid "Ask Claude about this page"
-msgstr ""
+msgstr "向 Claude 询问此页面"
 
 #: frontend/src/components/Analytics/TrackingNotice.vue:9
 msgid "Ask a Wiki Manager to turn on page view tracking."
@@ -380,7 +380,7 @@ msgstr "返回全部空间"
 #: wiki/templates/wiki/includes/feedback_widget.html:8
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 msgid "Bad"
-msgstr ""
+msgstr "差"
 
 #. Label of the base_payload (JSON) field in DocType 'Wiki Merge Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
@@ -406,7 +406,7 @@ msgstr "分支机构"
 
 #: wiki/wiki/report/wiki_broken_links/wiki_broken_links.py:37
 msgid "Broken Link"
-msgstr ""
+msgstr "失效链接"
 
 #. Label of a shortcut in the Wiki Workspace
 #: wiki/wiki/workspace/wiki/wiki.json
@@ -438,7 +438,7 @@ msgstr "取消"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1604
 msgid "Cannot resolve conflicts for a finalized Change Request."
-msgstr ""
+msgstr "无法为已终结的变更请求解决冲突。"
 
 #. Label of the change_request (Link) field in DocType 'Wiki Merge Conflict'
 #. Label of the change_request (Link) field in DocType 'Wiki Revision'
@@ -468,7 +468,7 @@ msgstr "变更请求已批准"
 
 #: frontend/src/composables/useChangeRequestActions.js:85
 msgid "Change request archived"
-msgstr ""
+msgstr "变更请求已归档"
 
 #: frontend/src/composables/useChangeRequestActions.js:131
 #: frontend/src/pages/ContributionReview.vue:740
@@ -481,7 +481,7 @@ msgstr "变更请求已拒绝"
 
 #: frontend/src/composables/useChangeRequestActions.js:67
 msgid "Change request submitted for review"
-msgstr ""
+msgstr "变更请求已提交审阅"
 
 #: frontend/src/pages/ContributionReview.vue:866
 msgid "Change request withdrawn"
@@ -519,7 +519,7 @@ msgstr "已要求修改"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1472
 msgid "Changes were requested on your change request “{0}”."
-msgstr ""
+msgstr "你的变更请求“{0}”被要求修改。"
 
 #: frontend/src/components/SpaceWelcome.vue:30
 msgid "Choose a page from the tree on the left."
@@ -567,11 +567,11 @@ msgstr "克隆空间"
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:8
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:31
 msgid "Clone Wiki Space"
-msgstr ""
+msgstr "克隆 Wiki 空间"
 
 #: frontend/src/pages/SpaceDetails.vue:273
 msgid "Cloning started in background"
-msgstr ""
+msgstr "克隆已在后台开始"
 
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:28
 msgid "Cloning started in background."
@@ -588,7 +588,7 @@ msgstr "关闭页面设置"
 
 #: wiki/templates/wiki/includes/mobile_header.html:155
 msgid "Close sidebar"
-msgstr ""
+msgstr "关闭侧边栏"
 
 #. Option for the 'Status' (Select) field in DocType 'Wiki Feedback'
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
@@ -649,7 +649,7 @@ msgstr ""
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1607
 msgid "Conflict is already resolved."
-msgstr ""
+msgstr "冲突已解决。"
 
 #: frontend/src/pages/ContributionReview.vue:102
 msgid "Conflicts"
@@ -724,7 +724,7 @@ msgstr ""
 #: wiki/templates/wiki/document.html:45
 #: wiki/templates/wiki/macros/buttons.html:36
 msgid "Copied!"
-msgstr ""
+msgstr "已复制！"
 
 #: wiki/templates/wiki/document.html:45
 #: wiki/templates/wiki/macros/buttons.html:36
@@ -743,7 +743,7 @@ msgstr "复制页面"
 #: wiki/templates/wiki/document.html:55 wiki/templates/wiki/document.html:69
 #: wiki/templates/wiki/macros/buttons.html:9
 msgid "Copy page as Markdown for LLMs"
-msgstr ""
+msgstr "以 Markdown 复制页面（供 LLM 使用）"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:79
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:84
@@ -857,7 +857,7 @@ msgstr "当前"
 #: frontend/src/pages/SpaceDetails.vue:84
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:44
 msgid "Current Base Route"
-msgstr ""
+msgstr "当前基础路径"
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:117
 msgid "Custom range"
@@ -874,7 +874,7 @@ msgstr ""
 
 #: wiki/api/analytics.py:217
 msgid "Date range cannot be longer than {0} days"
-msgstr ""
+msgstr "日期范围不能超过 {0} 天"
 
 #. Label of the default_wiki_space (Autocomplete) field in DocType 'Wiki
 #. Settings'
@@ -1013,7 +1013,7 @@ msgstr "文档文件夹"
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:477
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:793
 msgid "Document not found in change request"
-msgstr ""
+msgstr "在变更请求中未找到该文档"
 
 #: wiki/templates/wiki/document.html:35
 #: wiki/templates/wiki/macros/buttons.html:80
@@ -1022,7 +1022,7 @@ msgstr "下载"
 
 #: wiki/templates/wiki/macros/buttons.html:81
 msgid "Download this page as a PDF"
-msgstr ""
+msgstr "将此页面下载为 PDF"
 
 #. Option for the 'Status' (Select) field in DocType 'Wiki Change Request'
 #. Option for the 'Status' (Select) field in DocType 'Wiki Page Patch'
@@ -1043,11 +1043,11 @@ msgstr "正在起草修改"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1159
 msgid "Each operation must be an object"
-msgstr ""
+msgstr "每个 operation 必须是对象"
 
 #: wiki/templates/wiki/macros/buttons.html:12
 msgid "Edit"
-msgstr ""
+msgstr "编辑"
 
 #: frontend/src/components/WikiDocumentList.vue:224
 msgid "Edit External Link"
@@ -1119,7 +1119,7 @@ msgstr "输入链接标题"
 #: frontend/src/pages/SpaceDetails.vue:92
 #: frontend/src/pages/SpaceDetails.vue:122
 msgid "Enter new route (without leading slash)"
-msgstr ""
+msgstr "输入新路径（不含开头的斜杠）"
 
 #: frontend/src/components/WikiDocumentList.vue:183
 #: frontend/src/components/WikiDocumentList.vue:451
@@ -1158,7 +1158,7 @@ msgstr "批准变更请求失败"
 
 #: frontend/src/composables/useChangeRequestActions.js:96
 msgid "Error archiving change request"
-msgstr ""
+msgstr "归档变更请求失败"
 
 #: frontend/src/components/AssignDialog.vue:92
 msgid "Error assigning reviewer"
@@ -1220,11 +1220,11 @@ msgstr "保存页面设置失败"
 
 #: frontend/src/pages/SpaceDetails.vue:277
 msgid "Error starting clone"
-msgstr ""
+msgstr "启动克隆失败"
 
 #: frontend/src/composables/useChangeRequestActions.js:75
 msgid "Error submitting for review"
-msgstr ""
+msgstr "提交审阅失败"
 
 #: frontend/src/composables/useTreeDialogs.js:308
 msgid "Error updating external link"
@@ -1352,11 +1352,11 @@ msgstr "反馈提交上限"
 
 #: wiki/templates/wiki/includes/feedback_widget.html:12
 msgid "Feedback rating"
-msgstr ""
+msgstr "反馈评分"
 
 #: wiki/wiki/doctype/migrate_to_wiki/migrate_to_wiki.py:250
 msgid "File {0} does not exist"
-msgstr ""
+msgstr "文件 {0} 不存在"
 
 #. Label of the finished_at (Datetime) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
@@ -1369,7 +1369,7 @@ msgstr "要同步的仓库文件夹。支持 docs/guide 这样的嵌套路径。
 
 #: wiki/wiki/git_sync.py:571
 msgid "Found {0}. Keep only one sidebar config file."
-msgstr ""
+msgstr "找到 {0}。请只保留一个侧边栏配置文件。"
 
 #: frontend/src/components/LibrarySidebar.vue:11
 #: wiki/templates/wiki/layout.html:9
@@ -1378,7 +1378,7 @@ msgstr "Frappe Wiki"
 
 #: wiki/api/analytics.py:214
 msgid "From Date must be on or before To Date"
-msgstr ""
+msgstr "开始日期不能晚于结束日期"
 
 #: frontend/src/components/PageSettingsPanel.vue:36
 msgid "From the repo"
@@ -1429,7 +1429,7 @@ msgstr "Git 同步"
 
 #: wiki/wiki/doctype/wiki_space/wiki_space.py:153
 msgid "Git Sync cannot be toggled after a space is created."
-msgstr ""
+msgstr "空间创建后无法再切换 Git 同步。"
 
 #. Label of the git_synced (Check) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -1452,7 +1452,7 @@ msgstr ""
 
 #: wiki/www/github/manifest_redirect.py:29
 msgid "GitHub App creation failed: {0}"
-msgstr ""
+msgstr "创建 GitHub App 失败：{0}"
 
 #. Description of the 'GitHub Installation ID' (Data) field in DocType 'Wiki
 #. Space'
@@ -1462,7 +1462,7 @@ msgstr ""
 
 #: wiki/api/github.py:63 wiki/api/github.py:350 wiki/api/github.py:366
 msgid "GitHub App is not configured in Wiki Settings."
-msgstr ""
+msgstr "未在 Wiki 设置中配置 GitHub App。"
 
 #. Label of the github_installation_id (Data) field in DocType 'Wiki GitHub
 #. Webhook Log'
@@ -1484,15 +1484,15 @@ msgstr "GitHub 同步"
 
 #: wiki/api/github.py:498
 msgid "GitHub account is not connected."
-msgstr ""
+msgstr "未连接 GitHub 账号。"
 
 #: wiki/www/github/redirect.py:27
 msgid "GitHub authorization failed: {0}"
-msgstr ""
+msgstr "GitHub 授权失败：{0}"
 
 #: wiki/api/github.py:383
 msgid "GitHub did not return an access token: {0}"
-msgstr ""
+msgstr "GitHub 未返回访问令牌：{0}"
 
 #. Description of the 'Repository' (Data) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -1618,27 +1618,27 @@ msgstr "在其他账号或组织上安装 GitHub App"
 
 #: wiki/api/analytics.py:210
 msgid "Interval must be one of {0}"
-msgstr ""
+msgstr "时间间隔必须是 {0} 之一"
 
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.py:104
 msgid "Invalid feedback submission parameters"
-msgstr ""
+msgstr "反馈提交参数无效"
 
 #: wiki/www/github/manifest_redirect.py:32
 msgid "Invalid or expired GitHub App creation. Please try again."
-msgstr ""
+msgstr "GitHub App 创建请求无效或已过期。请重试。"
 
 #: wiki/www/github/redirect.py:30
 msgid "Invalid or expired GitHub authorization. Please try connecting again."
-msgstr ""
+msgstr "GitHub 授权无效或已过期。请重新连接。"
 
 #: wiki/wiki/doctype/wiki_github_webhook_log/wiki_github_webhook_log.py:47
 msgid "Invalid webhook signature."
-msgstr ""
+msgstr "Webhook 签名无效。"
 
 #: wiki/wiki/git_sync.py:578
 msgid "Invalid {0}: {1}"
-msgstr ""
+msgstr "{0} 无效：{1}"
 
 #. Label of the is_deleted (Check) field in DocType 'Wiki Revision Item'
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
@@ -1793,7 +1793,7 @@ msgstr "上次同步 {0}"
 #: wiki/templates/wiki/document.html:124
 #: wiki/templates/wiki/includes/sidebar.html:244
 msgid "Last updated {0}"
-msgstr ""
+msgstr "最后更新于 {0}"
 
 #. Description of the 'access_control_section' (Section Break) field in DocType
 #. 'Wiki Space'
@@ -1908,11 +1908,11 @@ msgstr ""
 
 #: frontend/src/composables/useChangeRequestActions.js:167
 msgid "Merge conflict — resolve it to continue"
-msgstr ""
+msgstr "合并冲突 — 请解决后继续"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1856
 msgid "Merge conflicts detected"
-msgstr ""
+msgstr "检测到合并冲突"
 
 #. Option for the 'Status' (Select) field in DocType 'Wiki Change Request'
 #: frontend/src/components/SpaceModeStrip.vue:457
@@ -2005,7 +2005,7 @@ msgstr "更多操作"
 
 #: wiki/templates/wiki/macros/buttons.html:41
 msgid "More page actions"
-msgstr ""
+msgstr "更多页面操作"
 
 #. Label of the moved_count (Int) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
@@ -2060,7 +2060,7 @@ msgstr ""
 #: frontend/src/pages/SpaceDetails.vue:90
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:51
 msgid "New Base Route"
-msgstr ""
+msgstr "新的基础路径"
 
 #. Label of the documentation_route (Data) field in DocType 'Migrate To Wiki'
 #: wiki/wiki/doctype/migrate_to_wiki/migrate_to_wiki.json
@@ -2094,7 +2094,7 @@ msgstr "新建空间"
 #: frontend/src/pages/SpaceDetails.vue:120
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:14
 msgid "New Space Route"
-msgstr ""
+msgstr "新空间路径"
 
 #. Label of the new_title (Data) field in DocType 'Wiki Page Patch'
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
@@ -2123,7 +2123,7 @@ msgstr ""
 #: wiki/wiki/doctype/wiki_space/wiki_space.py:274
 #: wiki/wiki/doctype/wiki_space/wiki_space.py:352
 msgid "New route is the same as current route"
-msgstr ""
+msgstr "新路径与当前路径相同"
 
 #: frontend/src/components/CommandPalette.vue:310
 msgid "New space"
@@ -2169,7 +2169,7 @@ msgstr "无进行中的变更请求"
 
 #: frontend/src/pages/Overview.vue:306
 msgid "No change"
-msgstr ""
+msgstr "无变化"
 
 #: frontend/src/pages/Contributions.vue:205
 msgid "No change requests in review"
@@ -2226,7 +2226,7 @@ msgstr "无结果"
 #: wiki/templates/wiki/includes/mobile_header.html:210
 #: wiki/templates/wiki/includes/search_modal.html:99
 msgid "No results for"
-msgstr ""
+msgstr "无结果："
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:76
 msgid "No roles configured (open to all logged-in users)."
@@ -2261,31 +2261,31 @@ msgstr "未连接仓库"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:883
 msgid "Not permitted"
-msgstr ""
+msgstr "无权限"
 
 #: wiki/api/analytics.py:185
 msgid "Not permitted to change page view tracking"
-msgstr ""
+msgstr "无权修改页面浏览统计设置"
 
 #: wiki/api/github.py:569
 msgid "Not permitted to configure the GitHub App."
-msgstr ""
+msgstr "无权配置 GitHub App。"
 
 #: wiki/api/github.py:545
 msgid "Not permitted to read Wiki Settings."
-msgstr ""
+msgstr "无权读取 Wiki 设置。"
 
 #: wiki/api/analytics.py:177
 msgid "Not permitted to read the page view tracking setting"
-msgstr ""
+msgstr "无权读取页面浏览统计设置"
 
 #: wiki/api/analytics.py:245
 msgid "Not permitted to view analytics for this space"
-msgstr ""
+msgstr "无权查看此空间的分析数据"
 
 #: wiki/api/analytics.py:46 wiki/api/analytics.py:238
 msgid "Not permitted to view wiki analytics"
-msgstr ""
+msgstr "无权查看 Wiki 分析数据"
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:68
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:83
@@ -2305,7 +2305,7 @@ msgstr "尚未同步任何内容"
 #: wiki/templates/wiki/includes/feedback_widget.html:9
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 msgid "Ok"
-msgstr ""
+msgstr "一般"
 
 #. Label of the old_parent (Link) field in DocType 'Wiki Document'
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
@@ -2322,11 +2322,11 @@ msgstr "本页内容"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:323
 msgid "Only a group can be marked as a tab."
-msgstr ""
+msgstr "只有分组可以标记为标签。"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:325
 msgid "Only a top-level group can be marked as a tab. Nested tabs are not supported."
-msgstr ""
+msgstr "只有顶层分组可以标记为标签。不支持嵌套标签。"
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:88
 msgid "Only space admins can change access control."
@@ -2334,11 +2334,11 @@ msgstr "只有空间管理员可以修改访问权限。"
 
 #: wiki/permissions.py:163
 msgid "Only space editors can create or change tabs."
-msgstr ""
+msgstr "只有空间编辑者可以创建或修改标签。"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1517
 msgid "Only the author can withdraw this change request."
-msgstr ""
+msgstr "只有作者可以撤回此变更请求。"
 
 #. Option for the 'Status' (Select) field in DocType 'Wiki Merge Conflict'
 #. Option for the 'Status' (Select) field in DocType 'Wiki Feedback'
@@ -2346,27 +2346,27 @@ msgstr ""
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 msgid "Open"
-msgstr ""
+msgstr "打开"
 
 #: frontend/src/pages/Overview.vue:203
 msgid "Open change requests"
-msgstr ""
+msgstr "打开变更请求"
 
 #: frontend/src/pages/Overview.vue:40
 msgid "Open change requests by space"
-msgstr ""
+msgstr "按空间查看变更请求"
 
 #: wiki/templates/wiki/document.html:57 wiki/templates/wiki/document.html:71
 msgid "Open in ChatGPT"
-msgstr ""
+msgstr "在 ChatGPT 中打开"
 
 #: wiki/templates/wiki/document.html:58 wiki/templates/wiki/document.html:72
 msgid "Open in Claude"
-msgstr ""
+msgstr "在 Claude 中打开"
 
 #: wiki/templates/wiki/includes/mobile_header.html:94
 msgid "Open navigation menu"
-msgstr ""
+msgstr "打开导航菜单"
 
 #: frontend/src/components/PageMetaLine.vue:12
 msgid "Open page analytics"
@@ -2374,7 +2374,7 @@ msgstr "打开页面分析"
 
 #: wiki/templates/wiki/includes/header.html:65
 msgid "Open search"
-msgstr ""
+msgstr "打开搜索"
 
 #. Label of the operation_version (Int) field in DocType 'Wiki Change Request'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
@@ -2383,7 +2383,7 @@ msgstr ""
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1162
 msgid "Operation is missing 'type'"
-msgstr ""
+msgstr "operation 缺少 'type'"
 
 #. Description of the 'Docs Subdirectory' (Data) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -2455,7 +2455,7 @@ msgstr "页面操作"
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:1134
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:1146
 msgid "Page not found"
-msgstr ""
+msgstr "页面未找到"
 
 #: frontend/src/components/PageSettingsPanel.vue:13
 #: frontend/src/components/WikiDocumentPanel.vue:27
@@ -2475,7 +2475,7 @@ msgstr "页面标题"
 
 #: frontend/src/pages/Overview.vue:55 frontend/src/pages/Overview.vue:201
 msgid "Page views"
-msgstr ""
+msgstr "页面浏览量"
 
 #: frontend/src/components/Analytics/TrackingNotice.vue:5
 msgid "Page views are not being recorded"
@@ -2523,7 +2523,7 @@ msgstr ""
 
 #: wiki/api/analytics.py:224
 msgid "Pass either a space or a document, not both"
-msgstr ""
+msgstr "请只传 space 或 document 其中之一，不能同时传"
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:95
 msgid "Paste PEM private key"
@@ -2576,11 +2576,11 @@ msgstr ""
 
 #: wiki/www/github/authorize.py:22 wiki/www/github/redirect.py:22
 msgid "Please log in to connect your GitHub account."
-msgstr ""
+msgstr "请登录后再连接你的 GitHub 账号。"
 
 #: wiki/www/github/manifest_redirect.py:22 wiki/www/github/new_app.py:24
 msgid "Please log in to create a GitHub App."
-msgstr ""
+msgstr "请登录后再创建 GitHub App。"
 
 #: frontend/src/components/NewSpaceDialog.vue:558
 msgid "Please pick a GitHub repository"
@@ -2596,7 +2596,7 @@ msgstr "请提供原因"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1485
 msgid "Please provide a reason for rejecting this change request."
-msgstr ""
+msgstr "请说明拒绝此变更请求的原因。"
 
 #: frontend/src/pages/ContributionReview.vue:793
 msgid "Please provide feedback"
@@ -2604,7 +2604,7 @@ msgstr "请提供反馈"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1456
 msgid "Please provide feedback explaining what needs to change."
-msgstr ""
+msgstr "请说明需要修改的内容。"
 
 #: frontend/src/pages/ContributionReview.vue:349
 msgid "Please provide feedback explaining what needs to change. This is sent back to the author."
@@ -2622,7 +2622,7 @@ msgstr "位置"
 #: wiki/templates/wiki/document.html:35
 #: wiki/templates/wiki/macros/buttons.html:80
 msgid "Preparing…"
-msgstr ""
+msgstr "准备中…"
 
 #. Description of the 'Disable Indexing' (Check) field in DocType 'Wiki
 #. Document'
@@ -2783,7 +2783,7 @@ msgstr ""
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1501
 msgid "Rejected this change request: {0}"
-msgstr ""
+msgstr "已拒绝此变更请求：{0}"
 
 #: frontend/src/pages/ContributionReview.vue:382
 msgid "Rejecting is final — this change request cannot be merged. Please explain why it is being rejected."
@@ -2803,7 +2803,7 @@ msgstr "提交前请先重新加载最新"
 
 #: frontend/src/composables/useChangeRequestActions.js:25
 msgid "Reload latest before {0}"
-msgstr ""
+msgstr "{0}前请先重新加载最新"
 
 #: frontend/src/components/PageSettingsPanel.vue:121
 #: frontend/src/components/SpaceIdentityPicker.vue:109
@@ -2820,7 +2820,7 @@ msgstr "提交前请先移除失败的上传"
 
 #: frontend/src/composables/useChangeRequestActions.js:34
 msgid "Remove failed uploads before {0}"
-msgstr ""
+msgstr "{0}前请先移除失败的上传"
 
 #: frontend/src/components/WikiDocumentPanel.vue:166
 #: frontend/src/components/WikiDocumentPanel.vue:541
@@ -2867,11 +2867,11 @@ msgstr ""
 
 #: wiki/wiki/git_sync.py:1023
 msgid "Repository and branch are required for git sync."
-msgstr ""
+msgstr "Git 同步需要提供仓库和分支。"
 
 #: wiki/wiki/git_sync.py:110
 msgid "Repository tree for {0} is too large (>100,000 entries) and was truncated by GitHub. Narrow the sync to a sub-directory via the 'Docs Subdirectory' field."
-msgstr ""
+msgstr "{0} 的仓库目录树过大（超过 100,000 项），已被 GitHub 截断。请通过“文档子目录”字段将同步范围缩小到某个子目录。"
 
 #: frontend/src/pages/ContributionReview.vue:344
 #: frontend/src/pages/ContributionReview.vue:369
@@ -2885,7 +2885,7 @@ msgstr "已要求修改"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1471
 msgid "Requested changes: {0}"
-msgstr ""
+msgstr "已要求修改：{0}"
 
 #. Label of the resolution (Select) field in DocType 'Wiki Merge Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
@@ -2894,7 +2894,7 @@ msgstr ""
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1591
 msgid "Resolution must be 'ours' or 'theirs'."
-msgstr ""
+msgstr "resolution 必须是 'ours' 或 'theirs'。"
 
 #: frontend/src/pages/ContributionReview.vue:41
 msgid "Resolve & Merge"
@@ -2910,7 +2910,7 @@ msgstr "提交前请先处理失败的修改"
 
 #: frontend/src/composables/useChangeRequestActions.js:28
 msgid "Resolve failed changes before {0}"
-msgstr ""
+msgstr "{0}前请先处理失败的修改"
 
 #. Option for the 'Status' (Select) field in DocType 'Wiki Merge Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
@@ -2991,7 +2991,7 @@ msgstr ""
 
 #: frontend/src/pages/Overview.vue:41
 msgid "Right now"
-msgstr ""
+msgstr "刚刚"
 
 #. Label of the role (Link) field in DocType 'Wiki Space Role'
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:31
@@ -3027,7 +3027,7 @@ msgstr "路径"
 #: wiki/wiki/doctype/wiki_space/wiki_space.py:282
 #: wiki/wiki/doctype/wiki_space/wiki_space.py:356
 msgid "Route '{0}' is already used by another Wiki Space"
-msgstr ""
+msgstr "路径 '{0}' 已被另一个 Wiki 空间使用"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:19
 msgid "Route Prefix"
@@ -3037,7 +3037,7 @@ msgstr "路径前缀"
 #: wiki/wiki/doctype/wiki_space/wiki_space.py:349
 #: wiki/wiki/doctype/wiki_space/wiki_space.py:383
 msgid "Route cannot be empty"
-msgstr ""
+msgstr "路径不能为空"
 
 #: frontend/src/components/NewSpaceDialog.vue:554
 msgid "Route is required."
@@ -3079,7 +3079,7 @@ msgstr "合并前请先保存修改"
 
 #: frontend/src/composables/useChangeRequestActions.js:40
 msgid "Save your changes before {0}"
-msgstr ""
+msgstr "{0}前请先保存修改"
 
 #: frontend/src/composables/useSyncState.js:32
 msgid "Saving…"
@@ -3101,11 +3101,11 @@ msgstr "搜索"
 #: wiki/templates/wiki/includes/header.html:71
 #: wiki/templates/wiki/includes/search_modal.html:52
 msgid "Search documentation"
-msgstr ""
+msgstr "搜索文档"
 
 #: wiki/templates/wiki/includes/mobile_header.html:201
 msgid "Search navigation"
-msgstr ""
+msgstr "搜索导航"
 
 #: frontend/src/components/WikiDocumentList.vue:10
 msgid "Search pages..."
@@ -3307,7 +3307,7 @@ msgstr ""
 #: frontend/src/pages/SpaceDetails.vue:134
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:32
 msgid "Start Cloning"
-msgstr ""
+msgstr "开始克隆"
 
 #. Label of the started_at (Datetime) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
@@ -3360,7 +3360,7 @@ msgstr ""
 #: wiki/templates/wiki/includes/header.html:25
 #: wiki/templates/wiki/includes/mobile_header.html:149
 msgid "Switch wiki space"
-msgstr ""
+msgstr "切换 Wiki 空间"
 
 #. Label of the switcher_order (Int) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -3457,7 +3457,7 @@ msgstr "标签图标"
 
 #: wiki/templates/wiki/includes/feedback_widget.html:67
 msgid "Thanks!"
-msgstr ""
+msgstr "谢谢！"
 
 #: frontend/src/components/NewSpaceDialog.vue:90
 msgid "The GitHub App is not installed on any account yet. Install it on the account and repositories you want to sync."
@@ -3505,17 +3505,17 @@ msgstr "没有等待审阅的变更请求。"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1422
 msgid "There are no changes to submit for review."
-msgstr ""
+msgstr "没有可提交审阅的修改。"
 
 #: wiki/wiki/doctype/wiki_space/wiki_space.py:277
 #: wiki/wiki/doctype/wiki_space/wiki_space.py:359
 #: wiki/wiki/doctype/wiki_space/wiki_space.py:379
 msgid "This Wiki Space has no root group. Migrate to Version 3 first."
-msgstr ""
+msgstr "此 Wiki 空间没有根分组。请先迁移到 Version 3。"
 
 #: wiki/wiki/doctype/wiki_space/wiki_space.py:164
 msgid "This Wiki Space is not git-synced."
-msgstr ""
+msgstr "此 Wiki 空间未启用 Git 同步。"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:80
 msgid "This cannot be undone. Deleting the space also removes:"
@@ -3523,15 +3523,15 @@ msgstr "此操作无法撤销。删除空间还会移除："
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:111
 msgid "This change request is {0} and cannot be changed."
-msgstr ""
+msgstr "此变更请求状态为 {0}，无法修改。"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:125
 msgid "This change request is {0} and is locked for editing."
-msgstr ""
+msgstr "此变更请求状态为 {0}，已锁定编辑。"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1148
 msgid "This draft has changed elsewhere. Reload latest."
-msgstr ""
+msgstr "此草稿已在别处被修改。请重新加载最新内容。"
 
 #: frontend/src/components/WikiDocumentList.vue:154
 msgid "This group contains"
@@ -3543,7 +3543,7 @@ msgstr "这是一个草稿分组。"
 
 #: wiki/www/wiki_app.py:34
 msgid "This method is only meant for developer mode"
-msgstr ""
+msgstr "此方法仅供开发模式使用"
 
 #: frontend/src/composables/useTreeDialogs.js:92
 msgid "This route is already in use"
@@ -3555,11 +3555,11 @@ msgstr "此空间还没有任何页面。"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:98
 msgid "This wiki space is not accepting contributions."
-msgstr ""
+msgstr "此 Wiki 空间未开放投稿。"
 
 #: wiki/permissions.py:40
 msgid "This wiki space is synced from GitHub and is read-only."
-msgstr ""
+msgstr "此 Wiki 空间从 GitHub 同步，为只读。"
 
 #: frontend/src/pages/ContributionReview.vue:325
 msgid "This will approve the change request and immediately merge it into the live wiki. This cannot be undone. Are you sure?"
@@ -3659,7 +3659,7 @@ msgstr ""
 
 #: wiki/templates/wiki/includes/search_modal.html:92
 msgid "Type to search documentation"
-msgstr ""
+msgstr "输入以搜索文档"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:168
 msgid "Type {0} to confirm"
@@ -3677,7 +3677,7 @@ msgstr "URL 为必填项"
 
 #: wiki/templates/wiki/document.html:218
 msgid "Unable to download this page right now."
-msgstr ""
+msgstr "暂时无法下载此页面。"
 
 #. Option for the 'Status' (Select) field in DocType 'Wiki Page Patch'
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
@@ -3686,7 +3686,7 @@ msgstr ""
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1106
 msgid "Unknown operation type: {0}"
-msgstr ""
+msgstr "未知的 operation 类型：{0}"
 
 #: frontend/src/components/LibrarySidebar.vue:199
 msgid "Unpin from top"
@@ -3734,12 +3734,12 @@ msgstr "更新"
 #: frontend/src/pages/SpaceDetails.vue:104
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:56
 msgid "Update Routes"
-msgstr ""
+msgstr "更新路径"
 
 #: frontend/src/pages/SpaceDetails.vue:77
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:39
 msgid "Update Wiki Space Routes"
-msgstr ""
+msgstr "更新 Wiki 空间路径"
 
 #. Label of the updated_count (Int) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
@@ -3812,7 +3812,7 @@ msgstr "浏览量"
 
 #: frontend/src/pages/Overview.vue:78
 msgid "Views by space"
-msgstr ""
+msgstr "各空间浏览量"
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:54
 msgid "Views over time"
@@ -3832,7 +3832,7 @@ msgstr "提交前请等待待处理修改同步完成"
 
 #: frontend/src/composables/useChangeRequestActions.js:37
 msgid "Wait for pending changes to sync before {0}"
-msgstr ""
+msgstr "{0}前请等待待处理修改同步完成"
 
 #: frontend/src/components/SpaceModeStrip.vue:388
 msgid "Wait for uploads to finish before merging"
@@ -3844,7 +3844,7 @@ msgstr "提交前请等待上传完成"
 
 #: frontend/src/composables/useChangeRequestActions.js:31
 msgid "Wait for uploads to finish before {0}"
-msgstr ""
+msgstr "{0}前请等待上传完成"
 
 #: frontend/src/components/WikiDocumentList.vue:152
 msgid "Warning"
@@ -3852,7 +3852,7 @@ msgstr "警告"
 
 #: wiki/templates/wiki/includes/feedback_widget.html:4
 msgid "Was this helpful?"
-msgstr ""
+msgstr "这有帮助吗？"
 
 #. Option for the 'Trigger' (Select) field in DocType 'Wiki Git Sync Log'
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:123
@@ -3891,7 +3891,7 @@ msgstr ""
 #: wiki/templates/wiki/includes/mobile_header.html:145
 #: wiki/wiki/workspace/wiki/wiki.json
 msgid "Wiki"
-msgstr ""
+msgstr "Wiki"
 
 #. Name of a DocType
 #: wiki/wiki/doctype/wiki_app_switcher_list_table/wiki_app_switcher_list_table.json
@@ -3941,7 +3941,7 @@ msgstr ""
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 #: wiki/wiki/report/wiki_broken_links/wiki_broken_links.py:30
 msgid "Wiki Document"
-msgstr ""
+msgstr "Wiki Document"
 
 #. Name of a DocType
 #. Label of a shortcut in the Wiki Workspace
@@ -4035,7 +4035,7 @@ msgstr ""
 
 #: wiki/wiki/doctype/wiki_page/wiki_page.py:10
 msgid "Wiki Page doctype is deprecated and will be deleted in a future release. Please migrate to Wiki Document (Version 3 structure)."
-msgstr ""
+msgstr "Wiki Page doctype 已弃用，将在未来版本中移除。请迁移到 Wiki Document（Version 3 结构）。"
 
 #. Label of the wiki_pages (Table) field in DocType 'Wiki Page Revision'
 #. Label of a shortcut in the Wiki Workspace
@@ -4139,38 +4139,38 @@ msgstr ""
 
 #: wiki/www/github/manifest_redirect.py:24 wiki/www/github/new_app.py:26
 msgid "You are not permitted to configure the GitHub App."
-msgstr ""
+msgstr "你无权配置 GitHub App。"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:538
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:823
 msgid "You do not have access to this wiki space."
-msgstr ""
+msgstr "你无权访问此 Wiki 空间。"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1531
 msgid "You do not have permission to merge change requests in this space."
-msgstr ""
+msgstr "你无权在此空间合并变更请求。"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1627
 msgid "You do not have permission to merge in this space."
-msgstr ""
+msgstr "你无权在此空间执行合并。"
 
 #: wiki/api/wiki_space.py:257
 msgid "You do not have permission to reorder this document"
-msgstr ""
+msgstr "你无权重新排序此文档"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1600
 msgid "You do not have permission to resolve conflicts in this space."
-msgstr ""
+msgstr "你无权在此空间解决冲突。"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1434
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1461
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1490
 msgid "You do not have permission to review change requests in this space."
-msgstr ""
+msgstr "你无权在此空间审阅变更请求。"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1554
 msgid "You do not have permission to view merge conflicts in this space."
-msgstr ""
+msgstr "你无权在此空间查看合并冲突。"
 
 #: frontend/src/layouts/MainLayout.vue:88
 msgid "You don't have permission to access the Wiki."
@@ -4178,11 +4178,11 @@ msgstr ""
 
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:776
 msgid "You don't have permission to delete child document: {0}"
-msgstr ""
+msgstr "你无权删除子文档：{0}"
 
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:766
 msgid "You don't have permission to delete this document"
-msgstr ""
+msgstr "你无权删除此文档"
 
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:737
 msgid "You don't have permission to edit this page"
@@ -4194,19 +4194,19 @@ msgstr "你还没有创建任何变更请求。编辑一个 Wiki 页面即可开
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1444
 msgid "Your change request “{0}” was approved."
-msgstr ""
+msgstr "你的变更请求“{0}”已批准。"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:2202
 msgid "Your change request “{0}” was merged."
-msgstr ""
+msgstr "你的变更请求“{0}”已合并。"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1502
 msgid "Your change request “{0}” was rejected."
-msgstr ""
+msgstr "你的变更请求“{0}”已拒绝。"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1139
 msgid "base_version must be an integer"
-msgstr ""
+msgstr "base_version 必须是整数"
 
 #. Option for the 'Git Reference Type' (Select) field in DocType 'Wiki GitHub
 #. Webhook Log'
@@ -4242,15 +4242,15 @@ msgstr ""
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1026
 msgid "create_node operation requires temp_key"
-msgstr ""
+msgstr "create_node operation 需要 temp_key"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1029
 msgid "create_node operation requires title"
-msgstr ""
+msgstr "create_node operation 需要 title"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1077
 msgid "delete_node operation requires doc_key"
-msgstr ""
+msgstr "delete_node operation 需要 doc_key"
 
 #: frontend/src/components/NewSpaceDialog.vue:166
 msgid "docs"
@@ -4276,7 +4276,7 @@ msgstr ""
 
 #: frontend/src/composables/useChangeRequestActions.js:118
 msgid "merging"
-msgstr ""
+msgstr "合并"
 
 #. Option for the 'Conflict Type' (Select) field in DocType 'Wiki Merge
 #. Conflict'
@@ -4286,7 +4286,7 @@ msgstr ""
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1092
 msgid "move_node operation requires doc_key"
-msgstr ""
+msgstr "move_node operation 需要 doc_key"
 
 #: frontend/src/components/NewSpaceDialog.vue:44
 msgid "my-wiki-space"
@@ -4294,11 +4294,11 @@ msgstr "my-wiki-space"
 
 #: wiki/templates/wiki/includes/search_modal.html:161
 msgid "new tab"
-msgstr ""
+msgstr "新标签页"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1124
 msgid "operations must be a non-empty list"
-msgstr ""
+msgstr "operations 必须是非空列表"
 
 #. Option for the 'Resolution' (Select) field in DocType 'Wiki Merge Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
@@ -4325,7 +4325,7 @@ msgstr "已解决"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1085
 msgid "restore_node operation requires doc_key"
-msgstr ""
+msgstr "restore_node operation 需要 doc_key"
 
 #: frontend/src/components/WikiDocumentList.vue:116
 msgid "space/page-url"
@@ -4337,7 +4337,7 @@ msgstr "space/section/page"
 
 #: frontend/src/composables/useChangeRequestActions.js:60
 msgid "submitting"
-msgstr ""
+msgstr "提交"
 
 #. Option for the 'Git Reference Type' (Select) field in DocType 'Wiki GitHub
 #. Webhook Log'
@@ -4382,15 +4382,15 @@ msgstr ""
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1065
 msgid "update_content operation requires content"
-msgstr ""
+msgstr "update_content operation 需要 content"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1063
 msgid "update_content operation requires doc_key"
-msgstr ""
+msgstr "update_content operation 需要 doc_key"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1054
 msgid "update_node operation requires doc_key"
-msgstr ""
+msgstr "update_node operation 需要 doc_key"
 
 #. Description of the 'Assets Prepend' (Data) field in DocType 'Migrate To
 #. Wiki'
@@ -4404,7 +4404,7 @@ msgstr "{0} 个变更请求"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1639
 msgid "{0} conflict(s) still unresolved."
-msgstr ""
+msgstr "仍有 {0} 个冲突未解决。"
 
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:69
 msgid "{0} documents updated successfully"
@@ -4420,11 +4420,11 @@ msgstr "{0} 分钟阅读"
 
 #: wiki/wiki/git_sync.py:580
 msgid "{0} must contain a mapping with a sidebar key."
-msgstr ""
+msgstr "{0} 必须包含带 sidebar 键的映射。"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1741
 msgid "{0} new conflict(s) detected during merge retry."
-msgstr ""
+msgstr "合并重试时检测到 {0} 个新冲突。"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:177
 msgid "{0} pages"
