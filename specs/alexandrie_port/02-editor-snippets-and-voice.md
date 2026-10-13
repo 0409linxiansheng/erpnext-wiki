@@ -129,10 +129,29 @@ Chromium exposes one natively and "no button" would otherwise be luck.
 Its three strings are recorded and left untranslated under the bulk-translation
 workflow.
 
-**Phase 5 — diagrams, parity check.** Walk the existing node view against
-Alexandrie's: insert from the slash menu, edit the source, recover from invalid
-syntax, delete. Close only what is actually missing, and record what was already
-there instead of rebuilding it.
+**Phase 5 — diagrams — parity check DONE (2026-10-13).** The node view was
+already complete; the check closed its one uncovered behaviour instead of
+rebuilding anything.
+
+| Behaviour | State |
+| --- | --- |
+| Insert from the slash menu | already there (`/mermaid`, English keyword kept) |
+| Edit the source in place | already there (two-pane textarea) |
+| Live preview that keeps the last good render | already there |
+| Explain an invalid edit | there in the code (`role="alert"` beside the preview) but **untested** — now covered |
+| Delete the diagram | already there |
+| Read-only render (CR preview / published viewer) | already there |
+| Re-render on a theme flip | already there |
+| Public reader | already there (server-rendered fence + hydration) |
+| **Print** | **not covered, deliberately** |
+
+The print gap is the one spec 01 had for maths, and it is *not* closed the same
+way. Maths could be rendered to a self-contained SVG in node; mermaid needs a real
+layout engine, and `mermaid-cli` brings a headless Chromium with it. That is a much
+heavier dependency than the maths path bought, for a diagram that a reader can
+already open in the wiki, so a PDF keeps showing the diagram's source. Closing it
+properly means either mermaid-cli in the print pipeline or a headless-Chromium PDF
+— each deserves its own spec rather than a drive-by.
 
 ## Tests
 

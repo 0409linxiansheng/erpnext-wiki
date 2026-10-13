@@ -129,4 +129,29 @@ test.describe('Mermaid diagrams', () => {
 			page.locator('#wiki-content .mermaid svg').first(),
 		).toBeVisible({ timeout: 15000 });
 	});
+
+	test('an invalid edit keeps the last good render and says why', async ({ page, wiki }) => {
+		await createDraftAndOpenEditor(page, await wiki.space(), `mermaid-invalid-${Date.now()}`);
+
+		await page.evaluate((md) => {
+			window.wikiEditor.commands.setContent(md, { contentType: 'markdown' });
+		}, MERMAID_MARKDOWN);
+
+		const preview = page.locator('.mermaid-block-svg svg').first();
+		await expect(preview).toBeVisible({ timeout: 10000 });
+
+		// Break the source mid-edit. The preview must not flicker to blank while the
+		// author is still typing, so the last good SVG stays on screen and the failure
+		// is stated beside it.
+		const source = page.locator('.mermaid-block-code').first();
+		await source.fill('flowchart TD\n  A[Start] -->');
+
+		await expect(page.locator('.mermaid-block-error')).toBeVisible({ timeout: 10000 });
+		await expect(preview).toBeVisible();
+
+		// Fixing the source clears the message and renders the new diagram.
+		await source.fill('flowchart TD\n  A[Start] --> B[Fixed]');
+		await expect(page.locator('.mermaid-block-error')).toHaveCount(0);
+		await expect(page.locator('.mermaid-block-svg svg').first()).toBeVisible();
+	});
 });
