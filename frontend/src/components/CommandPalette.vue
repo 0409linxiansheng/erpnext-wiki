@@ -79,6 +79,12 @@
 						>
 							{{ item.subtitle }}
 						</div>
+						<div
+							v-if="item.snippet"
+							class="mt-0.5 truncate text-sm text-ink-gray-5"
+						>
+							{{ item.snippet }}
+						</div>
 					</div>
 					<Tooltip v-if="item.unpublished" :text="__('Unpublished')">
 						<span
@@ -200,17 +206,26 @@ const spaces = useList({
 	immediate: false,
 });
 
-const pages = createResource({ url: 'wiki.api.search.search_pages' });
+// Full-text, not route-substring: results carry a content snippet and a score,
+// and are already ranked server-side (frappe's SQLiteSearch scoring pipeline).
+const pages = createResource({
+	url: 'wiki.frappe_wiki.doctype.wiki_document.search.search',
+});
 
 watch(showCommandPalette, (open) => {
 	if (open && !spaces.data) spaces.fetch();
 });
 
+const submittedQuery = ref('');
+
 watchDebounced(
 	query,
 	(value) => {
 		const q = value.trim();
-		if (q.length >= MIN_SERVER_QUERY) pages.submit({ query: q });
+		if (q.length >= MIN_SERVER_QUERY) {
+			submittedQuery.value = q;
+			pages.submit({ query: q });
+		}
 	},
 	{ debounce: 300 },
 );
@@ -245,13 +260,21 @@ const spaceItems = computed(() =>
 	})),
 );
 
+/** The FTS index highlights matches with `<mark>`; the palette renders labels as
+ *  text, so strip the tags rather than show them literally. */
+function stripMarks(text) {
+	return String(text || '').replace(/<\/?mark>/g, '');
+}
+
 function toPageItem(page) {
 	return {
 		key: `page:${page.name}`,
-		label: page.title,
+		label: stripMarks(page.title),
 		path: pathInSpace(page),
 		icon: 'lucide-file-text',
 		subtitle: `/${page.route}`,
+		snippet: stripMarks(page.content),
+		score: page.score,
 		unpublished: !page.is_published,
 		scoreScale: page.wiki_space === currentSpace.value ? SPACE_BIAS : 1,
 		route: {
@@ -267,7 +290,11 @@ function pathInSpace(page) {
 	return route.slice(route.indexOf('/') + 1);
 }
 
-const pageItems = computed(() => (pages.data || []).map(toPageItem));
+const pageItems = computed(() =>
+	submittedQuery.value === query.value.trim()
+		? ((pages.data?.results) || []).map(toPageItem)
+		: [],
+);
 
 const recentItems = computed(() =>
 	recentPages.value

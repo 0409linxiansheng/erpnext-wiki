@@ -46,9 +46,16 @@ export function buildResultGroups(
 		{
 			id: 'pages',
 			title: titles.pages,
+			// Pages arrive ranked by the server (full-text score); do not re-fuzzy
+			// them, or the snippet relevance frappe already computed is thrown away.
+			// The space bias still nudges the current space, as it did for fuzzysort.
 			items:
 				q.length >= MIN_SERVER_QUERY
-					? rank(q, pages, { key: 'path', threshold: PATH_THRESHOLD })
+					? [...(pages || [])].sort(
+							(a, b) =>
+								(b.score ?? 0) * (b.scoreScale ?? 1) -
+								(a.score ?? 0) * (a.scoreScale ?? 1),
+						)
 					: [],
 		},
 	];

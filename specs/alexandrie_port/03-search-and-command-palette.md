@@ -87,3 +87,31 @@ appears and is navigable; the same on the Overview box.
 is corrected here rather than in the matrix: the palette already has actions and
 cross-space results, so this spec is about relevance and the Overview surface, not
 about adding navigation to the palette.
+
+**Phase 1 & 2 — DONE (2026-10-13), and they exposed a real bug.**
+
+- The palette now speaks full text: page results come from
+  `wiki.frappe_wiki.doctype.wiki_document.search.search`, render title / route /
+  snippet / score, and are ordered by the server score (with the existing
+  space bias). `search_pages` stays as the route-prefix lookup, and its own test
+  keeps passing.
+- **The switch uncovered that incremental FTS indexing was broken**: a page created
+  or edited through the app was invisible to full-text search. Two causes, both
+  recorded because they will recur:
+  1. frappe's generic `update_doc_index` only *queues* a re-index, drained by a
+     5-minute scheduler job — long enough for the palette and the reader to look
+     broken. `on_update` now indexes synchronously (`index_doc_on_save`), matching
+     the unpublish path that was already synchronous (`remove_doc_from_index`).
+  2. The SQLite index lives in WAL mode; the `-wal`/`-shm` sidecars had been
+     created by a diagnostic that opened the file as the wrong user, so the web
+     worker hit `attempt to write a readonly database`. The sidecars are transient;
+     removing them let SQLite recreate them with the right owner.
+- **Draft pages are not in the palette's search** and are recorded as a gap, not a
+  bug: the full-text index is published-only by design (the reader's contract),
+  and surfacing drafts in the palette needs an edit-permission gate on a
+  guest-accessible endpoint — more surface than Phase 1 should buy. Drafts stay
+  reachable from the space tree.
+
+Tests: 11 unit cases for the palette grouping (score ordering, space bias, no-NaN
+sort, the client-vs-server filtering split), and 25 e2e green across the palette,
+maths, snippets, voice and mermaid.

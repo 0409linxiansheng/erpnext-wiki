@@ -4,9 +4,12 @@ import { appUrl } from '../helpers/routes';
 test.describe('Command Palette', () => {
 	test('finds a page in another space and opens it', async ({ page, wiki }) => {
 		const token = `Quillfeather${Date.now().toString(36)}`;
+		// Published on purpose: the palette's full-text search is the reader's index,
+		// which indexes published pages only. Finding a *draft* from the palette is a
+		// recorded gap (see spec 03), not what this test covers.
 		const target = await wiki.space({
 			space_name: `${token} Space`,
-			pages: [{ title: `${token} Deploy Guide`, is_published: false }],
+			pages: [{ title: `${token} Deploy Guide`, is_published: true }],
 		});
 
 		await page.goto(appUrl('spaces'));
