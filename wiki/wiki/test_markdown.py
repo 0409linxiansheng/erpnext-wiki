@@ -1095,3 +1095,46 @@ class TestThemeAwareImages(unittest.TestCase):
 		result = render_markdown('<picture>\n  <img src="/files/shot.png" alt="" data-align="x">\n</picture>')
 
 		self.assertNotIn('data-align="x" />', result)
+
+class TestFileAttachmentRendering(unittest.TestCase):
+	"""spec 06: non-image/video/pdf URLs with a file extension render as audio,
+	text/code previews or a download card instead of a broken <img>."""
+
+	def test_audio_renders_as_native_player(self):
+		html = render_markdown("![voice memo](/files/note.mp3)")
+
+		self.assertIn('data-type="audio-block" data-src="/files/note.mp3"', html)
+		self.assertIn('<audio controls preload="metadata" src="/files/note.mp3">', html)
+		self.assertNotIn('<p><div data-type="audio-block"', html)
+
+	def test_text_file_renders_as_code_preview(self):
+		html = render_markdown("![config](/files/settings.toml)")
+
+		self.assertIn('data-type="text-file-block" data-src="/files/settings.toml"', html)
+		self.assertIn('<code data-role="content">', html)
+		self.assertNotIn("<img", html)
+
+	def test_unknown_extension_renders_as_download_card(self):
+		html = render_markdown("![bundle](/files/export.zip)")
+
+		self.assertIn('data-type="file-block" data-src="/files/export.zip"', html)
+		self.assertIn('class="wiki-file-card"', html)
+		self.assertNotIn("<img", html)
+
+	def test_image_video_pdf_still_win(self):
+		self.assertIn("<img", render_markdown("![pic](/files/a.png)"))
+		self.assertIn('data-type="video-block"', render_markdown("![clip](/files/a.mp4)"))
+		self.assertIn('data-type="pdf-block"', render_markdown("![doc](/files/a.pdf)"))
+
+	def test_svg_stays_an_image_not_a_text_file(self):
+		html = render_markdown("![logo](/files/logo.svg)")
+
+		self.assertNotIn("text-file-block", html)
+		self.assertNotIn("file-block", html)
+
+	def test_extensionless_url_is_not_hijacked(self):
+		# A remote image without an extension stays an image.
+		html = render_markdown("![logo](/assets/brandmark)")
+
+		self.assertNotIn("file-block", html)
+		self.assertNotIn("text-file-block", html)

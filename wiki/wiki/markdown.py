@@ -357,6 +357,231 @@ def _replace_pdf_placeholders(html: str, pdfs: list[dict], placeholder_prefix: s
 	return html
 
 
+AUDIO_EXTENSIONS = (
+	".mp3",
+	".wav",
+	".m4a",
+	".aac",
+	".flac",
+	".opus",
+	".oga",
+	".weba",
+)
+
+# Text/code formats get an inline preview (fetched client-side, like the PDF
+# thumbnail) rather than a download card. `.svg` is deliberately absent: it is an
+# image, rendered as `<img>`, not as text.
+TEXT_EXTENSIONS = (
+	".txt",
+	".md",
+	".markdown",
+	".csv",
+	".tsv",
+	".json",
+	".jsonl",
+	".yaml",
+	".yml",
+	".py",
+	".js",
+	".mjs",
+	".cjs",
+	".ts",
+	".jsx",
+	".tsx",
+	".css",
+	".scss",
+	".less",
+	".html",
+	".htm",
+	".xml",
+	".sh",
+	".bash",
+	".zsh",
+	".fish",
+	".sql",
+	".ini",
+	".toml",
+	".conf",
+	".log",
+	".diff",
+	".patch",
+	".rst",
+	".tex",
+	".bib",
+	".env",
+	".gitignore",
+	".dockerfile",
+)
+
+# Image extensions that keep their `<img>` rendering and must not be reclassified.
+IMAGE_EXTENSIONS = (
+	".png",
+	".jpg",
+	".jpeg",
+	".gif",
+	".webp",
+	".svg",
+	".avif",
+	".ico",
+	".bmp",
+)
+
+
+def _split_ext(url: str) -> str:
+	"""Lowercased path extension without query/fragment, or "" when there is none."""
+	if not url:
+		return ""
+	clean = str(url).split("?", 1)[0].split("#", 1)[0].lower()
+	base = clean.rsplit("/", 1)[-1]
+	if "." not in base:
+		return ""
+	return "." + base.rsplit(".", 1)[-1]
+
+
+def _is_audio_url(url: str) -> bool:
+	return _split_ext(url) in AUDIO_EXTENSIONS
+
+
+def _is_text_url(url: str) -> bool:
+	return _split_ext(url) in TEXT_EXTENSIONS
+
+
+def _is_attachment_url(url: str) -> bool:
+	"""A non-image/video/pdf/audio/text URL that still has a file extension.
+
+	Extensionless URLs stay images (a remote imageless URL must not be hijacked);
+	the callers run before this one and have already claimed their types, so the
+	only guard needed here is against the image types the default `<img>` renderer
+	owns.
+	"""
+	ext = _split_ext(url)
+	if not ext:
+		return False
+	return ext not in IMAGE_EXTENSIONS and not _is_video_url(url) and not _is_pdf_url(
+		url
+	) and not _is_audio_url(url) and not _is_text_url(url)
+
+
+def _generate_audio_html(url: str, filename: str = "") -> str:
+	"""Native audio player plus a download fallback; no client JS involved."""
+	safe_name = _remove_script_tags(filename) or "Audio"
+	return (
+		f'<div class="wiki-audio-embed" data-type="audio-block" data-src="{url}"'
+		f' data-filename="{safe_name}">'
+		f'<audio controls preload="metadata" src="{url}"><source src="{url}" /></audio>'
+		f'<div class="wiki-file-meta">'
+		f'<span class="wiki-file-name">{safe_name}</span>'
+		f'<a class="wiki-file-download" href="{url}" download target="_blank"'
+		f' rel="noopener" aria-label="Download">{_PDF_DOWNLOAD_ICON_SVG}</a>'
+		f"</div></div>"
+	)
+
+
+def _generate_text_file_html(url: str, filename: str = "") -> str:
+	"""Inline text/code preview. The text itself is fetched client-side (the renderer
+	is pure, so it cannot read the file here); the `<code>` starts empty and a
+	reader script fills it, leaving the filename and download link as a no-JS
+	fallback (which is also what print shows)."""
+	safe_name = _remove_script_tags(filename) or "File"
+	return (
+		f'<div class="wiki-text-file-embed" data-type="text-file-block" data-src="{url}"'
+		f' data-filename="{safe_name}">'
+		f'<pre class="wiki-text-file"><code data-role="content"></code></pre>'
+		f'<div class="wiki-file-meta">'
+		f'<span class="wiki-file-name">{safe_name}</span>'
+		f'<a class="wiki-file-download" href="{url}" download target="_blank"'
+		f' rel="noopener" aria-label="Download">{_PDF_DOWNLOAD_ICON_SVG}</a>'
+		f"</div></div>"
+	)
+
+
+def _generate_file_html(url: str, filename: str = "") -> str:
+	"""Generic download card for anything that has no richer preview."""
+	safe_name = _remove_script_tags(filename) or "File"
+	return (
+		f'<div class="wiki-file-embed" data-type="file-block" data-src="{url}"'
+		f' data-filename="{safe_name}">'
+		f'<a class="wiki-file-card" href="{url}" download target="_blank" rel="noopener">'
+		f'<span class="wiki-file-icon">{_PDF_ICON_SVG}</span>'
+		f'<span class="wiki-file-name">{safe_name}</span>'
+		f'<span class="wiki-file-download">{_PDF_DOWNLOAD_ICON_SVG}</span>'
+		f"</a></div>"
+	)
+
+
+def _process_audio_with_placeholders(content: str) -> tuple[str, list[dict], str]:
+	"""Full-line `![name](audio-url)` -> audio block placeholder."""
+	audios = []
+	placeholder_prefix = "WIKIAUDIOPLACEHOLDER"
+
+	def replacer(match):
+		url = match.group("url") or ""
+		if not _is_audio_url(url):
+			return match.group(0)
+		idx = len(audios)
+		audios.append({"url": url, "filename": match.group("alt") or ""})
+		return _standalone_block(match, f"{placeholder_prefix}{idx}END")
+
+	return VIDEO_MARKDOWN_PATTERN.sub(replacer, content), audios, placeholder_prefix
+
+
+def _replace_audio_placeholders(html: str, audios: list[dict], placeholder_prefix: str) -> str:
+	for idx, audio in enumerate(audios):
+		placeholder = f"{placeholder_prefix}{idx}END"
+		audio_html = _generate_audio_html(audio["url"], audio["filename"])
+		html = html.replace(f"<p>{placeholder}</p>", audio_html)
+		html = html.replace(placeholder, audio_html)
+	return html
+
+
+def _process_text_files_with_placeholders(content: str) -> tuple[str, list[dict], str]:
+	texts = []
+	placeholder_prefix = "WIKITEXTPLACEHOLDER"
+
+	def replacer(match):
+		url = match.group("url") or ""
+		if not _is_text_url(url):
+			return match.group(0)
+		idx = len(texts)
+		texts.append({"url": url, "filename": match.group("alt") or ""})
+		return _standalone_block(match, f"{placeholder_prefix}{idx}END")
+
+	return VIDEO_MARKDOWN_PATTERN.sub(replacer, content), texts, placeholder_prefix
+
+
+def _replace_text_file_placeholders(html: str, texts: list[dict], placeholder_prefix: str) -> str:
+	for idx, text in enumerate(texts):
+		placeholder = f"{placeholder_prefix}{idx}END"
+		text_html = _generate_text_file_html(text["url"], text["filename"])
+		html = html.replace(f"<p>{placeholder}</p>", text_html)
+		html = html.replace(placeholder, text_html)
+	return html
+
+
+def _process_files_with_placeholders(content: str) -> tuple[str, list[dict], str]:
+	files = []
+	placeholder_prefix = "WIKIFILEPLACEHOLDER"
+
+	def replacer(match):
+		url = match.group("url") or ""
+		if not _is_attachment_url(url):
+			return match.group(0)
+		idx = len(files)
+		files.append({"url": url, "filename": match.group("alt") or ""})
+		return _standalone_block(match, f"{placeholder_prefix}{idx}END")
+
+	return VIDEO_MARKDOWN_PATTERN.sub(replacer, content), files, placeholder_prefix
+
+
+def _replace_file_placeholders(html: str, files: list[dict], placeholder_prefix: str) -> str:
+	for idx, file in enumerate(files):
+		placeholder = f"{placeholder_prefix}{idx}END"
+		file_html = _generate_file_html(file["url"], file["filename"])
+		html = html.replace(f"<p>{placeholder}</p>", file_html)
+		html = html.replace(placeholder, file_html)
+	return html
+
+
 def _encode_image_url_spaces(content: str) -> str:
 	"""
 	Pre-process markdown to URL-encode literal spaces in image URLs.
@@ -720,6 +945,9 @@ def render_markdown_with_toc(content: str) -> tuple[str, list]:
 	processed_content, callouts, callout_prefix = _process_callouts_with_placeholders(processed_content)
 	processed_content, videos, video_prefix = _process_videos_with_placeholders(processed_content)
 	processed_content, pdfs, pdf_prefix = _process_pdfs_with_placeholders(processed_content)
+	processed_content, audios, audio_prefix = _process_audio_with_placeholders(processed_content)
+	processed_content, texts, text_prefix = _process_text_files_with_placeholders(processed_content)
+	processed_content, files, file_prefix = _process_files_with_placeholders(processed_content)
 
 	env: dict = {}
 	tokens = md.parse(processed_content, env)
@@ -729,6 +957,9 @@ def render_markdown_with_toc(content: str) -> tuple[str, list]:
 	html = _replace_callout_placeholders(html, callouts, callout_prefix, md.render)
 	html = _replace_video_placeholders(html, videos, video_prefix)
 	html = _replace_pdf_placeholders(html, pdfs, pdf_prefix)
+	html = _replace_audio_placeholders(html, audios, audio_prefix)
+	html = _replace_text_file_placeholders(html, texts, text_prefix)
+	html = _replace_file_placeholders(html, files, file_prefix)
 
 	if _TABLE_CODE_PIPE_SENTINEL in html:
 		html = html.replace(_TABLE_CODE_PIPE_SENTINEL, "|")

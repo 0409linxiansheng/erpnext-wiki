@@ -95,3 +95,21 @@ documentation review, not by provisioning a bucket here.
 "runbook" because Frappe's backend is already pluggable and there is nothing to
 build but the switch-over procedure; the real code is attach/preview and the ZIP
 round-trip.
+
+**Phase 1, first slice — DONE (2026-10-13): the reader and print surfaces.**
+
+`markdown.py` now renders full-line `![name](url)` for the file types that used to
+produce a broken `<img>`: `audio/*` → a native `<audio>` player, text/code
+extensions → a text preview block, and any other URL with an extension → a
+download card. Image/video/PDF still win (regression-pinned), and an extensionless
+URL is left alone so a remote imageless image is never hijacked.
+
+The renderer stays a **pure function** — it cannot read the file at render time —
+so the text itself is fetched client-side by `public/js/text-file-preview.js`
+(the same lazy/MutationObserver pattern as pdf-viewer.js), which fills the
+`<code>` and highlights it with the reader's existing highlight.js. The filename +
+download link is the no-JS/print fallback. 113 markdown unit tests green.
+
+The editor side (attach-from-toolbar, the optimistic upload flow, the node view)
+is the next slice; until it lands, a text/audio/file is already correctly rendered
+anywhere a `![name](url)` reaches the reader.
