@@ -1,0 +1,215 @@
+app_name = "wiki"
+app_title = "Wiki"
+app_publisher = "Frappe"
+app_description = "Simple Wiki App"
+app_icon = "octicon octicon-file-directory"
+app_color = "grey"
+app_email = "developers@frappe.io"
+app_license = "MIT"
+
+add_to_apps_screen = [
+	{
+		"name": "wiki",
+		"logo": "/assets/wiki/images/wiki-logo.png",
+		"title": "Wiki",
+		"route": "/wiki-app",
+		"has_permission": "wiki.utils.check_app_permission",
+	}
+]
+
+page_renderer = [
+	# Crawler routes (.md, llms.txt, sitemap.xml) resolve first — they take over
+	# paths that would otherwise fall through to the reader or the framework.
+	"wiki.wiki.crawler_renderer.CrawlerRenderer",
+	"wiki.frappe_wiki.doctype.wiki_document.wiki_document.WikiDocumentRenderer",
+]
+export_python_type_annotations = True
+
+# SQLite Search
+sqlite_search = ["wiki.frappe_wiki.doctype.wiki_document.wiki_sqlite_search.WikiSQLiteSearch"]
+
+
+jinja = {
+	"methods": [
+		"wiki.utils.get_tailwindcss_hash",
+		"wiki.utils.get_asset_hash",
+		"wiki.utils.lucide_svg",
+		"wiki.utils.space_mark",
+	]
+}
+
+# Includes in <head>
+# ------------------
+
+# include js, css files in header of desk.html
+# app_include_css = "/assets/wiki/css/wiki.css"
+# app_include_js = "/assets/wiki/js/wiki.js"
+
+# include js, css files in header of web template
+# web_include_css = "/assets/wiki/css/wiki.css"
+# web_include_js = "/assets/wiki/js/wiki.js"
+
+# include custom scss in every website theme (without file extension ".scss")
+# website_theme_scss = "wiki/public/scss/website"
+
+# include js, css files in header of web form
+# webform_include_js = {"doctype": "public/js/doctype.js"}
+# webform_include_css = {"doctype": "public/css/doctype.css"}
+
+# include js in page
+# page_js = {"page" : "public/js/file.js"}
+
+# include js in doctype views
+# doctype_js = {"doctype" : "public/js/doctype.js"}
+# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+# doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
+# doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
+
+# Home Pages
+# ----------
+
+# application home page (will override Website Settings)
+# home_page = "login"
+
+# website user home page (by Role)
+# role_home_page = {
+# 	"Role": "home_page"
+# }
+
+# Generators
+# ----------
+
+# automatically create page for each record of this doctype
+# website_generators = ["Web Page"]
+
+# Installation
+# ------------
+
+# before_install = "wiki.install.before_install"
+after_install = "wiki.install.after_install"
+
+# after_migrate = ["wiki.wiki.doctype.wiki_page.search.build_index_in_background"]
+
+# Desk Notifications
+# ------------------
+# See frappe.core.notifications.get_notification_config
+
+# notification_config = "wiki.notifications.get_notification_config"
+
+# Permissions
+# -----------
+# Permissions evaluated in scripted ways
+
+permission_query_conditions = {
+	"Wiki Space": "wiki.permissions.wiki_space_query_conditions",
+	"Wiki Document": "wiki.permissions.wiki_document_query_conditions",
+	"Wiki Change Request": "wiki.permissions.wiki_cr_query_conditions",
+}
+
+has_permission = {
+	"Wiki Space": "wiki.permissions.wiki_space_has_permission",
+	"Wiki Document": "wiki.permissions.wiki_document_has_permission",
+	"Wiki Change Request": "wiki.permissions.wiki_cr_has_permission",
+}
+
+# DocType Class
+# ---------------
+# Override standard doctype classes
+
+# override_doctype_class = {
+# 	"ToDo": "custom_app.overrides.CustomToDo"
+# }
+
+# Document Events
+# ---------------
+# Hook on document methods and events
+
+doc_events = {
+	"User": {"after_insert": "wiki.utils.add_wiki_user_role"},
+	"Wiki Document": {
+		"on_update": "wiki.frappe_wiki.doctype.wiki_document.wiki_document.on_wiki_document_update",
+		"on_trash": "wiki.frappe_wiki.doctype.wiki_document.wiki_document.on_wiki_document_trash",
+	},
+	# A space's roles, route and publish state decide what the crawler indexes
+	# list, and none of them touch a Wiki Document.
+	"Wiki Space": {
+		"on_update": "wiki.wiki.crawler_cache.clear_crawler_cache",
+		"on_trash": "wiki.wiki.crawler_cache.clear_crawler_cache",
+	},
+}
+
+# The cached sitemap also lists the site's other pages (Builder, Web Page, ...),
+# which change without touching the wiki but always clear the website cache.
+website_clear_cache = "wiki.wiki.crawler_cache.clear_crawler_cache"
+
+# Auto-prune the webhook delivery log (Frappe's daily log-clearing runs each
+# doctype's `clear_old_logs`).
+default_log_clearing_doctypes = {
+	"Wiki GitHub Webhook Log": 30,
+}
+
+# Scheduled Tasks
+# ---------------
+
+scheduler_events = {
+	"cron": {
+		"*/10 * * * *": [
+			"wiki.analytics_store.ingest_recent_views",
+		],
+	},
+	"daily": [
+		"wiki.telemetry_scan.send_site_profile",
+	],
+}
+
+# scheduler_events = {
+# 	"all": [
+# 		"wiki.tasks.all"
+# 	],
+# 	"daily": [
+# 		"wiki.tasks.daily"
+# 	],
+# 	"hourly": [
+# 		"wiki.tasks.hourly"
+# 	],
+# 	"weekly": [
+# 		"wiki.tasks.weekly"
+# 	]
+# 	"monthly": [
+# 		"wiki.tasks.monthly"
+# 	]
+# }
+
+# Testing
+# -------
+
+# before_tests = "wiki.install.before_tests"
+
+# Overriding Methods
+# ------------------------------
+#
+# override_whitelisted_methods = {
+# 	"frappe.desk.doctype.event.event.get_events": "wiki.event.get_events"
+# }
+
+# whitelisted_paths = {
+# 	"/update-page": ["Wiki Page", "update"],
+# 	"/new-page": ["Wiki Page", "new"],
+# 	"/get-route": "wiki.wiki.doctype.wiki_page.wiki_page.get_route",
+# }
+
+#
+# each overriding function accepts a `data` argument;
+# generated from the base implementation of the doctype dashboard,
+# along with any modifications made in other Frappe apps
+# override_doctype_dashboards = {
+# 	"Task": "wiki.task.get_dashboard_data"
+# }
+
+# exempt linked doctypes from being automatically cancelled
+#
+# auto_cancel_exempted_doctypes = ["Auto Repeat"]
+
+website_route_rules = [
+	{"from_route": "/wiki-app/<path:app_path>", "to_route": "wiki-app"},
+]
