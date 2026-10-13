@@ -87,8 +87,19 @@ Insertion goes through the editor's markdown insertion so the round-trip rules
 (and therefore `$…$`, callouts and fences inside a snippet) are the ones already
 under test.
 
-**Phase 3 — manage.** A dialog to create, edit and delete snippets, reachable from
-the picker, built like `NewSpaceDialog.vue`. Search over title + keywords.
+**Phase 3 — manage — DONE (2026-10-13).** Editing and deleting live on the row
+they act on rather than in a separate manager screen: a pencil in each list row
+loads that snippet into the form the create flow already uses, so one form covers
+create, edit and delete and there is no second screen showing the same three
+fields. Saves go through `frappe.client.set_value` with a field dict (it accepts
+one), creates through `frappe.client.insert`, deletes through
+`frappe.client.delete` — the stock REST surface, no whitelisted method added.
+
+Deleting takes two clicks, and the label changes to `Confirm delete` between them:
+a snippet is small enough that a modal would be more ceremony than the data
+deserves, and destructive enough that one click would be careless. The e2e asserts
+the deletion against the **server**, not the list — a row leaving the dialog would
+also happen if the reload merely failed.
 
 **Phase 4 — dictate.** A mic button that starts/stops `SpeechRecognition` and
 streams interim results into the editor at the caret. Capability-probed at mount

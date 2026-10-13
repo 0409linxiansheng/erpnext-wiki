@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wiki VERSION\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
-"POT-Creation-Date: 2026-10-13 21:30+0806\n"
-"PO-Revision-Date: 2026-10-13 21:30+0806\n"
+"POT-Creation-Date: 2026-10-13 21:36+0806\n"
+"PO-Revision-Date: 2026-10-13 21:36+0806\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: developers@frappe.io\n"
 "MIME-Version: 1.0\n"
@@ -437,6 +437,7 @@ msgstr ""
 
 #: frontend/src/components/AssignDialog.vue:20
 #: frontend/src/components/DraftContributionPanel.vue:124
+#: frontend/src/components/SnippetPickerDialog.vue:84
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:112
 #: frontend/src/components/SubmitForReviewButton.vue:121
 #: frontend/src/components/WikiDocumentList.vue:124
@@ -595,7 +596,7 @@ msgstr ""
 msgid "Cloning started in background."
 msgstr ""
 
-#: frontend/src/components/SnippetPickerDialog.vue:72
+#: frontend/src/components/SnippetPickerDialog.vue:77
 #: frontend/src/components/SpaceModeStrip.vue:258
 msgid "Close"
 msgstr ""
@@ -664,6 +665,10 @@ msgstr ""
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:95
 msgid "Configured — paste a new key to replace"
+msgstr ""
+
+#: frontend/src/components/SnippetPickerDialog.vue:82
+msgid "Confirm delete"
 msgstr ""
 
 #. Label of the conflict_type (Select) field in DocType 'Wiki Merge Conflict'
@@ -784,8 +789,8 @@ msgstr ""
 msgid "Could not copy the space name"
 msgstr ""
 
-#: frontend/src/components/SnippetPickerDialog.vue:165
-msgid "Could not create the snippet"
+#: frontend/src/components/SnippetPickerDialog.vue:245
+msgid "Could not delete the snippet"
 msgstr ""
 
 #: frontend/src/components/SpaceIdentityPicker.vue:259
@@ -794,6 +799,10 @@ msgstr ""
 
 #: frontend/src/components/SpaceModeStrip.vue:347
 msgid "Could not reload from server"
+msgstr ""
+
+#: frontend/src/components/SnippetPickerDialog.vue:227
+msgid "Could not save the snippet"
 msgstr ""
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:265
@@ -810,7 +819,7 @@ msgid "Count visits to published pages, which is what the Overview reports"
 msgstr ""
 
 #: frontend/src/components/NewSpaceDialog.vue:12
-#: frontend/src/components/SnippetPickerDialog.vue:70
+#: frontend/src/components/SnippetPickerDialog.vue:91
 msgid "Create"
 msgstr ""
 
@@ -914,6 +923,7 @@ msgstr ""
 msgid "Default Wiki Space"
 msgstr ""
 
+#: frontend/src/components/SnippetPickerDialog.vue:82
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:66
 #: frontend/src/components/WikiDocumentList.vue:135
 #: frontend/src/components/WikiDocumentList.vue:168
@@ -1095,6 +1105,10 @@ msgstr ""
 
 #: frontend/src/components/WikiDocumentPanel.vue:45
 msgid "Edit on GitHub"
+msgstr ""
+
+#: frontend/src/components/SnippetPickerDialog.vue:50
+msgid "Edit snippet"
 msgstr ""
 
 #: frontend/src/components/PageSettingsPanel.vue:219
@@ -1700,7 +1714,7 @@ msgstr ""
 msgid "Insert Video"
 msgstr ""
 
-#: frontend/src/components/SnippetPickerDialog.vue:4
+#: frontend/src/components/SnippetPickerDialog.vue:5
 msgid "Insert snippet"
 msgstr ""
 
@@ -2248,7 +2262,7 @@ msgstr ""
 msgid "New route is the same as current route"
 msgstr ""
 
-#: frontend/src/components/SnippetPickerDialog.vue:61
+#: frontend/src/components/SnippetPickerDialog.vue:76
 msgid "New snippet"
 msgstr ""
 
@@ -2363,11 +2377,11 @@ msgstr ""
 msgid "No roles found"
 msgstr ""
 
-#: frontend/src/components/SnippetPickerDialog.vue:42
+#: frontend/src/components/SnippetPickerDialog.vue:58
 msgid "No snippets match"
 msgstr ""
 
-#: frontend/src/components/SnippetPickerDialog.vue:42
+#: frontend/src/components/SnippetPickerDialog.vue:58
 msgid "No snippets yet"
 msgstr ""
 
@@ -3207,6 +3221,7 @@ msgid "Running"
 msgstr ""
 
 #: frontend/src/components/PageSettingsPanel.vue:249
+#: frontend/src/components/SnippetPickerDialog.vue:91
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:127
 #: frontend/src/components/WikiDocumentList.vue:126
 #: frontend/src/components/WikiDocumentList.vue:191
@@ -3279,7 +3294,7 @@ msgstr ""
 msgid "Search role to add"
 msgstr ""
 
-#: frontend/src/components/SnippetPickerDialog.vue:15
+#: frontend/src/components/SnippetPickerDialog.vue:18
 msgid "Search snippets…"
 msgstr ""
 
@@ -3382,20 +3397,29 @@ msgstr ""
 msgid "Slug"
 msgstr ""
 
+#: frontend/src/components/SnippetPickerDialog.vue:5
 #: frontend/src/components/tiptap-extensions/slash-commands.js:199
 msgid "Snippet"
 msgstr ""
 
-#: frontend/src/components/SnippetPickerDialog.vue:52
+#: frontend/src/components/SnippetPickerDialog.vue:67
 msgid "Snippet content"
 msgstr ""
 
-#: frontend/src/components/SnippetPickerDialog.vue:163
+#: frontend/src/components/SnippetPickerDialog.vue:222
 msgid "Snippet created"
 msgstr ""
 
-#: frontend/src/components/SnippetPickerDialog.vue:48
+#: frontend/src/components/SnippetPickerDialog.vue:243
+msgid "Snippet deleted"
+msgstr ""
+
+#: frontend/src/components/SnippetPickerDialog.vue:63
 msgid "Snippet title"
+msgstr ""
+
+#: frontend/src/components/SnippetPickerDialog.vue:217
+msgid "Snippet updated"
 msgstr ""
 
 #: frontend/src/components/PageSettingsPanel.vue:83

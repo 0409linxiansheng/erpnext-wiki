@@ -86,4 +86,41 @@ test.describe('snippets', () => {
 
 		await expect(editor).toContainText('Thanks,');
 	});
+
+	test('a snippet is renamed and deleted from the picker', async ({ page, wiki, request }) => {
+		await createSnippet(request, `${PREFIX} draft`, 'First version');
+
+		const editor = await createDraftAndOpenEditor(
+			page,
+			await wiki.space(),
+			`snip-edit-${Date.now()}`,
+		);
+
+		await editor.click();
+		await openPicker(page);
+
+		await page.getByRole('button', { name: 'Edit snippet' }).first().click();
+		await page.getByPlaceholder('Snippet title', { exact: true }).fill(`${PREFIX} final`);
+		await page.getByRole('button', { name: 'Save' }).click();
+		await expect(page.getByText(`${PREFIX} final`, { exact: true })).toBeVisible();
+
+		// Deleting is two clicks on purpose, so the second one has to be the one that
+		// actually removes it.
+		await page.getByRole('button', { name: 'Edit snippet' }).first().click();
+		await page.getByRole('button', { name: 'Delete' }).click();
+		await page.getByRole('button', { name: 'Confirm delete' }).click();
+
+		// Assert against the server, not the list: a row disappearing from the dialog
+		// would also happen if the reload simply failed.
+		await expect
+			.poll(async () => {
+				const rows = await getList<{ name: string }>(request, 'Wiki Snippet', {
+					fields: ['name'],
+					filters: { title: `${PREFIX} final` },
+					limit: 0,
+				});
+				return rows.length;
+			})
+			.toBe(0);
+	});
 });

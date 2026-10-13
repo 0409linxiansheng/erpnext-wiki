@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wiki VERSION\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
-"POT-Creation-Date: 2026-10-13 21:30+0806\n"
+"POT-Creation-Date: 2026-10-13 21:36+0806\n"
 "PO-Revision-Date: 2026-10-13 19:15+0806\n"
 "Last-Translator: developers@frappe.io\n"
 "Language: zh\n"
@@ -443,6 +443,7 @@ msgstr "提示框"
 
 #: frontend/src/components/AssignDialog.vue:20
 #: frontend/src/components/DraftContributionPanel.vue:124
+#: frontend/src/components/SnippetPickerDialog.vue:84
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:112
 #: frontend/src/components/SubmitForReviewButton.vue:121
 #: frontend/src/components/WikiDocumentList.vue:124
@@ -601,7 +602,7 @@ msgstr "克隆已在后台开始"
 msgid "Cloning started in background."
 msgstr "克隆已在后台开始。"
 
-#: frontend/src/components/SnippetPickerDialog.vue:72
+#: frontend/src/components/SnippetPickerDialog.vue:77
 #: frontend/src/components/SpaceModeStrip.vue:258
 msgid "Close"
 msgstr "关闭"
@@ -671,6 +672,10 @@ msgstr "已配置"
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:95
 msgid "Configured — paste a new key to replace"
 msgstr "已配置 — 粘贴新密钥即可替换"
+
+#: frontend/src/components/SnippetPickerDialog.vue:82
+msgid "Confirm delete"
+msgstr "确认删除"
 
 #. Label of the conflict_type (Select) field in DocType 'Wiki Merge Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
@@ -790,9 +795,9 @@ msgstr "无法复制网址"
 msgid "Could not copy the space name"
 msgstr "无法复制空间名称"
 
-#: frontend/src/components/SnippetPickerDialog.vue:165
-msgid "Could not create the snippet"
-msgstr "创建片段失败"
+#: frontend/src/components/SnippetPickerDialog.vue:245
+msgid "Could not delete the snippet"
+msgstr "删除片段失败"
 
 #: frontend/src/components/SpaceIdentityPicker.vue:259
 msgid "Could not generate a logo"
@@ -801,6 +806,10 @@ msgstr "无法生成图标"
 #: frontend/src/components/SpaceModeStrip.vue:347
 msgid "Could not reload from server"
 msgstr "无法从服务器重新加载"
+
+#: frontend/src/components/SnippetPickerDialog.vue:227
+msgid "Could not save the snippet"
+msgstr "保存片段失败"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:265
 #: frontend/src/stores/space.js:231
@@ -816,7 +825,7 @@ msgid "Count visits to published pages, which is what the Overview reports"
 msgstr "统计已发布页面的访问量，即概览中报告的数据"
 
 #: frontend/src/components/NewSpaceDialog.vue:12
-#: frontend/src/components/SnippetPickerDialog.vue:70
+#: frontend/src/components/SnippetPickerDialog.vue:91
 msgid "Create"
 msgstr "创建"
 
@@ -920,6 +929,7 @@ msgstr "日期范围不能超过 {0} 天"
 msgid "Default Wiki Space"
 msgstr "默认 Wiki 空间"
 
+#: frontend/src/components/SnippetPickerDialog.vue:82
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:66
 #: frontend/src/components/WikiDocumentList.vue:135
 #: frontend/src/components/WikiDocumentList.vue:168
@@ -1102,6 +1112,10 @@ msgstr "编辑路径"
 #: frontend/src/components/WikiDocumentPanel.vue:45
 msgid "Edit on GitHub"
 msgstr "在 GitHub 上编辑"
+
+#: frontend/src/components/SnippetPickerDialog.vue:50
+msgid "Edit snippet"
+msgstr "编辑片段"
 
 #: frontend/src/components/PageSettingsPanel.vue:219
 msgid "Edited by"
@@ -1706,7 +1720,7 @@ msgstr "插入 PDF"
 msgid "Insert Video"
 msgstr "插入视频"
 
-#: frontend/src/components/SnippetPickerDialog.vue:4
+#: frontend/src/components/SnippetPickerDialog.vue:5
 msgid "Insert snippet"
 msgstr "插入片段"
 
@@ -2254,7 +2268,7 @@ msgstr "待创建的新页面"
 msgid "New route is the same as current route"
 msgstr "新路径与当前路径相同"
 
-#: frontend/src/components/SnippetPickerDialog.vue:61
+#: frontend/src/components/SnippetPickerDialog.vue:76
 msgid "New snippet"
 msgstr "新建片段"
 
@@ -2369,11 +2383,11 @@ msgstr "未配置角色（对所有已登录用户开放）。"
 msgid "No roles found"
 msgstr "未找到角色"
 
-#: frontend/src/components/SnippetPickerDialog.vue:42
+#: frontend/src/components/SnippetPickerDialog.vue:58
 msgid "No snippets match"
 msgstr "没有匹配的片段"
 
-#: frontend/src/components/SnippetPickerDialog.vue:42
+#: frontend/src/components/SnippetPickerDialog.vue:58
 msgid "No snippets yet"
 msgstr "暂无片段"
 
@@ -3213,6 +3227,7 @@ msgid "Running"
 msgstr "正在运行"
 
 #: frontend/src/components/PageSettingsPanel.vue:249
+#: frontend/src/components/SnippetPickerDialog.vue:91
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:127
 #: frontend/src/components/WikiDocumentList.vue:126
 #: frontend/src/components/WikiDocumentList.vue:191
@@ -3285,7 +3300,7 @@ msgstr "搜索结果"
 msgid "Search role to add"
 msgstr "搜索要添加的角色"
 
-#: frontend/src/components/SnippetPickerDialog.vue:15
+#: frontend/src/components/SnippetPickerDialog.vue:18
 msgid "Search snippets…"
 msgstr "搜索片段…"
 
@@ -3388,21 +3403,30 @@ msgstr "大小"
 msgid "Slug"
 msgstr "别名"
 
+#: frontend/src/components/SnippetPickerDialog.vue:5
 #: frontend/src/components/tiptap-extensions/slash-commands.js:199
 msgid "Snippet"
 msgstr "片段"
 
-#: frontend/src/components/SnippetPickerDialog.vue:52
+#: frontend/src/components/SnippetPickerDialog.vue:67
 msgid "Snippet content"
 msgstr "片段内容"
 
-#: frontend/src/components/SnippetPickerDialog.vue:163
+#: frontend/src/components/SnippetPickerDialog.vue:222
 msgid "Snippet created"
 msgstr "片段已创建"
 
-#: frontend/src/components/SnippetPickerDialog.vue:48
+#: frontend/src/components/SnippetPickerDialog.vue:243
+msgid "Snippet deleted"
+msgstr "片段已删除"
+
+#: frontend/src/components/SnippetPickerDialog.vue:63
 msgid "Snippet title"
 msgstr "片段标题"
+
+#: frontend/src/components/SnippetPickerDialog.vue:217
+msgid "Snippet updated"
+msgstr "片段已更新"
 
 #: frontend/src/components/PageSettingsPanel.vue:83
 msgid "Social preview"
