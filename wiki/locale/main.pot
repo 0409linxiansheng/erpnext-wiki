@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wiki VERSION\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
-"POT-Creation-Date: 2026-10-13 21:36+0806\n"
-"PO-Revision-Date: 2026-10-13 21:36+0806\n"
+"POT-Creation-Date: 2026-10-13 22:07+0806\n"
+"PO-Revision-Date: 2026-10-13 22:07+0806\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: developers@frappe.io\n"
 "MIME-Version: 1.0\n"
@@ -395,7 +395,7 @@ msgstr ""
 msgid "Beta"
 msgstr ""
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:117
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:185
 msgid "Block Math"
 msgstr ""
 
@@ -620,7 +620,7 @@ msgstr ""
 msgid "Code"
 msgstr ""
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:74
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:142
 #: frontend/src/components/tiptap-extensions/slash-commands.js:66
 msgid "Code Block"
 msgstr ""
@@ -805,6 +805,10 @@ msgstr ""
 msgid "Could not save the snippet"
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:18
+msgid "Could not start dictation"
+msgstr ""
+
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:265
 #: frontend/src/stores/space.js:231
 msgid "Could not start sync"
@@ -987,6 +991,10 @@ msgstr ""
 
 #: frontend/src/components/tiptap-extensions/slash-commands.js:150
 msgid "Diagram"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:11
+msgid "Dictate"
 msgstr ""
 
 #: frontend/src/pages/ContributionReview.vue:253
@@ -1606,7 +1614,7 @@ msgstr ""
 msgid "Header / Robots"
 msgstr ""
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:129
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:197
 msgid "Heading"
 msgstr ""
 
@@ -1688,7 +1696,7 @@ msgstr ""
 msgid "Injected into the <head> of all public wiki pages"
 msgstr ""
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:105
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:173
 msgid "Inline Math"
 msgstr ""
 
@@ -1702,15 +1710,15 @@ msgstr ""
 msgid "Insert"
 msgstr ""
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:81
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:149
 msgid "Insert Image"
 msgstr ""
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:89
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:157
 msgid "Insert PDF"
 msgstr ""
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:97
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:165
 msgid "Insert Video"
 msgstr ""
 
@@ -3528,6 +3536,10 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:11
+msgid "Stop dictation"
+msgstr ""
+
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:55
 msgid "Stored secrets are never shown. Leave a field blank to keep its current value."
 msgstr ""
@@ -3656,7 +3668,7 @@ msgstr ""
 msgid "Table"
 msgstr ""
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:60
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:128
 #: frontend/src/components/tiptap-extensions/slash-commands.js:90
 msgid "Task List"
 msgstr ""
@@ -3904,7 +3916,7 @@ msgstr ""
 msgid "Under Review"
 msgstr ""
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:67
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:135
 msgid "Underline"
 msgstr ""
 

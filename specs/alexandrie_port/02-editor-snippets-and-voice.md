@@ -101,10 +101,33 @@ deserves, and destructive enough that one click would be careless. The e2e asser
 the deletion against the **server**, not the list — a row leaving the dialog would
 also happen if the reload merely failed.
 
-**Phase 4 — dictate.** A mic button that starts/stops `SpeechRecognition` and
-streams interim results into the editor at the caret. Capability-probed at mount
-(decision 3); a permission denial or an API error surfaces as a message and
-changes nothing in the document.
+**Phase 4 — dictate — DONE (2026-10-13).** A mic button in the editor toolbar
+starts and stops `SpeechRecognition` (`useSpeechToText.js`), which streams both
+interim and final transcripts. Where the API is missing the control is not rendered
+at all (decision 3); a denied microphone or a failed start leaves the document
+untouched and shows a message instead.
+
+Three implementation notes worth keeping:
+
+- **Interim text goes into the document, and is replaced on each update** — tracked
+  as a range, and only replaced while the caret is still where dictation left it.
+  If the user clicks or types elsewhere mid-dictation, that text is theirs and the
+  next transcript is appended. Deleting text out from under a moving caret is the
+  failure mode this guard exists for.
+- **A transcript is inserted as an explicit text node**, not through the markdown
+  path: dictated text is text, and `insertContent('*')` would otherwise be parsed as
+  markdown.
+- **Recognition language follows `frappe.boot.lang`**, with the bare `zh` this site
+  serves mapped to `zh-CN`; unset means "whatever the browser would use".
+
+Verified by e2e with a **stub recogniser** (`page.addInitScript`): a test cannot
+speak, but it can prove the wiring — an interim transcript lands and is then
+replaced rather than duplicated (one "dictation" in the document, not two). The
+capability path gets its own test that removes the API first, because headless
+Chromium exposes one natively and "no button" would otherwise be luck.
+
+Its three strings are recorded and left untranslated under the bulk-translation
+workflow.
 
 **Phase 5 — diagrams, parity check.** Walk the existing node view against
 Alexandrie's: insert from the slash menu, edit the source, recover from invalid

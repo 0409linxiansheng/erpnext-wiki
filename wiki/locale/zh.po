@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wiki VERSION\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
-"POT-Creation-Date: 2026-10-13 21:36+0806\n"
+"POT-Creation-Date: 2026-10-13 22:07+0806\n"
 "PO-Revision-Date: 2026-10-13 19:15+0806\n"
 "Last-Translator: developers@frappe.io\n"
 "Language: zh\n"
@@ -401,7 +401,7 @@ msgstr "基础修订"
 msgid "Beta"
 msgstr "测试版"
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:117
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:185
 msgid "Block Math"
 msgstr "块级公式"
 
@@ -626,7 +626,7 @@ msgstr "已关闭"
 msgid "Code"
 msgstr "代码"
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:74
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:142
 #: frontend/src/components/tiptap-extensions/slash-commands.js:66
 msgid "Code Block"
 msgstr "代码块"
@@ -811,6 +811,10 @@ msgstr "无法从服务器重新加载"
 msgid "Could not save the snippet"
 msgstr "保存片段失败"
 
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:18
+msgid "Could not start dictation"
+msgstr ""
+
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:265
 #: frontend/src/stores/space.js:231
 msgid "Could not start sync"
@@ -994,6 +998,10 @@ msgstr "详情"
 #: frontend/src/components/tiptap-extensions/slash-commands.js:150
 msgid "Diagram"
 msgstr "图表"
+
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:11
+msgid "Dictate"
+msgstr ""
 
 #: frontend/src/pages/ContributionReview.vue:253
 msgid "Diff"
@@ -1612,7 +1620,7 @@ msgstr "页眉与 Robots"
 msgid "Header / Robots"
 msgstr "页眉 / Robots"
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:129
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:197
 msgid "Heading"
 msgstr "标题"
 
@@ -1694,7 +1702,7 @@ msgstr "包含内部链接？"
 msgid "Injected into the <head> of all public wiki pages"
 msgstr "注入到所有公开 Wiki 页面的 <head> 中"
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:105
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:173
 msgid "Inline Math"
 msgstr "行内公式"
 
@@ -1708,15 +1716,15 @@ msgstr "行内公式"
 msgid "Insert"
 msgstr "插入"
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:81
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:149
 msgid "Insert Image"
 msgstr "插入图片"
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:89
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:157
 msgid "Insert PDF"
 msgstr "插入 PDF"
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:97
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:165
 msgid "Insert Video"
 msgstr "插入视频"
 
@@ -3534,6 +3542,10 @@ msgstr "正在开始克隆…"
 msgid "Status"
 msgstr "状态"
 
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:11
+msgid "Stop dictation"
+msgstr ""
+
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:55
 msgid "Stored secrets are never shown. Leave a field blank to keep its current value."
 msgstr "已存储的密钥不会显示。留空则保持当前值不变。"
@@ -3662,7 +3674,7 @@ msgstr "标签图标"
 msgid "Table"
 msgstr "表格"
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:60
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:128
 #: frontend/src/components/tiptap-extensions/slash-commands.js:90
 msgid "Task List"
 msgstr "任务列表"
@@ -3910,7 +3922,7 @@ msgstr "暂时无法下载此页面。"
 msgid "Under Review"
 msgstr "审阅中"
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:67
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:135
 msgid "Underline"
 msgstr "下划线"
 
