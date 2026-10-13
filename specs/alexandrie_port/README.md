@@ -90,8 +90,8 @@ Difficulty is effort on *this* stack, not in Alexandrie.
 
 | # | Spec | What | Depends on |
 |---|------|------|-----------|
-| 01 ✎ | [01-editor-math-and-containers.md](01-editor-math-and-containers.md) | LaTeX node, task-list verification, container/frame parity across all render surfaces | — |
-| 02 | `02-editor-snippets-and-voice.md` | Snippet manager, speech-to-text, in-editor diagram editing | 01 |
+| 01 ✅ | [01-editor-math-and-containers.md](01-editor-math-and-containers.md) | LaTeX node, task-list verification, container/frame parity across all render surfaces | — |
+| 02 ✅ | [02-editor-snippets-and-voice.md](02-editor-snippets-and-voice.md) | Snippet manager, speech-to-text, in-editor diagram editing | 01 |
 | 03 | `03-search-and-command-palette.md` | Ranking calibration, action + cross-space results in the palette, Overview search surface | — |
 | 04 | `04-kanban-task-board.md` | `Wiki Task` docType + board view bound to a space | — |
 | 05 | `05-page-level-access-control.md` | Node-scoped 5-level ACL with tree inheritance | **prd.md (change requests) must land first** |
