@@ -139,7 +139,10 @@ interchangeable; 05 is sequenced by the dependency, 08 by infrastructure.
 
 ## Open questions (need sign-off)
 
-1. Snippet ownership: per-user library, per-space, or both? (blocks spec 02)
+1. ~~Snippet ownership: per-user library, per-space, or both?~~ **Decided
+   2026-10-13: per-user library for v1, with a nullable `wiki_space` link on
+   `Wiki Snippet` from the first commit** so space-shared snippets are additive
+   later rather than a schema change. Spec 02 is unblocked.
 2. Kanban: is a task board genuinely wanted, or is it a "nice to have" that should
    stay out? (blocks spec 04)
 3. 5-level ACL: do the five levels need to be first-class, or is Read/Write/Admin
