@@ -29,7 +29,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:177
 msgid "1 page"
-msgstr ""
+msgstr "1 页"
 
 #: frontend/src/components/PageMetaLine.vue:73
 msgid "1 view in last 30 days"
@@ -86,7 +86,7 @@ msgstr "显示在搜索结果和链接预览中的简短摘要"
 
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:100
 msgid "A space is connected to GitHub when it is created. A connected space is read-only in the editor — its pages come from the repository."
-msgstr ""
+msgstr "空间在创建时连接 GitHub。已连接的空间在编辑器中为只读 — 其页面来自仓库。"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:481
 msgid "A tab must stay at the top level. Remove the tab flag first to move it."
@@ -96,7 +96,7 @@ msgstr ""
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:94
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Accept Contributions"
-msgstr ""
+msgstr "接受投稿"
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:32
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:46
@@ -126,7 +126,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:345
 msgid "Access control updated"
-msgstr ""
+msgstr "访问权限已更新"
 
 #: frontend/src/components/CommandPalette.vue:398
 #: wiki/templates/wiki/includes/search_modal.html:60
@@ -140,11 +140,11 @@ msgstr "添加"
 
 #: frontend/src/components/WikiDocumentList.vue:200
 msgid "Add External Link"
-msgstr ""
+msgstr "添加外部链接"
 
 #: frontend/src/components/WikiDocumentList.vue:96
 msgid "Add a group or link"
-msgstr ""
+msgstr "添加分组或链接"
 
 #. Name of a role
 #: frontend/src/pages/AllSpaces.vue:349
@@ -166,7 +166,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:176
 msgid "All its pages"
-msgstr ""
+msgstr "其全部页面"
 
 #: frontend/src/pages/Overview.vue:257
 msgid "All spaces"
@@ -191,7 +191,7 @@ msgstr ""
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:66
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:170
 msgid "Analytics"
-msgstr ""
+msgstr "分析"
 
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:215
 msgid "Another page with the route '{0}' already exists: {1}"
@@ -243,7 +243,7 @@ msgstr ""
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "Approved"
-msgstr ""
+msgstr "已批准"
 
 #. Label of the approved_by (Link) field in DocType 'Wiki Page Patch'
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
@@ -256,7 +256,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceModeStrip.vue:148
 msgid "Approved! Ready to merge."
-msgstr ""
+msgstr "已批准！可以合并了。"
 
 #. Option for the 'Status' (Select) field in DocType 'Wiki Change Request'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
@@ -270,7 +270,7 @@ msgstr ""
 
 #: frontend/src/components/WikiDocumentList.vue:141
 msgid "Are you sure you want to delete this"
-msgstr ""
+msgstr "确定要删除此项吗"
 
 #: wiki/templates/wiki/document.html:57 wiki/templates/wiki/document.html:71
 msgid "Ask ChatGPT about this page"
@@ -374,7 +374,7 @@ msgstr ""
 #: frontend/src/components/SpaceTreePanel.vue:9
 #: frontend/src/components/SpaceTreePanel.vue:13
 msgid "Back to All Spaces"
-msgstr ""
+msgstr "返回全部空间"
 
 #. Option for the 'Type' (Select) field in DocType 'Wiki Feedback'
 #: wiki/templates/wiki/includes/feedback_widget.html:8
@@ -394,7 +394,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:49
 msgid "Beta"
-msgstr ""
+msgstr "测试版"
 
 #. Label of the branch (Data) field in DocType 'Wiki GitHub Webhook Log'
 #. Label of the branch (Data) field in DocType 'Wiki Space'
@@ -446,7 +446,7 @@ msgstr ""
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 #: wiki/frappe_wiki/doctype/wiki_revision/wiki_revision.json
 msgid "Change Request"
-msgstr ""
+msgstr "变更请求"
 
 #: frontend/src/components/CommandPalette.vue:230
 #: frontend/src/components/LibrarySidebar.vue:279
@@ -460,7 +460,7 @@ msgstr "变更请求"
 #: frontend/src/components/WikiDocumentList.vue:177
 #: frontend/src/components/WikiTree.vue:402
 msgid "Change Title"
-msgstr ""
+msgstr "修改标题"
 
 #: frontend/src/pages/ContributionReview.vue:770
 msgid "Change request approved"
@@ -497,7 +497,7 @@ msgstr "修改路径"
 
 #: frontend/src/components/SpaceIdentityPicker.vue:12
 msgid "Change space logo"
-msgstr ""
+msgstr "更换空间图标"
 
 #: frontend/src/pages/ContributionReview.vue:175
 msgid "Changes"
@@ -515,7 +515,7 @@ msgstr ""
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "Changes Requested"
-msgstr ""
+msgstr "已要求修改"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1472
 msgid "Changes were requested on your change request “{0}”."
@@ -523,12 +523,12 @@ msgstr ""
 
 #: frontend/src/components/SpaceWelcome.vue:30
 msgid "Choose a page from the tree on the left."
-msgstr ""
+msgstr "请从左侧目录树中选择一个页面。"
 
 #: frontend/src/components/WikiDocumentList.vue:17
 #: frontend/src/components/WikiDocumentList.vue:18
 msgid "Clear search"
-msgstr ""
+msgstr "清除搜索"
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:154
 msgid "Click a month to see its days"
@@ -557,11 +557,11 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:56
 msgid "Clone"
-msgstr ""
+msgstr "克隆"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:52
 msgid "Clone Space"
-msgstr ""
+msgstr "克隆空间"
 
 #: frontend/src/pages/SpaceDetails.vue:113
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:8
@@ -579,7 +579,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceModeStrip.vue:258
 msgid "Close"
-msgstr ""
+msgstr "关闭"
 
 #: frontend/src/components/PageSettingsPanel.vue:15
 #: frontend/src/components/PageSettingsPanel.vue:18
@@ -606,7 +606,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:105
 msgid "Collect Feedback"
-msgstr ""
+msgstr "收集反馈"
 
 #. Label of the commit_sha (Data) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
@@ -709,11 +709,11 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:309
 msgid "Contributions disabled"
-msgstr ""
+msgstr "已关闭投稿"
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:309
 msgid "Contributions enabled"
-msgstr ""
+msgstr "已开启投稿"
 
 #. Label of the auto_convert_images_to_webp (Check) field in DocType 'Wiki
 #. Settings'
@@ -748,28 +748,28 @@ msgstr ""
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:79
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:84
 msgid "Copy webhook URL"
-msgstr ""
+msgstr "复制 Webhook 网址"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:221
 msgid "Could not copy URL"
-msgstr ""
+msgstr "无法复制网址"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:244
 msgid "Could not copy the space name"
-msgstr ""
+msgstr "无法复制空间名称"
 
 #: frontend/src/components/SpaceIdentityPicker.vue:259
 msgid "Could not generate a logo"
-msgstr ""
+msgstr "无法生成图标"
 
 #: frontend/src/components/SpaceModeStrip.vue:347
 msgid "Could not reload from server"
-msgstr ""
+msgstr "无法从服务器重新加载"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:265
 #: frontend/src/stores/space.js:231
 msgid "Could not start sync"
-msgstr ""
+msgstr "无法启动同步"
 
 #: frontend/src/components/NewSpaceDialog.vue:543
 msgid "Could not verify the branch on GitHub."
@@ -795,7 +795,7 @@ msgstr ""
 
 #: frontend/src/components/WikiDocumentList.vue:447
 msgid "Create New Group"
-msgstr ""
+msgstr "新建分组"
 
 #. Description of the 'Create New Assets ' (Check) field in DocType 'Migrate To
 #. Wiki'
@@ -805,7 +805,7 @@ msgstr ""
 
 #: frontend/src/components/WikiDocumentList.vue:447
 msgid "Create New Page"
-msgstr ""
+msgstr "新建页面"
 
 #: frontend/src/components/NewSpaceDialog.vue:8
 msgid "Create Wiki Space"
@@ -813,11 +813,11 @@ msgstr "创建 Wiki 空间"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:53
 msgid "Create a new space with the same structure"
-msgstr ""
+msgstr "创建一个结构相同的新空间"
 
 #: frontend/src/components/SpaceWelcome.vue:84
 msgid "Create your first page"
-msgstr ""
+msgstr "创建你的第一个页面"
 
 #: frontend/src/components/WikiDocumentList.vue:43
 msgid "Create your first page to get started"
@@ -889,7 +889,7 @@ msgstr ""
 #: frontend/src/components/WikiDocumentPanel.vue:554
 #: frontend/src/components/WikiTree.vue:419
 msgid "Delete"
-msgstr ""
+msgstr "删除"
 
 #: frontend/src/components/DraftContributionPanel.vue:424
 msgid "Delete Draft"
@@ -898,11 +898,11 @@ msgstr "删除草稿"
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:62
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:121
 msgid "Delete Space"
-msgstr ""
+msgstr "删除空间"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:73
 msgid "Delete Space {0}"
-msgstr ""
+msgstr "删除空间 {0}"
 
 #. Label of the deleted_count (Int) field in DocType 'Wiki Git Sync Log'
 #: frontend/src/components/WikiTree.vue:67
@@ -965,11 +965,11 @@ msgstr "放弃"
 
 #: frontend/src/components/SpaceModeStrip.vue:430
 msgid "Discard Changes"
-msgstr ""
+msgstr "放弃修改"
 
 #: frontend/src/components/SpaceModeStrip.vue:102
 msgid "Discard local failed changes and adopt server state"
-msgstr ""
+msgstr "放弃本地失败的修改并采用服务器状态"
 
 #. Label of the doc_count (Int) field in DocType 'Wiki Revision'
 #: wiki/frappe_wiki/doctype/wiki_revision/wiki_revision.json
@@ -997,7 +997,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:36
 msgid "Docs Folder"
-msgstr ""
+msgstr "文档文件夹"
 
 #. Label of the docs_subdir (Data) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -1039,7 +1039,7 @@ msgstr "未找到草稿"
 
 #: frontend/src/components/SpaceModeStrip.vue:441
 msgid "Drafting Changes"
-msgstr ""
+msgstr "正在起草修改"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1159
 msgid "Each operation must be an object"
@@ -1257,7 +1257,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:85
 msgid "Every change request"
-msgstr ""
+msgstr "所有变更请求"
 
 #: frontend/src/components/WikiTree.vue:23
 msgid "Expand"
@@ -1281,11 +1281,11 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:252
 msgid "Failed to delete the space"
-msgstr ""
+msgstr "删除空间失败"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:227
 msgid "Failed to rename the space"
-msgstr ""
+msgstr "重命名空间失败"
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:224
 msgid "Failed to save configuration"
@@ -1297,19 +1297,19 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:347
 msgid "Failed to update access control"
-msgstr ""
+msgstr "更新访问权限失败"
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:314
 msgid "Failed to update contributions setting"
-msgstr ""
+msgstr "更新投稿设置失败"
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:330
 msgid "Failed to update the feedback setting"
-msgstr ""
+msgstr "更新反馈设置失败"
 
 #: frontend/src/components/SpaceSettings/NavigationPanel.vue:87
 msgid "Failed to update the order"
-msgstr ""
+msgstr "更新排序失败"
 
 #: frontend/src/composables/useSpaceIdentitySaver.js:26
 msgid "Failed to update the space logo"
@@ -1317,7 +1317,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/NavigationPanel.vue:66
 msgid "Failed to update the switcher"
-msgstr ""
+msgstr "更新空间切换器失败"
 
 #: frontend/src/components/PageSettingsPanel.vue:475
 msgid "Failed to upload image"
@@ -1325,7 +1325,7 @@ msgstr "图片上传失败"
 
 #: frontend/src/components/SpaceIdentityPicker.vue:300
 msgid "Failed to upload logo"
-msgstr ""
+msgstr "图标上传失败"
 
 #. Label of the favicon (Attach Image) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -1374,7 +1374,7 @@ msgstr ""
 #: frontend/src/components/LibrarySidebar.vue:11
 #: wiki/templates/wiki/layout.html:9
 msgid "Frappe Wiki"
-msgstr ""
+msgstr "Frappe Wiki"
 
 #: wiki/api/analytics.py:214
 msgid "From Date must be on or before To Date"
@@ -1397,7 +1397,7 @@ msgstr "常规"
 
 #: frontend/src/components/SpaceIdentityPicker.vue:67
 msgid "Generate"
-msgstr ""
+msgstr "生成"
 
 #: frontend/src/components/WikiSettings/GeneralPanel.vue:25
 msgid "Generate a branded social preview image for pages that have no Meta Image uploaded"
@@ -1425,7 +1425,7 @@ msgstr ""
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:172
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Git Sync"
-msgstr ""
+msgstr "Git 同步"
 
 #: wiki/wiki/doctype/wiki_space/wiki_space.py:153
 msgid "Git Sync cannot be toggled after a space is created."
@@ -1574,7 +1574,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceIdentityPicker.vue:167
 msgid "Icon"
-msgstr ""
+msgstr "图标"
 
 #: frontend/src/components/SpaceIdentityPicker.vue:63
 msgid "Icons"
@@ -1594,7 +1594,7 @@ msgstr ""
 #: frontend/src/components/SpaceModeStrip.vue:445
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 msgid "In Review"
-msgstr ""
+msgstr "审阅中"
 
 #: wiki/wiki/report/wiki_broken_links/wiki_broken_links.js:14
 msgid "Include images?"
@@ -1770,7 +1770,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:50
 msgid "Last Synced"
-msgstr ""
+msgstr "上次同步"
 
 #. Label of the last_synced_commit_sha (Data) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -1788,7 +1788,7 @@ msgstr "最后编辑"
 
 #: frontend/src/components/SpaceModeStrip.vue:318
 msgid "Last synced {0}"
-msgstr ""
+msgstr "上次同步 {0}"
 
 #: wiki/templates/wiki/document.html:124
 #: wiki/templates/wiki/includes/sidebar.html:244
@@ -1814,7 +1814,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:173
 msgid "Let readers propose edits via change requests. Users with write access can always edit."
-msgstr ""
+msgstr "允许读者通过变更请求提出修改。具有写入权限的用户始终可以直接编辑。"
 
 #. Label of the light_mode_logo (Attach Image) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -1832,7 +1832,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/NavigationPanel.vue:6
 msgid "List this space in the switcher and on the overview page"
-msgstr ""
+msgstr "在空间切换器和概览页中列出此空间"
 
 #: frontend/src/components/ContributionsPanel.vue:162
 #: frontend/src/pages/AllSpaces.vue:263
@@ -1869,7 +1869,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/NavigationPanel.vue:19
 msgid "Lower numbers come first; spaces that tie are ordered by name"
-msgstr ""
+msgstr "数字越小越靠前；数值相同的空间按名称排序"
 
 #. Label of the main_revision (Link) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -1878,7 +1878,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:29
 msgid "Make this wiki space publicly accessible"
-msgstr ""
+msgstr "将此 Wiki 空间设为公开可访问"
 
 #. Option for the 'Trigger' (Select) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
@@ -1895,7 +1895,7 @@ msgstr "菜单"
 #: frontend/src/components/SpaceModeStrip.vue:160
 #: frontend/src/pages/ContributionReview.vue:49
 msgid "Merge"
-msgstr ""
+msgstr "合并"
 
 #: frontend/src/pages/ContributionReview.vue:87
 msgid "Merge Conflicts"
@@ -1918,7 +1918,7 @@ msgstr ""
 #: frontend/src/components/SpaceModeStrip.vue:457
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 msgid "Merged"
-msgstr ""
+msgstr "已合并"
 
 #. Label of the merged_at (Datetime) field in DocType 'Wiki Change Request'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
@@ -2045,11 +2045,11 @@ msgstr "导航"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:51
 msgid "Never"
-msgstr ""
+msgstr "从未"
 
 #: frontend/src/components/SpaceModeStrip.vue:317
 msgid "Never synced"
-msgstr ""
+msgstr "从未同步"
 
 #. Label of the new (Check) field in DocType 'Wiki Page Patch'
 #: frontend/src/composables/useChangeTypeDisplay.js:10
@@ -2142,7 +2142,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:173
 msgid "No .wiki.yml or .wiki.json in the docs folder — the page tree is inferred from the docs folder."
-msgstr ""
+msgstr "文档文件夹中没有 .wiki.yml 或 .wiki.json — 页面树将根据文档文件夹推断。"
 
 #. Option for the 'Status' (Select) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
@@ -2177,7 +2177,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:299
 msgid "No changes"
-msgstr ""
+msgstr "无修改"
 
 #: frontend/src/pages/ContributionReview.vue:313
 msgid "No changes in this change request."
@@ -2193,7 +2193,7 @@ msgstr "无匹配结果"
 
 #: frontend/src/components/SpaceWelcome.vue:89
 msgid "No pages have come across from the repository."
-msgstr ""
+msgstr "仓库中还没有任何页面同步过来。"
 
 #: frontend/src/components/WikiDocumentList.vue:42
 msgid "No pages have synced from the repository yet"
@@ -2209,7 +2209,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceModeStrip.vue:252
 msgid "No pending changes"
-msgstr ""
+msgstr "无待处理修改"
 
 #: frontend/src/pages/ContributionReview.vue:276
 msgid "No published version yet."
@@ -2217,7 +2217,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:21
 msgid "No repository configured"
-msgstr ""
+msgstr "未配置仓库"
 
 #: frontend/src/components/CommandPalette.vue:96
 msgid "No results"
@@ -2230,11 +2230,11 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:76
 msgid "No roles configured (open to all logged-in users)."
-msgstr ""
+msgstr "未配置角色（对所有已登录用户开放）。"
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:17
 msgid "No roles found"
-msgstr ""
+msgstr "未找到角色"
 
 #: frontend/src/pages/AllSpaces.vue:72
 msgid "No spaces found"
@@ -2242,7 +2242,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:162
 msgid "No sync runs yet"
-msgstr ""
+msgstr "尚无同步记录"
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:74
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:82
@@ -2257,7 +2257,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:96
 msgid "Not connected to a repository"
-msgstr ""
+msgstr "未连接仓库"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:883
 msgid "Not permitted"
@@ -2299,7 +2299,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceWelcome.vue:83
 msgid "Nothing synced yet"
-msgstr ""
+msgstr "尚未同步任何内容"
 
 #. Option for the 'Type' (Select) field in DocType 'Wiki Feedback'
 #: wiki/templates/wiki/includes/feedback_widget.html:9
@@ -2330,7 +2330,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:88
 msgid "Only space admins can change access control."
-msgstr ""
+msgstr "只有空间管理员可以修改访问权限。"
 
 #: wiki/permissions.py:163
 msgid "Only space editors can create or change tabs."
@@ -2392,7 +2392,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/NavigationPanel.vue:17
 msgid "Order"
-msgstr ""
+msgstr "排序"
 
 #. Label of the order_index (Int) field in DocType 'Wiki Revision Item'
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
@@ -2435,7 +2435,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceIdentityPicker.vue:113
 msgid "PNG or SVG, shown at a small size."
-msgstr ""
+msgstr "PNG 或 SVG，以小尺寸显示。"
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:20
 msgid "Page"
@@ -2489,15 +2489,15 @@ msgstr "页面"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:40
 msgid "Pages are read from the repository root"
-msgstr ""
+msgstr "页面从仓库根目录读取"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:39
 msgid "Pages are read from this folder in the repository"
-msgstr ""
+msgstr "页面从仓库中的此文件夹读取"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:183
 msgid "Pages live under /{0}/…"
-msgstr ""
+msgstr "页面位于 /{0}/… 之下"
 
 #. Label of the parent_key (Data) field in DocType 'Wiki Revision Item'
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
@@ -2546,11 +2546,11 @@ msgstr ""
 
 #: frontend/src/components/SpaceModeStrip.vue:174
 msgid "Pending Changes"
-msgstr ""
+msgstr "待处理修改"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:63
 msgid "Permanently delete this space and all its pages"
-msgstr ""
+msgstr "永久删除此空间及其所有页面"
 
 #. Label of the permission_level (Select) field in DocType 'Wiki Space Role'
 #: wiki/wiki/doctype/wiki_space_role/wiki_space_role.json
@@ -2559,7 +2559,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceWelcome.vue:27
 msgid "Pick a page to edit"
-msgstr ""
+msgstr "选择一个页面开始编辑"
 
 #: frontend/src/components/LibrarySidebar.vue:199
 msgid "Pin to top"
@@ -2613,7 +2613,7 @@ msgstr ""
 #: frontend/src/components/SpaceModeStrip.vue:400
 #: frontend/src/composables/useChangeRequestActions.js:115
 msgid "Please wait for reordering to finish before merging"
-msgstr ""
+msgstr "请等待重新排序完成后再合并"
 
 #: frontend/src/pages/ContributionReview.vue:702
 msgid "Position"
@@ -2673,11 +2673,11 @@ msgstr ""
 
 #: frontend/src/components/SpaceWelcome.vue:11
 msgid "Pulling the latest pages from GitHub. This will only take a moment."
-msgstr ""
+msgstr "正在从 GitHub 拉取最新页面，请稍候。"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:71
 msgid "Pushes to the repository sync automatically via this webhook URL:"
-msgstr ""
+msgstr "推送到仓库后会通过此 Webhook 网址自动同步："
 
 #. Label of the raised_by (Link) field in DocType 'Wiki Page Patch'
 #. Label of the raised_by (Link) field in DocType 'Wiki Page Revision'
@@ -2713,7 +2713,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:85
 msgid "Readable by all logged-in users if no roles are set. Add the Guest role for public/anonymous access."
-msgstr ""
+msgstr "未设置角色时，所有已登录用户均可阅读。如需公开/匿名访问，请添加 Guest 角色。"
 
 #: frontend/src/components/PageSettingsPanel.vue:209
 msgid "Reading time"
@@ -2721,7 +2721,7 @@ msgstr "阅读时间"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:68
 msgid "Real-time Sync"
-msgstr ""
+msgstr "实时同步"
 
 #: frontend/src/pages/ContributionReview.vue:387
 msgid "Reason"
@@ -2774,7 +2774,7 @@ msgstr ""
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "Rejected"
-msgstr ""
+msgstr "已拒绝"
 
 #. Label of the rejected_at (Datetime) field in DocType 'Wiki Change Request'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
@@ -2791,15 +2791,15 @@ msgstr ""
 
 #: frontend/src/components/SpaceModeStrip.vue:105
 msgid "Reload latest"
-msgstr ""
+msgstr "重新加载最新"
 
 #: frontend/src/components/SpaceModeStrip.vue:382
 msgid "Reload latest before merging"
-msgstr ""
+msgstr "合并前请先重新加载最新"
 
 #: frontend/src/components/SubmitForReviewButton.vue:92
 msgid "Reload latest before submitting"
-msgstr ""
+msgstr "提交前请先重新加载最新"
 
 #: frontend/src/composables/useChangeRequestActions.js:25
 msgid "Reload latest before {0}"
@@ -2812,11 +2812,11 @@ msgstr "移除"
 
 #: frontend/src/components/SpaceModeStrip.vue:391
 msgid "Remove failed uploads before merging"
-msgstr ""
+msgstr "合并前请先移除失败的上传"
 
 #: frontend/src/components/SubmitForReviewButton.vue:101
 msgid "Remove failed uploads before submitting"
-msgstr ""
+msgstr "提交前请先移除失败的上传"
 
 #: frontend/src/composables/useChangeRequestActions.js:34
 msgid "Remove failed uploads before {0}"
@@ -2902,11 +2902,11 @@ msgstr ""
 
 #: frontend/src/components/SpaceModeStrip.vue:385
 msgid "Resolve failed changes before merging"
-msgstr ""
+msgstr "合并前请先处理失败的修改"
 
 #: frontend/src/components/SubmitForReviewButton.vue:95
 msgid "Resolve failed changes before submitting"
-msgstr ""
+msgstr "提交前请先处理失败的修改"
 
 #: frontend/src/composables/useChangeRequestActions.js:28
 msgid "Resolve failed changes before {0}"
@@ -2997,7 +2997,7 @@ msgstr ""
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:31
 #: wiki/wiki/doctype/wiki_space_role/wiki_space_role.json
 msgid "Role"
-msgstr ""
+msgstr "角色"
 
 #. Label of the roles (Table) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -3031,7 +3031,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:19
 msgid "Route Prefix"
-msgstr ""
+msgstr "路径前缀"
 
 #: wiki/wiki/doctype/wiki_space/wiki_space.py:270
 #: wiki/wiki/doctype/wiki_space/wiki_space.py:349
@@ -3075,7 +3075,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceModeStrip.vue:397
 msgid "Save your changes before merging"
-msgstr ""
+msgstr "合并前请先保存修改"
 
 #: frontend/src/composables/useChangeRequestActions.js:40
 msgid "Save your changes before {0}"
@@ -3125,7 +3125,7 @@ msgstr "搜索结果"
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:15
 msgid "Search role to add"
-msgstr ""
+msgstr "搜索要添加的角色"
 
 #: frontend/src/pages/AllSpaces.vue:57
 msgid "Search spaces..."
@@ -3178,7 +3178,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:107
 msgid "Show a feedback widget on wiki pages to collect user reactions"
-msgstr ""
+msgstr "在 Wiki 页面上显示反馈组件以收集用户反馈"
 
 #: frontend/src/components/WikiSettings/GeneralPanel.vue:7
 msgid "Show an auto-generated table of contents on wiki pages"
@@ -3186,7 +3186,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/NavigationPanel.vue:4
 msgid "Show in Space Switcher"
-msgstr ""
+msgstr "在空间切换器中显示"
 
 #. Label of the show_in_switcher (Check) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -3199,15 +3199,15 @@ msgstr "显示整个空间"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:41
 msgid "Shown in the reader header and on generated social preview images"
-msgstr ""
+msgstr "显示在读者页页眉和生成的社交预览图片上"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:5
 msgid "Shown in the sidebar, the switcher and the reader header"
-msgstr ""
+msgstr "显示在侧边栏、空间切换器和读者页页眉"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:167
 msgid "Sidebar configuration"
-msgstr ""
+msgstr "侧边栏配置"
 
 #. Label of the signature (Data) field in DocType 'Wiki GitHub Webhook Log'
 #: wiki/wiki/doctype/wiki_github_webhook_log/wiki_github_webhook_log.json
@@ -3249,7 +3249,7 @@ msgstr ""
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:8
 #: frontend/src/pages/AllSpaces.vue:105
 msgid "Space"
-msgstr ""
+msgstr "空间"
 
 #. Label of the space_color (Data) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -3263,7 +3263,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:39
 msgid "Space Logo"
-msgstr ""
+msgstr "空间图标"
 
 #. Label of the space_name (Data) field in DocType 'Wiki Space'
 #: frontend/src/components/NewSpaceDialog.vue:33
@@ -3274,15 +3274,15 @@ msgstr "空间名称"
 
 #: frontend/src/components/SpaceSidebar.vue:44
 msgid "Space actions"
-msgstr ""
+msgstr "空间操作"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:12
 msgid "Space name"
-msgstr ""
+msgstr "空间名称"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:242
 msgid "Space name copied"
-msgstr ""
+msgstr "空间名称已复制"
 
 #: frontend/src/components/CommandPalette.vue:332
 #: frontend/src/components/LibrarySidebar.vue:204
@@ -3343,12 +3343,12 @@ msgstr "主题"
 #: frontend/src/components/SubmitForReviewButton.vue:126
 #: wiki/templates/wiki/includes/feedback_widget.html:54
 msgid "Submit"
-msgstr ""
+msgstr "提交"
 
 #: frontend/src/components/SubmitForReviewButton.vue:16
 #: frontend/src/components/SubmitForReviewButton.vue:26
 msgid "Submit for review"
-msgstr ""
+msgstr "提交审阅"
 
 #. Option for the 'Status' (Select) field in DocType 'Wiki Git Sync Log'
 #. Option for the 'Last Sync Status' (Select) field in DocType 'Wiki Space'
@@ -3369,7 +3369,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:96
 msgid "Sync History"
-msgstr ""
+msgstr "同步历史"
 
 #: frontend/src/components/WikiTree.vue:52
 #: frontend/src/composables/useSyncState.js:31
@@ -3385,7 +3385,7 @@ msgstr ""
 #: frontend/src/components/SpaceWelcome.vue:8 frontend/src/stores/space.js:63
 #: frontend/src/stores/space.js:67
 msgid "Sync in progress"
-msgstr ""
+msgstr "正在同步"
 
 #: frontend/src/components/SpaceModeStrip.vue:43
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:29
@@ -3396,7 +3396,7 @@ msgstr "立即同步"
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:254
 #: frontend/src/stores/space.js:226
 msgid "Sync started — pulling the latest from GitHub"
-msgstr ""
+msgstr "已开始同步 — 正在从 GitHub 拉取最新内容"
 
 #. Label of the synced_spaces (Small Text) field in DocType 'Wiki GitHub
 #. Webhook Log'
@@ -3416,7 +3416,7 @@ msgstr "从 GitHub 同步？"
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:177
 msgid "Synced spaces are read-only, so contributions are always off."
-msgstr ""
+msgstr "同步的空间为只读，因此投稿始终关闭。"
 
 #: frontend/src/components/WikiTree.vue:57
 #: frontend/src/components/WikiTree.vue:58
@@ -3482,7 +3482,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:84
 msgid "Their revision history"
-msgstr ""
+msgstr "其修订历史"
 
 #. Label of the theirs_payload (JSON) field in DocType 'Wiki Merge Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
@@ -3519,7 +3519,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:80
 msgid "This cannot be undone. Deleting the space also removes:"
-msgstr ""
+msgstr "此操作无法撤销。删除空间还会移除："
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:111
 msgid "This change request is {0} and cannot be changed."
@@ -3551,7 +3551,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceWelcome.vue:90
 msgid "This space doesn't have any pages yet."
-msgstr ""
+msgstr "此空间还没有任何页面。"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:98
 msgid "This wiki space is not accepting contributions."
@@ -3663,7 +3663,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:168
 msgid "Type {0} to confirm"
-msgstr ""
+msgstr "输入 {0} 以确认"
 
 #: frontend/src/components/WikiDocumentList.vue:207
 #: frontend/src/components/WikiDocumentList.vue:231
@@ -3753,19 +3753,19 @@ msgstr ""
 #: frontend/src/components/SpaceIdentityPicker.vue:88
 #: frontend/src/components/SpaceIdentityPicker.vue:168
 msgid "Upload"
-msgstr ""
+msgstr "上传"
 
 #: frontend/src/components/PageSettingsPanel.vue:140
 msgid "Upload image"
-msgstr ""
+msgstr "上传图片"
 
 #: frontend/src/components/PageSettingsPanel.vue:140
 msgid "Uploading..."
-msgstr ""
+msgstr "上传中…"
 
 #: frontend/src/components/SpaceIdentityPicker.vue:101
 msgid "Use this image"
-msgstr ""
+msgstr "使用此图片"
 
 #. Label of the user (Link) field in DocType 'Wiki GitHub Connection'
 #: wiki/wiki/doctype/wiki_github_connection/wiki_github_connection.json
@@ -3779,16 +3779,16 @@ msgstr ""
 
 #: frontend/src/components/SpaceModeStrip.vue:421
 msgid "View changes ({0})"
-msgstr ""
+msgstr "查看修改（{0}）"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:59
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:149
 msgid "View commit on GitHub"
-msgstr ""
+msgstr "在 GitHub 上查看提交"
 
 #: frontend/src/components/PageSettingsPanel.vue:235
 msgid "View in Desk"
-msgstr ""
+msgstr "在 Desk 中查看"
 
 #: frontend/src/components/WikiDocumentPanel.vue:14
 #: frontend/src/components/WikiDocumentPanel.vue:18
@@ -3797,12 +3797,12 @@ msgstr ""
 
 #: frontend/src/components/SpaceSidebar.vue:121
 msgid "View live site"
-msgstr ""
+msgstr "查看线上站点"
 
 #: frontend/src/components/SpaceTreePanel.vue:25
 #: frontend/src/components/SpaceTreePanel.vue:30
 msgid "View space"
-msgstr ""
+msgstr "查看空间"
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:38
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:135
@@ -3820,15 +3820,15 @@ msgstr "浏览量趋势"
 
 #: frontend/src/components/PageSettingsPanel.vue:58
 msgid "Visible on the public site"
-msgstr ""
+msgstr "在公开站点可见"
 
 #: frontend/src/components/SpaceModeStrip.vue:394
 msgid "Wait for pending changes to sync before merging"
-msgstr ""
+msgstr "合并前请等待待处理修改同步完成"
 
 #: frontend/src/components/SubmitForReviewButton.vue:104
 msgid "Wait for pending changes to sync before submitting"
-msgstr ""
+msgstr "提交前请等待待处理修改同步完成"
 
 #: frontend/src/composables/useChangeRequestActions.js:37
 msgid "Wait for pending changes to sync before {0}"
@@ -3836,11 +3836,11 @@ msgstr ""
 
 #: frontend/src/components/SpaceModeStrip.vue:388
 msgid "Wait for uploads to finish before merging"
-msgstr ""
+msgstr "合并前请等待上传完成"
 
 #: frontend/src/components/SubmitForReviewButton.vue:98
 msgid "Wait for uploads to finish before submitting"
-msgstr ""
+msgstr "提交前请等待上传完成"
 
 #: frontend/src/composables/useChangeRequestActions.js:31
 msgid "Wait for uploads to finish before {0}"
@@ -3858,7 +3858,7 @@ msgstr ""
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:123
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 msgid "Webhook"
-msgstr ""
+msgstr "Webhook"
 
 #. Label of the github_webhook_secret (Password) field in DocType 'Wiki
 #. Settings'
@@ -3869,7 +3869,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:219
 msgid "Webhook URL copied"
-msgstr ""
+msgstr "Webhook 网址已复制"
 
 #. Description of the 'Git Synced?' (Check) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -4129,7 +4129,7 @@ msgstr ""
 
 #: frontend/src/components/PageSettingsPanel.vue:205
 msgid "Words"
-msgstr ""
+msgstr "字数"
 
 #. Option for the 'Permission Level' (Select) field in DocType 'Wiki Space
 #. Role'
@@ -4220,11 +4220,11 @@ msgstr ""
 
 #: frontend/src/components/SubmitForReviewButton.vue:115
 msgid "change"
-msgstr ""
+msgstr "处变更"
 
 #: frontend/src/components/SubmitForReviewButton.vue:115
 msgid "changes"
-msgstr ""
+msgstr "处变更"
 
 #: frontend/src/components/WikiDocumentList.vue:155
 msgid "child document"
@@ -4254,7 +4254,7 @@ msgstr ""
 
 #: frontend/src/components/NewSpaceDialog.vue:166
 msgid "docs"
-msgstr ""
+msgstr "docs"
 
 #: frontend/src/components/WikiDocumentList.vue:142
 msgid "group"
@@ -4267,7 +4267,7 @@ msgstr ""
 
 #: frontend/src/components/NewSpaceDialog.vue:158
 msgid "main"
-msgstr ""
+msgstr "main"
 
 #. Option for the 'Resolution' (Select) field in DocType 'Wiki Merge Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
@@ -4290,7 +4290,7 @@ msgstr ""
 
 #: frontend/src/components/NewSpaceDialog.vue:44
 msgid "my-wiki-space"
-msgstr ""
+msgstr "my-wiki-space"
 
 #: wiki/templates/wiki/includes/search_modal.html:161
 msgid "new tab"
@@ -4312,12 +4312,12 @@ msgstr ""
 
 #: frontend/src/components/DraftContributionPanel.vue:119
 msgid "page-route"
-msgstr ""
+msgstr "page-route"
 
 #: frontend/src/components/SpaceModeStrip.vue:479
 #: frontend/src/pages/AllSpaces.vue:375
 msgid "pages"
-msgstr ""
+msgstr "页"
 
 #: frontend/src/pages/ContributionReview.vue:92
 msgid "resolved"
@@ -4333,7 +4333,7 @@ msgstr ""
 
 #: frontend/src/components/PageSettingsPanel.vue:50
 msgid "space/section/page"
-msgstr ""
+msgstr "space/section/page"
 
 #: frontend/src/composables/useChangeRequestActions.js:60
 msgid "submitting"
@@ -4412,7 +4412,7 @@ msgstr ""
 
 #: frontend/src/components/PageSettingsPanel.vue:211
 msgid "{0} min"
-msgstr ""
+msgstr "{0} 分钟"
 
 #: frontend/src/components/PageMetaLine.vue:67
 msgid "{0} min read"
@@ -4428,7 +4428,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:177
 msgid "{0} pages"
-msgstr ""
+msgstr "{0} 页"
 
 #: frontend/src/components/LibrarySidebar.vue:220
 msgid "{0} pinned"
@@ -4444,7 +4444,7 @@ msgstr "最近 30 天 {0} 次浏览"
 
 #: frontend/src/components/SpaceModeStrip.vue:479
 msgid "{0} {1} changed"
-msgstr ""
+msgstr "{0} {1}已变更"
 
 #. Count format of shortcut in the Wiki Workspace
 #: wiki/wiki/workspace/wiki/wiki.json
