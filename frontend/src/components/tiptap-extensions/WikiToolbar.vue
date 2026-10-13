@@ -57,28 +57,28 @@ const imageInput = ref(null);
 // shape.
 const TaskListItem = {
 	icon: 'lucide-list-checks',
-	label: 'Task List',
+	label: __('Task List'),
 	action: (editor) => editor.chain().focus().toggleTaskList().run(),
 	isActive: (editor) => editor.isActive('taskList'),
 };
 
 const UnderlineItem = {
 	icon: 'lucide-underline',
-	label: 'Underline',
+	label: __('Underline'),
 	action: (editor) => editor.chain().focus().toggleUnderline().run(),
 	isActive: (editor) => editor.isActive('underline'),
 };
 
 const CodeBlockItem = {
 	icon: 'lucide-square-code',
-	label: 'Code Block',
+	label: __('Code Block'),
 	action: (editor) => editor.chain().focus().toggleCodeBlock().run(),
 	isActive: (editor) => editor.isActive('codeBlock'),
 };
 
 const InsertImageItem = {
 	icon: 'lucide-image',
-	label: 'Insert Image',
+	label: __('Insert Image'),
 	action: () => {
 		imageInput.value?.click();
 	},
@@ -86,7 +86,7 @@ const InsertImageItem = {
 
 const InsertPdfItem = {
 	icon: 'lucide-file-text',
-	label: 'Insert PDF',
+	label: __('Insert PDF'),
 	action: (editor) => editor.chain().focus().selectAndUploadPdf().run(),
 };
 
@@ -94,7 +94,7 @@ const InsertPdfItem = {
 // node is `videoBlock`, so the atom hides itself and we roll our own.
 const InsertVideoItem = {
 	icon: 'lucide-video',
-	label: 'Insert Video',
+	label: __('Insert Video'),
 	action: (editor) => editor.chain().focus().selectAndUploadVideo().run(),
 };
 
@@ -102,7 +102,7 @@ const InsertVideoItem = {
 // return false when handed nothing, so a formula has to come with a template.
 const InlineMathItem = {
 	icon: 'lucide-sigma',
-	label: 'Inline Math',
+	label: __('Inline Math'),
 	action: (editor) =>
 		editor
 			.chain()
@@ -114,7 +114,7 @@ const InlineMathItem = {
 
 const BlockMathItem = {
 	icon: 'lucide-sigma-square',
-	label: 'Block Math',
+	label: __('Block Math'),
 	action: (editor) =>
 		editor
 			.chain()
@@ -126,7 +126,7 @@ const BlockMathItem = {
 
 const HeadingGroup = {
 	type: 'group',
-	label: 'Heading',
+	label: __('Heading'),
 	items: [H1, H2, H3, H4, H5, H6],
 };
 

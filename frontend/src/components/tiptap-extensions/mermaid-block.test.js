@@ -3,7 +3,7 @@ import test from 'node:test';
 
 import { getLoaderUrl, getMermaid } from './mermaid-loader.js';
 import { parseMermaidFence, renderMermaidFence } from './mermaid-markdown.js';
-import { SLASH_COMMANDS } from './slash-commands.js';
+import { slashCommands } from './slash-commands.js';
 
 test('parses mermaid fenced code blocks', () => {
 	const source = '```mermaid\nflowchart TD\n  A --> B\n```\n';
@@ -23,7 +23,7 @@ test('renders mermaid blocks back to fenced markdown', () => {
 });
 
 test('exposes a slash command for inserting mermaid diagrams', () => {
-	const diagram = SLASH_COMMANDS.find((command) => command.title === 'Diagram');
+	const diagram = slashCommands().find((command) => command.title === 'Diagram');
 	assert.ok(diagram);
 	// "/mermaid" must keep finding it for longtime users.
 	assert.ok(diagram.keywords.includes('mermaid'));

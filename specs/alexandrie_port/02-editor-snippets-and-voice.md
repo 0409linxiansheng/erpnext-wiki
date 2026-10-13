@@ -150,3 +150,27 @@ Two things the working code taught us, both recorded rather than papered over:
   than a drive-by change to the picker: the fix has to make the literals
   extractable *and* call `__()` at render time, since the commands array is built
   at import time, before `translationPlugin` installs `window.__`.
+
+  **Fixed (2026-10-13) as its own increment.** `SLASH_COMMANDS` became a lazy
+  `slashCommands()` builder, so `__()` wraps each label where the label is written
+  (the extractor sees it) while the array is still built on first use, after the
+  catalog is installed. `keywords` stay in the source language, so "mermaid" and
+  "snippet" keep finding their commands once the labels turn Chinese. The three
+  consumers moved with it: `filterCommands`, `WikiEditor.vue` and
+  `mermaid-block.test.js`.
+
+  Wrapping the labels exposed **the same class of gap in the editor toolbar**,
+  including the two maths buttons this spec's predecessor added: nine `label:` 
+  literals in `WikiToolbar.vue` were invisible to the extractor. Those sit inside
+  `<script setup>`, which runs after `translationPlugin`, so they only needed
+  `__()` around them — no builder. 31 labels are now translatable in total
+  (24 from the slash menu, 7 new from the toolbar; `Task List` and `Code Block`
+  were already entries, which is a useful cross-check that the two menus share
+  msgids). Catalog: 943/943.
+
+  What this does *not* yet fix is the general case: any component that writes a
+  visible literal into a plain object (`label: '…'`, `title: '…'`) escapes
+  extraction silently. The guard only sees strings that reach `main.pot`, so it
+  cannot catch a string that never gets there. A lint or a test that flags
+  suspicious literals in `frontend/src` would close that hole properly and is worth
+  its own small spec.

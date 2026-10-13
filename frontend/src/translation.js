@@ -9,8 +9,18 @@ function format(message, replace) {
 	);
 }
 
-function translate(message, replace, context = null) {
-	const translatedMessages = window.translatedMessages || {};
+/**
+ * Look a message up in the loaded catalog.
+ *
+ * Exported because `slash-commands.js` needs it: its labels have to be wrapped in
+ * `__()` where they are written for the extractor to see them, which means the
+ * module needs a call it can make when the menu is built rather than the global
+ * that only exists once this plugin has run. `window` is tolerated as absent so
+ * the frontend unit tests, which run the module in node, can import it.
+ */
+export function translate(message, replace, context = null) {
+	const translatedMessages =
+		typeof window === 'undefined' ? {} : window.translatedMessages || {};
 	let translatedMessage = '';
 
 	if (context) {

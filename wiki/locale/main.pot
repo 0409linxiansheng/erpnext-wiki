@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wiki VERSION\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
-"POT-Creation-Date: 2026-10-13 21:14+0806\n"
-"PO-Revision-Date: 2026-10-13 21:14+0806\n"
+"POT-Creation-Date: 2026-10-13 21:30+0806\n"
+"PO-Revision-Date: 2026-10-13 21:30+0806\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: developers@frappe.io\n"
 "MIME-Version: 1.0\n"
@@ -395,6 +395,14 @@ msgstr ""
 msgid "Beta"
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:117
+msgid "Block Math"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:58
+msgid "Blockquote"
+msgstr ""
+
 #. Label of the branch (Data) field in DocType 'Wiki GitHub Webhook Log'
 #. Label of the branch (Data) field in DocType 'Wiki Space'
 #: frontend/src/components/NewSpaceDialog.vue:154
@@ -414,6 +422,17 @@ msgstr ""
 
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:37
 msgid "Bulk Update Routes"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:74
+msgid "Bullet List"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:212
+#: frontend/src/components/tiptap-extensions/slash-commands.js:225
+#: frontend/src/components/tiptap-extensions/slash-commands.js:238
+#: frontend/src/components/tiptap-extensions/slash-commands.js:251
+msgid "Callouts"
 msgstr ""
 
 #: frontend/src/components/AssignDialog.vue:20
@@ -598,6 +617,11 @@ msgstr ""
 #. Label of the code (Section Break) field in DocType 'Wiki Page Patch'
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "Code"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:74
+#: frontend/src/components/tiptap-extensions/slash-commands.js:66
+msgid "Code Block"
 msgstr ""
 
 #: frontend/src/components/WikiTree.vue:23
@@ -871,6 +895,7 @@ msgid "Custom range"
 msgstr ""
 
 #: frontend/src/components/WikiTree.vue:416
+#: frontend/src/components/tiptap-extensions/slash-commands.js:249
 msgid "Danger"
 msgstr ""
 
@@ -948,6 +973,10 @@ msgstr ""
 #: frontend/src/components/PageSettingsPanel.vue:202
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 msgid "Details"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:150
+msgid "Diagram"
 msgstr ""
 
 #: frontend/src/pages/ContributionReview.vue:253
@@ -1079,6 +1108,10 @@ msgstr ""
 #. Label of the email_id (Data) field in DocType 'Wiki Feedback'
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 msgid "Email Id"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:142
+msgid "Embed"
 msgstr ""
 
 #. Label of the enable_feedback (Check) field in DocType 'Wiki Settings'
@@ -1559,6 +1592,22 @@ msgstr ""
 msgid "Header / Robots"
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:129
+msgid "Heading"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:34
+msgid "Heading 1"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:42
+msgid "Heading 2"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:50
+msgid "Heading 3"
+msgstr ""
+
 #. Label of the hide_on_sidebar (Check) field in DocType 'Wiki Group Item'
 #: wiki/wiki/doctype/wiki_group_item/wiki_group_item.json
 msgid "Hide on sidebar"
@@ -1572,6 +1621,10 @@ msgstr ""
 #. Label of the home_tab_title (Data) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Home Tab Title"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:191
+msgid "Horizontal Rule"
 msgstr ""
 
 #: frontend/src/components/WikiSettings/FeedbackPanel.vue:15
@@ -1598,6 +1651,7 @@ msgid "Ideally should be 1200 x 630 pixels."
 msgstr ""
 
 #. Label of the meta_image (Attach Image) field in DocType 'Wiki Page'
+#: frontend/src/components/tiptap-extensions/slash-commands.js:98
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
 msgid "Image"
 msgstr ""
@@ -1618,6 +1672,32 @@ msgstr ""
 
 #: frontend/src/components/WikiSettings/CodePanel.vue:6
 msgid "Injected into the <head> of all public wiki pages"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:105
+msgid "Inline Math"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:131
+#: frontend/src/components/tiptap-extensions/slash-commands.js:144
+#: frontend/src/components/tiptap-extensions/slash-commands.js:152
+#: frontend/src/components/tiptap-extensions/slash-commands.js:162
+#: frontend/src/components/tiptap-extensions/slash-commands.js:183
+#: frontend/src/components/tiptap-extensions/slash-commands.js:193
+#: frontend/src/components/tiptap-extensions/slash-commands.js:201
+msgid "Insert"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:81
+msgid "Insert Image"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:89
+msgid "Insert PDF"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:97
+msgid "Insert Video"
 msgstr ""
 
 #: frontend/src/components/SnippetPickerDialog.vue:4
@@ -1843,6 +1923,10 @@ msgstr ""
 msgid "Link copied"
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/slash-commands.js:181
+msgid "Link to Page"
+msgstr ""
+
 #. Group in Wiki Page's connections
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
 msgid "Linked Documents"
@@ -1850,6 +1934,12 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/NavigationPanel.vue:6
 msgid "List this space in the switcher and on the overview page"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:76
+#: frontend/src/components/tiptap-extensions/slash-commands.js:84
+#: frontend/src/components/tiptap-extensions/slash-commands.js:92
+msgid "Lists"
 msgstr ""
 
 #: frontend/src/components/ContributionsPanel.vue:162
@@ -1906,6 +1996,16 @@ msgstr ""
 #. Description of the 'Content' (Text) field in DocType 'Wiki Snippet'
 #: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
 msgid "Markdown, inserted at the cursor exactly as stored — no node, no syntax of its own."
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:160
+msgid "Math"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:100
+#: frontend/src/components/tiptap-extensions/slash-commands.js:115
+#: frontend/src/components/tiptap-extensions/slash-commands.js:123
+msgid "Media"
 msgstr ""
 
 #: frontend/src/components/MobileAppMenu.vue:3
@@ -2328,12 +2428,20 @@ msgstr ""
 msgid "Not set"
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/slash-commands.js:210
+msgid "Note"
+msgstr ""
+
 #: frontend/src/pages/Contributions.vue:188
 msgid "Nothing assigned to you"
 msgstr ""
 
 #: frontend/src/components/SpaceWelcome.vue:83
 msgid "Nothing synced yet"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:82
+msgid "Numbered List"
 msgstr ""
 
 #. Option for the 'Type' (Select) field in DocType 'Wiki Feedback'
@@ -2457,6 +2565,10 @@ msgstr ""
 #: frontend/src/layouts/MainLayout.vue:18 frontend/src/pages/Overview.vue:4
 #: frontend/src/pages/Overview.vue:313
 msgid "Overview"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:121
+msgid "PDF"
 msgstr ""
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:93
@@ -3270,6 +3382,10 @@ msgstr ""
 msgid "Slug"
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/slash-commands.js:199
+msgid "Snippet"
+msgstr ""
+
 #: frontend/src/components/SnippetPickerDialog.vue:52
 msgid "Snippet content"
 msgstr ""
@@ -3512,6 +3628,23 @@ msgstr ""
 msgid "Tab icons"
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/slash-commands.js:129
+msgid "Table"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:60
+#: frontend/src/components/tiptap-extensions/slash-commands.js:90
+msgid "Task List"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:36
+#: frontend/src/components/tiptap-extensions/slash-commands.js:44
+#: frontend/src/components/tiptap-extensions/slash-commands.js:52
+#: frontend/src/components/tiptap-extensions/slash-commands.js:60
+#: frontend/src/components/tiptap-extensions/slash-commands.js:68
+msgid "Text"
+msgstr ""
+
 #: wiki/templates/wiki/includes/feedback_widget.html:67
 msgid "Thanks!"
 msgstr ""
@@ -3631,6 +3764,10 @@ msgstr ""
 msgid "Tint behind the space icon: one of gray, blue, green, amber, red, violet."
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/slash-commands.js:223
+msgid "Tip"
+msgstr ""
+
 #. Label of the title (Data) field in DocType 'Wiki Change Request'
 #. Label of the title (Small Text) field in DocType 'Wiki Document'
 #. Label of the title (Small Text) field in DocType 'Wiki Revision Item'
@@ -3743,6 +3880,10 @@ msgstr ""
 msgid "Under Review"
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:67
+msgid "Underline"
+msgstr ""
+
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1106
 msgid "Unknown operation type: {0}"
 msgstr ""
@@ -3836,6 +3977,10 @@ msgstr ""
 msgid "Version 3"
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/slash-commands.js:113
+msgid "Video"
+msgstr ""
+
 #: frontend/src/components/SpaceModeStrip.vue:421
 msgid "View changes ({0})"
 msgstr ""
@@ -3906,6 +4051,7 @@ msgid "Wait for uploads to finish before {0}"
 msgstr ""
 
 #: frontend/src/components/WikiDocumentList.vue:152
+#: frontend/src/components/tiptap-extensions/slash-commands.js:236
 msgid "Warning"
 msgstr ""
 

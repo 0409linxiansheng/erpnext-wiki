@@ -11,79 +11,93 @@
  */
 
 import { Extension } from '@tiptap/core';
+import { translate as __ } from '../../translation.js';
 import Suggestion from '@tiptap/suggestion';
-import { useSnippetPickerStore } from '@/stores/snippetPicker';
+import { useSnippetPickerStore } from '../../stores/snippetPicker.js';
 import { DEFAULT_BLOCK_MATH_LATEX } from './math-markdown.js';
 
-export const SLASH_COMMANDS = [
+/**
+ * Build the menu.
+ *
+ * `__()` has to wrap each label where the label is written, or
+ * `bench generate-pot-file` never sees the string. It cannot run while this module
+ * is imported, though: `translationPlugin` installs the catalog later, and an
+ * eagerly built array would freeze English into a Chinese site. Hence a builder,
+ * called the first time the menu opens.
+ *
+ * Each entry's `keywords` stay in the source language, so "mermaid" and "snippet"
+ * still find their commands after the labels turn Chinese.
+ */
+function buildCommands() {
+	return [
 	{
-		title: 'Heading 1',
+		title: __('Heading 1'),
 		icon: 'lucide-heading-1',
-		group: 'Text',
+		group: __('Text'),
 		command: ({ editor, range }) => {
 			editor.chain().focus().deleteRange(range).setHeading({ level: 1 }).run();
 		},
 	},
 	{
-		title: 'Heading 2',
+		title: __('Heading 2'),
 		icon: 'lucide-heading-2',
-		group: 'Text',
+		group: __('Text'),
 		command: ({ editor, range }) => {
 			editor.chain().focus().deleteRange(range).setHeading({ level: 2 }).run();
 		},
 	},
 	{
-		title: 'Heading 3',
+		title: __('Heading 3'),
 		icon: 'lucide-heading-3',
-		group: 'Text',
+		group: __('Text'),
 		command: ({ editor, range }) => {
 			editor.chain().focus().deleteRange(range).setHeading({ level: 3 }).run();
 		},
 	},
 	{
-		title: 'Blockquote',
+		title: __('Blockquote'),
 		icon: 'lucide-quote',
-		group: 'Text',
+		group: __('Text'),
 		command: ({ editor, range }) => {
 			editor.chain().focus().deleteRange(range).toggleBlockquote().run();
 		},
 	},
 	{
-		title: 'Code Block',
+		title: __('Code Block'),
 		icon: 'lucide-code',
-		group: 'Text',
+		group: __('Text'),
 		command: ({ editor, range }) => {
 			editor.chain().focus().deleteRange(range).toggleCodeBlock().run();
 		},
 	},
 	{
-		title: 'Bullet List',
+		title: __('Bullet List'),
 		icon: 'lucide-list',
-		group: 'Lists',
+		group: __('Lists'),
 		command: ({ editor, range }) => {
 			editor.chain().focus().deleteRange(range).toggleBulletList().run();
 		},
 	},
 	{
-		title: 'Numbered List',
+		title: __('Numbered List'),
 		icon: 'lucide-list-ordered',
-		group: 'Lists',
+		group: __('Lists'),
 		command: ({ editor, range }) => {
 			editor.chain().focus().deleteRange(range).toggleOrderedList().run();
 		},
 	},
 	{
-		title: 'Task List',
+		title: __('Task List'),
 		icon: 'lucide-list-checks',
-		group: 'Lists',
+		group: __('Lists'),
 		command: ({ editor, range }) => {
 			editor.chain().focus().deleteRange(range).toggleTaskList().run();
 		},
 	},
 	{
-		title: 'Image',
+		title: __('Image'),
 		icon: 'lucide-image',
-		group: 'Media',
+		group: __('Media'),
 		command: ({ editor, range }) => {
 			// Delete the slash command text first
 			editor.chain().focus().deleteRange(range).run();
@@ -96,25 +110,25 @@ export const SLASH_COMMANDS = [
 		},
 	},
 	{
-		title: 'Video',
+		title: __('Video'),
 		icon: 'lucide-video',
-		group: 'Media',
+		group: __('Media'),
 		command: ({ editor, range }) => {
 			editor.chain().focus().deleteRange(range).selectAndUploadVideo().run();
 		},
 	},
 	{
-		title: 'PDF',
+		title: __('PDF'),
 		icon: 'lucide-file-text',
-		group: 'Media',
+		group: __('Media'),
 		command: ({ editor, range }) => {
 			editor.chain().focus().deleteRange(range).selectAndUploadPdf().run();
 		},
 	},
 	{
-		title: 'Table',
+		title: __('Table'),
 		icon: 'lucide-table',
-		group: 'Insert',
+		group: __('Insert'),
 		command: ({ editor, range }) => {
 			editor
 				.chain()
@@ -125,17 +139,17 @@ export const SLASH_COMMANDS = [
 		},
 	},
 	{
-		title: 'Embed',
+		title: __('Embed'),
 		icon: 'lucide-app-window',
-		group: 'Insert',
+		group: __('Insert'),
 		command: ({ editor, range }) => {
 			editor.chain().focus().deleteRange(range).insertIframePlaceholder().run();
 		},
 	},
 	{
-		title: 'Diagram',
+		title: __('Diagram'),
 		icon: 'lucide-network',
-		group: 'Insert',
+		group: __('Insert'),
 		// Longtime users still reach for the engine's name.
 		keywords: ['mermaid'],
 		command: ({ editor, range }) => {
@@ -143,9 +157,9 @@ export const SLASH_COMMANDS = [
 		},
 	},
 	{
-		title: 'Math',
+		title: __('Math'),
 		icon: 'lucide-sigma',
-		group: 'Insert',
+		group: __('Insert'),
 		keywords: ['latex', 'formula', 'equation', 'katex', 'tex'],
 		// A display formula: `insertBlockMath` refuses an empty body, so the
 		// template body is the only way the command can insert anything.
@@ -164,9 +178,9 @@ export const SLASH_COMMANDS = [
 		},
 	},
 	{
-		title: 'Link to Page',
+		title: __('Link to Page'),
 		icon: 'lucide-file-symlink',
-		group: 'Insert',
+		group: __('Insert'),
 		keywords: ['linkpage', 'wiki link'],
 		// Typing the picker's own trigger opens it (see page-links.js).
 		command: ({ editor, range }) => {
@@ -174,17 +188,17 @@ export const SLASH_COMMANDS = [
 		},
 	},
 	{
-		title: 'Horizontal Rule',
+		title: __('Horizontal Rule'),
 		icon: 'lucide-minus',
-		group: 'Insert',
+		group: __('Insert'),
 		command: ({ editor, range }) => {
 			editor.chain().focus().deleteRange(range).setHorizontalRule().run();
 		},
 	},
 	{
-		title: 'Snippet',
+		title: __('Snippet'),
 		icon: 'lucide-scissors',
-		group: 'Insert',
+		group: __('Insert'),
 		keywords: ['snippet', 'reusable', 'template', 'fragment'],
 		// The picker is a Vue dialog, which a Tiptap command cannot render: it hands
 		// the editor and the range it wants replaced to a store instead.
@@ -193,9 +207,9 @@ export const SLASH_COMMANDS = [
 		},
 	},
 	{
-		title: 'Note',
+		title: __('Note'),
 		icon: 'lucide-info',
-		group: 'Callouts',
+		group: __('Callouts'),
 		command: ({ editor, range }) => {
 			editor
 				.chain()
@@ -206,9 +220,9 @@ export const SLASH_COMMANDS = [
 		},
 	},
 	{
-		title: 'Tip',
+		title: __('Tip'),
 		icon: 'lucide-lightbulb',
-		group: 'Callouts',
+		group: __('Callouts'),
 		command: ({ editor, range }) => {
 			editor
 				.chain()
@@ -219,9 +233,9 @@ export const SLASH_COMMANDS = [
 		},
 	},
 	{
-		title: 'Warning',
+		title: __('Warning'),
 		icon: 'lucide-triangle-alert',
-		group: 'Callouts',
+		group: __('Callouts'),
 		command: ({ editor, range }) => {
 			editor
 				.chain()
@@ -232,9 +246,9 @@ export const SLASH_COMMANDS = [
 		},
 	},
 	{
-		title: 'Danger',
+		title: __('Danger'),
 		icon: 'lucide-octagon-alert',
-		group: 'Callouts',
+		group: __('Callouts'),
 		command: ({ editor, range }) => {
 			editor
 				.chain()
@@ -244,17 +258,26 @@ export const SLASH_COMMANDS = [
 				.run();
 		},
 	},
-];
+	];
+}
+
+let built = null;
+
+/** The menu's items, translated. `WikiEditor.vue` hands these to the suggestion. */
+export function slashCommands() {
+	if (!built) built = buildCommands();
+	return built;
+}
 
 /**
  * Filter commands by search query. Matches the title, the group header
  * ("call" finds every callout), and any legacy keywords ("mermaid" → Diagram).
  */
 export function filterCommands(query) {
-	if (!query) return SLASH_COMMANDS;
+	if (!query) return slashCommands();
 
 	const lowerQuery = query.toLowerCase();
-	return SLASH_COMMANDS.filter((cmd) =>
+	return slashCommands().filter((cmd) =>
 		[cmd.title, cmd.group, ...(cmd.keywords || [])].some((text) =>
 			text?.toLowerCase().includes(lowerQuery),
 		),

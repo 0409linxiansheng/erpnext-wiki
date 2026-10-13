@@ -116,7 +116,7 @@ import {
 import { PdfBlock } from './tiptap-extensions/pdf-block.js';
 import { PreserveBlankLines } from './tiptap-extensions/preserve-blank-lines.js';
 import {
-	SLASH_COMMANDS,
+	slashCommands,
 	SlashCommands,
 	filterCommands,
 } from './tiptap-extensions/slash-commands.js';
@@ -846,7 +846,7 @@ const editor = useEditor({
 					items: ({ query }) => filterCommands(query),
 					// The menu opens with these before the first query runs, so a bare
 					// "/" shows every command instead of "No commands found".
-					initialItems: SLASH_COMMANDS,
+					initialItems: slashCommands(),
 				},
 				SlashCommandsList,
 			),

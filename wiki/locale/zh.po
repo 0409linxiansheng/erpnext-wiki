@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wiki VERSION\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
-"POT-Creation-Date: 2026-10-13 21:14+0806\n"
+"POT-Creation-Date: 2026-10-13 21:30+0806\n"
 "PO-Revision-Date: 2026-10-13 19:15+0806\n"
 "Last-Translator: developers@frappe.io\n"
 "Language: zh\n"
@@ -401,6 +401,14 @@ msgstr "基础修订"
 msgid "Beta"
 msgstr "测试版"
 
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:117
+msgid "Block Math"
+msgstr "块级公式"
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:58
+msgid "Blockquote"
+msgstr "引用块"
+
 #. Label of the branch (Data) field in DocType 'Wiki GitHub Webhook Log'
 #. Label of the branch (Data) field in DocType 'Wiki Space'
 #: frontend/src/components/NewSpaceDialog.vue:154
@@ -421,6 +429,17 @@ msgstr "失效链接报表"
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:37
 msgid "Bulk Update Routes"
 msgstr "批量更新路径"
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:74
+msgid "Bullet List"
+msgstr "项目符号列表"
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:212
+#: frontend/src/components/tiptap-extensions/slash-commands.js:225
+#: frontend/src/components/tiptap-extensions/slash-commands.js:238
+#: frontend/src/components/tiptap-extensions/slash-commands.js:251
+msgid "Callouts"
+msgstr "提示框"
 
 #: frontend/src/components/AssignDialog.vue:20
 #: frontend/src/components/DraftContributionPanel.vue:124
@@ -605,6 +624,11 @@ msgstr "已关闭"
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "Code"
 msgstr "代码"
+
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:74
+#: frontend/src/components/tiptap-extensions/slash-commands.js:66
+msgid "Code Block"
+msgstr "代码块"
 
 #: frontend/src/components/WikiTree.vue:23
 msgid "Collapse"
@@ -877,6 +901,7 @@ msgid "Custom range"
 msgstr "自定义范围"
 
 #: frontend/src/components/WikiTree.vue:416
+#: frontend/src/components/tiptap-extensions/slash-commands.js:249
 msgid "Danger"
 msgstr "危险"
 
@@ -955,6 +980,10 @@ msgstr "描述"
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 msgid "Details"
 msgstr "详情"
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:150
+msgid "Diagram"
+msgstr "图表"
 
 #: frontend/src/pages/ContributionReview.vue:253
 msgid "Diff"
@@ -1086,6 +1115,10 @@ msgstr "编辑于 {0}"
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 msgid "Email Id"
 msgstr "邮箱"
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:142
+msgid "Embed"
+msgstr "嵌入"
 
 #. Label of the enable_feedback (Check) field in DocType 'Wiki Settings'
 #: frontend/src/components/WikiSettings/FeedbackPanel.vue:6
@@ -1565,6 +1598,22 @@ msgstr "页眉与 Robots"
 msgid "Header / Robots"
 msgstr "页眉 / Robots"
 
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:129
+msgid "Heading"
+msgstr "标题"
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:34
+msgid "Heading 1"
+msgstr "标题 1"
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:42
+msgid "Heading 2"
+msgstr "标题 2"
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:50
+msgid "Heading 3"
+msgstr "标题 3"
+
 #. Label of the hide_on_sidebar (Check) field in DocType 'Wiki Group Item'
 #: wiki/wiki/doctype/wiki_group_item/wiki_group_item.json
 msgid "Hide on sidebar"
@@ -1579,6 +1628,10 @@ msgstr "首页标签图标"
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Home Tab Title"
 msgstr "首页标签标题"
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:191
+msgid "Horizontal Rule"
+msgstr "分隔线"
 
 #: frontend/src/components/WikiSettings/FeedbackPanel.vue:15
 msgid "Hourly rate limit on feedback submissions"
@@ -1604,6 +1657,7 @@ msgid "Ideally should be 1200 x 630 pixels."
 msgstr "建议为 1200 x 630 像素。"
 
 #. Label of the meta_image (Attach Image) field in DocType 'Wiki Page'
+#: frontend/src/components/tiptap-extensions/slash-commands.js:98
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
 msgid "Image"
 msgstr "图片"
@@ -1625,6 +1679,32 @@ msgstr "包含内部链接？"
 #: frontend/src/components/WikiSettings/CodePanel.vue:6
 msgid "Injected into the <head> of all public wiki pages"
 msgstr "注入到所有公开 Wiki 页面的 <head> 中"
+
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:105
+msgid "Inline Math"
+msgstr "行内公式"
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:131
+#: frontend/src/components/tiptap-extensions/slash-commands.js:144
+#: frontend/src/components/tiptap-extensions/slash-commands.js:152
+#: frontend/src/components/tiptap-extensions/slash-commands.js:162
+#: frontend/src/components/tiptap-extensions/slash-commands.js:183
+#: frontend/src/components/tiptap-extensions/slash-commands.js:193
+#: frontend/src/components/tiptap-extensions/slash-commands.js:201
+msgid "Insert"
+msgstr "插入"
+
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:81
+msgid "Insert Image"
+msgstr "插入图片"
+
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:89
+msgid "Insert PDF"
+msgstr "插入 PDF"
+
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:97
+msgid "Insert Video"
+msgstr "插入视频"
 
 #: frontend/src/components/SnippetPickerDialog.vue:4
 msgid "Insert snippet"
@@ -1849,6 +1929,10 @@ msgstr "浅色模式图标"
 msgid "Link copied"
 msgstr "链接已复制"
 
+#: frontend/src/components/tiptap-extensions/slash-commands.js:181
+msgid "Link to Page"
+msgstr "链接到页面"
+
 #. Group in Wiki Page's connections
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
 msgid "Linked Documents"
@@ -1857,6 +1941,12 @@ msgstr "关联文档"
 #: frontend/src/components/SpaceSettings/NavigationPanel.vue:6
 msgid "List this space in the switcher and on the overview page"
 msgstr "在空间切换器和概览页中列出此空间"
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:76
+#: frontend/src/components/tiptap-extensions/slash-commands.js:84
+#: frontend/src/components/tiptap-extensions/slash-commands.js:92
+msgid "Lists"
+msgstr "列表"
 
 #: frontend/src/components/ContributionsPanel.vue:162
 #: frontend/src/pages/AllSpaces.vue:263
@@ -1913,6 +2003,16 @@ msgstr "手动"
 #: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
 msgid "Markdown, inserted at the cursor exactly as stored — no node, no syntax of its own."
 msgstr "Markdown 原文，按存储内容原样插入到光标处 —— 不引入新节点，也没有专属语法。"
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:160
+msgid "Math"
+msgstr "数学公式"
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:100
+#: frontend/src/components/tiptap-extensions/slash-commands.js:115
+#: frontend/src/components/tiptap-extensions/slash-commands.js:123
+msgid "Media"
+msgstr "媒体"
 
 #: frontend/src/components/MobileAppMenu.vue:3
 #: wiki/templates/wiki/includes/mobile_header.html:98
@@ -2334,6 +2434,10 @@ msgstr "无权查看 Wiki 分析数据"
 msgid "Not set"
 msgstr "未设置"
 
+#: frontend/src/components/tiptap-extensions/slash-commands.js:210
+msgid "Note"
+msgstr "说明"
+
 #: frontend/src/pages/Contributions.vue:188
 msgid "Nothing assigned to you"
 msgstr "没有指派给你的内容"
@@ -2341,6 +2445,10 @@ msgstr "没有指派给你的内容"
 #: frontend/src/components/SpaceWelcome.vue:83
 msgid "Nothing synced yet"
 msgstr "尚未同步任何内容"
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:82
+msgid "Numbered List"
+msgstr "编号列表"
 
 #. Option for the 'Type' (Select) field in DocType 'Wiki Feedback'
 #: wiki/templates/wiki/includes/feedback_widget.html:9
@@ -2464,6 +2572,10 @@ msgstr "已过期"
 #: frontend/src/pages/Overview.vue:313
 msgid "Overview"
 msgstr "概览"
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:121
+msgid "PDF"
+msgstr "PDF"
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:93
 msgid "PEM-encoded private key generated for the GitHub App"
@@ -3276,6 +3388,10 @@ msgstr "大小"
 msgid "Slug"
 msgstr "别名"
 
+#: frontend/src/components/tiptap-extensions/slash-commands.js:199
+msgid "Snippet"
+msgstr "片段"
+
 #: frontend/src/components/SnippetPickerDialog.vue:52
 msgid "Snippet content"
 msgstr "片段内容"
@@ -3518,6 +3634,23 @@ msgstr "标签图标"
 msgid "Tab icons"
 msgstr "标签图标"
 
+#: frontend/src/components/tiptap-extensions/slash-commands.js:129
+msgid "Table"
+msgstr "表格"
+
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:60
+#: frontend/src/components/tiptap-extensions/slash-commands.js:90
+msgid "Task List"
+msgstr "任务列表"
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js:36
+#: frontend/src/components/tiptap-extensions/slash-commands.js:44
+#: frontend/src/components/tiptap-extensions/slash-commands.js:52
+#: frontend/src/components/tiptap-extensions/slash-commands.js:60
+#: frontend/src/components/tiptap-extensions/slash-commands.js:68
+msgid "Text"
+msgstr "文本"
+
 #: wiki/templates/wiki/includes/feedback_widget.html:67
 msgid "Thanks!"
 msgstr "谢谢！"
@@ -3637,6 +3770,10 @@ msgstr "这会将侧边栏同步为基于目录树的 Wiki 文档。是否继续
 msgid "Tint behind the space icon: one of gray, blue, green, amber, red, violet."
 msgstr "空间图标底色：gray、blue、green、amber、red、violet 之一。"
 
+#: frontend/src/components/tiptap-extensions/slash-commands.js:223
+msgid "Tip"
+msgstr "提示"
+
 #. Label of the title (Data) field in DocType 'Wiki Change Request'
 #. Label of the title (Small Text) field in DocType 'Wiki Document'
 #. Label of the title (Small Text) field in DocType 'Wiki Revision Item'
@@ -3749,6 +3886,10 @@ msgstr "暂时无法下载此页面。"
 msgid "Under Review"
 msgstr "审阅中"
 
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:67
+msgid "Underline"
+msgstr "下划线"
+
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1106
 msgid "Unknown operation type: {0}"
 msgstr "未知的 operation 类型：{0}"
@@ -3842,6 +3983,10 @@ msgstr "用户"
 msgid "Version 3"
 msgstr "Version 3"
 
+#: frontend/src/components/tiptap-extensions/slash-commands.js:113
+msgid "Video"
+msgstr "视频"
+
 #: frontend/src/components/SpaceModeStrip.vue:421
 msgid "View changes ({0})"
 msgstr "查看修改（{0}）"
@@ -3912,6 +4057,7 @@ msgid "Wait for uploads to finish before {0}"
 msgstr "{0}前请等待上传完成"
 
 #: frontend/src/components/WikiDocumentList.vue:152
+#: frontend/src/components/tiptap-extensions/slash-commands.js:236
 msgid "Warning"
 msgstr "警告"
 
