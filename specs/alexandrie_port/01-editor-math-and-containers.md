@@ -182,7 +182,9 @@ tags, verify a published page in both themes. Expect font-path trouble here.
 **Phase 4 — SPA polish.** Toolbar entry, slash command, node view editing popover,
 `wiki-editor-content.css` parity, `katex_loader` boot hash.
 
-**Phase 5 — print** per the decision above; if deferred, record the deferral.
+**Phase 5 — print — DONE (2026-10-13).** Reversed from the original deferral: the
+print flavour now typesets maths on the server (`wiki/wiki/math_render.py` +
+`scripts/render-math.mjs`), so a PDF carries the same formulas as the reader.
 
 **Phase 6 — e2e.** `e2e/tests/math.spec.ts`: slash-insert a formula, save, and
 assert `.katex` exists on the published page. Create a throwaway space through
@@ -317,11 +319,38 @@ Two deviations from the spec's file table, both deliberate:
   selecting and deleting it; a click-to-edit popover is a UX affordance, not
   feature parity, so it is left for a follow-up rather than half-built.
 
-**Phase 5 — print: deferred, decision (a).** `standard_wiki_document` renders
-through wkhtmltopdf with no JS, so the client hydration never runs and a formula
-prints as its raw TeX source. Accepted for now (visibly wrong but consistent
-with mermaid); the TeX→SVG cache (option c) needs a server-side renderer and
-waits for a real PDF in hand.
+**Phase 5 — print: built, decision reversed (2026-10-13).** The original call was
+to accept raw TeX in the PDF (option a); that was overruled on the ground that a
+page which is correct on screen and wrong in the export is worse than one that is
+wrong in both.
+
+What was built:
+
+- `wiki/wiki/math_render.py` replaces the TeX inside each `.math-inline` /
+  `.math-block` container with MathJax SVG, keeping the container so the print
+  CSS still applies. It is called from `Wiki Document.before_print`, which
+  `frappe.www.printview` invokes for both the print view and PDF generation.
+- `scripts/render-math.mjs` does the TeX → SVG work, one node process for the
+  whole page, reading one JSON object on stdin and writing one on stdout.
+- **MathJax, not KaTeX.** KaTeX emits HTML plus a stylesheet plus web fonts;
+  MathJax `fontCache: 'local'` emits every glyph as a path inside the `<svg>`, so
+  QtWebKit needs no fonts. KaTeX also has no SVG output at all.
+- **The `es5/tex-svg.js` single-file bundle does not work here**: it hard-requires
+  `xmldom-sre`, which only speech-rule-engine 3.x provides, and mathjax-full
+  depends on 4.x. `mathjax-full/js/*` is CommonJS with no `exports` map, so the
+  harness reaches it through `createRequire`. `yarn add mathjax-full@3.2.2` at the
+  app root is the only new dependency.
+- **`html` and `htmlCssColor` are dropped from the TeX packages.** With them,
+  `\href{javascript:alert(1)}{x}` produced a real `<a href>` inside the SVG — an
+  XSS vector, because the print HTML is previewed in a browser. The reader already
+  refuses that construct (KaTeX runs with `trust: false`); the server now agrees,
+  and `sanitize_svg` strips unsafe `href`/`xlink:href` as a second layer.
+- A formula that fails to render keeps its raw TeX, and an unusable node
+  installation degrades the same way: a wrong-looking PDF beats no PDF.
+- Verified: a probe page with one inline and one display formula printed through
+  `/printview` contains 2 `<svg>` and 10 `<path>` and no raw TeX, and
+  `download_pdf` returns a valid one-page PDF. `wiki/wiki/test_math_render.py`
+  pins the plumbing (12 cases) without needing node.
 
 **Phase 6 — e2e.** `e2e/tests/math.spec.ts` covers editor parse + KaTeX preview,
 byte-identical round-trip, the currency/code-span negatives, the slash insert,

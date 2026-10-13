@@ -19,6 +19,7 @@ from werkzeug.wrappers import Response
 from wiki.telemetry import capture, reader_config
 from wiki.utils import fingerprint_js_url
 from wiki.wiki.markdown import render_markdown, render_markdown_with_toc
+from wiki.wiki.math_render import render_math_for_print
 
 WIKI_DOCUMENT_PRINT_FORMAT = "Standard Wiki Document"
 
@@ -714,9 +715,13 @@ class WikiDocument(NestedSet):
 
 	def before_print(self, print_settings=None):
 		"""Render markdown content so the print format can drop it in as HTML."""
-		self.rendered_content_for_pdf = resolve_wiki_links(
+		rendered = resolve_wiki_links(
 			render_markdown(self.content or ""), self.get_space_name()
 		)
+		# wkhtmltopdf runs no JavaScript, so the reader's KaTeX hydration never
+		# happens here: maths has to be typeset on the server or the PDF prints the
+		# raw TeX. See wiki/wiki/math_render.py.
+		self.rendered_content_for_pdf = render_math_for_print(rendered)
 
 	@frappe.whitelist()
 	def update_meta(
