@@ -33,7 +33,7 @@
             <template v-if="isEditing">
                 <Button
                     @click="saveLink"
-                    title="Submit"
+                    :title="__('Submit')"
                     variant="subtle"
                 >
                     <template #icon>
@@ -42,7 +42,7 @@
                 </Button>
                 <Button
                     @click="cancelEdit"
-                    title="Cancel"
+                    :title="__('Cancel')"
                     variant="subtle"
                 >
                     <template #icon>
@@ -53,7 +53,7 @@
             <template v-else>
                 <Button
                     @click="copyLink"
-                    title="Copy"
+                    :title="__('Copy')"
                     variant="subtle"
                 >
                     <template #icon>
@@ -62,7 +62,7 @@
                 </Button>
                 <Button
                     @click="startEditing"
-                    title="Edit"
+                    :title="__('Edit')"
                     variant="subtle"
                 >
                     <template #icon>
@@ -71,7 +71,7 @@
                 </Button>
                 <Button
                     @click="removeLink"
-                    title="Remove"
+                    :title="__('Remove')"
                     variant="subtle"
                 >
                     <template #icon>

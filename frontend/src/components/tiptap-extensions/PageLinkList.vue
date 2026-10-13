@@ -7,7 +7,7 @@
         <div class="flex items-center gap-1.5 px-3 pb-1 pt-2.5 text-xs text-ink-gray-5">
             <span class="lucide-link-2 size-3.5" aria-hidden="true" />
             <span v-if="trimmedQuery" class="truncate">Link to “{{ trimmedQuery }}”</span>
-            <span v-else>Link to a page</span>
+            <span v-else>{{ __('Link to a page') }}</span>
         </div>
 
         <div class="max-h-72 overflow-y-auto p-1.5 pt-0.5">

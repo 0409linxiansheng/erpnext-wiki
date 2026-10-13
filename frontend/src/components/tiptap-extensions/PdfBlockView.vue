@@ -151,7 +151,7 @@ function closeViewer() {
 				/>
 				<div v-if="thumbError" class="wiki-pdf-thumb-fallback">
 					<span class="lucide-file-text size-10" aria-hidden="true" />
-					<span>Preview unavailable</span>
+					<span>{{ __('Preview unavailable') }}</span>
 				</div>
 			</div>
 		</div>

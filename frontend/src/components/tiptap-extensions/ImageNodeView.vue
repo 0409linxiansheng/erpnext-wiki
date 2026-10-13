@@ -59,7 +59,7 @@
                     class="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-black/35 text-sm text-white"
                 >
                     <LoadingIndicator class="size-5" />
-                    <span>Uploading…</span>
+                    <span>{{ __('Uploading…') }}</span>
                 </div>
             </div>
             <div v-if="node.attrs.error" class="wiki-image-error py-2 text-center text-sm text-ink-red-4">

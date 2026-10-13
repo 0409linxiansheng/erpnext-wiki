@@ -151,7 +151,7 @@ const dropdownOptions = computed(() => [
                 class="callout-title flex-1 min-w-0 bg-transparent border-none p-0 outline-none text-base-medium text-ink-gray-8 placeholder:text-ink-gray-5"
                 :value="node.attrs.title"
                 :placeholder="defaultTitle"
-                aria-label="Callout title"
+                :aria-label="__('Callout title')"
                 @input="setTitle"
                 @blur="restoreDefaultTitle"
                 @keydown.enter.prevent="focusBody"

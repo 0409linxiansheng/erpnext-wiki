@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wiki VERSION\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
-"POT-Creation-Date: 2026-10-13 23:53+0806\n"
-"PO-Revision-Date: 2026-10-13 23:53+0806\n"
+"POT-Creation-Date: 2026-10-14 00:27+0806\n"
+"PO-Revision-Date: 2026-10-14 00:27+0806\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: developers@frappe.io\n"
 "MIME-Version: 1.0\n"
@@ -432,6 +432,10 @@ msgstr ""
 msgid "Bullet List"
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/CalloutBlockView.vue:154
+msgid "Callout title"
+msgstr ""
+
 #: frontend/src/components/tiptap-extensions/slash-commands.js:212
 #: frontend/src/components/tiptap-extensions/slash-commands.js:225
 #: frontend/src/components/tiptap-extensions/slash-commands.js:238
@@ -451,12 +455,17 @@ msgstr ""
 #: frontend/src/components/WikiDocumentList.vue:237
 #: frontend/src/components/WikiDocumentPanel.vue:164
 #: frontend/src/components/WikiDocumentPanel.vue:188
+#: frontend/src/components/tiptap-extensions/LinkPopup.vue:45
 #: frontend/src/pages/ContributionReview.vue:330
 #: frontend/src/pages/ContributionReview.vue:362
 #: frontend/src/pages/ContributionReview.vue:395
 #: frontend/src/pages/SpaceDetails.vue:98
 #: frontend/src/pages/SpaceDetails.vue:128
 msgid "Cancel"
+msgstr ""
+
+#: wiki/api/zip_import.py:37
+msgid "Cannot import into a space that already has pages."
 msgstr ""
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1604
@@ -761,6 +770,7 @@ msgstr ""
 msgid "Copied!"
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/LinkPopup.vue:56
 #: wiki/templates/wiki/document.html:45
 #: wiki/templates/wiki/macros/buttons.html:36
 msgid "Copy"
@@ -1106,6 +1116,7 @@ msgstr ""
 msgid "Each operation must be an object"
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/LinkPopup.vue:65
 #: wiki/templates/wiki/macros/buttons.html:12
 msgid "Edit"
 msgstr ""
@@ -1139,6 +1150,7 @@ msgstr ""
 msgid "Email Id"
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/IframeBlockView.vue:102
 #: frontend/src/components/tiptap-extensions/slash-commands.js:142
 msgid "Embed"
 msgstr ""
@@ -1685,6 +1697,10 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
+#: wiki/api/zip_import.py:96
+msgid "Imported space"
+msgstr ""
+
 #. Option for the 'Status' (Select) field in DocType 'Wiki Change Request'
 #: frontend/src/components/SpaceModeStrip.vue:445
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
@@ -1922,6 +1938,10 @@ msgstr ""
 msgid "Last updated {0}"
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/MermaidBlockView.vue:163
+msgid "Learn about Mermaid"
+msgstr ""
+
 #. Description of the 'access_control_section' (Section Break) field in DocType
 #. 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -1954,6 +1974,10 @@ msgstr ""
 
 #: frontend/src/components/tiptap-extensions/slash-commands.js:181
 msgid "Link to Page"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/PageLinkList.vue:10
+msgid "Link to a page"
 msgstr ""
 
 #. Group in Wiki Page's connections
@@ -2316,6 +2340,10 @@ msgstr ""
 #: frontend/src/components/LibrarySidebar.vue:83
 #: frontend/src/pages/AllSpaces.vue:33
 msgid "No Wiki Spaces"
+msgstr ""
+
+#: wiki/api/zip_import.py:156
+msgid "No ZIP file given."
 msgstr ""
 
 #: frontend/src/components/PageSettingsPanel.vue:520
@@ -2706,6 +2734,10 @@ msgstr ""
 msgid "Paste PEM private key"
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/IframeBlockView.vue:92
+msgid "Paste a URL or <iframe> embed code."
+msgstr ""
+
 #. Label of the section_break_payload (Section Break) field in DocType 'Wiki
 #. Merge Conflict'
 #. Label of the payload_section (Section Break) field in DocType 'Wiki GitHub
@@ -2811,6 +2843,10 @@ msgstr ""
 #: frontend/src/components/PageSettingsPanel.vue:156
 #: frontend/src/pages/ContributionReview.vue:260
 msgid "Preview"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/PdfBlockView.vue:154
+msgid "Preview unavailable"
 msgstr ""
 
 #. Label of the github_app_private_key (Password) field in DocType 'Wiki
@@ -2984,7 +3020,13 @@ msgstr ""
 
 #: frontend/src/components/PageSettingsPanel.vue:121
 #: frontend/src/components/SpaceIdentityPicker.vue:109
+#: frontend/src/components/tiptap-extensions/IframeBlockView.vue:103
+#: frontend/src/components/tiptap-extensions/LinkPopup.vue:74
 msgid "Remove"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/MermaidBlockView.vue:170
+msgid "Remove diagram"
 msgstr ""
 
 #: frontend/src/components/SpaceModeStrip.vue:391
@@ -3011,6 +3053,11 @@ msgstr ""
 
 #: frontend/src/components/WikiDocumentPanel.vue:152
 msgid "Rename Page"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/MermaidBlockView.vue:139
+#: frontend/src/components/tiptap-extensions/MermaidBlockView.vue:197
+msgid "Rendering…"
 msgstr ""
 
 #: frontend/src/composables/useChangeTypeDisplay.js:31
@@ -3526,6 +3573,10 @@ msgstr ""
 msgid "Start Cloning"
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/MermaidBlockView.vue:200
+msgid "Start typing Mermaid to preview your diagram."
+msgstr ""
+
 #. Label of the started_at (Datetime) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 msgid "Started At"
@@ -3562,6 +3613,7 @@ msgid "Subject"
 msgstr ""
 
 #: frontend/src/components/SubmitForReviewButton.vue:126
+#: frontend/src/components/tiptap-extensions/LinkPopup.vue:36
 #: wiki/templates/wiki/includes/feedback_widget.html:54
 msgid "Submit"
 msgstr ""
@@ -3924,6 +3976,10 @@ msgstr ""
 msgid "Unable to download this page right now."
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/MermaidBlockView.vue:142
+msgid "Unable to render this diagram."
+msgstr ""
+
 #. Option for the 'Status' (Select) field in DocType 'Wiki Page Patch'
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "Under Review"
@@ -4016,6 +4072,10 @@ msgstr ""
 msgid "Uploading..."
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/ImageNodeView.vue:62
+msgid "Uploading…"
+msgstr ""
+
 #: frontend/src/components/SpaceIdentityPicker.vue:101
 msgid "Use this image"
 msgstr ""
@@ -4030,6 +4090,7 @@ msgstr ""
 msgid "Version 3"
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/VideoBlockView.vue:64
 #: frontend/src/components/tiptap-extensions/slash-commands.js:113
 msgid "Video"
 msgstr ""
