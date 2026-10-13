@@ -74,3 +74,27 @@ row changed and a reload keeps it.
 **Phase 0** — evidence above; the README's open question #2 is closed. The design is
 deliberately the smallest thing that is a useful board: one doctype, four columns,
 two drag writes.
+
+**Phases 2–4 — DONE (2026-10-14).** The board is a `tasks` child route under
+`/spaces/:spaceId` (`SpaceTasks.vue`), reachable from a kanban button in the space
+sidebar header. Four columns (the statuses), inline create per column, delete per
+card, and native HTML5 drag: dropping on another column writes `status`, and the
+board reloads. Within-column reordering is deferred — the spec's sort_order field
+is in place and the list orders by it, but the drop handler only moves status for
+now.
+
+Deleting a space now cascades to its `Wiki Task`s (`delete_linked_content`), the
+same as documents and revisions — without it a space with a board could never be
+deleted (LinkExistsError), which the e2e cleanup caught immediately.
+
+Two incidents worth recording:
+- The board's e2e initially drove a `LinkExistsError` from the factory cleanup,
+  which is what surfaced the missing cascade above.
+- An unrelated regression surfaced too: the editor's link popup stopped rendering.
+  It is mounted as its **own** `createApp` (into a tippy container), so it does not
+  inherit the main app's `globalProperties.__`; the i18n sweep had switched its
+  tooltips to `__()`, and the popup failed to resolve it. The fix hands the popup
+  app `window.__` before mount.
+
+Tests: 3 doctype unit cases, 2 kanban e2e (create + drag to Done; delete), and the
+full suite at 32 green across eight specs.

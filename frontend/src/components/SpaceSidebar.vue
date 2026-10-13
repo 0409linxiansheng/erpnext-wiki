@@ -37,6 +37,15 @@
 				<span class="min-w-0 flex-1 truncate text-base-medium leading-tighter text-ink-gray-8">
 					{{ spaceName }}
 				</span>
+				<Tooltip :text="__('Tasks')">
+					<Button
+						variant="ghost"
+						icon="lucide-kanban"
+						:aria-label="__('Tasks')"
+						:class="route.name === 'SpaceTasks' ? 'text-ink-gray-9' : 'text-ink-gray-5'"
+						:route="{ name: 'SpaceTasks', params: { spaceId } }"
+					/>
+				</Tooltip>
 				<Dropdown :options="spaceActions" placement="right">
 					<Button
 						variant="ghost"
@@ -83,6 +92,7 @@
 <script setup>
 import { Button, Dropdown, Sidebar, Tooltip } from 'frappe-ui';
 import { computed } from 'vue';
+import { useRoute } from 'vue-router';
 
 import { useSpaceIdentitySaver } from '../composables/useSpaceIdentitySaver.js';
 import { useSpaceSettings } from '../composables/useSpaceSettings';
@@ -97,6 +107,7 @@ const props = defineProps({
 	spaceId: { type: String, required: true },
 });
 
+const route = useRoute();
 const spaceStore = useSpaceStore();
 const { open: openSpaceSettings } = useSpaceSettings();
 

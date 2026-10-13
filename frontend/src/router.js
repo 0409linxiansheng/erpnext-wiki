@@ -54,6 +54,12 @@ const routes = [
 				props: true,
 			},
 			{
+				path: 'tasks',
+				name: 'SpaceTasks',
+				component: () => import('@/components/SpaceTasks.vue'),
+				props: true,
+			},
+			{
 				path: 'draft/:docKey',
 				name: 'DraftChangeRequest',
 				component: () => import('@/components/DraftContributionPanel.vue'),

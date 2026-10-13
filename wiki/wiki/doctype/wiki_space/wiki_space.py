@@ -134,7 +134,7 @@ class WikiSpace(Document):
 				for revision in revisions:
 					frappe.delete_doc("Wiki Revision", revision, force=True, ignore_permissions=True)
 
-			for doctype in ("Wiki Git Sync Log", "Wiki Change Request"):
+			for doctype in ("Wiki Git Sync Log", "Wiki Change Request", "Wiki Task"):
 				for name in frappe.get_all(doctype, filters={"wiki_space": self.name}, pluck="name", limit=0):
 					frappe.delete_doc(doctype, name, force=True, ignore_permissions=True)
 		finally:

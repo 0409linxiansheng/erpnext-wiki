@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wiki VERSION\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
-"POT-Creation-Date: 2026-10-14 00:27+0806\n"
-"PO-Revision-Date: 2026-10-14 00:27+0806\n"
+"POT-Creation-Date: 2026-10-14 01:35+0806\n"
+"PO-Revision-Date: 2026-10-14 01:35+0806\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: developers@frappe.io\n"
 "MIME-Version: 1.0\n"
@@ -133,6 +133,7 @@ msgstr ""
 
 #: frontend/src/components/NewSpaceDialog.vue:124
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:22
+#: frontend/src/components/SpaceTasks.vue:67
 msgid "Add"
 msgstr ""
 
@@ -144,11 +145,16 @@ msgstr ""
 msgid "Add a group or link"
 msgstr ""
 
+#: frontend/src/components/SpaceTasks.vue:78
+msgid "Add a task"
+msgstr ""
+
 #. Name of a role
 #: frontend/src/pages/AllSpaces.vue:349
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 #: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
 msgid "All"
 msgstr ""
 
@@ -316,6 +322,11 @@ msgstr ""
 msgid "Assign this change request to a reviewer. They will be notified and it will appear in their \"Assigned to me\" list."
 msgstr ""
 
+#. Label of the assigned_to (Link) field in DocType 'Wiki Task'
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
+msgid "Assigned To"
+msgstr ""
+
 #: frontend/src/components/ContributionsPanel.vue:204
 msgid "Assigned to"
 msgstr ""
@@ -377,6 +388,11 @@ msgstr ""
 #: frontend/src/components/SpaceTreePanel.vue:9
 #: frontend/src/components/SpaceTreePanel.vue:13
 msgid "Back to All Spaces"
+msgstr ""
+
+#. Option for the 'Status' (Select) field in DocType 'Wiki Task'
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
+msgid "Backlog"
 msgstr ""
 
 #. Option for the 'Type' (Select) field in DocType 'Wiki Feedback'
@@ -447,6 +463,7 @@ msgstr ""
 #: frontend/src/components/DraftContributionPanel.vue:124
 #: frontend/src/components/SnippetPickerDialog.vue:84
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:112
+#: frontend/src/components/SpaceTasks.vue:64
 #: frontend/src/components/SubmitForReviewButton.vue:121
 #: frontend/src/components/WikiDocumentList.vue:124
 #: frontend/src/components/WikiDocumentList.vue:165
@@ -803,12 +820,24 @@ msgstr ""
 msgid "Could not copy the space name"
 msgstr ""
 
+#: frontend/src/components/SpaceTasks.vue:137
+msgid "Could not create the task"
+msgstr ""
+
 #: frontend/src/components/SnippetPickerDialog.vue:245
 msgid "Could not delete the snippet"
 msgstr ""
 
+#: frontend/src/components/SpaceTasks.vue:174
+msgid "Could not delete the task"
+msgstr ""
+
 #: frontend/src/components/SpaceIdentityPicker.vue:259
 msgid "Could not generate a logo"
+msgstr ""
+
+#: frontend/src/components/SpaceTasks.vue:164
+msgid "Could not move the task"
 msgstr ""
 
 #: frontend/src/components/SpaceModeStrip.vue:347
@@ -964,6 +993,10 @@ msgstr ""
 msgid "Delete Space {0}"
 msgstr ""
 
+#: frontend/src/components/SpaceTasks.vue:45
+msgid "Delete task"
+msgstr ""
+
 #. Label of the deleted_count (Int) field in DocType 'Wiki Git Sync Log'
 #: frontend/src/components/WikiTree.vue:67
 #: frontend/src/composables/useChangeTypeDisplay.js:24
@@ -991,8 +1024,10 @@ msgstr ""
 
 #. Label of the description (Small Text) field in DocType 'Wiki Change Request'
 #. Label of the meta_description (Small Text) field in DocType 'Wiki Page'
+#. Label of the description (Text) field in DocType 'Wiki Task'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
 msgid "Description"
 msgstr ""
 
@@ -1083,6 +1118,11 @@ msgstr ""
 msgid "Document not found in change request"
 msgstr ""
 
+#. Option for the 'Status' (Select) field in DocType 'Wiki Task'
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
+msgid "Done"
+msgstr ""
+
 #: frontend/src/components/tiptap-extensions/FileBlockView.vue:72
 #: frontend/src/components/tiptap-extensions/FileBlockView.vue:80
 #: frontend/src/components/tiptap-extensions/FileBlockView.vue:87
@@ -1110,6 +1150,10 @@ msgstr ""
 
 #: frontend/src/components/SpaceModeStrip.vue:441
 msgid "Drafting Changes"
+msgstr ""
+
+#: frontend/src/components/SpaceTasks.vue:6
+msgid "Drag a card to move it between columns."
 msgstr ""
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1159
@@ -1699,6 +1743,11 @@ msgstr ""
 
 #: wiki/api/zip_import.py:96
 msgid "Imported space"
+msgstr ""
+
+#. Option for the 'Status' (Select) field in DocType 'Wiki Task'
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
+msgid "In Progress"
 msgstr ""
 
 #. Option for the 'Status' (Select) field in DocType 'Wiki Change Request'
@@ -2604,6 +2653,11 @@ msgstr ""
 msgid "Order updated"
 msgstr ""
 
+#. Description of the 'Sort Order' (Int) field in DocType 'Wiki Task'
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
+msgid "Order within a status column; the board renumbers siblings on drop."
+msgstr ""
+
 #. Label of the orignal_code (Code) field in DocType 'Wiki Page Patch'
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "Original HTML"
@@ -3495,7 +3549,9 @@ msgid "Social preview"
 msgstr ""
 
 #. Label of the sort_order (Int) field in DocType 'Wiki Document'
+#. Label of the sort_order (Int) field in DocType 'Wiki Task'
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
 msgid "Sort Order"
 msgstr ""
 
@@ -3536,7 +3592,7 @@ msgstr ""
 msgid "Space Name"
 msgstr ""
 
-#: frontend/src/components/SpaceSidebar.vue:44
+#: frontend/src/components/SpaceSidebar.vue:53
 msgid "Space actions"
 msgstr ""
 
@@ -3550,7 +3606,7 @@ msgstr ""
 
 #: frontend/src/components/CommandPalette.vue:359
 #: frontend/src/components/LibrarySidebar.vue:204
-#: frontend/src/components/SpaceSidebar.vue:114
+#: frontend/src/components/SpaceSidebar.vue:125
 #: frontend/src/components/SpaceTreePanel.vue:34
 #: frontend/src/components/SpaceTreePanel.vue:38
 msgid "Space settings"
@@ -3591,12 +3647,14 @@ msgstr ""
 #. Label of the status (Select) field in DocType 'Wiki Feedback'
 #. Label of the status (Select) field in DocType 'Wiki Git Sync Log'
 #. Label of the status (Select) field in DocType 'Wiki Page Patch'
+#. Label of the status (Select) field in DocType 'Wiki Task'
 #: frontend/src/components/ContributionsPanel.vue:202
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
 msgid "Status"
 msgstr ""
 
@@ -3662,7 +3720,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceModeStrip.vue:43
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:29
-#: frontend/src/components/SpaceSidebar.vue:128
+#: frontend/src/components/SpaceSidebar.vue:139
 msgid "Sync now"
 msgstr ""
 
@@ -3714,6 +3772,7 @@ msgstr ""
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 #: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
 msgid "System Manager"
 msgstr ""
 
@@ -3736,6 +3795,16 @@ msgstr ""
 #: frontend/src/components/tiptap-extensions/WikiToolbar.vue:128
 #: frontend/src/components/tiptap-extensions/slash-commands.js:90
 msgid "Task List"
+msgstr ""
+
+#: frontend/src/components/SpaceTasks.vue:59
+msgid "Task title"
+msgstr ""
+
+#: frontend/src/components/SpaceSidebar.vue:40
+#: frontend/src/components/SpaceSidebar.vue:44
+#: frontend/src/components/SpaceTasks.vue:4
+msgid "Tasks"
 msgstr ""
 
 #: frontend/src/components/tiptap-extensions/slash-commands.js:36
@@ -3769,6 +3838,11 @@ msgstr ""
 
 #: frontend/src/components/WikiDocumentPanel.vue:180
 msgid "The page is removed from the space when this change request is merged."
+msgstr ""
+
+#. Description of the 'Wiki Space' (Link) field in DocType 'Wiki Task'
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
+msgid "The space this task belongs to; the board groups by it. Not a permission gate (that is spec 05)."
 msgstr ""
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:84
@@ -3874,6 +3948,7 @@ msgstr ""
 #. Label of the title (Small Text) field in DocType 'Wiki Revision Item'
 #. Label of the title (Data) field in DocType 'Wiki Page'
 #. Label of the title (Data) field in DocType 'Wiki Snippet'
+#. Label of the title (Data) field in DocType 'Wiki Task'
 #: frontend/src/components/PageSettingsPanel.vue:42
 #: frontend/src/components/WikiDocumentList.vue:112
 #: frontend/src/components/WikiDocumentList.vue:182
@@ -3885,6 +3960,7 @@ msgstr ""
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
 #: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
 msgid "Title"
 msgstr ""
 
@@ -3897,6 +3973,11 @@ msgstr ""
 #: frontend/src/composables/useTreeDialogs.js:247
 #: frontend/src/composables/useTreeDialogs.js:287
 msgid "Title is required"
+msgstr ""
+
+#. Option for the 'Status' (Select) field in DocType 'Wiki Task'
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
+msgid "To Do"
 msgstr ""
 
 #: frontend/src/components/LibrarySidebar.vue:253
@@ -4113,7 +4194,7 @@ msgstr ""
 msgid "View live"
 msgstr ""
 
-#: frontend/src/components/SpaceSidebar.vue:121
+#: frontend/src/components/SpaceSidebar.vue:132
 msgid "View live site"
 msgstr ""
 
@@ -4406,6 +4487,7 @@ msgstr ""
 #. Settings'
 #. Label of the wiki_space (Link) field in DocType 'Wiki Snippet'
 #. Name of a DocType
+#. Label of the wiki_space (Link) field in DocType 'Wiki Task'
 #. Label of a shortcut in the Wiki Workspace
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
@@ -4415,6 +4497,7 @@ msgstr ""
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 #: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
 #: wiki/wiki/report/wiki_broken_links/wiki_broken_links.js:8
 #: wiki/wiki/workspace/wiki/wiki.json
 msgid "Wiki Space"
@@ -4427,6 +4510,11 @@ msgstr ""
 #. Name of a DocType
 #: wiki/wiki/doctype/wiki_space_role/wiki_space_role.json
 msgid "Wiki Space Role"
+msgstr ""
+
+#. Name of a DocType
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
+msgid "Wiki Task"
 msgstr ""
 
 #. Name of a role

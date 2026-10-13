@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wiki VERSION\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
-"POT-Creation-Date: 2026-10-14 00:27+0806\n"
+"POT-Creation-Date: 2026-10-14 01:35+0806\n"
 "PO-Revision-Date: 2026-10-13 19:15+0806\n"
 "Last-Translator: developers@frappe.io\n"
 "Language: zh\n"
@@ -139,6 +139,7 @@ msgstr "操作"
 
 #: frontend/src/components/NewSpaceDialog.vue:124
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:22
+#: frontend/src/components/SpaceTasks.vue:67
 msgid "Add"
 msgstr "添加"
 
@@ -150,11 +151,16 @@ msgstr "添加外部链接"
 msgid "Add a group or link"
 msgstr "添加分组或链接"
 
+#: frontend/src/components/SpaceTasks.vue:78
+msgid "Add a task"
+msgstr ""
+
 #. Name of a role
 #: frontend/src/pages/AllSpaces.vue:349
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 #: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
 msgid "All"
 msgstr "全部"
 
@@ -322,6 +328,11 @@ msgstr "指派审阅人"
 msgid "Assign this change request to a reviewer. They will be notified and it will appear in their \"Assigned to me\" list."
 msgstr "将此变更请求指派给一位审阅人。对方会收到通知，并出现在其“指派给我”列表中。"
 
+#. Label of the assigned_to (Link) field in DocType 'Wiki Task'
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
+msgid "Assigned To"
+msgstr ""
+
 #: frontend/src/components/ContributionsPanel.vue:204
 msgid "Assigned to"
 msgstr "分配给"
@@ -384,6 +395,11 @@ msgstr "返回"
 #: frontend/src/components/SpaceTreePanel.vue:13
 msgid "Back to All Spaces"
 msgstr "返回全部空间"
+
+#. Option for the 'Status' (Select) field in DocType 'Wiki Task'
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
+msgid "Backlog"
+msgstr ""
 
 #. Option for the 'Type' (Select) field in DocType 'Wiki Feedback'
 #: wiki/templates/wiki/includes/feedback_widget.html:8
@@ -453,6 +469,7 @@ msgstr "提示框"
 #: frontend/src/components/DraftContributionPanel.vue:124
 #: frontend/src/components/SnippetPickerDialog.vue:84
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:112
+#: frontend/src/components/SpaceTasks.vue:64
 #: frontend/src/components/SubmitForReviewButton.vue:121
 #: frontend/src/components/WikiDocumentList.vue:124
 #: frontend/src/components/WikiDocumentList.vue:165
@@ -809,13 +826,25 @@ msgstr "无法复制网址"
 msgid "Could not copy the space name"
 msgstr "无法复制空间名称"
 
+#: frontend/src/components/SpaceTasks.vue:137
+msgid "Could not create the task"
+msgstr ""
+
 #: frontend/src/components/SnippetPickerDialog.vue:245
 msgid "Could not delete the snippet"
 msgstr "删除片段失败"
 
+#: frontend/src/components/SpaceTasks.vue:174
+msgid "Could not delete the task"
+msgstr ""
+
 #: frontend/src/components/SpaceIdentityPicker.vue:259
 msgid "Could not generate a logo"
 msgstr "无法生成图标"
+
+#: frontend/src/components/SpaceTasks.vue:164
+msgid "Could not move the task"
+msgstr ""
 
 #: frontend/src/components/SpaceModeStrip.vue:347
 msgid "Could not reload from server"
@@ -970,6 +999,10 @@ msgstr "删除空间"
 msgid "Delete Space {0}"
 msgstr "删除空间 {0}"
 
+#: frontend/src/components/SpaceTasks.vue:45
+msgid "Delete task"
+msgstr ""
+
 #. Label of the deleted_count (Int) field in DocType 'Wiki Git Sync Log'
 #: frontend/src/components/WikiTree.vue:67
 #: frontend/src/composables/useChangeTypeDisplay.js:24
@@ -997,8 +1030,10 @@ msgstr "已弃用：标签已移除。保留此字段是为了让旧修订和变
 
 #. Label of the description (Small Text) field in DocType 'Wiki Change Request'
 #. Label of the meta_description (Small Text) field in DocType 'Wiki Page'
+#. Label of the description (Text) field in DocType 'Wiki Task'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
 msgid "Description"
 msgstr "描述"
 
@@ -1089,6 +1124,11 @@ msgstr "文档文件夹"
 msgid "Document not found in change request"
 msgstr "在变更请求中未找到该文档"
 
+#. Option for the 'Status' (Select) field in DocType 'Wiki Task'
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
+msgid "Done"
+msgstr ""
+
 #: frontend/src/components/tiptap-extensions/FileBlockView.vue:72
 #: frontend/src/components/tiptap-extensions/FileBlockView.vue:80
 #: frontend/src/components/tiptap-extensions/FileBlockView.vue:87
@@ -1117,6 +1157,10 @@ msgstr "未找到草稿"
 #: frontend/src/components/SpaceModeStrip.vue:441
 msgid "Drafting Changes"
 msgstr "正在起草修改"
+
+#: frontend/src/components/SpaceTasks.vue:6
+msgid "Drag a card to move it between columns."
+msgstr ""
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1159
 msgid "Each operation must be an object"
@@ -1705,6 +1749,11 @@ msgstr "图片"
 
 #: wiki/api/zip_import.py:96
 msgid "Imported space"
+msgstr ""
+
+#. Option for the 'Status' (Select) field in DocType 'Wiki Task'
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
+msgid "In Progress"
 msgstr ""
 
 #. Option for the 'Status' (Select) field in DocType 'Wiki Change Request'
@@ -2610,6 +2659,11 @@ msgstr "排序索引"
 msgid "Order updated"
 msgstr "顺序已更新"
 
+#. Description of the 'Sort Order' (Int) field in DocType 'Wiki Task'
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
+msgid "Order within a status column; the board renumbers siblings on drop."
+msgstr ""
+
 #. Label of the orignal_code (Code) field in DocType 'Wiki Page Patch'
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "Original HTML"
@@ -3501,7 +3555,9 @@ msgid "Social preview"
 msgstr "社交分享预览"
 
 #. Label of the sort_order (Int) field in DocType 'Wiki Document'
+#. Label of the sort_order (Int) field in DocType 'Wiki Task'
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
 msgid "Sort Order"
 msgstr "排序"
 
@@ -3542,7 +3598,7 @@ msgstr "空间图标"
 msgid "Space Name"
 msgstr "空间名称"
 
-#: frontend/src/components/SpaceSidebar.vue:44
+#: frontend/src/components/SpaceSidebar.vue:53
 msgid "Space actions"
 msgstr "空间操作"
 
@@ -3556,7 +3612,7 @@ msgstr "空间名称已复制"
 
 #: frontend/src/components/CommandPalette.vue:359
 #: frontend/src/components/LibrarySidebar.vue:204
-#: frontend/src/components/SpaceSidebar.vue:114
+#: frontend/src/components/SpaceSidebar.vue:125
 #: frontend/src/components/SpaceTreePanel.vue:34
 #: frontend/src/components/SpaceTreePanel.vue:38
 msgid "Space settings"
@@ -3597,12 +3653,14 @@ msgstr "正在开始克隆…"
 #. Label of the status (Select) field in DocType 'Wiki Feedback'
 #. Label of the status (Select) field in DocType 'Wiki Git Sync Log'
 #. Label of the status (Select) field in DocType 'Wiki Page Patch'
+#. Label of the status (Select) field in DocType 'Wiki Task'
 #: frontend/src/components/ContributionsPanel.vue:202
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
 msgid "Status"
 msgstr "状态"
 
@@ -3668,7 +3726,7 @@ msgstr "正在同步"
 
 #: frontend/src/components/SpaceModeStrip.vue:43
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:29
-#: frontend/src/components/SpaceSidebar.vue:128
+#: frontend/src/components/SpaceSidebar.vue:139
 msgid "Sync now"
 msgstr "立即同步"
 
@@ -3720,6 +3778,7 @@ msgstr "正在同步…"
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 #: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
 msgid "System Manager"
 msgstr "系统管理员"
 
@@ -3743,6 +3802,16 @@ msgstr "表格"
 #: frontend/src/components/tiptap-extensions/slash-commands.js:90
 msgid "Task List"
 msgstr "任务列表"
+
+#: frontend/src/components/SpaceTasks.vue:59
+msgid "Task title"
+msgstr ""
+
+#: frontend/src/components/SpaceSidebar.vue:40
+#: frontend/src/components/SpaceSidebar.vue:44
+#: frontend/src/components/SpaceTasks.vue:4
+msgid "Tasks"
+msgstr ""
 
 #: frontend/src/components/tiptap-extensions/slash-commands.js:36
 #: frontend/src/components/tiptap-extensions/slash-commands.js:44
@@ -3776,6 +3845,11 @@ msgstr "最近一次从仓库加载的侧边栏配置（.wiki.yml、.wiki.yaml �
 #: frontend/src/components/WikiDocumentPanel.vue:180
 msgid "The page is removed from the space when this change request is merged."
 msgstr "此变更请求合并后，该页面将从空间中移除。"
+
+#. Description of the 'Wiki Space' (Link) field in DocType 'Wiki Task'
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
+msgid "The space this task belongs to; the board groups by it. Not a permission gate (that is spec 05)."
+msgstr ""
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:84
 msgid "Their revision history"
@@ -3880,6 +3954,7 @@ msgstr "提示"
 #. Label of the title (Small Text) field in DocType 'Wiki Revision Item'
 #. Label of the title (Data) field in DocType 'Wiki Page'
 #. Label of the title (Data) field in DocType 'Wiki Snippet'
+#. Label of the title (Data) field in DocType 'Wiki Task'
 #: frontend/src/components/PageSettingsPanel.vue:42
 #: frontend/src/components/WikiDocumentList.vue:112
 #: frontend/src/components/WikiDocumentList.vue:182
@@ -3891,6 +3966,7 @@ msgstr "提示"
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
 #: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
 msgid "Title"
 msgstr "标题"
 
@@ -3904,6 +3980,11 @@ msgstr "标题与内容"
 #: frontend/src/composables/useTreeDialogs.js:287
 msgid "Title is required"
 msgstr "标题为必填项"
+
+#. Option for the 'Status' (Select) field in DocType 'Wiki Task'
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
+msgid "To Do"
+msgstr ""
 
 #: frontend/src/components/LibrarySidebar.vue:253
 #: frontend/src/components/MobileAppMenu.vue:34
@@ -4119,7 +4200,7 @@ msgstr "在 Desk 中查看"
 msgid "View live"
 msgstr "查看线上"
 
-#: frontend/src/components/SpaceSidebar.vue:121
+#: frontend/src/components/SpaceSidebar.vue:132
 msgid "View live site"
 msgstr "查看线上站点"
 
@@ -4412,6 +4493,7 @@ msgstr "Wiki 片段"
 #. Settings'
 #. Label of the wiki_space (Link) field in DocType 'Wiki Snippet'
 #. Name of a DocType
+#. Label of the wiki_space (Link) field in DocType 'Wiki Task'
 #. Label of a shortcut in the Wiki Workspace
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
@@ -4421,6 +4503,7 @@ msgstr "Wiki 片段"
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 #: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
 #: wiki/wiki/report/wiki_broken_links/wiki_broken_links.js:8
 #: wiki/wiki/workspace/wiki/wiki.json
 msgid "Wiki Space"
@@ -4434,6 +4517,11 @@ msgstr "Wiki 空间“{0}”创建成功。"
 #: wiki/wiki/doctype/wiki_space_role/wiki_space_role.json
 msgid "Wiki Space Role"
 msgstr "Wiki 空间角色"
+
+#. Name of a DocType
+#: wiki/wiki/doctype/wiki_task/wiki_task.json
+msgid "Wiki Task"
+msgstr ""
 
 #. Name of a role
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
