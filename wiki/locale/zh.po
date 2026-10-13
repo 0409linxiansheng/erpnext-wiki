@@ -102,7 +102,7 @@ msgstr ""
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:46
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:169
 msgid "Access"
-msgstr ""
+msgstr "访问权限"
 
 #. Label of the access_control_tab (Tab Break) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -319,7 +319,7 @@ msgstr ""
 
 #: frontend/src/components/ContributionsPanel.vue:204
 msgid "Assigned to"
-msgstr ""
+msgstr "分配给"
 
 #: frontend/src/pages/Contributions.vue:180
 msgid "Assigned to me"
@@ -402,7 +402,7 @@ msgstr ""
 #: wiki/wiki/doctype/wiki_github_webhook_log/wiki_github_webhook_log.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Branch"
-msgstr ""
+msgstr "分支机构"
 
 #: wiki/wiki/report/wiki_broken_links/wiki_broken_links.py:37
 msgid "Broken Link"
@@ -540,7 +540,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:95
 msgid "Click to copy"
-msgstr ""
+msgstr "点击复制"
 
 #. Label of the github_app_client_id (Data) field in DocType 'Wiki Settings'
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:23
@@ -598,7 +598,7 @@ msgstr ""
 #. Label of the code (Section Break) field in DocType 'Wiki Page Patch'
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "Code"
-msgstr ""
+msgstr "代码"
 
 #: frontend/src/components/WikiTree.vue:23
 msgid "Collapse"
@@ -729,7 +729,7 @@ msgstr ""
 #: wiki/templates/wiki/document.html:45
 #: wiki/templates/wiki/macros/buttons.html:36
 msgid "Copy"
-msgstr ""
+msgstr "复制"
 
 #: frontend/src/components/LibrarySidebar.vue:209
 msgid "Copy link"
@@ -961,7 +961,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceModeStrip.vue:121
 msgid "Discard"
-msgstr ""
+msgstr "放弃"
 
 #: frontend/src/components/SpaceModeStrip.vue:430
 msgid "Discard Changes"
@@ -1503,7 +1503,7 @@ msgstr ""
 #: wiki/templates/wiki/includes/feedback_widget.html:10
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 msgid "Good"
-msgstr ""
+msgstr "良好"
 
 #: frontend/src/components/DraftContributionPanel.vue:68
 msgid "Group"
@@ -1578,7 +1578,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceIdentityPicker.vue:63
 msgid "Icons"
-msgstr ""
+msgstr "图标"
 
 #. Description of the 'Image' (Attach Image) field in DocType 'Wiki Page'
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
@@ -1883,7 +1883,7 @@ msgstr ""
 #. Option for the 'Trigger' (Select) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 msgid "Manual"
-msgstr ""
+msgstr "手动"
 
 #: frontend/src/components/MobileAppMenu.vue:3
 #: wiki/templates/wiki/includes/mobile_header.html:98
@@ -1996,12 +1996,12 @@ msgstr ""
 #: frontend/src/components/ContributionsPanel.vue:208
 #: frontend/src/composables/useChangeTypeDisplay.js:17
 msgid "Modified"
-msgstr ""
+msgstr "已修改"
 
 #: frontend/src/components/SpaceModeStrip.vue:73
 #: frontend/src/pages/ContributionReview.vue:61
 msgid "More actions"
-msgstr ""
+msgstr "更多操作"
 
 #: wiki/templates/wiki/macros/buttons.html:41
 msgid "More page actions"
@@ -2041,7 +2041,7 @@ msgstr ""
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:37
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:168
 msgid "Navigation"
-msgstr ""
+msgstr "导航"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:51
 msgid "Never"
@@ -2221,7 +2221,7 @@ msgstr ""
 
 #: frontend/src/components/CommandPalette.vue:96
 msgid "No results"
-msgstr ""
+msgstr "无结果"
 
 #: wiki/templates/wiki/includes/mobile_header.html:210
 #: wiki/templates/wiki/includes/search_modal.html:99
@@ -2291,7 +2291,7 @@ msgstr ""
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:83
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:103
 msgid "Not set"
-msgstr ""
+msgstr "未设置"
 
 #: frontend/src/pages/Contributions.vue:188
 msgid "Nothing assigned to you"
@@ -2485,7 +2485,7 @@ msgstr ""
 #: frontend/src/pages/SpaceDetails.vue:12
 #: frontend/src/pages/SpaceDetails.vue:35
 msgid "Pages"
-msgstr ""
+msgstr "页面"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:40
 msgid "Pages are read from the repository root"
@@ -2729,7 +2729,7 @@ msgstr ""
 
 #: frontend/src/components/CommandPalette.vue:397
 msgid "Recent"
-msgstr ""
+msgstr "最近"
 
 #: frontend/src/components/PageSettingsPanel.vue:143
 msgid "Recommended 1200×630"
@@ -3052,7 +3052,7 @@ msgstr ""
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Running"
-msgstr ""
+msgstr "正在运行"
 
 #: frontend/src/components/PageSettingsPanel.vue:249
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:127
@@ -3083,7 +3083,7 @@ msgstr ""
 
 #: frontend/src/composables/useSyncState.js:32
 msgid "Saving…"
-msgstr ""
+msgstr "正在保存…"
 
 #. Option for the 'Trigger' (Select) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
@@ -3133,7 +3133,7 @@ msgstr ""
 
 #: frontend/src/components/CommandPalette.vue:96
 msgid "Searching…"
-msgstr ""
+msgstr "正在搜索…"
 
 #. Label of the github_app_secrets_section (Section Break) field in DocType
 #. 'Wiki Settings'
@@ -3391,7 +3391,7 @@ msgstr ""
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:29
 #: frontend/src/components/SpaceSidebar.vue:128
 msgid "Sync now"
-msgstr ""
+msgstr "立即同步"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:254
 #: frontend/src/stores/space.js:226
@@ -3421,7 +3421,7 @@ msgstr ""
 #: frontend/src/components/WikiTree.vue:57
 #: frontend/src/components/WikiTree.vue:58
 msgid "Syncing…"
-msgstr ""
+msgstr "正在同步…"
 
 #. Name of a role
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
@@ -3610,7 +3610,7 @@ msgstr ""
 #: frontend/src/components/CommandPalette.vue:341
 #: wiki/templates/wiki/includes/header.html:101
 msgid "Toggle theme"
-msgstr ""
+msgstr "切换主题"
 
 #. Label of the secrets_section (Section Break) field in DocType 'Wiki GitHub
 #. Connection'
@@ -3646,7 +3646,7 @@ msgstr ""
 #. Label of the trigger (Select) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 msgid "Trigger"
-msgstr ""
+msgstr "触发器"
 
 #: frontend/src/components/Analytics/TrackingNotice.vue:14
 msgid "Turn on tracking"
@@ -3673,7 +3673,7 @@ msgstr ""
 #: frontend/src/composables/useTreeDialogs.js:251
 #: frontend/src/composables/useTreeDialogs.js:291
 msgid "URL is required"
-msgstr ""
+msgstr "URL 为必填项"
 
 #: wiki/templates/wiki/document.html:218
 msgid "Unable to download this page right now."
@@ -3714,7 +3714,7 @@ msgstr ""
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:35
 #: frontend/src/composables/useSyncState.js:33
 msgid "Unsaved changes"
-msgstr ""
+msgstr "未保存的更改"
 
 #: frontend/src/components/DraftContributionPanel.vue:213
 #: frontend/src/components/PageSettingsPanel.vue:43
@@ -3724,7 +3724,7 @@ msgstr ""
 #: frontend/src/pages/ContributionReview.vue:202
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1219
 msgid "Untitled"
-msgstr ""
+msgstr "无标题"
 
 #: frontend/src/components/DraftContributionPanel.vue:126
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:23
