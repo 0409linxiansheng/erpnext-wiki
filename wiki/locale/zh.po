@@ -25,7 +25,7 @@ msgstr ""
 
 #: frontend/src/pages/Contributions.vue:278
 msgid "1 change request"
-msgstr ""
+msgstr "1 个变更请求"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:177
 msgid "1 page"
@@ -37,11 +37,11 @@ msgstr "最近 30 天 1 次浏览"
 
 #: frontend/src/pages/Overview.vue:196
 msgid "30 days"
-msgstr ""
+msgstr "30 天"
 
 #: frontend/src/pages/Overview.vue:195
 msgid "7 days"
-msgstr ""
+msgstr "7 天"
 
 #: frontend/src/pages/Overview.vue:197
 msgid "90 days"
@@ -58,7 +58,7 @@ msgstr ""
 
 #: frontend/src/components/WikiSettings/CodePanel.vue:5
 msgid "<head> HTML"
-msgstr ""
+msgstr "<head> HTML"
 
 #. Content of the 'github_app_intro' (HTML) field in DocType 'Wiki Settings'
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
@@ -151,7 +151,7 @@ msgstr "添加分组或链接"
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "All"
-msgstr ""
+msgstr "全部"
 
 #: frontend/src/components/CommandPalette.vue:224
 #: frontend/src/components/LibrarySidebar.vue:273
@@ -162,7 +162,7 @@ msgstr "全部空间"
 
 #: frontend/src/pages/Contributions.vue:200
 msgid "All in review"
-msgstr ""
+msgstr "全部审阅中"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:176
 msgid "All its pages"
@@ -203,7 +203,7 @@ msgstr ""
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:19
 msgid "App ID"
-msgstr ""
+msgstr "App ID"
 
 #. Label of the app_name (Data) field in DocType 'Migrate To Wiki'
 #: wiki/wiki/doctype/migrate_to_wiki/migrate_to_wiki.json
@@ -214,7 +214,7 @@ msgstr ""
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:28
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "App Public Link"
-msgstr ""
+msgstr "App 公开链接"
 
 #. Label of the app_switcher_logo (Attach Image) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -229,13 +229,13 @@ msgstr ""
 
 #: frontend/src/pages/ContributionReview.vue:57
 msgid "Approve"
-msgstr ""
+msgstr "批准"
 
 #: frontend/src/pages/ContributionReview.vue:321
 #: frontend/src/pages/ContributionReview.vue:336
 #: frontend/src/pages/ContributionReview.vue:603
 msgid "Approve & Merge"
-msgstr ""
+msgstr "批准并合并"
 
 #. Option for the 'Status' (Select) field in DocType 'Wiki Change Request'
 #. Option for the 'Status' (Select) field in DocType 'Wiki Page Patch'
@@ -311,7 +311,7 @@ msgstr "指派审阅人"
 
 #: frontend/src/pages/ContributionReview.vue:626
 msgid "Assign reviewer"
-msgstr ""
+msgstr "指派审阅人"
 
 #: frontend/src/components/AssignDialog.vue:9
 msgid "Assign this change request to a reviewer. They will be notified and it will appear in their \"Assigned to me\" list."
@@ -323,18 +323,18 @@ msgstr "分配给"
 
 #: frontend/src/pages/Contributions.vue:180
 msgid "Assigned to me"
-msgstr ""
+msgstr "指派给我"
 
 #: frontend/src/components/WikiSettings/GeneralPanel.vue:13
 msgid "Auto Convert Image to WebP"
-msgstr ""
+msgstr "自动将图片转换为 WebP"
 
 #. Label of the auto_generate_meta_images (Check) field in DocType 'Wiki
 #. Settings'
 #: frontend/src/components/WikiSettings/GeneralPanel.vue:23
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Auto Generate Meta Images"
-msgstr ""
+msgstr "自动生成元图片"
 
 #: frontend/src/components/PageSettingsPanel.vue:196
 msgid "Auto-generated from the page metadata. Upload an image to override it."
@@ -342,7 +342,7 @@ msgstr "根据页面元数据自动生成。上传图片可覆盖。"
 
 #: frontend/src/components/WikiSettings/GeneralPanel.vue:15
 msgid "Automatically convert uploaded PNG/JPEG images to WebP to reduce page size"
-msgstr ""
+msgstr "自动将上传的 PNG/JPEG 图片转换为 WebP 以减小页面体积"
 
 #. Description of the 'Convert Uploaded Images to WebP' (Check) field in
 #. DocType 'Wiki Settings'
@@ -367,7 +367,7 @@ msgstr ""
 
 #: frontend/src/pages/ContributionReview.vue:8
 msgid "Back"
-msgstr ""
+msgstr "返回"
 
 #: frontend/src/components/SpaceSidebar.vue:13
 #: frontend/src/components/SpaceSidebar.vue:17
@@ -464,7 +464,7 @@ msgstr "修改标题"
 
 #: frontend/src/pages/ContributionReview.vue:770
 msgid "Change request approved"
-msgstr ""
+msgstr "变更请求已批准"
 
 #: frontend/src/composables/useChangeRequestActions.js:85
 msgid "Change request archived"
@@ -473,11 +473,11 @@ msgstr ""
 #: frontend/src/composables/useChangeRequestActions.js:131
 #: frontend/src/pages/ContributionReview.vue:740
 msgid "Change request merged"
-msgstr ""
+msgstr "变更请求已合并"
 
 #: frontend/src/pages/ContributionReview.vue:853
 msgid "Change request rejected"
-msgstr ""
+msgstr "变更请求已拒绝"
 
 #: frontend/src/composables/useChangeRequestActions.js:67
 msgid "Change request submitted for review"
@@ -485,11 +485,11 @@ msgstr ""
 
 #: frontend/src/pages/ContributionReview.vue:866
 msgid "Change request withdrawn"
-msgstr ""
+msgstr "变更请求已撤回"
 
 #: frontend/src/pages/Contributions.vue:189
 msgid "Change requests assigned to you for review will appear here."
-msgstr ""
+msgstr "指派给你审阅的变更请求会显示在这里。"
 
 #: frontend/src/components/DraftContributionPanel.vue:419
 msgid "Change route"
@@ -501,7 +501,7 @@ msgstr "更换空间图标"
 
 #: frontend/src/pages/ContributionReview.vue:175
 msgid "Changes"
-msgstr ""
+msgstr "修改"
 
 #. Label of the counts_section (Section Break) field in DocType 'Wiki Git Sync
 #. Log'
@@ -546,14 +546,14 @@ msgstr "点击复制"
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:23
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Client ID"
-msgstr ""
+msgstr "客户端 ID"
 
 #. Label of the github_app_client_secret (Password) field in DocType 'Wiki
 #. Settings'
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:66
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Client Secret"
-msgstr ""
+msgstr "客户端密钥"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:56
 msgid "Clone"
@@ -602,7 +602,7 @@ msgstr "代码"
 
 #: frontend/src/components/WikiTree.vue:23
 msgid "Collapse"
-msgstr ""
+msgstr "折叠"
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:105
 msgid "Collect Feedback"
@@ -626,21 +626,21 @@ msgstr ""
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:221
 msgid "Configuration saved"
-msgstr ""
+msgstr "配置已保存"
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:8
 msgid "Configure a GitHub App so Wiki Spaces can sync from GitHub repositories, including private ones. Access tokens are minted on demand from the App private key — no per-space secrets are stored."
-msgstr ""
+msgstr "配置 GitHub App 后，Wiki 空间即可从 GitHub 仓库（含私有仓库）同步。访问令牌按需由 App 私钥签发 — 不会存储各空间的密钥。"
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:68
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:83
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:103
 msgid "Configured"
-msgstr ""
+msgstr "已配置"
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:95
 msgid "Configured — paste a new key to replace"
-msgstr ""
+msgstr "已配置 — 粘贴新密钥即可替换"
 
 #. Label of the conflict_type (Select) field in DocType 'Wiki Merge Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
@@ -653,11 +653,11 @@ msgstr ""
 
 #: frontend/src/pages/ContributionReview.vue:102
 msgid "Conflicts"
-msgstr ""
+msgstr "冲突"
 
 #: frontend/src/pages/ContributionReview.vue:828
 msgid "Conflicts resolved and change request merged"
-msgstr ""
+msgstr "冲突已解决，变更请求已合并"
 
 #: frontend/src/components/NewSpaceDialog.vue:79
 msgid "Connect GitHub"
@@ -777,7 +777,7 @@ msgstr "无法在 GitHub 上验证该分支。"
 
 #: frontend/src/components/WikiSettings/ViewTrackingToggle.vue:5
 msgid "Count visits to published pages, which is what the Overview reports"
-msgstr ""
+msgstr "统计已发布页面的访问量，即概览中报告的数据"
 
 #: frontend/src/components/NewSpaceDialog.vue:12
 msgid "Create"
@@ -786,7 +786,7 @@ msgstr "创建"
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:12
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.js:8
 msgid "Create GitHub App"
-msgstr ""
+msgstr "创建 GitHub App"
 
 #. Label of the create_new_assets (Check) field in DocType 'Migrate To Wiki'
 #: wiki/wiki/doctype/migrate_to_wiki/migrate_to_wiki.json
@@ -821,15 +821,15 @@ msgstr "创建你的第一个页面"
 
 #: frontend/src/components/WikiDocumentList.vue:43
 msgid "Create your first page to get started"
-msgstr ""
+msgstr "创建你的第一个页面以开始"
 
 #: frontend/src/pages/AllSpaces.vue:399
 msgid "Create your first wiki space from the sidebar to get started"
-msgstr ""
+msgstr "从侧边栏创建你的第一个 Wiki 空间以开始"
 
 #: frontend/src/pages/AllSpaces.vue:398
 msgid "Create your first wiki space to get started"
-msgstr ""
+msgstr "创建你的第一个 Wiki 空间以开始"
 
 #. Label of the created_count (Int) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
@@ -852,7 +852,7 @@ msgstr ""
 
 #: frontend/src/pages/ContributionReview.vue:271
 msgid "Current"
-msgstr ""
+msgstr "当前"
 
 #: frontend/src/pages/SpaceDetails.vue:84
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:44
@@ -865,7 +865,7 @@ msgstr "自定义范围"
 
 #: frontend/src/components/WikiTree.vue:416
 msgid "Danger"
-msgstr ""
+msgstr "危险"
 
 #. Label of the dark_mode_logo (Attach Image) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -909,11 +909,11 @@ msgstr "删除空间 {0}"
 #: frontend/src/composables/useChangeTypeDisplay.js:24
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 msgid "Deleted"
-msgstr ""
+msgstr "已删除"
 
 #: frontend/src/components/WikiTree.vue:66
 msgid "Deleted in this draft. Merge to remove it for everyone."
-msgstr ""
+msgstr "在此草稿中已删除。合并后将对所有人生效。"
 
 #. Description of the 'Enable Tabbed Navigation' (Check) field in DocType 'Wiki
 #. Space'
@@ -945,7 +945,7 @@ msgstr "详情"
 
 #: frontend/src/pages/ContributionReview.vue:253
 msgid "Diff"
-msgstr ""
+msgstr "差异"
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:190
 #: frontend/src/pages/Overview.vue:152
@@ -1051,7 +1051,7 @@ msgstr ""
 
 #: frontend/src/components/WikiDocumentList.vue:224
 msgid "Edit External Link"
-msgstr ""
+msgstr "编辑外部链接"
 
 #: frontend/src/components/DraftContributionPanel.vue:112
 msgid "Edit Route"
@@ -1059,7 +1059,7 @@ msgstr "编辑路径"
 
 #: frontend/src/components/WikiDocumentPanel.vue:45
 msgid "Edit on GitHub"
-msgstr ""
+msgstr "在 GitHub 上编辑"
 
 #: frontend/src/components/PageSettingsPanel.vue:219
 msgid "Edited by"
@@ -1078,7 +1078,7 @@ msgstr ""
 #: frontend/src/components/WikiSettings/FeedbackPanel.vue:6
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Enable Feedback"
-msgstr ""
+msgstr "启用反馈"
 
 #. Label of the enable_feedback_collection (Check) field in DocType 'Wiki
 #. Space'
@@ -1096,25 +1096,25 @@ msgstr ""
 #: frontend/src/components/WikiSettings/GeneralPanel.vue:6
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Enable Table of Contents"
-msgstr ""
+msgstr "启用目录"
 
 #: frontend/src/components/WikiSettings/ViewTrackingToggle.vue:3
 msgid "Enable View Tracking"
-msgstr ""
+msgstr "启用浏览统计"
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:62
 msgid "Enter client secret"
-msgstr ""
+msgstr "输入客户端密钥"
 
 #: frontend/src/components/WikiDocumentList.vue:183
 #: frontend/src/components/WikiDocumentList.vue:451
 msgid "Enter group name"
-msgstr ""
+msgstr "输入分组名称"
 
 #: frontend/src/components/WikiDocumentList.vue:206
 #: frontend/src/components/WikiDocumentList.vue:230
 msgid "Enter link title"
-msgstr ""
+msgstr "输入链接标题"
 
 #: frontend/src/pages/SpaceDetails.vue:92
 #: frontend/src/pages/SpaceDetails.vue:122
@@ -1124,7 +1124,7 @@ msgstr ""
 #: frontend/src/components/WikiDocumentList.vue:183
 #: frontend/src/components/WikiDocumentList.vue:451
 msgid "Enter page title"
-msgstr ""
+msgstr "输入页面标题"
 
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:16
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:53
@@ -1133,15 +1133,15 @@ msgstr ""
 
 #: frontend/src/pages/ContributionReview.vue:388
 msgid "Enter the reason for rejection..."
-msgstr ""
+msgstr "输入拒绝原因…"
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:77
 msgid "Enter webhook secret"
-msgstr ""
+msgstr "输入 Webhook 密钥"
 
 #: frontend/src/pages/ContributionReview.vue:355
 msgid "Enter your feedback..."
-msgstr ""
+msgstr "输入你的反馈…"
 
 #. Option for the 'Status' (Select) field in DocType 'Wiki Git Sync Log'
 #. Label of the error (Code) field in DocType 'Wiki Git Sync Log'
@@ -1154,7 +1154,7 @@ msgstr ""
 #: frontend/src/pages/ContributionReview.vue:773
 #: frontend/src/pages/ContributionReview.vue:783
 msgid "Error approving change request"
-msgstr ""
+msgstr "批准变更请求失败"
 
 #: frontend/src/composables/useChangeRequestActions.js:96
 msgid "Error archiving change request"
@@ -1169,7 +1169,7 @@ msgstr "指派审阅人失败"
 #: frontend/src/composables/useTreeDialogs.js:202
 #: frontend/src/composables/useTreeDialogs.js:270
 msgid "Error creating draft"
-msgstr ""
+msgstr "创建草稿失败"
 
 #: frontend/src/components/DraftContributionPanel.vue:492
 msgid "Error deleting draft"
@@ -1177,33 +1177,33 @@ msgstr "删除草稿失败"
 
 #: frontend/src/pages/ContributionReview.vue:675
 msgid "Error loading conflicts"
-msgstr ""
+msgstr "加载冲突失败"
 
 #: frontend/src/pages/ContributionReview.vue:730
 msgid "Error loading diff"
-msgstr ""
+msgstr "加载差异失败"
 
 #: frontend/src/composables/useChangeRequestActions.js:175
 #: frontend/src/pages/ContributionReview.vue:752
 #: frontend/src/pages/ContributionReview.vue:755
 msgid "Error merging change request"
-msgstr ""
+msgstr "合并变更请求失败"
 
 #: frontend/src/pages/ContributionReview.vue:858
 msgid "Error rejecting change request"
-msgstr ""
+msgstr "拒绝变更请求失败"
 
 #: frontend/src/pages/ContributionReview.vue:806
 msgid "Error requesting changes"
-msgstr ""
+msgstr "要求修改失败"
 
 #: frontend/src/pages/ContributionReview.vue:837
 msgid "Error resolving conflicts"
-msgstr ""
+msgstr "解决冲突失败"
 
 #: frontend/src/components/WikiTree.vue:356
 msgid "Error restoring page"
-msgstr ""
+msgstr "恢复页面失败"
 
 #: frontend/src/components/DraftContributionPanel.vue:308
 #: frontend/src/components/DraftContributionPanel.vue:361
@@ -1233,7 +1233,7 @@ msgstr ""
 #: frontend/src/components/WikiDocumentPanel.vue:637
 #: frontend/src/components/WikiTree.vue:348
 msgid "Error updating publish status"
-msgstr ""
+msgstr "更新发布状态失败"
 
 #: frontend/src/components/DraftContributionPanel.vue:461
 msgid "Error updating route"
@@ -1248,7 +1248,7 @@ msgstr "更新标题失败"
 
 #: frontend/src/pages/ContributionReview.vue:873
 msgid "Error withdrawing change request"
-msgstr ""
+msgstr "撤回变更请求失败"
 
 #. Label of the event (Data) field in DocType 'Wiki GitHub Webhook Log'
 #: wiki/wiki/doctype/wiki_github_webhook_log/wiki_github_webhook_log.json
@@ -1261,7 +1261,7 @@ msgstr "所有变更请求"
 
 #: frontend/src/components/WikiTree.vue:23
 msgid "Expand"
-msgstr ""
+msgstr "展开"
 
 #. Label of the is_external_link (Check) field in DocType 'Wiki Document'
 #. Label of the is_external_link (Check) field in DocType 'Wiki Revision Item'
@@ -1270,7 +1270,7 @@ msgstr ""
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
 msgid "External Link"
-msgstr ""
+msgstr "外部链接"
 
 #. Label of the external_url (Data) field in DocType 'Wiki Document'
 #. Label of the external_url (Data) field in DocType 'Wiki Revision Item'
@@ -1289,11 +1289,11 @@ msgstr "重命名空间失败"
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:224
 msgid "Failed to save configuration"
-msgstr ""
+msgstr "保存配置失败"
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:247
 msgid "Failed to save secrets"
-msgstr ""
+msgstr "保存密钥失败"
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:347
 msgid "Failed to update access control"
@@ -1341,14 +1341,14 @@ msgstr ""
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Feedback"
-msgstr ""
+msgstr "反馈"
 
 #. Label of the feedback_submission_limit (Int) field in DocType 'Wiki
 #. Settings'
 #: frontend/src/components/WikiSettings/FeedbackPanel.vue:14
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Feedback Submission Limit"
-msgstr ""
+msgstr "反馈提交上限"
 
 #: wiki/templates/wiki/includes/feedback_widget.html:12
 msgid "Feedback rating"
@@ -1401,7 +1401,7 @@ msgstr "生成"
 
 #: frontend/src/components/WikiSettings/GeneralPanel.vue:25
 msgid "Generate a branded social preview image for pages that have no Meta Image uploaded"
-msgstr ""
+msgstr "为未上传元图片的页面生成带品牌标识的社交预览图"
 
 #. Description of the 'Auto Generate Meta Images' (Check) field in DocType
 #. 'Wiki Settings'
@@ -1480,7 +1480,7 @@ msgstr ""
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:6
 #: frontend/src/components/WikiSettings/WikiSettings.vue:115
 msgid "GitHub Sync"
-msgstr ""
+msgstr "GitHub 同步"
 
 #: wiki/api/github.py:498
 msgid "GitHub account is not connected."
@@ -1540,7 +1540,7 @@ msgstr ""
 
 #: frontend/src/components/WikiSettings/WikiSettings.vue:109
 msgid "Header & Robots"
-msgstr ""
+msgstr "页眉与 Robots"
 
 #. Label of the header__robots_tab (Tab Break) field in DocType 'Wiki Settings'
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
@@ -1564,7 +1564,7 @@ msgstr ""
 
 #: frontend/src/components/WikiSettings/FeedbackPanel.vue:15
 msgid "Hourly rate limit on feedback submissions"
-msgstr ""
+msgstr "每小时反馈提交次数上限"
 
 #. Description of the 'Feedback Submission Limit' (Int) field in DocType 'Wiki
 #. Settings'
@@ -1606,7 +1606,7 @@ msgstr ""
 
 #: frontend/src/components/WikiSettings/CodePanel.vue:6
 msgid "Injected into the <head> of all public wiki pages"
-msgstr ""
+msgstr "注入到所有公开 Wiki 页面的 <head> 中"
 
 #: frontend/src/components/NewSpaceDialog.vue:97
 msgid "Install GitHub App"
@@ -1693,7 +1693,7 @@ msgstr ""
 
 #: frontend/src/components/WikiDocumentList.vue:145
 msgid "It stays in your draft, marked as deleted, until the change request is merged."
-msgstr ""
+msgstr "它会保留在你的草稿中并标记为已删除，直到变更请求被合并。"
 
 #. Description of the 'Enable Feedback' (Check) field in DocType 'Wiki
 #. Settings'
@@ -1713,12 +1713,12 @@ msgstr "跳转到"
 #: frontend/src/pages/ContributionReview.vue:134
 #: frontend/src/pages/ContributionReview.vue:148
 msgid "Keep Main"
-msgstr ""
+msgstr "保留主干"
 
 #: frontend/src/pages/ContributionReview.vue:134
 #: frontend/src/pages/ContributionReview.vue:154
 msgid "Keep Your Changes"
-msgstr ""
+msgstr "保留你的修改"
 
 #. Label of the meta_keywords (Small Text) field in DocType 'Wiki Page'
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
@@ -1780,7 +1780,7 @@ msgstr ""
 #: frontend/src/pages/AllSpaces.vue:112
 #: wiki/frappe_wiki/print_format/standard_wiki_document/standard_wiki_document.html:212
 msgid "Last Updated"
-msgstr ""
+msgstr "最后更新"
 
 #: frontend/src/components/PageSettingsPanel.vue:215
 msgid "Last edited"
@@ -1899,7 +1899,7 @@ msgstr "合并"
 
 #: frontend/src/pages/ContributionReview.vue:87
 msgid "Merge Conflicts"
-msgstr ""
+msgstr "合并冲突"
 
 #. Label of the merge_revision (Link) field in DocType 'Wiki Change Request'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
@@ -2014,7 +2014,7 @@ msgstr ""
 
 #: frontend/src/pages/Contributions.vue:166
 msgid "My Change Requests"
-msgstr ""
+msgstr "我的变更请求"
 
 #: frontend/src/components/NewSpaceDialog.vue:35
 msgid "My Wiki Space"
@@ -2022,7 +2022,7 @@ msgstr "我的 Wiki 空间"
 
 #: frontend/src/components/WikiDocumentList.vue:182
 msgid "Name"
-msgstr ""
+msgstr "名称"
 
 #: frontend/src/composables/useTreeDialogs.js:217
 msgid "Name is required"
@@ -2070,7 +2070,7 @@ msgstr ""
 #: frontend/src/components/WikiDocumentList.vue:435
 #: frontend/src/components/WikiTree.vue:382
 msgid "New Group"
-msgstr ""
+msgstr "新建分组"
 
 #. Label of the new_code (Code) field in DocType 'Wiki Page Patch'
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
@@ -2079,7 +2079,7 @@ msgstr ""
 
 #: frontend/src/components/WikiTree.vue:377
 msgid "New Page"
-msgstr ""
+msgstr "新建页面"
 
 #. Label of the new_sidebar_group (Data) field in DocType 'Wiki Page Patch'
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
@@ -2151,7 +2151,7 @@ msgstr ""
 
 #: frontend/src/pages/Contributions.vue:170
 msgid "No Change Requests"
-msgstr ""
+msgstr "暂无变更请求"
 
 #: frontend/src/components/ContributionsPanel.vue:280
 msgid "No Space"
@@ -2173,7 +2173,7 @@ msgstr ""
 
 #: frontend/src/pages/Contributions.vue:205
 msgid "No change requests in review"
-msgstr ""
+msgstr "没有审阅中的变更请求"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:299
 msgid "No changes"
@@ -2181,7 +2181,7 @@ msgstr "无修改"
 
 #: frontend/src/pages/ContributionReview.vue:313
 msgid "No changes in this change request."
-msgstr ""
+msgstr "此变更请求中没有修改。"
 
 #: frontend/src/components/PageSettingsPanel.vue:191
 msgid "No description set"
@@ -2197,15 +2197,15 @@ msgstr "仓库中还没有任何页面同步过来。"
 
 #: frontend/src/components/WikiDocumentList.vue:42
 msgid "No pages have synced from the repository yet"
-msgstr ""
+msgstr "尚未从仓库同步任何页面"
 
 #: frontend/src/components/WikiDocumentList.vue:31
 msgid "No pages match \"{0}\""
-msgstr ""
+msgstr "没有匹配“{0}”的页面"
 
 #: frontend/src/components/WikiDocumentList.vue:39
 msgid "No pages yet"
-msgstr ""
+msgstr "暂无页面"
 
 #: frontend/src/components/SpaceModeStrip.vue:252
 msgid "No pending changes"
@@ -2213,7 +2213,7 @@ msgstr "无待处理修改"
 
 #: frontend/src/pages/ContributionReview.vue:276
 msgid "No published version yet."
-msgstr ""
+msgstr "尚无已发布版本。"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:21
 msgid "No repository configured"
@@ -2238,7 +2238,7 @@ msgstr "未找到角色"
 
 #: frontend/src/pages/AllSpaces.vue:72
 msgid "No spaces found"
-msgstr ""
+msgstr "未找到空间"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:162
 msgid "No sync runs yet"
@@ -2253,7 +2253,7 @@ msgstr "该时间范围内没有浏览量"
 
 #: frontend/src/pages/AllSpaces.vue:396
 msgid "No wiki spaces available"
-msgstr ""
+msgstr "暂无 Wiki 空间"
 
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:96
 msgid "Not connected to a repository"
@@ -2295,7 +2295,7 @@ msgstr "未设置"
 
 #: frontend/src/pages/Contributions.vue:188
 msgid "Nothing assigned to you"
-msgstr ""
+msgstr "没有指派给你的内容"
 
 #: frontend/src/components/SpaceWelcome.vue:83
 msgid "Nothing synced yet"
@@ -2426,7 +2426,7 @@ msgstr "概览"
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:93
 msgid "PEM-encoded private key generated for the GitHub App"
-msgstr ""
+msgstr "为 GitHub App 生成的 PEM 编码私钥"
 
 #. Description of the 'Private Key' (Password) field in DocType 'Wiki Settings'
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
@@ -2527,7 +2527,7 @@ msgstr ""
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:95
 msgid "Paste PEM private key"
-msgstr ""
+msgstr "粘贴 PEM 私钥"
 
 #. Label of the section_break_payload (Section Break) field in DocType 'Wiki
 #. Merge Conflict'
@@ -2592,7 +2592,7 @@ msgstr "请选择或输入分支"
 
 #: frontend/src/pages/ContributionReview.vue:845
 msgid "Please provide a reason"
-msgstr ""
+msgstr "请提供原因"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1485
 msgid "Please provide a reason for rejecting this change request."
@@ -2600,7 +2600,7 @@ msgstr ""
 
 #: frontend/src/pages/ContributionReview.vue:793
 msgid "Please provide feedback"
-msgstr ""
+msgstr "请提供反馈"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1456
 msgid "Please provide feedback explaining what needs to change."
@@ -2608,7 +2608,7 @@ msgstr ""
 
 #: frontend/src/pages/ContributionReview.vue:349
 msgid "Please provide feedback explaining what needs to change. This is sent back to the author."
-msgstr ""
+msgstr "请说明需要修改的内容。该反馈会发回给作者。"
 
 #: frontend/src/components/SpaceModeStrip.vue:400
 #: frontend/src/composables/useChangeRequestActions.js:115
@@ -2617,7 +2617,7 @@ msgstr "请等待重新排序完成后再合并"
 
 #: frontend/src/pages/ContributionReview.vue:702
 msgid "Position"
-msgstr ""
+msgstr "位置"
 
 #: wiki/templates/wiki/document.html:35
 #: wiki/templates/wiki/macros/buttons.html:80
@@ -2641,22 +2641,22 @@ msgstr "预览"
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:101
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Private Key"
-msgstr ""
+msgstr "私钥"
 
 #: frontend/src/pages/ContributionReview.vue:283
 msgid "Proposed"
-msgstr ""
+msgstr "提议"
 
 #. Description of the 'App Public Link' (Data) field in DocType 'Wiki Settings'
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:30
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Public installation link, e.g. https://github.com/apps/your-app/installations/new"
-msgstr ""
+msgstr "公开安装链接，例如 https://github.com/apps/your-app/installations/new"
 
 #: frontend/src/components/WikiDocumentPanel.vue:546
 #: frontend/src/components/WikiTree.vue:407
 msgid "Publish"
-msgstr ""
+msgstr "发布"
 
 #. Label of the published (Check) field in DocType 'Wiki Page'
 #: frontend/src/components/PageSettingsPanel.vue:56
@@ -2709,7 +2709,7 @@ msgstr ""
 
 #: frontend/src/components/WikiDocumentPanel.vue:12
 msgid "Read-only"
-msgstr ""
+msgstr "只读"
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:85
 msgid "Readable by all logged-in users if no roles are set. Add the Guest role for public/anonymous access."
@@ -2725,7 +2725,7 @@ msgstr "实时同步"
 
 #: frontend/src/pages/ContributionReview.vue:387
 msgid "Reason"
-msgstr ""
+msgstr "原因"
 
 #: frontend/src/components/CommandPalette.vue:397
 msgid "Recent"
@@ -2762,11 +2762,11 @@ msgstr ""
 #: frontend/src/pages/ContributionReview.vue:402
 #: frontend/src/pages/ContributionReview.vue:619
 msgid "Reject"
-msgstr ""
+msgstr "拒绝"
 
 #: frontend/src/pages/ContributionReview.vue:377
 msgid "Reject Change Request"
-msgstr ""
+msgstr "拒绝变更请求"
 
 #. Option for the 'Status' (Select) field in DocType 'Wiki Change Request'
 #. Option for the 'Status' (Select) field in DocType 'Wiki Page Patch'
@@ -2787,7 +2787,7 @@ msgstr ""
 
 #: frontend/src/pages/ContributionReview.vue:382
 msgid "Rejecting is final — this change request cannot be merged. Please explain why it is being rejected."
-msgstr ""
+msgstr "拒绝后不可撤销 — 该变更请求将无法合并。请说明拒绝原因。"
 
 #: frontend/src/components/SpaceModeStrip.vue:105
 msgid "Reload latest"
@@ -2826,15 +2826,15 @@ msgstr ""
 #: frontend/src/components/WikiDocumentPanel.vue:541
 #: frontend/src/components/WikiTree.vue:392
 msgid "Rename"
-msgstr ""
+msgstr "重命名"
 
 #: frontend/src/components/WikiDocumentList.vue:177
 msgid "Rename Group"
-msgstr ""
+msgstr "重命名分组"
 
 #: frontend/src/components/WikiDocumentPanel.vue:152
 msgid "Rename Page"
-msgstr ""
+msgstr "重命名页面"
 
 #: frontend/src/composables/useChangeTypeDisplay.js:31
 msgid "Reordered"
@@ -2877,11 +2877,11 @@ msgstr ""
 #: frontend/src/pages/ContributionReview.vue:369
 #: frontend/src/pages/ContributionReview.vue:612
 msgid "Request Changes"
-msgstr ""
+msgstr "要求修改"
 
 #: frontend/src/pages/ContributionReview.vue:801
 msgid "Requested changes"
-msgstr ""
+msgstr "已要求修改"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1471
 msgid "Requested changes: {0}"
@@ -2898,7 +2898,7 @@ msgstr ""
 
 #: frontend/src/pages/ContributionReview.vue:41
 msgid "Resolve & Merge"
-msgstr ""
+msgstr "解决并合并"
 
 #: frontend/src/components/SpaceModeStrip.vue:385
 msgid "Resolve failed changes before merging"
@@ -2934,7 +2934,7 @@ msgstr ""
 
 #: frontend/src/components/WikiTree.vue:366
 msgid "Restore"
-msgstr ""
+msgstr "恢复"
 
 #: frontend/src/components/LibrarySidebar.vue:70
 #: frontend/src/pages/AllSpaces.vue:183
@@ -3067,11 +3067,11 @@ msgstr "保存"
 
 #: frontend/src/components/WikiDocumentPanel.vue:195
 msgid "Save Delete Draft"
-msgstr ""
+msgstr "保存删除草稿"
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:116
 msgid "Save Secrets"
-msgstr ""
+msgstr "保存密钥"
 
 #: frontend/src/components/SpaceModeStrip.vue:397
 msgid "Save your changes before merging"
@@ -3109,7 +3109,7 @@ msgstr ""
 
 #: frontend/src/components/WikiDocumentList.vue:10
 msgid "Search pages..."
-msgstr ""
+msgstr "搜索页面…"
 
 #: frontend/src/components/AssignDialog.vue:14
 msgid "Search people..."
@@ -3129,7 +3129,7 @@ msgstr "搜索要添加的角色"
 
 #: frontend/src/pages/AllSpaces.vue:57
 msgid "Search spaces..."
-msgstr ""
+msgstr "搜索空间…"
 
 #: frontend/src/components/CommandPalette.vue:96
 msgid "Searching…"
@@ -3140,11 +3140,11 @@ msgstr "正在搜索…"
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:52
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Secrets"
-msgstr ""
+msgstr "密钥"
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:244
 msgid "Secrets updated"
-msgstr ""
+msgstr "密钥已更新"
 
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.js:6
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:6
@@ -3174,7 +3174,7 @@ msgstr ""
 
 #: frontend/src/components/WikiSettings/FeedbackPanel.vue:8
 msgid "Show a feedback widget on every wiki page to collect ratings and comments"
-msgstr ""
+msgstr "在每个 Wiki 页面上显示反馈组件，以收集评分和评论"
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:107
 msgid "Show a feedback widget on wiki pages to collect user reactions"
@@ -3182,7 +3182,7 @@ msgstr "在 Wiki 页面上显示反馈组件以收集用户反馈"
 
 #: frontend/src/components/WikiSettings/GeneralPanel.vue:7
 msgid "Show an auto-generated table of contents on wiki pages"
-msgstr ""
+msgstr "在 Wiki 页面上显示自动生成的目录"
 
 #: frontend/src/components/SpaceSettings/NavigationPanel.vue:4
 msgid "Show in Space Switcher"
@@ -3334,7 +3334,7 @@ msgstr "状态"
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:55
 msgid "Stored secrets are never shown. Leave a field blank to keep its current value."
-msgstr ""
+msgstr "已存储的密钥不会显示。留空则保持当前值不变。"
 
 #: frontend/src/components/ContributionsPanel.vue:201
 msgid "Subject"
@@ -3374,11 +3374,11 @@ msgstr "同步历史"
 #: frontend/src/components/WikiTree.vue:52
 #: frontend/src/composables/useSyncState.js:31
 msgid "Sync failed"
-msgstr ""
+msgstr "同步失败"
 
 #: frontend/src/components/WikiTree.vue:51
 msgid "Sync failed — edit again or delete to recover"
-msgstr ""
+msgstr "同步失败 — 重新编辑或删除以恢复"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:285
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:289
@@ -3469,7 +3469,7 @@ msgstr "此 Wiki 空间的网址路径（例如 /my-wiki-space）"
 
 #: frontend/src/pages/ContributionReview.vue:89
 msgid "The following documents have conflicting changes. Choose which version to keep for each conflict."
-msgstr ""
+msgstr "以下文档存在冲突修改。请为每个冲突选择要保留的版本。"
 
 #. Description of the 'Wiki Config' (Code) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -3478,7 +3478,7 @@ msgstr ""
 
 #: frontend/src/components/WikiDocumentPanel.vue:180
 msgid "The page is removed from the space when this change request is merged."
-msgstr ""
+msgstr "此变更请求合并后，该页面将从空间中移除。"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:84
 msgid "Their revision history"
@@ -3501,7 +3501,7 @@ msgstr "主题：浅色"
 
 #: frontend/src/pages/Contributions.vue:206
 msgid "There are no change requests waiting for review."
-msgstr ""
+msgstr "没有等待审阅的变更请求。"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1422
 msgid "There are no changes to submit for review."
@@ -3535,7 +3535,7 @@ msgstr ""
 
 #: frontend/src/components/WikiDocumentList.vue:154
 msgid "This group contains"
-msgstr ""
+msgstr "此分组包含"
 
 #: frontend/src/components/DraftContributionPanel.vue:75
 msgid "This is a draft group."
@@ -3563,7 +3563,7 @@ msgstr ""
 
 #: frontend/src/pages/ContributionReview.vue:325
 msgid "This will approve the change request and immediately merge it into the live wiki. This cannot be undone. Are you sure?"
-msgstr ""
+msgstr "这将批准该变更请求并立即合并到线上 Wiki。此操作无法撤销。确定继续吗？"
 
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:86
 msgid "This will sync the sidebar into tree-based Wiki Documents. Continue?"
@@ -3668,7 +3668,7 @@ msgstr "输入 {0} 以确认"
 #: frontend/src/components/WikiDocumentList.vue:207
 #: frontend/src/components/WikiDocumentList.vue:231
 msgid "URL"
-msgstr ""
+msgstr "网址"
 
 #: frontend/src/composables/useTreeDialogs.js:251
 #: frontend/src/composables/useTreeDialogs.js:291
@@ -3695,7 +3695,7 @@ msgstr "取消置顶"
 #: frontend/src/components/WikiDocumentPanel.vue:546
 #: frontend/src/components/WikiTree.vue:407
 msgid "Unpublish"
-msgstr ""
+msgstr "取消发布"
 
 #: frontend/src/components/CommandPalette.vue:83
 #: frontend/src/components/LibrarySidebar.vue:186
@@ -3793,7 +3793,7 @@ msgstr "在 Desk 中查看"
 #: frontend/src/components/WikiDocumentPanel.vue:14
 #: frontend/src/components/WikiDocumentPanel.vue:18
 msgid "View live"
-msgstr ""
+msgstr "查看线上"
 
 #: frontend/src/components/SpaceSidebar.vue:121
 msgid "View live site"
@@ -3848,7 +3848,7 @@ msgstr ""
 
 #: frontend/src/components/WikiDocumentList.vue:152
 msgid "Warning"
-msgstr ""
+msgstr "警告"
 
 #: wiki/templates/wiki/includes/feedback_widget.html:4
 msgid "Was this helpful?"
@@ -3865,7 +3865,7 @@ msgstr "Webhook"
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:81
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Webhook Secret"
-msgstr ""
+msgstr "Webhook 密钥"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:219
 msgid "Webhook URL copied"
@@ -4060,7 +4060,7 @@ msgstr ""
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 #: wiki/wiki/workspace/wiki/wiki.json
 msgid "Wiki Settings"
-msgstr ""
+msgstr "Wiki 设置"
 
 #. Name of a DocType
 #: wiki/wiki/doctype/wiki_sidebar/wiki_sidebar.json
@@ -4125,7 +4125,7 @@ msgstr ""
 #: frontend/src/pages/ContributionReview.vue:73
 #: frontend/src/pages/ContributionReview.vue:638
 msgid "Withdraw"
-msgstr ""
+msgstr "撤回"
 
 #: frontend/src/components/PageSettingsPanel.vue:205
 msgid "Words"
@@ -4190,7 +4190,7 @@ msgstr "你没有编辑此页面的权限"
 
 #: frontend/src/pages/Contributions.vue:171
 msgid "You have not created any change requests yet. Edit a wiki page to get started."
-msgstr ""
+msgstr "你还没有创建任何变更请求。编辑一个 Wiki 页面即可开始。"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1444
 msgid "Your change request “{0}” was approved."
@@ -4216,7 +4216,7 @@ msgstr ""
 
 #: frontend/src/pages/ContributionReview.vue:21
 msgid "by"
-msgstr ""
+msgstr "由"
 
 #: frontend/src/components/SubmitForReviewButton.vue:115
 msgid "change"
@@ -4228,11 +4228,11 @@ msgstr "处变更"
 
 #: frontend/src/components/WikiDocumentList.vue:155
 msgid "child document"
-msgstr ""
+msgstr "子文档"
 
 #: frontend/src/components/WikiDocumentList.vue:155
 msgid "child documents"
-msgstr ""
+msgstr "子文档"
 
 #. Option for the 'Conflict Type' (Select) field in DocType 'Wiki Merge
 #. Conflict'
@@ -4258,12 +4258,12 @@ msgstr "docs"
 
 #: frontend/src/components/WikiDocumentList.vue:142
 msgid "group"
-msgstr ""
+msgstr "分组"
 
 #: frontend/src/components/WikiDocumentList.vue:208
 #: frontend/src/components/WikiDocumentList.vue:232
 msgid "https://example.com"
-msgstr ""
+msgstr "https://example.com"
 
 #: frontend/src/components/NewSpaceDialog.vue:158
 msgid "main"
@@ -4308,7 +4308,7 @@ msgstr ""
 #: frontend/src/components/WikiDocumentList.vue:142
 #: frontend/src/pages/AllSpaces.vue:375
 msgid "page"
-msgstr ""
+msgstr "页面"
 
 #: frontend/src/components/DraftContributionPanel.vue:119
 msgid "page-route"
@@ -4321,7 +4321,7 @@ msgstr "页"
 
 #: frontend/src/pages/ContributionReview.vue:92
 msgid "resolved"
-msgstr ""
+msgstr "已解决"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1085
 msgid "restore_node operation requires doc_key"
@@ -4329,7 +4329,7 @@ msgstr ""
 
 #: frontend/src/components/WikiDocumentList.vue:116
 msgid "space/page-url"
-msgstr ""
+msgstr "space/page-url"
 
 #: frontend/src/components/PageSettingsPanel.vue:50
 msgid "space/section/page"
@@ -4347,7 +4347,7 @@ msgstr ""
 
 #: frontend/src/components/WikiDocumentList.vue:156
 msgid "that will also be deleted."
-msgstr ""
+msgstr "也将被删除。"
 
 #. Option for the 'Resolution' (Select) field in DocType 'Wiki Merge Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
@@ -4400,7 +4400,7 @@ msgstr ""
 
 #: frontend/src/pages/Contributions.vue:281
 msgid "{0} change requests"
-msgstr ""
+msgstr "{0} 个变更请求"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1639
 msgid "{0} conflict(s) still unresolved."
