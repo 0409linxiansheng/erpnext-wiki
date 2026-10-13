@@ -67,10 +67,9 @@ JSON.
 
 ## Phases
 
-**Phase 0 — evidence.** Add `babel_extractors.csv` (start from
-`wlh_translate`'s, minus its app-specific `dock` / `hd_view` rules unless they
-apply). Run `generate-pot-file --app wiki`. Record the real string count and any
-extractor that cannot read a surface (the SPA's `.vue` templates are the risk).
+**Phase 0 — evidence — DONE (2026-10-13).** No custom `babel_extractors.csv`
+was needed; frappe's stock rules already cover every surface this app has. The
+catalog is **899 entries with zero junk**. See the reconciliation log.
 
 **Phase 1 — catalog.** `create-po-file zh --app wiki`, then `compile-po-to-mo`
 and confirm the chain end to end with a handful of hand-translated strings: change
@@ -101,3 +100,46 @@ for "other languages later".
   to load.
 - The Desk's own translations (frappe/erpnext) — those are the other apps' job and
   are already handled by `wlh_translate`.
+
+## Reconciliation log
+
+**Phase 0 — evidence (2026-10-13).**
+
+- Extraction runs on frappe 16.51.0:
+  `bench --site erp.local generate-pot-file --app wiki`.
+- **No custom `babel_extractors.csv` is needed.** frappe's stock rules already
+  cover every surface here — `**.vue` and `**.html` via
+  `frappe.gettext.extractors.html_template`, `**.js`, `**.py`, `**/hooks.py`
+  (navbar), `**/doctype/*/*.json`, `**/workspace/*/*.json`,
+  `**/desktop_icon/*.json`, `**/report/*/*.json`, `**/fixtures/custom_field.json`.
+  The SPA contains no `.ts`/`.tsx` at all, so the TS rules `wlh_translate` carries
+  have nothing to do.
+- The one JSON the stock rules miss is
+  `wiki/frappe_wiki/print_format/standard_wiki_document/standard_wiki_document.json`.
+  Its only user-visible string is the record `name` (`Standard Wiki Document`),
+  which is a record name and belongs to the Translation doctype, not to gettext.
+  Left out deliberately — extraction is not the tool for record names.
+- `generate_pot` filters directories through `repo.ignored(...)`, so `.gitignore`
+  keeps `frontend/node_modules/` and the built `wiki/public/frontend/` out of the
+  catalog automatically: **899 entries, no minified-bundle junk**. That failure
+  mode is exactly what polluted `wlh_translate` — it walks with its own filter and
+  has to enumerate build outputs by hand.
+- Inventory by area: `frontend/src` 731 references (the SPA is the bulk),
+  `wiki/wiki` 306, `wiki/frappe_wiki` 199, `wiki/templates` 66, `wiki/api` 20.
+- **Pipeline proven end to end on both runtime paths**, with five strings from four
+  surfaces: `New Space` (SPA), `Space Name` (DocType label), `You don't have
+  permission to edit this page` (Python), and `Copy page` / `Download` (server-side
+  Jinja templates).
+  - *SPA path:* after `compile-po-to-mo`, all five came back from
+    `GET /api/method/wiki.api.get_translations` — the exact endpoint
+    `frontend/src/translation.js` reads. That endpoint returns the raw catalog
+    (`get_all_translations(language)`), so it proves loading, not `_()` resolution.
+  - *Server-rendered path:* `GET /docs/welcome-to-frappe-wiki` served as a `zh` user
+    contains `复制页面` in the HTML, which is `_()` resolving inside
+    `wiki/templates/wiki/document.html`. This is the path a catalog that only loads
+    into the SPA would silently miss.
+  - Both paths read `sites/assets/locale/zh/LC_MESSAGES/wiki.mo`; without
+    `compile-po-to-mo` neither sees a translation, which is the first thing to check
+    when a string "does not translate".
+  - `bench execute frappe._` is **not** a valid check here: outside a request there is
+    no user language, so it answers with the msgid and looks like a failure.
