@@ -143,3 +143,30 @@ for "other languages later".
     when a string "does not translate".
   - `bench execute frappe._` is **not** a valid check here: outside a request there is
     no user language, so it answers with the msgid and looks like a failure.
+
+**Phase 1 — catalog, and the first real bug it exposed (2026-10-13).**
+
+- `bench create-po-file zh --app wiki` + `compile-po-to-mo` work as documented.
+  Translations were seeded by hand and the catalog grows in batches.
+- **The catalog alone did not change the rendered UI.** On `/wiki-app/spaces` a
+  `zh` user still saw `Overview`, `All Spaces`, `New Space`, `Published` in
+  English while `Search` / `Page` / `Spaces` were Chinese — a split that looks
+  like a bad catalog and is not one.
+- Cause: `frontend/src/translation.js` fired `createResource({auto: true})` from
+  the plugin, and `main.js` mounted immediately after. `translate()` reads
+  `window.translatedMessages`, a **plain object**, so the catalog arriving after
+  the first render never triggers a re-render: every string a component resolves
+  during setup keeps its msgid forever. Strings that only resolve once async data
+  lands (list items, placeholders) came out Chinese — hence the split.
+  `if (!window.translatedMessages) fetchTranslations()` also means the fetch is
+  skipped entirely when the app is embedded in the Desk, where frappe's boot
+  already set the object; only the standalone route was affected.
+- Fix: `loadTranslations()` resolves once the catalog is in place and `main.js`
+  mounts from `loadTranslations().finally(...)`, so a failed fetch still mounts.
+- Verified: `/wiki-app/spaces` as a `zh` user now renders 全部空间 / 变更请求 /
+  新建空间 / 已发布 / 最后更新 / 页面. What is still English is deliberate (the
+  product name), not ours (the user name, `CTRL`), a route value (`docs`), or
+  out of scope (the browser's relative timestamp, `a day ago`).
+- **Lesson for the next app-specific SPA surface:** a translation that exists in
+  the catalog, compiles into the `.mo`, and is present in the boot payload can
+  still never reach the DOM. Check first paint, not just the payload.

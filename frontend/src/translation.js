@@ -1,9 +1,6 @@
-import { createResource } from 'frappe-ui';
-
 export default function translationPlugin(app) {
 	app.config.globalProperties.__ = translate;
 	window.__ = translate;
-	if (!window.translatedMessages) fetchTranslations();
 }
 
 function format(message, replace) {
@@ -35,12 +32,29 @@ function translate(message, replace, context = null) {
 	return format(translatedMessage, replace);
 }
 
-function fetchTranslations() {
-	createResource({
-		url: 'wiki.api.get_translations',
-		auto: true,
-		transform: (data) => {
-			window.translatedMessages = data;
-		},
-	});
+/**
+ * Fetch the catalogs the SPA renders with, and resolve once they are in place.
+ *
+ * `translate()` reads a plain object, so a catalog that arrives late never
+ * triggers a re-render: every string a component resolves during setup keeps the
+ * msgid. On the standalone `/wiki-app` route nothing else sets
+ * `window.translatedMessages` (embedded in the Desk, frappe's boot already has),
+ * so `main.js` awaits this before mounting. See specs/i18n_chinese_first.md.
+ */
+async function loadTranslations() {
+	if (window.translatedMessages) return;
+
+	try {
+		const response = await fetch('/api/method/wiki.api.get_translations', {
+			credentials: 'same-origin',
+		});
+		const payload = await response.json();
+		window.translatedMessages = payload.message ?? payload;
+	} catch (error) {
+		// A missing catalog renders msgids, which is the pre-existing behaviour —
+		// it must never stop the app from mounting.
+		console.error('wiki: could not load translations', error);
+	}
 }
+
+export { loadTranslations };

@@ -9,7 +9,7 @@ import { useSessionStore } from './stores/session';
 import { useUserStore } from './stores/user';
 
 import { trackPageviews } from './telemetry';
-import translationPlugin from './translation';
+import translationPlugin, { loadTranslations } from './translation';
 
 import {
 	Badge,
@@ -67,4 +67,6 @@ for (const key in globalComponents) {
 	app.component(key, globalComponents[key]);
 }
 
-app.mount('#app');
+// The catalog has to be in place before the first render, not after it: see
+// loadTranslations(). `finally` keeps a failed fetch from blanking the app.
+loadTranslations().finally(() => app.mount('#app'));
