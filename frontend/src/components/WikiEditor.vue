@@ -653,6 +653,10 @@ function showLinkPopup({ editor: editorInstance, href, isNew, rect }) {
 			});
 		},
 	});
+	// The popup is its own Vue app (mounted into a tippy container), so it does not
+	// inherit the main app's global properties. Hand it the translate function or
+	// its template's __() calls fail to resolve.
+	linkPopupApp.config.globalProperties.__ = window.__;
 	linkPopupApp.mount(container);
 
 	// Create tippy popup
