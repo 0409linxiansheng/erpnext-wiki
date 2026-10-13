@@ -130,3 +130,22 @@ seven specs. Six new strings are extracted and left untranslated under the
 bulk-translation workflow.
 
 Phase 1 is complete.
+
+**Phase 2 — DONE (2026-10-13): space ZIP export.**
+
+`wiki.api.zip_export.export_space(space_name)` builds a deterministic ZIP —
+`manifest.json` (space's portable fields, the document tree with parent references
+by index, the attachment map) plus one `files/<name>` entry per referenced
+attachment — and saves it as a private File. The format and assembly live in
+`wiki.wiki.zip_portability` as a pure module, so the format is unit-tested without
+a site (6 cases: reference extraction incl. spaces/parens/dedup, and the
+manifest↔zip round-trip).
+
+Two things the walk got right after a live run: the tree is collected by NestedSet
+range (`lft`/`rgt`) rather than the denormalized `wiki_space` field, because the
+root group's `wiki_space` is unset and would orphan every top-level page's parent
+reference; and a repeated export to the same filename gets Frappe's hash-suffixed
+dedup, which is fine (the return value always carries the real `file_url`).
+
+Verified live on the `docs` space: 5 documents (root group + 4 pages) with the root
+at index 0 and every page pointing `parent: 0`. Revisions are excluded, as decided.
