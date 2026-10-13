@@ -124,3 +124,29 @@ there instead of rebuilding it.
 
 **Phase 0** — evidence gathered, decisions above. The probe page used for the
 HTTPS capability check was created and deleted; no test data is left behind.
+
+**Phase 2 — insert — DONE (2026-10-13).** `/snippet` in the Insert group opens a
+picker (`SnippetPickerDialog.vue`) that filters on title and keywords, is driven
+by arrow keys, and inserts the stored markdown at the caret through
+`insertContent(content, { contentType: 'markdown' })` — the path a paste takes, so
+a snippet containing `$…$`, a callout or a fence obeys the rules already under
+test. The command hands its editor and range to `stores/snippetPicker.js`, because
+a Tiptap extension can hold that state but cannot render a dialog.
+
+The picker can also create a snippet, which is the difference between a usable
+feature and a dead end; editing and deleting stay in Phase 3.
+
+Two things the working code taught us, both recorded rather than papered over:
+
+- **frappe-ui's `Dialog` takes its body through the default slot and its footer
+  through `#actions`.** Content placed in a `#body-content` slot renders nowhere,
+  silently — the dialog opened with a title and an empty body, and the first e2e
+  run failed on a placeholder that could never exist.
+- **The slash menu's own labels are not translatable at all.** `SLASH_COMMANDS`
+  stores plain `title` / `group` strings (no `__()`), so the extractor never sees
+  them and `Heading 1`, `Mermaid`, `Insert`, `Callouts` … stay English on a `zh`
+  site. Confirmed against `main.pot`: none of them are entries. This predates this
+  spec — every slash command has it — and it is its own small increment rather
+  than a drive-by change to the picker: the fix has to make the literals
+  extractable *and* call `__()` at render time, since the commands array is built
+  at import time, before `translationPlugin` installs `window.__`.

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wiki VERSION\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
-"POT-Creation-Date: 2026-10-13 20:43+0806\n"
+"POT-Creation-Date: 2026-10-13 21:14+0806\n"
 "PO-Revision-Date: 2026-10-13 19:15+0806\n"
 "Last-Translator: developers@frappe.io\n"
 "Language: zh\n"
@@ -582,6 +582,7 @@ msgstr "克隆已在后台开始"
 msgid "Cloning started in background."
 msgstr "克隆已在后台开始。"
 
+#: frontend/src/components/SnippetPickerDialog.vue:72
 #: frontend/src/components/SpaceModeStrip.vue:258
 msgid "Close"
 msgstr "关闭"
@@ -765,6 +766,10 @@ msgstr "无法复制网址"
 msgid "Could not copy the space name"
 msgstr "无法复制空间名称"
 
+#: frontend/src/components/SnippetPickerDialog.vue:165
+msgid "Could not create the snippet"
+msgstr "创建片段失败"
+
 #: frontend/src/components/SpaceIdentityPicker.vue:259
 msgid "Could not generate a logo"
 msgstr "无法生成图标"
@@ -787,6 +792,7 @@ msgid "Count visits to published pages, which is what the Overview reports"
 msgstr "统计已发布页面的访问量，即概览中报告的数据"
 
 #: frontend/src/components/NewSpaceDialog.vue:12
+#: frontend/src/components/SnippetPickerDialog.vue:70
 msgid "Create"
 msgstr "创建"
 
@@ -1620,6 +1626,10 @@ msgstr "包含内部链接？"
 msgid "Injected into the <head> of all public wiki pages"
 msgstr "注入到所有公开 Wiki 页面的 <head> 中"
 
+#: frontend/src/components/SnippetPickerDialog.vue:4
+msgid "Insert snippet"
+msgstr "插入片段"
+
 #: frontend/src/components/NewSpaceDialog.vue:97
 msgid "Install GitHub App"
 msgstr "安装 GitHub App"
@@ -2144,6 +2154,10 @@ msgstr "待创建的新页面"
 msgid "New route is the same as current route"
 msgstr "新路径与当前路径相同"
 
+#: frontend/src/components/SnippetPickerDialog.vue:61
+msgid "New snippet"
+msgstr "新建片段"
+
 #: frontend/src/components/CommandPalette.vue:310
 msgid "New space"
 msgstr "新建空间"
@@ -2254,6 +2268,14 @@ msgstr "未配置角色（对所有已登录用户开放）。"
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:17
 msgid "No roles found"
 msgstr "未找到角色"
+
+#: frontend/src/components/SnippetPickerDialog.vue:42
+msgid "No snippets match"
+msgstr "没有匹配的片段"
+
+#: frontend/src/components/SnippetPickerDialog.vue:42
+msgid "No snippets yet"
+msgstr "暂无片段"
 
 #: frontend/src/pages/AllSpaces.vue:72
 msgid "No spaces found"
@@ -3151,6 +3173,10 @@ msgstr "搜索结果"
 msgid "Search role to add"
 msgstr "搜索要添加的角色"
 
+#: frontend/src/components/SnippetPickerDialog.vue:15
+msgid "Search snippets…"
+msgstr "搜索片段…"
+
 #: frontend/src/pages/AllSpaces.vue:57
 msgid "Search spaces..."
 msgstr "搜索空间…"
@@ -3249,6 +3275,18 @@ msgstr "大小"
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
 msgid "Slug"
 msgstr "别名"
+
+#: frontend/src/components/SnippetPickerDialog.vue:52
+msgid "Snippet content"
+msgstr "片段内容"
+
+#: frontend/src/components/SnippetPickerDialog.vue:163
+msgid "Snippet created"
+msgstr "片段已创建"
+
+#: frontend/src/components/SnippetPickerDialog.vue:48
+msgid "Snippet title"
+msgstr "片段标题"
 
 #: frontend/src/components/PageSettingsPanel.vue:83
 msgid "Social preview"

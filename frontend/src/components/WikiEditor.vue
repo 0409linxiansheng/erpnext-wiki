@@ -35,6 +35,10 @@
             @change="handleSlashImageSelect"
         />
 
+        <!-- Rendered here, not in the extension: the slash command can hand the
+             picker its editor and range, but only a component can render it. -->
+        <SnippetPickerDialog />
+
     </div>
 </template>
 
@@ -82,6 +86,7 @@ import {
 import EditorTableOfContents from './EditorTableOfContents.vue';
 import LinkPopup from './tiptap-extensions/LinkPopup.vue';
 import PageLinkList from './tiptap-extensions/PageLinkList.vue';
+import SnippetPickerDialog from './SnippetPickerDialog.vue';
 import SlashCommandsList from './tiptap-extensions/SlashCommandsList.vue';
 import WikiBubbleMenu from './tiptap-extensions/WikiBubbleMenu.vue';
 import WikiToolbar from './tiptap-extensions/WikiToolbar.vue';

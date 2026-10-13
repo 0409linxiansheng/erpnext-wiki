@@ -12,6 +12,7 @@
 
 import { Extension } from '@tiptap/core';
 import Suggestion from '@tiptap/suggestion';
+import { useSnippetPickerStore } from '@/stores/snippetPicker';
 import { DEFAULT_BLOCK_MATH_LATEX } from './math-markdown.js';
 
 export const SLASH_COMMANDS = [
@@ -178,6 +179,17 @@ export const SLASH_COMMANDS = [
 		group: 'Insert',
 		command: ({ editor, range }) => {
 			editor.chain().focus().deleteRange(range).setHorizontalRule().run();
+		},
+	},
+	{
+		title: 'Snippet',
+		icon: 'lucide-scissors',
+		group: 'Insert',
+		keywords: ['snippet', 'reusable', 'template', 'fragment'],
+		// The picker is a Vue dialog, which a Tiptap command cannot render: it hands
+		// the editor and the range it wants replaced to a store instead.
+		command: ({ editor, range }) => {
+			useSnippetPickerStore().open(editor, range);
 		},
 	},
 	{
