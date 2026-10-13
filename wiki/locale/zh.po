@@ -21,7 +21,7 @@ msgstr ""
 #. Label of the head_html (Code) field in DocType 'Wiki Settings'
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "&lt;head&gt; HTML"
-msgstr ""
+msgstr "&lt;head&gt; HTML"
 
 #: frontend/src/pages/Contributions.vue:278
 msgid "1 change request"
@@ -55,6 +55,10 @@ msgid ""
 "\t</div>\n"
 "</div>"
 msgstr ""
+"<div class=\"mt-6\">\n"
+"\t<div class=\"wiki-diff like-disabled-input\">\n"
+"\t</div>\n"
+"</div>"
 
 #: frontend/src/components/WikiSettings/CodePanel.vue:5
 msgid "<head> HTML"
@@ -63,22 +67,22 @@ msgstr "<head> HTML"
 #. Content of the 'github_app_intro' (HTML) field in DocType 'Wiki Settings'
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "<p class=\"text-muted\">Configure a <a href=\"https://docs.github.com/en/apps/creating-github-apps\" target=\"_blank\">GitHub App</a> to let Wiki Spaces sync from GitHub repositories (including private ones). Installation access tokens are minted on demand from the App private key &mdash; no per-space secrets are stored.</p>"
-msgstr ""
+msgstr "<p class=\"text-muted\">配置 <a href=\"https://docs.github.com/en/apps/creating-github-apps\" target=\"_blank\">GitHub App</a> 后，Wiki 空间即可从 GitHub 仓库（含私有仓库）同步。安装访问令牌按需由 App 私钥签发 &mdash; 不会存储各空间的密钥。</p>"
 
 #. Header text in the Wiki Workspace
 #: wiki/wiki/workspace/wiki/wiki.json
 msgid "<span class=\"h4\"><b>Reports</b></span>"
-msgstr ""
+msgstr "<span class=\"h4\"><b>报表</b></span>"
 
 #. Header text in the Wiki Workspace
 #: wiki/wiki/workspace/wiki/wiki.json
 msgid "<span class=\"h4\">Wiki</span>"
-msgstr ""
+msgstr "<span class=\"h4\">Wiki</span>"
 
 #. Description of the 'Space Icon' (Data) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "A lucide class name from the curated picker list, e.g. lucide-book-open-text."
-msgstr ""
+msgstr "来自精选图标列表的 lucide 类名，例如 lucide-book-open-text。"
 
 #: frontend/src/components/PageSettingsPanel.vue:97
 msgid "A short summary shown in search results and link previews"
@@ -107,22 +111,22 @@ msgstr "访问权限"
 #. Label of the access_control_tab (Tab Break) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Access Control"
-msgstr ""
+msgstr "访问权限控制"
 
 #: frontend/src/layouts/MainLayout.vue:85
 msgid "Access Denied"
-msgstr ""
+msgstr "访问被拒绝"
 
 #. Label of the access_token (Password) field in DocType 'Wiki GitHub
 #. Connection'
 #: wiki/wiki/doctype/wiki_github_connection/wiki_github_connection.json
 msgid "Access Token"
-msgstr ""
+msgstr "访问令牌"
 
 #. Label of the expires_at (Datetime) field in DocType 'Wiki GitHub Connection'
 #: wiki/wiki/doctype/wiki_github_connection/wiki_github_connection.json
 msgid "Access Token Expires At"
-msgstr ""
+msgstr "访问令牌过期时间"
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:345
 msgid "Access control updated"
@@ -175,18 +179,18 @@ msgstr "全部空间"
 #. Label of the allow_guest (Check) field in DocType 'Wiki Page'
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
 msgid "Allow Guest"
-msgstr ""
+msgstr "允许访客"
 
 #. Description of the 'Accept Contributions' (Check) field in DocType 'Wiki
 #. Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Allow readers to propose edits via Change Requests. Users with write/merge access can always edit, even when this is off."
-msgstr ""
+msgstr "允许读者通过变更请求提出修改。具有写入/合并权限的用户始终可以编辑，即使此项关闭。"
 
 #. Label of the amended_from (Link) field in DocType 'Wiki Page Patch'
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "Amended From"
-msgstr ""
+msgstr "修订自"
 
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:66
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:170
@@ -208,7 +212,7 @@ msgstr "App ID"
 #. Label of the app_name (Data) field in DocType 'Migrate To Wiki'
 #: wiki/wiki/doctype/migrate_to_wiki/migrate_to_wiki.json
 msgid "App Name"
-msgstr ""
+msgstr "应用名称"
 
 #. Label of the github_app_public_link (Data) field in DocType 'Wiki Settings'
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:28
@@ -219,13 +223,13 @@ msgstr "App 公开链接"
 #. Label of the app_switcher_logo (Attach Image) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "App Switcher Logo"
-msgstr ""
+msgstr "应用切换器图标"
 
 #. Label of the app_title (Data) field in DocType 'Wiki App Switcher List
 #. Table'
 #: wiki/wiki/doctype/wiki_app_switcher_list_table/wiki_app_switcher_list_table.json
 msgid "App Title"
-msgstr ""
+msgstr "应用标题"
 
 #: frontend/src/pages/ContributionReview.vue:57
 msgid "Approve"
@@ -248,7 +252,7 @@ msgstr "已批准"
 #. Label of the approved_by (Link) field in DocType 'Wiki Page Patch'
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "Approved By"
-msgstr ""
+msgstr "批准人"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1443
 msgid "Approved this change request."
@@ -261,12 +265,12 @@ msgstr "已批准！可以合并了。"
 #. Option for the 'Status' (Select) field in DocType 'Wiki Change Request'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 msgid "Archived"
-msgstr ""
+msgstr "已归档"
 
 #. Label of the archived_at (Datetime) field in DocType 'Wiki Change Request'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 msgid "Archived At"
-msgstr ""
+msgstr "归档时间"
 
 #: frontend/src/components/WikiDocumentList.vue:141
 msgid "Are you sure you want to delete this"
@@ -288,17 +292,17 @@ msgstr "请联系 Wiki 管理员开启页面浏览统计。"
 #. Settings'
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Ask for contact details"
-msgstr ""
+msgstr "询问联系方式"
 
 #. Label of the assets_directory (Data) field in DocType 'Migrate To Wiki'
 #: wiki/wiki/doctype/migrate_to_wiki/migrate_to_wiki.json
 msgid "Assets Directory"
-msgstr ""
+msgstr "资源目录"
 
 #. Label of the assets_prepend (Data) field in DocType 'Migrate To Wiki'
 #: wiki/wiki/doctype/migrate_to_wiki/migrate_to_wiki.json
 msgid "Assets Prepend"
-msgstr ""
+msgstr "资源前置路径"
 
 #: frontend/src/components/AssignDialog.vue:27
 #: frontend/src/components/ContributionsPanel.vue:142
@@ -348,22 +352,22 @@ msgstr "自动将上传的 PNG/JPEG 图片转换为 WebP 以减小页面体积"
 #. DocType 'Wiki Settings'
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Automatically convert uploaded PNG/JPEG images to WebP to reduce page size."
-msgstr ""
+msgstr "自动将上传的 PNG/JPEG 图片转换为 WebP 以减小页面体积。"
 
 #. Label of the avatar (Long Text) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Avatar"
-msgstr ""
+msgstr "头像"
 
 #. Label of the avatar_seed (Data) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Avatar Seed"
-msgstr ""
+msgstr "头像种子"
 
 #. Label of the avatar_style (Data) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Avatar Style"
-msgstr ""
+msgstr "头像风格"
 
 #: frontend/src/pages/ContributionReview.vue:8
 msgid "Back"
@@ -385,12 +389,12 @@ msgstr "差"
 #. Label of the base_payload (JSON) field in DocType 'Wiki Merge Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 msgid "Base Payload"
-msgstr ""
+msgstr "基础数据"
 
 #. Label of the base_revision (Link) field in DocType 'Wiki Change Request'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 msgid "Base Revision"
-msgstr ""
+msgstr "基础修订"
 
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:49
 msgid "Beta"
@@ -411,11 +415,11 @@ msgstr "失效链接"
 #. Label of a shortcut in the Wiki Workspace
 #: wiki/wiki/workspace/wiki/wiki.json
 msgid "Broken Links Report"
-msgstr ""
+msgstr "失效链接报表"
 
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:37
 msgid "Bulk Update Routes"
-msgstr ""
+msgstr "批量更新路径"
 
 #: frontend/src/components/AssignDialog.vue:20
 #: frontend/src/components/DraftContributionPanel.vue:124
@@ -507,7 +511,7 @@ msgstr "修改"
 #. Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 msgid "Changes Applied"
-msgstr ""
+msgstr "已应用的修改"
 
 #. Option for the 'Status' (Select) field in DocType 'Wiki Change Request'
 #. Option for the 'Status' (Select) field in DocType 'Wiki Page Patch'
@@ -575,7 +579,7 @@ msgstr "克隆已在后台开始"
 
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:28
 msgid "Cloning started in background."
-msgstr ""
+msgstr "克隆已在后台开始。"
 
 #: frontend/src/components/SpaceModeStrip.vue:258
 msgid "Close"
@@ -593,7 +597,7 @@ msgstr "关闭侧边栏"
 #. Option for the 'Status' (Select) field in DocType 'Wiki Feedback'
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 msgid "Closed"
-msgstr ""
+msgstr "已关闭"
 
 #. Label of the code (Section Break) field in DocType 'Wiki Page Patch'
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
@@ -611,18 +615,18 @@ msgstr "收集反馈"
 #. Label of the commit_sha (Data) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 msgid "Commit SHA"
-msgstr ""
+msgstr "提交 SHA"
 
 #. Label of the compare (HTML) field in DocType 'Wiki Page Patch'
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "Compare"
-msgstr ""
+msgstr "比较"
 
 #. Label of the compare_changes_section (Section Break) field in DocType 'Wiki
 #. Page Patch'
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "Compare Changes"
-msgstr ""
+msgstr "比较修改"
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:221
 msgid "Configuration saved"
@@ -645,7 +649,7 @@ msgstr "已配置 — 粘贴新密钥即可替换"
 #. Label of the conflict_type (Select) field in DocType 'Wiki Merge Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 msgid "Conflict Type"
-msgstr ""
+msgstr "冲突类型"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1607
 msgid "Conflict is already resolved."
@@ -680,32 +684,32 @@ msgstr "正在连接 GitHub…"
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
 #: wiki/wiki/doctype/wiki_page_revision/wiki_page_revision.json
 msgid "Content"
-msgstr ""
+msgstr "内容"
 
 #. Label of the content_blob (Link) field in DocType 'Wiki Revision Item'
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
 msgid "Content Blob"
-msgstr ""
+msgstr "内容块"
 
 #. Label of the content_hash (Data) field in DocType 'Wiki Revision'
 #: wiki/frappe_wiki/doctype/wiki_revision/wiki_revision.json
 msgid "Content Hash"
-msgstr ""
+msgstr "内容哈希"
 
 #. Label of the content_type (Data) field in DocType 'Wiki Content Blob'
 #: wiki/frappe_wiki/doctype/wiki_content_blob/wiki_content_blob.json
 msgid "Content Type"
-msgstr ""
+msgstr "内容类型"
 
 #: frontend/src/composables/useChangeTypeDisplay.js:83
 msgid "Content or metadata updated"
-msgstr ""
+msgstr "内容或元数据已更新"
 
 #. Label of the contributions_section (Section Break) field in DocType 'Wiki
 #. Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Contributions"
-msgstr ""
+msgstr "投稿"
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:309
 msgid "Contributions disabled"
@@ -719,7 +723,7 @@ msgstr "已开启投稿"
 #. Settings'
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Convert Uploaded Images to WebP"
-msgstr ""
+msgstr "将上传的图片转换为 WebP"
 
 #: wiki/templates/wiki/document.html:45
 #: wiki/templates/wiki/macros/buttons.html:36
@@ -791,7 +795,7 @@ msgstr "创建 GitHub App"
 #. Label of the create_new_assets (Check) field in DocType 'Migrate To Wiki'
 #: wiki/wiki/doctype/migrate_to_wiki/migrate_to_wiki.json
 msgid "Create New Assets "
-msgstr ""
+msgstr "创建新资源"
 
 #: frontend/src/components/WikiDocumentList.vue:447
 msgid "Create New Group"
@@ -801,7 +805,7 @@ msgstr "新建分组"
 #. Wiki'
 #: wiki/wiki/doctype/migrate_to_wiki/migrate_to_wiki.json
 msgid "Create New Images if they exist on Disk"
-msgstr ""
+msgstr "如果磁盘上存在则创建新图片"
 
 #: frontend/src/components/WikiDocumentList.vue:447
 msgid "Create New Page"
@@ -834,21 +838,21 @@ msgstr "创建你的第一个 Wiki 空间以开始"
 #. Label of the created_count (Int) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 msgid "Created"
-msgstr ""
+msgstr "已创建"
 
 #. Label of the created_at (Datetime) field in DocType 'Wiki Content Blob'
 #. Label of the created_at (Datetime) field in DocType 'Wiki Revision'
 #: wiki/frappe_wiki/doctype/wiki_content_blob/wiki_content_blob.json
 #: wiki/frappe_wiki/doctype/wiki_revision/wiki_revision.json
 msgid "Created At"
-msgstr ""
+msgstr "创建时间"
 
 #. Label of the created_by (Link) field in DocType 'Wiki Content Blob'
 #. Label of the created_by (Link) field in DocType 'Wiki Revision'
 #: wiki/frappe_wiki/doctype/wiki_content_blob/wiki_content_blob.json
 #: wiki/frappe_wiki/doctype/wiki_revision/wiki_revision.json
 msgid "Created By"
-msgstr ""
+msgstr "创建人"
 
 #: frontend/src/pages/ContributionReview.vue:271
 msgid "Current"
@@ -870,7 +874,7 @@ msgstr "危险"
 #. Label of the dark_mode_logo (Attach Image) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Dark Mode Logo"
-msgstr ""
+msgstr "深色模式图标"
 
 #: wiki/api/analytics.py:217
 msgid "Date range cannot be longer than {0} days"
@@ -880,7 +884,7 @@ msgstr "日期范围不能超过 {0} 天"
 #. Settings'
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Default Wiki Space"
-msgstr ""
+msgstr "默认 Wiki 空间"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:66
 #: frontend/src/components/WikiDocumentList.vue:135
@@ -921,20 +925,20 @@ msgstr "在此草稿中已删除。合并后将对所有人生效。"
 #. Description of the 'Home Tab Icon' (Data) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Deprecated: tabs were removed. Kept for backwards compatibility."
-msgstr ""
+msgstr "已弃用：标签已移除。为向后兼容而保留。"
 
 #. Description of the 'Is Tab' (Check) field in DocType 'Wiki Document'
 #. Description of the 'Tab Icon' (Data) field in DocType 'Wiki Document'
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 msgid "Deprecated: tabs were removed. Kept so old revisions and change requests still apply."
-msgstr ""
+msgstr "已弃用：标签已移除。保留此字段是为了让旧修订和变更请求仍然可用。"
 
 #. Label of the description (Small Text) field in DocType 'Wiki Change Request'
 #. Label of the meta_description (Small Text) field in DocType 'Wiki Page'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #. Label of the details_section (Section Break) field in DocType 'Wiki Git Sync
 #. Log'
@@ -974,7 +978,7 @@ msgstr "放弃本地失败的修改并采用服务器状态"
 #. Label of the doc_count (Int) field in DocType 'Wiki Revision'
 #: wiki/frappe_wiki/doctype/wiki_revision/wiki_revision.json
 msgid "Doc Count"
-msgstr ""
+msgstr "文档数量"
 
 #. Label of the doc_key (Data) field in DocType 'Wiki Document'
 #. Label of the doc_key (Data) field in DocType 'Wiki Merge Conflict'
@@ -983,17 +987,17 @@ msgstr ""
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
 msgid "Doc Key"
-msgstr ""
+msgstr "文档键"
 
 #. Label of the docs_base_url (Data) field in DocType 'Migrate To Wiki'
 #: wiki/wiki/doctype/migrate_to_wiki/migrate_to_wiki.json
 msgid "Docs Base Utl"
-msgstr ""
+msgstr "文档基础网址"
 
 #. Label of the docs_directory (Data) field in DocType 'Migrate To Wiki'
 #: wiki/wiki/doctype/migrate_to_wiki/migrate_to_wiki.json
 msgid "Docs Directory"
-msgstr ""
+msgstr "文档目录"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:36
 msgid "Docs Folder"
@@ -1002,7 +1006,7 @@ msgstr "文档文件夹"
 #. Label of the docs_subdir (Data) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Docs Subdirectory"
-msgstr ""
+msgstr "文档子目录"
 
 #: frontend/src/components/NewSpaceDialog.vue:164
 msgid "Docs folder"
@@ -1072,7 +1076,7 @@ msgstr "编辑于 {0}"
 #. Label of the email_id (Data) field in DocType 'Wiki Feedback'
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 msgid "Email Id"
-msgstr ""
+msgstr "邮箱"
 
 #. Label of the enable_feedback (Check) field in DocType 'Wiki Settings'
 #: frontend/src/components/WikiSettings/FeedbackPanel.vue:6
@@ -1084,12 +1088,12 @@ msgstr "启用反馈"
 #. Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Enable Feedback Collection?"
-msgstr ""
+msgstr "启用反馈收集？"
 
 #. Label of the enable_tabs (Check) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Enable Tabbed Navigation"
-msgstr ""
+msgstr "启用标签式导航"
 
 #. Label of the enable_table_of_contents (Check) field in DocType 'Wiki
 #. Settings'
@@ -1129,7 +1133,7 @@ msgstr "输入页面标题"
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:16
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:53
 msgid "Enter the new base route (without leading slash)"
-msgstr ""
+msgstr "输入新的基础路径（不含开头的斜杠）"
 
 #: frontend/src/pages/ContributionReview.vue:388
 msgid "Enter the reason for rejection..."
@@ -1149,7 +1153,7 @@ msgstr "输入你的反馈…"
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Error"
-msgstr ""
+msgstr "错误"
 
 #: frontend/src/pages/ContributionReview.vue:773
 #: frontend/src/pages/ContributionReview.vue:783
@@ -1228,7 +1232,7 @@ msgstr "提交审阅失败"
 
 #: frontend/src/composables/useTreeDialogs.js:308
 msgid "Error updating external link"
-msgstr ""
+msgstr "更新外部链接失败"
 
 #: frontend/src/components/WikiDocumentPanel.vue:637
 #: frontend/src/components/WikiTree.vue:348
@@ -1253,7 +1257,7 @@ msgstr "撤回变更请求失败"
 #. Label of the event (Data) field in DocType 'Wiki GitHub Webhook Log'
 #: wiki/wiki/doctype/wiki_github_webhook_log/wiki_github_webhook_log.json
 msgid "Event"
-msgstr ""
+msgstr "事件"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:85
 msgid "Every change request"
@@ -1277,7 +1281,7 @@ msgstr "外部链接"
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
 msgid "External URL"
-msgstr ""
+msgstr "外部网址"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:252
 msgid "Failed to delete the space"
@@ -1313,7 +1317,7 @@ msgstr "更新排序失败"
 
 #: frontend/src/composables/useSpaceIdentitySaver.js:26
 msgid "Failed to update the space logo"
-msgstr ""
+msgstr "更新空间图标失败"
 
 #: frontend/src/components/SpaceSettings/NavigationPanel.vue:66
 msgid "Failed to update the switcher"
@@ -1330,7 +1334,7 @@ msgstr "图标上传失败"
 #. Label of the favicon (Attach Image) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Favicon"
-msgstr ""
+msgstr "网站图标"
 
 #. Label of the feedback (Small Text) field in DocType 'Wiki Feedback'
 #. Label of the feedback_section (Section Break) field in DocType 'Wiki
@@ -1361,7 +1365,7 @@ msgstr "文件 {0} 不存在"
 #. Label of the finished_at (Datetime) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 msgid "Finished At"
-msgstr ""
+msgstr "结束时间"
 
 #: frontend/src/components/NewSpaceDialog.vue:167
 msgid "Folder in the repo to sync. Supports nested paths like docs/guide."
@@ -1407,18 +1411,18 @@ msgstr "为未上传元图片的页面生成带品牌标识的社交预览图"
 #. 'Wiki Settings'
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Generate a branded social preview image for pages that have no Meta Image uploaded."
-msgstr ""
+msgstr "为未上传元图片的页面生成带品牌标识的社交预览图。"
 
 #. Description of the 'Avatar' (Long Text) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Generated mark as an SVG data URI. Hidden because it is a wall of text in a form."
-msgstr ""
+msgstr "生成的标记（SVG data URI）。由于在表单中是一大段文本，故隐藏。"
 
 #. Label of the git_reference_type (Select) field in DocType 'Wiki GitHub
 #. Webhook Log'
 #: wiki/wiki/doctype/wiki_github_webhook_log/wiki_github_webhook_log.json
 msgid "Git Reference Type"
-msgstr ""
+msgstr "Git 引用类型"
 
 #. Label of the git_sync_tab (Tab Break) field in DocType 'Wiki Space'
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:76
@@ -1434,7 +1438,7 @@ msgstr "空间创建后无法再切换 Git 同步。"
 #. Label of the git_synced (Check) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Git Synced?"
-msgstr ""
+msgstr "已启用 Git 同步？"
 
 #: frontend/src/components/NewSpaceDialog.vue:110
 msgid "GitHub Account or Organization"
@@ -1443,12 +1447,12 @@ msgstr "GitHub 账号或组织"
 #. Label of the github_app_tab (Tab Break) field in DocType 'Wiki Settings'
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "GitHub App"
-msgstr ""
+msgstr "GitHub App"
 
 #. Label of the github_app_id (Data) field in DocType 'Wiki Settings'
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "GitHub App ID"
-msgstr ""
+msgstr "GitHub App ID"
 
 #: wiki/www/github/manifest_redirect.py:29
 msgid "GitHub App creation failed: {0}"
@@ -1458,7 +1462,7 @@ msgstr "创建 GitHub App 失败：{0}"
 #. Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "GitHub App installation that grants access to the repo. Set via the connect-and-pick flow; lets the engine mint a token for private repos."
-msgstr ""
+msgstr "授予仓库访问权限的 GitHub App 安装。通过“连接并选择”流程设置；使引擎可为私有仓库签发令牌。"
 
 #: wiki/api/github.py:63 wiki/api/github.py:350 wiki/api/github.py:366
 msgid "GitHub App is not configured in Wiki Settings."
@@ -1470,12 +1474,12 @@ msgstr "未在 Wiki 设置中配置 GitHub App。"
 #: wiki/wiki/doctype/wiki_github_webhook_log/wiki_github_webhook_log.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "GitHub Installation ID"
-msgstr ""
+msgstr "GitHub 安装 ID"
 
 #. Label of the github_login (Data) field in DocType 'Wiki GitHub Connection'
 #: wiki/wiki/doctype/wiki_github_connection/wiki_github_connection.json
 msgid "GitHub Login"
-msgstr ""
+msgstr "GitHub 登录名"
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:6
 #: frontend/src/components/WikiSettings/WikiSettings.vue:115
@@ -1497,7 +1501,7 @@ msgstr "GitHub 未返回访问令牌：{0}"
 #. Description of the 'Repository' (Data) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "GitHub repository, e.g. frappe/wiki"
-msgstr ""
+msgstr "GitHub 仓库，例如 frappe/wiki"
 
 #. Option for the 'Type' (Select) field in DocType 'Wiki Feedback'
 #: wiki/templates/wiki/includes/feedback_widget.html:10
@@ -1521,22 +1525,22 @@ msgstr "分组用于组织页面，本身不含内容。"
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "Guest"
-msgstr ""
+msgstr "访客"
 
 #. Label of the hash (Data) field in DocType 'Wiki Content Blob'
 #: wiki/frappe_wiki/doctype/wiki_content_blob/wiki_content_blob.json
 msgid "Hash"
-msgstr ""
+msgstr "哈希"
 
 #. Label of the hashes_stale (Check) field in DocType 'Wiki Revision'
 #: wiki/frappe_wiki/doctype/wiki_revision/wiki_revision.json
 msgid "Hashes Stale"
-msgstr ""
+msgstr "哈希已过期"
 
 #. Label of the head_revision (Link) field in DocType 'Wiki Change Request'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 msgid "Head Revision"
-msgstr ""
+msgstr "最新修订"
 
 #: frontend/src/components/WikiSettings/WikiSettings.vue:109
 msgid "Header & Robots"
@@ -1545,22 +1549,22 @@ msgstr "页眉与 Robots"
 #. Label of the header__robots_tab (Tab Break) field in DocType 'Wiki Settings'
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Header / Robots"
-msgstr ""
+msgstr "页眉 / Robots"
 
 #. Label of the hide_on_sidebar (Check) field in DocType 'Wiki Group Item'
 #: wiki/wiki/doctype/wiki_group_item/wiki_group_item.json
 msgid "Hide on sidebar"
-msgstr ""
+msgstr "在侧边栏隐藏"
 
 #. Label of the home_tab_icon (Data) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Home Tab Icon"
-msgstr ""
+msgstr "首页标签图标"
 
 #. Label of the home_tab_title (Data) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Home Tab Title"
-msgstr ""
+msgstr "首页标签标题"
 
 #: frontend/src/components/WikiSettings/FeedbackPanel.vue:15
 msgid "Hourly rate limit on feedback submissions"
@@ -1570,7 +1574,7 @@ msgstr "每小时反馈提交次数上限"
 #. Settings'
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Hourly rate limit on submitting feedbacks"
-msgstr ""
+msgstr "每小时提交反馈次数上限"
 
 #: frontend/src/components/SpaceIdentityPicker.vue:167
 msgid "Icon"
@@ -1583,12 +1587,12 @@ msgstr "图标"
 #. Description of the 'Image' (Attach Image) field in DocType 'Wiki Page'
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
 msgid "Ideally should be 1200 x 630 pixels."
-msgstr ""
+msgstr "建议为 1200 x 630 像素。"
 
 #. Label of the meta_image (Attach Image) field in DocType 'Wiki Page'
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
 msgid "Image"
-msgstr ""
+msgstr "图片"
 
 #. Option for the 'Status' (Select) field in DocType 'Wiki Change Request'
 #: frontend/src/components/SpaceModeStrip.vue:445
@@ -1598,11 +1602,11 @@ msgstr "审阅中"
 
 #: wiki/wiki/report/wiki_broken_links/wiki_broken_links.js:14
 msgid "Include images?"
-msgstr ""
+msgstr "包含图片？"
 
 #: wiki/wiki/report/wiki_broken_links/wiki_broken_links.js:20
 msgid "Include internal links?"
-msgstr ""
+msgstr "包含内部链接？"
 
 #: frontend/src/components/WikiSettings/CodePanel.vue:6
 msgid "Injected into the <head> of all public wiki pages"
@@ -1643,53 +1647,53 @@ msgstr "{0} 无效：{1}"
 #. Label of the is_deleted (Check) field in DocType 'Wiki Revision Item'
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
 msgid "Is Deleted"
-msgstr ""
+msgstr "已删除"
 
 #. Label of the is_group (Check) field in DocType 'Wiki Document'
 #. Label of the is_group (Check) field in DocType 'Wiki Revision Item'
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
 msgid "Is Group"
-msgstr ""
+msgstr "是分组"
 
 #. Label of the is_merge (Check) field in DocType 'Wiki Revision'
 #: wiki/frappe_wiki/doctype/wiki_revision/wiki_revision.json
 msgid "Is Merge"
-msgstr ""
+msgstr "是合并"
 
 #. Label of the is_overlay (Check) field in DocType 'Wiki Revision'
 #: wiki/frappe_wiki/doctype/wiki_revision/wiki_revision.json
 msgid "Is Overlay"
-msgstr ""
+msgstr "是覆盖层"
 
 #. Label of the is_published (Check) field in DocType 'Wiki Revision Item'
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
 msgid "Is Published"
-msgstr ""
+msgstr "已发布"
 
 #. Label of the is_published (Check) field in DocType 'Wiki Document'
 #. Label of the is_published (Check) field in DocType 'Wiki Space'
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Is Published?"
-msgstr ""
+msgstr "是否已发布？"
 
 #. Label of the is_tab (Check) field in DocType 'Wiki Document'
 #. Label of the is_tab (Check) field in DocType 'Wiki Revision Item'
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
 msgid "Is Tab"
-msgstr ""
+msgstr "是标签"
 
 #. Label of the is_working (Check) field in DocType 'Wiki Revision'
 #: wiki/frappe_wiki/doctype/wiki_revision/wiki_revision.json
 msgid "Is Working"
-msgstr ""
+msgstr "是工作版本"
 
 #. Description of the 'Content' (Markdown Editor) field in DocType 'Wiki Page'
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
 msgid "It is recommended that you start your first heading with h2, as the title will be the h1."
-msgstr ""
+msgstr "建议首个标题使用 h2，因为页面标题会作为 h1。"
 
 #: frontend/src/components/WikiDocumentList.vue:145
 msgid "It stays in your draft, marked as deleted, until the change request is merged."
@@ -1699,12 +1703,12 @@ msgstr "它会保留在你的草稿中并标记为已删除，直到变更请求
 #. Settings'
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "It will show a feedback widget on every Wiki Page when enabled. It will collect the rating, email and related info about the Wiki Page."
-msgstr ""
+msgstr "启用后会在每个 Wiki 页面上显示反馈组件，收集评分、邮箱及与该页面相关的信息。"
 
 #. Label of the javascript (Code) field in DocType 'Wiki Settings'
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Javascript"
-msgstr ""
+msgstr "Javascript"
 
 #: frontend/src/components/CommandPalette.vue:394
 msgid "Jump to"
@@ -1723,7 +1727,7 @@ msgstr "保留你的修改"
 #. Label of the meta_keywords (Small Text) field in DocType 'Wiki Page'
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
 msgid "Keywords"
-msgstr ""
+msgstr "关键词"
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:113
 msgid "Last 12 months"
@@ -1751,22 +1755,22 @@ msgstr "最近 90 天"
 #. Label of the last_edited (Datetime) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Last Edited"
-msgstr ""
+msgstr "最后编辑"
 
 #. Label of the last_sync_error (Small Text) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Last Sync Error"
-msgstr ""
+msgstr "最近同步错误"
 
 #. Label of the last_sync_status (Select) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Last Sync Status"
-msgstr ""
+msgstr "最近同步状态"
 
 #. Label of the last_sync_time (Datetime) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Last Sync Time"
-msgstr ""
+msgstr "最近同步时间"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:50
 msgid "Last Synced"
@@ -1775,7 +1779,7 @@ msgstr "上次同步"
 #. Label of the last_synced_commit_sha (Data) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Last Synced Commit"
-msgstr ""
+msgstr "最近同步的提交"
 
 #: frontend/src/pages/AllSpaces.vue:112
 #: wiki/frappe_wiki/print_format/standard_wiki_document/standard_wiki_document.html:212
@@ -1799,7 +1803,7 @@ msgstr "最后更新于 {0}"
 #. 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Leave empty for open access to all logged-in users. Add the <b>Guest</b> role for public/anonymous access."
-msgstr ""
+msgstr "留空则对所有已登录用户开放。如需公开/匿名访问，请添加 <b>Guest</b> 角色。"
 
 #. Description of the 'Meta Title' (Data) field in DocType 'Wiki Document'
 #: frontend/src/components/PageSettingsPanel.vue:89
@@ -1810,7 +1814,7 @@ msgstr "留空则使用页面标题"
 #. Label of the lft (Int) field in DocType 'Wiki Document'
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 msgid "Left"
-msgstr ""
+msgstr "左"
 
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:173
 msgid "Let readers propose edits via change requests. Users with write access can always edit."
@@ -1819,7 +1823,7 @@ msgstr "允许读者通过变更请求提出修改。具有写入权限的用户
 #. Label of the light_mode_logo (Attach Image) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Light Mode Logo"
-msgstr ""
+msgstr "浅色模式图标"
 
 #: frontend/src/components/LibrarySidebar.vue:240
 msgid "Link copied"
@@ -1828,7 +1832,7 @@ msgstr "链接已复制"
 #. Group in Wiki Page's connections
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
 msgid "Linked Documents"
-msgstr ""
+msgstr "关联文档"
 
 #: frontend/src/components/SpaceSettings/NavigationPanel.vue:6
 msgid "List this space in the switcher and on the overview page"
@@ -1854,7 +1858,7 @@ msgstr "加载中…"
 #. Label of the log (Code) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 msgid "Log"
-msgstr ""
+msgstr "日志"
 
 #: frontend/src/components/CommandPalette.vue:364
 #: frontend/src/components/LibrarySidebar.vue:254
@@ -1865,7 +1869,7 @@ msgstr "退出登录"
 #. Label of the logo_section (Section Break) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Logo"
-msgstr ""
+msgstr "图标"
 
 #: frontend/src/components/SpaceSettings/NavigationPanel.vue:19
 msgid "Lower numbers come first; spaces that tie are ordered by name"
@@ -1874,7 +1878,7 @@ msgstr "数字越小越靠前；数值相同的空间按名称排序"
 #. Label of the main_revision (Link) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Main Revision"
-msgstr ""
+msgstr "主修订"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:29
 msgid "Make this wiki space publicly accessible"
@@ -1904,7 +1908,7 @@ msgstr "合并冲突"
 #. Label of the merge_revision (Link) field in DocType 'Wiki Change Request'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 msgid "Merge Revision"
-msgstr ""
+msgstr "合并修订"
 
 #: frontend/src/composables/useChangeRequestActions.js:167
 msgid "Merge conflict — resolve it to continue"
@@ -1923,12 +1927,12 @@ msgstr "已合并"
 #. Label of the merged_at (Datetime) field in DocType 'Wiki Change Request'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 msgid "Merged At"
-msgstr ""
+msgstr "合并时间"
 
 #. Label of the merged_by (Link) field in DocType 'Wiki Change Request'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 msgid "Merged By"
-msgstr ""
+msgstr "合并人"
 
 #. Label of the message (Data) field in DocType 'Wiki Revision'
 #. Label of the message (Text) field in DocType 'Wiki Page Patch'
@@ -1937,17 +1941,17 @@ msgstr ""
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 #: wiki/wiki/doctype/wiki_page_revision/wiki_page_revision.json
 msgid "Message"
-msgstr ""
+msgstr "消息"
 
 #. Label of the meta_description (Small Text) field in DocType 'Wiki Document'
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 msgid "Meta Description"
-msgstr ""
+msgstr "元描述"
 
 #. Label of the meta_image (Attach Image) field in DocType 'Wiki Document'
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 msgid "Meta Image"
-msgstr ""
+msgstr "元图片"
 
 #. Label of the meta_tags_section (Section Break) field in DocType 'Wiki
 #. Document'
@@ -1955,12 +1959,12 @@ msgstr ""
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
 msgid "Meta Tags"
-msgstr ""
+msgstr "元标签"
 
 #. Label of the meta_title (Data) field in DocType 'Wiki Document'
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 msgid "Meta Title"
-msgstr ""
+msgstr "元标题"
 
 #: frontend/src/components/PageSettingsPanel.vue:95
 msgid "Meta description"
@@ -1978,20 +1982,20 @@ msgstr "元标题"
 #. Revision'
 #: wiki/frappe_wiki/doctype/wiki_revision/wiki_revision.json
 msgid "Metadata"
-msgstr ""
+msgstr "元数据"
 
 #. Name of a DocType
 #: wiki/wiki/doctype/migrate_to_wiki/migrate_to_wiki.json
 msgid "Migrate To Wiki"
-msgstr ""
+msgstr "迁移到 Wiki"
 
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:84
 msgid "Migrate to Version 3"
-msgstr ""
+msgstr "迁移到 Version 3"
 
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:89
 msgid "Migration completed successfully."
-msgstr ""
+msgstr "迁移已成功完成。"
 
 #: frontend/src/components/ContributionsPanel.vue:208
 #: frontend/src/composables/useChangeTypeDisplay.js:17
@@ -2010,7 +2014,7 @@ msgstr "更多页面操作"
 #. Label of the moved_count (Int) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 msgid "Moved"
-msgstr ""
+msgstr "已移动"
 
 #: frontend/src/pages/Contributions.vue:166
 msgid "My Change Requests"
@@ -2026,17 +2030,17 @@ msgstr "名称"
 
 #: frontend/src/composables/useTreeDialogs.js:217
 msgid "Name is required"
-msgstr ""
+msgstr "名称为必填项"
 
 #. Label of the navbar_tab (Tab Break) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Navbar"
-msgstr ""
+msgstr "导航栏"
 
 #. Label of the navbar_items (Table) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Navbar Items"
-msgstr ""
+msgstr "导航栏项"
 
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:37
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:168
@@ -2055,7 +2059,7 @@ msgstr "从未同步"
 #: frontend/src/composables/useChangeTypeDisplay.js:10
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "New"
-msgstr ""
+msgstr "新建"
 
 #: frontend/src/pages/SpaceDetails.vue:90
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:51
@@ -2065,7 +2069,7 @@ msgstr "新的基础路径"
 #. Label of the documentation_route (Data) field in DocType 'Migrate To Wiki'
 #: wiki/wiki/doctype/migrate_to_wiki/migrate_to_wiki.json
 msgid "New Documentation Route"
-msgstr ""
+msgstr "新文档路径"
 
 #: frontend/src/components/WikiDocumentList.vue:435
 #: frontend/src/components/WikiTree.vue:382
@@ -2075,7 +2079,7 @@ msgstr "新建分组"
 #. Label of the new_code (Code) field in DocType 'Wiki Page Patch'
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "New HTML"
-msgstr ""
+msgstr "新 HTML"
 
 #: frontend/src/components/WikiTree.vue:377
 msgid "New Page"
@@ -2084,7 +2088,7 @@ msgstr "新建页面"
 #. Label of the new_sidebar_group (Data) field in DocType 'Wiki Page Patch'
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "New Sidebar Group"
-msgstr ""
+msgstr "新侧边栏分组"
 
 #: frontend/src/components/LibrarySidebar.vue:96
 #: frontend/src/pages/AllSpaces.vue:10 frontend/src/pages/AllSpaces.vue:42
@@ -2099,15 +2103,15 @@ msgstr "新空间路径"
 #. Label of the new_title (Data) field in DocType 'Wiki Page Patch'
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "New Title"
-msgstr ""
+msgstr "新标题"
 
 #: frontend/src/composables/useChangeTypeDisplay.js:80
 msgid "New external link added"
-msgstr ""
+msgstr "新增了外部链接"
 
 #: frontend/src/composables/useChangeTypeDisplay.js:79
 msgid "New group to be created"
-msgstr ""
+msgstr "待创建的新分组"
 
 #: frontend/src/components/CommandPalette.vue:299
 #: frontend/src/components/SpaceWelcome.vue:36
@@ -2118,7 +2122,7 @@ msgstr "新建页面"
 
 #: frontend/src/composables/useChangeTypeDisplay.js:81
 msgid "New page to be created"
-msgstr ""
+msgstr "待创建的新页面"
 
 #: wiki/wiki/doctype/wiki_space/wiki_space.py:274
 #: wiki/wiki/doctype/wiki_space/wiki_space.py:352
@@ -2138,7 +2142,7 @@ msgstr "新访客"
 #. Description of the 'Last Edited' (Datetime) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Newest save or merge of a page in this space. The sidebar orders spaces by it."
-msgstr ""
+msgstr "此空间中页面最近一次保存或合并的时间。侧边栏按此排序空间。"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:173
 msgid "No .wiki.yml or .wiki.json in the docs folder — the page tree is inferred from the docs folder."
@@ -2147,7 +2151,7 @@ msgstr "文档文件夹中没有 .wiki.yml 或 .wiki.json — 页面树将根据
 #. Option for the 'Status' (Select) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 msgid "No Change"
-msgstr ""
+msgstr "无变化"
 
 #: frontend/src/pages/Contributions.vue:170
 msgid "No Change Requests"
@@ -2310,7 +2314,7 @@ msgstr "一般"
 #. Label of the old_parent (Link) field in DocType 'Wiki Document'
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 msgid "Old Parent"
-msgstr ""
+msgstr "原父级"
 
 #: frontend/src/components/EditorTableOfContents.vue:29
 #: frontend/src/components/EditorTableOfContents.vue:69
@@ -2379,7 +2383,7 @@ msgstr "打开搜索"
 #. Label of the operation_version (Int) field in DocType 'Wiki Change Request'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 msgid "Operation Version"
-msgstr ""
+msgstr "操作版本"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1162
 msgid "Operation is missing 'type'"
@@ -2388,7 +2392,7 @@ msgstr "operation 缺少 'type'"
 #. Description of the 'Docs Subdirectory' (Data) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Optional sub-folder in the repo to sync (e.g. docs). Leave empty to sync from the repo root."
-msgstr ""
+msgstr "可选：要同步的仓库子文件夹（例如 docs）。留空则从仓库根目录同步。"
 
 #: frontend/src/components/SpaceSettings/NavigationPanel.vue:17
 msgid "Order"
@@ -2397,26 +2401,26 @@ msgstr "排序"
 #. Label of the order_index (Int) field in DocType 'Wiki Revision Item'
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
 msgid "Order Index"
-msgstr ""
+msgstr "排序索引"
 
 #: frontend/src/composables/useChangeTypeDisplay.js:87
 msgid "Order updated"
-msgstr ""
+msgstr "顺序已更新"
 
 #. Label of the orignal_code (Code) field in DocType 'Wiki Page Patch'
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "Original HTML"
-msgstr ""
+msgstr "原 HTML"
 
 #. Label of the ours_payload (JSON) field in DocType 'Wiki Merge Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 msgid "Ours Payload"
-msgstr ""
+msgstr "我方数据"
 
 #. Label of the outdated (Check) field in DocType 'Wiki Change Request'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 msgid "Outdated"
-msgstr ""
+msgstr "已过期"
 
 #: frontend/src/components/LibrarySidebar.vue:265
 #: frontend/src/layouts/MainLayout.vue:18 frontend/src/pages/Overview.vue:4
@@ -2431,7 +2435,7 @@ msgstr "为 GitHub App 生成的 PEM 编码私钥"
 #. Description of the 'Private Key' (Password) field in DocType 'Wiki Settings'
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "PEM-encoded private key generated for the GitHub App."
-msgstr ""
+msgstr "为 GitHub App 生成的 PEM 编码私钥。"
 
 #: frontend/src/components/SpaceIdentityPicker.vue:113
 msgid "PNG or SVG, shown at a small size."
@@ -2502,24 +2506,24 @@ msgstr "页面位于 /{0}/… 之下"
 #. Label of the parent_key (Data) field in DocType 'Wiki Revision Item'
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
 msgid "Parent Key"
-msgstr ""
+msgstr "父级键"
 
 #. Label of the parent_label (Data) field in DocType 'Wiki Group Item'
 #. Label of the parent_label (Data) field in DocType 'Wiki Sidebar'
 #: wiki/wiki/doctype/wiki_group_item/wiki_group_item.json
 #: wiki/wiki/doctype/wiki_sidebar/wiki_sidebar.json
 msgid "Parent Label"
-msgstr ""
+msgstr "父级标签"
 
 #. Label of the parent_revision (Link) field in DocType 'Wiki Revision'
 #: wiki/frappe_wiki/doctype/wiki_revision/wiki_revision.json
 msgid "Parent Revision"
-msgstr ""
+msgstr "父级修订"
 
 #. Label of the parent_wiki_document (Link) field in DocType 'Wiki Document'
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 msgid "Parent Wiki Document"
-msgstr ""
+msgstr "父级 Wiki 文档"
 
 #: wiki/api/analytics.py:224
 msgid "Pass either a space or a document, not both"
@@ -2537,12 +2541,12 @@ msgstr "粘贴 PEM 私钥"
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 #: wiki/wiki/doctype/wiki_github_webhook_log/wiki_github_webhook_log.json
 msgid "Payload"
-msgstr ""
+msgstr "数据"
 
 #. Option for the 'Last Sync Status' (Select) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Pending"
-msgstr ""
+msgstr "待处理"
 
 #: frontend/src/components/SpaceModeStrip.vue:174
 msgid "Pending Changes"
@@ -2555,7 +2559,7 @@ msgstr "永久删除此空间及其所有页面"
 #. Label of the permission_level (Select) field in DocType 'Wiki Space Role'
 #: wiki/wiki/doctype/wiki_space_role/wiki_space_role.json
 msgid "Permission Level"
-msgstr ""
+msgstr "权限级别"
 
 #: frontend/src/components/SpaceWelcome.vue:27
 msgid "Pick a page to edit"
@@ -2572,7 +2576,7 @@ msgstr "已置顶"
 
 #: frontend/src/layouts/MainLayout.vue:91
 msgid "Please contact your administrator to request access."
-msgstr ""
+msgstr "请联系管理员申请访问权限。"
 
 #: wiki/www/github/authorize.py:22 wiki/www/github/redirect.py:22
 msgid "Please log in to connect your GitHub account."
@@ -2669,7 +2673,7 @@ msgstr "已发布"
 
 #: wiki/wiki/report/wiki_broken_links/wiki_broken_links.js:26
 msgid "Published pages only?"
-msgstr ""
+msgstr "仅已发布页面？"
 
 #: frontend/src/components/SpaceWelcome.vue:11
 msgid "Pulling the latest pages from GitHub. This will only take a moment."
@@ -2684,28 +2688,28 @@ msgstr "推送到仓库后会通过此 Webhook 网址自动同步："
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 #: wiki/wiki/doctype/wiki_page_revision/wiki_page_revision.json
 msgid "Raised By"
-msgstr ""
+msgstr "提交人"
 
 #. Label of the raised_by_username (Data) field in DocType 'Wiki Page Revision'
 #: wiki/wiki/doctype/wiki_page_revision/wiki_page_revision.json
 msgid "Raised By Username"
-msgstr ""
+msgstr "提交人用户名"
 
 #. Label of the rating (Rating) field in DocType 'Wiki Feedback'
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 msgid "Rating"
-msgstr ""
+msgstr "评分"
 
 #. Description of the 'Avatar Seed' (Data) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Re-rolled by Shuffle. Stored so the same mark can be rebuilt from the style."
-msgstr ""
+msgstr "由“随机”重新生成。保存以便根据风格重建同一标记。"
 
 #. Option for the 'Permission Level' (Select) field in DocType 'Wiki Space
 #. Role'
 #: wiki/wiki/doctype/wiki_space_role/wiki_space_role.json
 msgid "Read"
-msgstr ""
+msgstr "读取"
 
 #: frontend/src/components/WikiDocumentPanel.vue:12
 msgid "Read-only"
@@ -2739,25 +2743,25 @@ msgstr "建议 1200×630"
 #. Document'
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 msgid "Recommended size: 1200x630px"
-msgstr ""
+msgstr "建议尺寸：1200x630px"
 
 #. Description of the 'Meta Description' (Small Text) field in DocType 'Wiki
 #. Document'
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 msgid "Recommended: 150-160 characters"
-msgstr ""
+msgstr "建议：150-160 个字符"
 
 #. Label of the refresh_token (Password) field in DocType 'Wiki GitHub
 #. Connection'
 #: wiki/wiki/doctype/wiki_github_connection/wiki_github_connection.json
 msgid "Refresh Token"
-msgstr ""
+msgstr "刷新令牌"
 
 #. Label of the refresh_token_expires_at (Datetime) field in DocType 'Wiki
 #. GitHub Connection'
 #: wiki/wiki/doctype/wiki_github_connection/wiki_github_connection.json
 msgid "Refresh Token Expires At"
-msgstr ""
+msgstr "刷新令牌过期时间"
 
 #: frontend/src/pages/ContributionReview.vue:402
 #: frontend/src/pages/ContributionReview.vue:619
@@ -2779,7 +2783,7 @@ msgstr "已拒绝"
 #. Label of the rejected_at (Datetime) field in DocType 'Wiki Change Request'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 msgid "Rejected At"
-msgstr ""
+msgstr "拒绝时间"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1501
 msgid "Rejected this change request: {0}"
@@ -2838,7 +2842,7 @@ msgstr "重命名页面"
 
 #: frontend/src/composables/useChangeTypeDisplay.js:31
 msgid "Reordered"
-msgstr ""
+msgstr "已重新排序"
 
 #: frontend/src/components/PageSettingsPanel.vue:118
 #: frontend/src/components/SpaceIdentityPicker.vue:88
@@ -2848,7 +2852,7 @@ msgstr "替换"
 #. Description of the 'Source Path' (Data) field in DocType 'Wiki Document'
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 msgid "Repo-relative path of the source file when this page is git-synced. Identity for cross-sync matching is (wiki_space, source_path)."
-msgstr ""
+msgstr "此页面启用 Git 同步时，源文件相对于仓库的路径。跨同步匹配的标识为 (wiki_space, source_path)。"
 
 #. Label of the repository (Data) field in DocType 'Wiki GitHub Webhook Log'
 #. Label of the repo_full_name (Data) field in DocType 'Wiki Space'
@@ -2863,7 +2867,7 @@ msgstr "仓库"
 #. Log'
 #: wiki/wiki/doctype/wiki_github_webhook_log/wiki_github_webhook_log.json
 msgid "Repository Owner"
-msgstr ""
+msgstr "仓库所有者"
 
 #: wiki/wiki/git_sync.py:1023
 msgid "Repository and branch are required for git sync."
@@ -2890,7 +2894,7 @@ msgstr "已要求修改：{0}"
 #. Label of the resolution (Select) field in DocType 'Wiki Merge Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 msgid "Resolution"
-msgstr ""
+msgstr "解决方式"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1591
 msgid "Resolution must be 'ours' or 'theirs'."
@@ -2915,22 +2919,22 @@ msgstr "{0}前请先处理失败的修改"
 #. Option for the 'Status' (Select) field in DocType 'Wiki Merge Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 msgid "Resolved"
-msgstr ""
+msgstr "已解决"
 
 #. Label of the resolved_at (Datetime) field in DocType 'Wiki Merge Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 msgid "Resolved At"
-msgstr ""
+msgstr "解决时间"
 
 #. Label of the resolved_by (Link) field in DocType 'Wiki Merge Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 msgid "Resolved By"
-msgstr ""
+msgstr "解决人"
 
 #. Label of the resolved_payload (JSON) field in DocType 'Wiki Merge Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 msgid "Resolved Payload"
-msgstr ""
+msgstr "解决后数据"
 
 #: frontend/src/components/WikiTree.vue:366
 msgid "Restore"
@@ -2945,29 +2949,29 @@ msgstr "受限访问"
 #. Webhook Log'
 #: wiki/wiki/doctype/wiki_github_webhook_log/wiki_github_webhook_log.json
 msgid "Result"
-msgstr ""
+msgstr "结果"
 
 #. Label of the section_break_review (Section Break) field in DocType 'Wiki
 #. Change Request'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 msgid "Review"
-msgstr ""
+msgstr "审阅"
 
 #. Label of the review_comment (Small Text) field in DocType 'Wiki Change
 #. Request'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 msgid "Review Comment"
-msgstr ""
+msgstr "审阅意见"
 
 #. Label of the reviewed_at (Datetime) field in DocType 'Wiki Change Request'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 msgid "Reviewed At"
-msgstr ""
+msgstr "审阅时间"
 
 #. Label of the reviewed_by (Link) field in DocType 'Wiki Change Request'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 msgid "Reviewed By"
-msgstr ""
+msgstr "审阅人"
 
 #: frontend/src/components/AssignDialog.vue:87
 msgid "Reviewer assigned"
@@ -2976,18 +2980,18 @@ msgstr "已指派审阅人"
 #. Label of the revision (Link) field in DocType 'Wiki Revision Item'
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
 msgid "Revision"
-msgstr ""
+msgstr "修订"
 
 #. Label of the section_break_revisions (Section Break) field in DocType 'Wiki
 #. Change Request'
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 msgid "Revisions"
-msgstr ""
+msgstr "修订"
 
 #. Label of the rgt (Int) field in DocType 'Wiki Document'
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 msgid "Right"
-msgstr ""
+msgstr "右"
 
 #: frontend/src/pages/Overview.vue:41
 msgid "Right now"
@@ -3002,12 +3006,12 @@ msgstr "角色"
 #. Label of the roles (Table) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Roles"
-msgstr ""
+msgstr "角色"
 
 #. Label of the root_group (Link) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Root Group"
-msgstr ""
+msgstr "根分组"
 
 #. Label of the route (Data) field in DocType 'Wiki Document'
 #. Label of the route (Data) field in DocType 'Wiki Revision Item'
@@ -3045,7 +3049,7 @@ msgstr "路径为必填项。"
 
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:68
 msgid "Routes Updated"
-msgstr ""
+msgstr "路径已更新"
 
 #. Option for the 'Status' (Select) field in DocType 'Wiki Git Sync Log'
 #. Option for the 'Last Sync Status' (Select) field in DocType 'Wiki Space'
@@ -3088,7 +3092,7 @@ msgstr "正在保存…"
 #. Option for the 'Trigger' (Select) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 msgid "Scheduled"
-msgstr ""
+msgstr "已计划"
 
 #: frontend/src/components/CommandPalette.vue:9
 #: frontend/src/components/CommandPalette.vue:25
@@ -3149,7 +3153,7 @@ msgstr "密钥已更新"
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.js:6
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:6
 msgid "See on website"
-msgstr ""
+msgstr "在网站上查看"
 
 #: frontend/src/components/NewSpaceDialog.vue:113
 msgid "Select an account or organization"
@@ -3165,12 +3169,12 @@ msgstr "设置"
 #. Settings'
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Shared secret used to verify incoming webhook deliveries (TB6)."
-msgstr ""
+msgstr "用于校验传入 Webhook 投递的共享密钥（TB6）。"
 
 #. Description of the 'Keywords' (Small Text) field in DocType 'Wiki Page'
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
 msgid "Should be a comma separated list"
-msgstr ""
+msgstr "应为逗号分隔的列表"
 
 #: frontend/src/components/WikiSettings/FeedbackPanel.vue:8
 msgid "Show a feedback widget on every wiki page to collect ratings and comments"
@@ -3191,7 +3195,7 @@ msgstr "在空间切换器中显示"
 #. Label of the show_in_switcher (Check) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Show in switcher?"
-msgstr ""
+msgstr "在切换器中显示？"
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:21
 msgid "Show the whole space"
@@ -3212,19 +3216,19 @@ msgstr "侧边栏配置"
 #. Label of the signature (Data) field in DocType 'Wiki GitHub Webhook Log'
 #: wiki/wiki/doctype/wiki_github_webhook_log/wiki_github_webhook_log.json
 msgid "Signature"
-msgstr ""
+msgstr "签名"
 
 #. Label of the size (Int) field in DocType 'Wiki Content Blob'
 #: wiki/frappe_wiki/doctype/wiki_content_blob/wiki_content_blob.json
 msgid "Size"
-msgstr ""
+msgstr "大小"
 
 #. Label of the slug (Data) field in DocType 'Wiki Document'
 #. Label of the slug (Data) field in DocType 'Wiki Revision Item'
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
 msgid "Slug"
-msgstr ""
+msgstr "别名"
 
 #: frontend/src/components/PageSettingsPanel.vue:83
 msgid "Social preview"
@@ -3233,18 +3237,18 @@ msgstr "社交分享预览"
 #. Label of the sort_order (Int) field in DocType 'Wiki Document'
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 msgid "Sort Order"
-msgstr ""
+msgstr "排序"
 
 #. Label of the source_section (Section Break) field in DocType 'Wiki GitHub
 #. Webhook Log'
 #: wiki/wiki/doctype/wiki_github_webhook_log/wiki_github_webhook_log.json
 msgid "Source"
-msgstr ""
+msgstr "来源"
 
 #. Label of the source_path (Data) field in DocType 'Wiki Document'
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 msgid "Source Path"
-msgstr ""
+msgstr "源文件路径"
 
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:8
 #: frontend/src/pages/AllSpaces.vue:105
@@ -3254,12 +3258,12 @@ msgstr "空间"
 #. Label of the space_color (Data) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Space Color"
-msgstr ""
+msgstr "空间颜色"
 
 #. Label of the space_icon (Data) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Space Icon"
-msgstr ""
+msgstr "空间图标"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:39
 msgid "Space Logo"
@@ -3302,7 +3306,7 @@ msgstr "空间"
 #. GitHub Webhook Log'
 #: wiki/wiki/doctype/wiki_github_webhook_log/wiki_github_webhook_log.json
 msgid "Spaces a push enqueued a sync for (empty for ignored or non-matching deliveries)."
-msgstr ""
+msgstr "该推送触发同步的空间（被忽略或不匹配的投递为空）。"
 
 #: frontend/src/pages/SpaceDetails.vue:134
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:32
@@ -3312,11 +3316,11 @@ msgstr "开始克隆"
 #. Label of the started_at (Datetime) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 msgid "Started At"
-msgstr ""
+msgstr "开始时间"
 
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:25
 msgid "Starting clone..."
-msgstr ""
+msgstr "正在开始克隆…"
 
 #. Label of the status (Select) field in DocType 'Wiki Change Request'
 #. Label of the status (Select) field in DocType 'Wiki Merge Conflict'
@@ -3355,7 +3359,7 @@ msgstr "提交审阅"
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Success"
-msgstr ""
+msgstr "成功"
 
 #: wiki/templates/wiki/includes/header.html:25
 #: wiki/templates/wiki/includes/mobile_header.html:149
@@ -3365,7 +3369,7 @@ msgstr "切换 Wiki 空间"
 #. Label of the switcher_order (Int) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Switcher Order"
-msgstr ""
+msgstr "切换器排序"
 
 #: frontend/src/components/SpaceSettings/GitSyncPanel.vue:96
 msgid "Sync History"
@@ -3402,7 +3406,7 @@ msgstr "已开始同步 — 正在从 GitHub 拉取最新内容"
 #. Webhook Log'
 #: wiki/wiki/doctype/wiki_github_webhook_log/wiki_github_webhook_log.json
 msgid "Synced Spaces"
-msgstr ""
+msgstr "已同步的空间"
 
 #: frontend/src/components/LibrarySidebar.vue:67
 #: frontend/src/components/SpaceModeStrip.vue:34
@@ -3441,7 +3445,7 @@ msgstr "正在同步…"
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "System Manager"
-msgstr ""
+msgstr "系统管理员"
 
 #. Label of the tab_icon (Data) field in DocType 'Wiki Document'
 #. Label of the tab_icon (Data) field in DocType 'Wiki Revision Item'
@@ -3474,7 +3478,7 @@ msgstr "以下文档存在冲突修改。请为每个冲突选择要保留的版
 #. Description of the 'Wiki Config' (Code) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "The most recently loaded sidebar config (.wiki.yml, .wiki.yaml or .wiki.json) from the repo, shown as JSON. Empty when the structure is inferred."
-msgstr ""
+msgstr "最近一次从仓库加载的侧边栏配置（.wiki.yml、.wiki.yaml 或 .wiki.json），以 JSON 显示。当结构为推断得出时为空。"
 
 #: frontend/src/components/WikiDocumentPanel.vue:180
 msgid "The page is removed from the space when this change request is merged."
@@ -3487,7 +3491,7 @@ msgstr "其修订历史"
 #. Label of the theirs_payload (JSON) field in DocType 'Wiki Merge Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 msgid "Theirs Payload"
-msgstr ""
+msgstr "对方数据"
 
 #: frontend/src/components/CommandPalette.vue:348
 #: wiki/templates/wiki/includes/search_modal.html:62
@@ -3547,7 +3551,7 @@ msgstr "此方法仅供开发模式使用"
 
 #: frontend/src/composables/useTreeDialogs.js:92
 msgid "This route is already in use"
-msgstr ""
+msgstr "此路径已被占用"
 
 #: frontend/src/components/SpaceWelcome.vue:90
 msgid "This space doesn't have any pages yet."
@@ -3567,12 +3571,12 @@ msgstr "这将批准该变更请求并立即合并到线上 Wiki。此操作无�
 
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:86
 msgid "This will sync the sidebar into tree-based Wiki Documents. Continue?"
-msgstr ""
+msgstr "这会将侧边栏同步为基于目录树的 Wiki 文档。是否继续？"
 
 #. Description of the 'Space Color' (Data) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Tint behind the space icon: one of gray, blue, green, amber, red, violet."
-msgstr ""
+msgstr "空间图标底色：gray、blue、green、amber、red、violet 之一。"
 
 #. Label of the title (Data) field in DocType 'Wiki Change Request'
 #. Label of the title (Small Text) field in DocType 'Wiki Document'
@@ -3594,13 +3598,13 @@ msgstr "标题"
 #. Label of the content_section (Section Break) field in DocType 'Wiki Page'
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
 msgid "Title & Content"
-msgstr ""
+msgstr "标题与内容"
 
 #: frontend/src/composables/useTreeDialogs.js:148
 #: frontend/src/composables/useTreeDialogs.js:247
 #: frontend/src/composables/useTreeDialogs.js:287
 msgid "Title is required"
-msgstr ""
+msgstr "标题为必填项"
 
 #: frontend/src/components/LibrarySidebar.vue:253
 #: frontend/src/components/MobileAppMenu.vue:34
@@ -3616,7 +3620,7 @@ msgstr "切换主题"
 #. Connection'
 #: wiki/wiki/doctype/wiki_github_connection/wiki_github_connection.json
 msgid "Tokens"
-msgstr ""
+msgstr "令牌"
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:71
 #: frontend/src/pages/Overview.vue:107
@@ -3635,13 +3639,13 @@ msgstr "统计会记录已发布页面的访问量，并为每位访客保存设
 #. Label of the tree_hash (Data) field in DocType 'Wiki Revision'
 #: wiki/frappe_wiki/doctype/wiki_revision/wiki_revision.json
 msgid "Tree Hash"
-msgstr ""
+msgstr "目录树哈希"
 
 #. Label of the section_break_j5x7 (Section Break) field in DocType 'Wiki
 #. Document'
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 msgid "Tree Related Fields"
-msgstr ""
+msgstr "树结构相关字段"
 
 #. Label of the trigger (Select) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
@@ -3655,7 +3659,7 @@ msgstr "开启统计"
 #. Label of the type (Select) field in DocType 'Wiki Feedback'
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 msgid "Type"
-msgstr ""
+msgstr "类型"
 
 #: wiki/templates/wiki/includes/search_modal.html:92
 msgid "Type to search documentation"
@@ -3682,7 +3686,7 @@ msgstr "暂时无法下载此页面。"
 #. Option for the 'Status' (Select) field in DocType 'Wiki Page Patch'
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "Under Review"
-msgstr ""
+msgstr "审阅中"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1106
 msgid "Unknown operation type: {0}"
@@ -3744,11 +3748,11 @@ msgstr "更新 Wiki 空间路径"
 #. Label of the updated_count (Int) field in DocType 'Wiki Git Sync Log'
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 msgid "Updated"
-msgstr ""
+msgstr "已更新"
 
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:64
 msgid "Updating routes..."
-msgstr ""
+msgstr "正在更新路径…"
 
 #: frontend/src/components/SpaceIdentityPicker.vue:88
 #: frontend/src/components/SpaceIdentityPicker.vue:168
@@ -3770,12 +3774,12 @@ msgstr "使用此图片"
 #. Label of the user (Link) field in DocType 'Wiki GitHub Connection'
 #: wiki/wiki/doctype/wiki_github_connection/wiki_github_connection.json
 msgid "User"
-msgstr ""
+msgstr "用户"
 
 #. Label of the version_3_tab (Tab Break) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Version 3"
-msgstr ""
+msgstr "Version 3"
 
 #: frontend/src/components/SpaceModeStrip.vue:421
 msgid "View changes ({0})"
@@ -3874,13 +3878,13 @@ msgstr "Webhook 网址已复制"
 #. Description of the 'Git Synced?' (Check) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "When enabled, this space is synced one-way from a GitHub repository and is read-only in the wiki. Immutable after creation."
-msgstr ""
+msgstr "启用后，此空间将从 GitHub 仓库单向同步，并在 Wiki 中为只读。创建后不可更改。"
 
 #. Description of the 'Access Token Expires At' (Datetime) field in DocType
 #. 'Wiki GitHub Connection'
 #: wiki/wiki/doctype/wiki_github_connection/wiki_github_connection.json
 msgid "When the access token expires (blank = non-expiring)."
-msgstr ""
+msgstr "访问令牌的过期时间（留空表示不过期）。"
 
 #. Label of a Desktop Icon
 #. Name of a Workspace
@@ -3896,7 +3900,7 @@ msgstr "Wiki"
 #. Name of a DocType
 #: wiki/wiki/doctype/wiki_app_switcher_list_table/wiki_app_switcher_list_table.json
 msgid "Wiki App Switcher List Table"
-msgstr ""
+msgstr "Wiki 应用切换器列表"
 
 #. Name of a role
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
@@ -3913,27 +3917,27 @@ msgstr ""
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Wiki Approver"
-msgstr ""
+msgstr "Wiki 审批人"
 
 #. Name of a report
 #: wiki/wiki/report/wiki_broken_links/wiki_broken_links.json
 msgid "Wiki Broken Links"
-msgstr ""
+msgstr "Wiki 失效链接"
 
 #. Name of a DocType
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
 msgid "Wiki Change Request"
-msgstr ""
+msgstr "Wiki 变更请求"
 
 #. Label of the wiki_config (Code) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Wiki Config"
-msgstr ""
+msgstr "Wiki 配置"
 
 #. Name of a DocType
 #: wiki/frappe_wiki/doctype/wiki_content_blob/wiki_content_blob.json
 msgid "Wiki Content Blob"
-msgstr ""
+msgstr "Wiki 内容块"
 
 #. Name of a DocType
 #. Label of the wiki_document (Link) field in DocType 'Wiki Feedback'
@@ -3948,27 +3952,27 @@ msgstr "Wiki Document"
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 #: wiki/wiki/workspace/wiki/wiki.json
 msgid "Wiki Feedback"
-msgstr ""
+msgstr "Wiki 反馈"
 
 #. Name of a DocType
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
 msgid "Wiki Git Sync Log"
-msgstr ""
+msgstr "Wiki Git 同步日志"
 
 #. Name of a DocType
 #: wiki/wiki/doctype/wiki_github_connection/wiki_github_connection.json
 msgid "Wiki GitHub Connection"
-msgstr ""
+msgstr "Wiki GitHub 连接"
 
 #. Name of a DocType
 #: wiki/wiki/doctype/wiki_github_webhook_log/wiki_github_webhook_log.json
 msgid "Wiki GitHub Webhook Log"
-msgstr ""
+msgstr "Wiki GitHub Webhook 日志"
 
 #. Name of a DocType
 #: wiki/wiki/doctype/wiki_group_item/wiki_group_item.json
 msgid "Wiki Group Item"
-msgstr ""
+msgstr "Wiki 分组项"
 
 #. Name of a role
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
@@ -3980,12 +3984,12 @@ msgstr ""
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Wiki Manager"
-msgstr ""
+msgstr "Wiki 管理员"
 
 #. Name of a DocType
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 msgid "Wiki Merge Conflict"
-msgstr ""
+msgstr "Wiki 合并冲突"
 
 #. Label of the wiki_page (Link) field in DocType 'Wiki Feedback'
 #. Label of the wiki_page (Link) field in DocType 'Wiki Group Item'
@@ -4000,38 +4004,38 @@ msgstr ""
 #: wiki/wiki/doctype/wiki_page_revision_item/wiki_page_revision_item.json
 #: wiki/wiki/doctype/wiki_sidebar/wiki_sidebar.json
 msgid "Wiki Page"
-msgstr ""
+msgstr "Wiki 页面"
 
 #. Label of the table_of_contents_section (Section Break) field in DocType
 #. 'Wiki Settings'
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Wiki Page Configurations"
-msgstr ""
+msgstr "Wiki 页面配置"
 
 #. Name of a DocType
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 msgid "Wiki Page Patch"
-msgstr ""
+msgstr "Wiki 页面补丁"
 
 #. Label of a shortcut in the Wiki Workspace
 #: wiki/wiki/workspace/wiki/wiki.json
 msgid "Wiki Page Patches"
-msgstr ""
+msgstr "Wiki 页面补丁"
 
 #. Name of a DocType
 #: wiki/wiki/doctype/wiki_page_revision/wiki_page_revision.json
 msgid "Wiki Page Revision"
-msgstr ""
+msgstr "Wiki 页面修订"
 
 #. Name of a DocType
 #: wiki/wiki/doctype/wiki_page_revision_item/wiki_page_revision_item.json
 msgid "Wiki Page Revision Item"
-msgstr ""
+msgstr "Wiki 页面修订项"
 
 #. Label of a shortcut in the Wiki Workspace
 #: wiki/wiki/workspace/wiki/wiki.json
 msgid "Wiki Page Revisions"
-msgstr ""
+msgstr "Wiki 页面修订"
 
 #: wiki/wiki/doctype/wiki_page/wiki_page.py:10
 msgid "Wiki Page doctype is deprecated and will be deleted in a future release. Please migrate to Wiki Document (Version 3 structure)."
@@ -4042,17 +4046,17 @@ msgstr "Wiki Page doctype 已弃用，将在未来版本中移除。请迁移到
 #: wiki/wiki/doctype/wiki_page_revision/wiki_page_revision.json
 #: wiki/wiki/workspace/wiki/wiki.json
 msgid "Wiki Pages"
-msgstr ""
+msgstr "Wiki 页面"
 
 #. Name of a DocType
 #: wiki/frappe_wiki/doctype/wiki_revision/wiki_revision.json
 msgid "Wiki Revision"
-msgstr ""
+msgstr "Wiki 修订"
 
 #. Name of a DocType
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
 msgid "Wiki Revision Item"
-msgstr ""
+msgstr "Wiki 修订项"
 
 #. Name of a DocType
 #. Label of a shortcut in the Wiki Workspace
@@ -4065,12 +4069,12 @@ msgstr "Wiki 设置"
 #. Name of a DocType
 #: wiki/wiki/doctype/wiki_sidebar/wiki_sidebar.json
 msgid "Wiki Sidebar"
-msgstr ""
+msgstr "Wiki 侧边栏"
 
 #. Label of the wiki_sidebars (Table) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Wiki Sidebars"
-msgstr ""
+msgstr "Wiki 侧边栏"
 
 #. Label of the wiki_space (Link) field in DocType 'Wiki Change Request'
 #. Label of the wiki_space (Link) field in DocType 'Wiki Document'
@@ -4092,7 +4096,7 @@ msgstr ""
 #: wiki/wiki/report/wiki_broken_links/wiki_broken_links.js:8
 #: wiki/wiki/workspace/wiki/wiki.json
 msgid "Wiki Space"
-msgstr ""
+msgstr "Wiki 空间"
 
 #: frontend/src/components/NewSpaceDialog.vue:505
 msgid "Wiki Space \"{0}\" created successfully."
@@ -4101,7 +4105,7 @@ msgstr "Wiki 空间“{0}”创建成功。"
 #. Name of a DocType
 #: wiki/wiki/doctype/wiki_space_role/wiki_space_role.json
 msgid "Wiki Space Role"
-msgstr ""
+msgstr "Wiki 空间角色"
 
 #. Name of a role
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.json
@@ -4110,17 +4114,17 @@ msgstr ""
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Wiki User"
-msgstr ""
+msgstr "Wiki 用户"
 
 #: frontend/src/composables/useChangeTypeDisplay.js:85
 msgid "Will be deleted"
-msgstr ""
+msgstr "将被删除"
 
 #. Description of the '&lt;head&gt; HTML' (Code) field in DocType 'Wiki
 #. Settings'
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 msgid "Will be included in all public Wiki pages"
-msgstr ""
+msgstr "将注入到所有公开 Wiki 页面"
 
 #: frontend/src/pages/ContributionReview.vue:73
 #: frontend/src/pages/ContributionReview.vue:638
@@ -4135,7 +4139,7 @@ msgstr "字数"
 #. Role'
 #: wiki/wiki/doctype/wiki_space_role/wiki_space_role.json
 msgid "Write"
-msgstr ""
+msgstr "写入"
 
 #: wiki/www/github/manifest_redirect.py:24 wiki/www/github/new_app.py:26
 msgid "You are not permitted to configure the GitHub App."
@@ -4174,7 +4178,7 @@ msgstr "你无权在此空间查看合并冲突。"
 
 #: frontend/src/layouts/MainLayout.vue:88
 msgid "You don't have permission to access the Wiki."
-msgstr ""
+msgstr "你无权访问 Wiki。"
 
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:776
 msgid "You don't have permission to delete child document: {0}"
@@ -4212,7 +4216,7 @@ msgstr "base_version 必须是整数"
 #. Webhook Log'
 #: wiki/wiki/doctype/wiki_github_webhook_log/wiki_github_webhook_log.json
 msgid "branch"
-msgstr ""
+msgstr "分支"
 
 #: frontend/src/pages/ContributionReview.vue:21
 msgid "by"
@@ -4238,7 +4242,7 @@ msgstr "子文档"
 #. Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 msgid "content"
-msgstr ""
+msgstr "内容"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1026
 msgid "create_node operation requires temp_key"
@@ -4272,7 +4276,7 @@ msgstr "main"
 #. Option for the 'Resolution' (Select) field in DocType 'Wiki Merge Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 msgid "manual"
-msgstr ""
+msgstr "手动"
 
 #: frontend/src/composables/useChangeRequestActions.js:118
 msgid "merging"
@@ -4282,7 +4286,7 @@ msgstr "合并"
 #. Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 msgid "meta"
-msgstr ""
+msgstr "元数据"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1092
 msgid "move_node operation requires doc_key"
@@ -4303,7 +4307,7 @@ msgstr "operations 必须是非空列表"
 #. Option for the 'Resolution' (Select) field in DocType 'Wiki Merge Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 msgid "ours"
-msgstr ""
+msgstr "我方"
 
 #: frontend/src/components/WikiDocumentList.vue:142
 #: frontend/src/pages/AllSpaces.vue:375
@@ -4343,7 +4347,7 @@ msgstr "提交"
 #. Webhook Log'
 #: wiki/wiki/doctype/wiki_github_webhook_log/wiki_github_webhook_log.json
 msgid "tag"
-msgstr ""
+msgstr "标签"
 
 #: frontend/src/components/WikiDocumentList.vue:156
 msgid "that will also be deleted."
@@ -4352,7 +4356,7 @@ msgstr "也将被删除。"
 #. Option for the 'Resolution' (Select) field in DocType 'Wiki Merge Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 msgid "theirs"
-msgstr ""
+msgstr "对方"
 
 #: frontend/src/components/CommandPalette.vue:115
 #: wiki/templates/wiki/includes/search_modal.html:167
@@ -4378,7 +4382,7 @@ msgstr "选择"
 #. Conflict'
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 msgid "tree"
-msgstr ""
+msgstr "目录树"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1065
 msgid "update_content operation requires content"
@@ -4396,7 +4400,7 @@ msgstr "update_node operation 需要 doc_key"
 #. Wiki'
 #: wiki/wiki/doctype/migrate_to_wiki/migrate_to_wiki.json
 msgid "with docs base url"
-msgstr ""
+msgstr "使用文档基础 URL"
 
 #: frontend/src/pages/Contributions.vue:281
 msgid "{0} change requests"
@@ -4408,7 +4412,7 @@ msgstr "仍有 {0} 个冲突未解决。"
 
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:69
 msgid "{0} documents updated successfully"
-msgstr ""
+msgstr "已成功更新 {0} 个文档"
 
 #: frontend/src/components/PageSettingsPanel.vue:211
 msgid "{0} min"
@@ -4449,10 +4453,10 @@ msgstr "{0} {1}已变更"
 #. Count format of shortcut in the Wiki Workspace
 #: wiki/wiki/workspace/wiki/wiki.json
 msgid "{} Published"
-msgstr ""
+msgstr "{} 已发布"
 
 #. Count format of shortcut in the Wiki Workspace
 #: wiki/wiki/workspace/wiki/wiki.json
 msgid "{} Under Review"
-msgstr ""
+msgstr "{} 审阅中"
 

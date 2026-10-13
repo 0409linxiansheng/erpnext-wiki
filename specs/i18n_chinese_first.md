@@ -76,7 +76,10 @@ and confirm the chain end to end with a handful of hand-translated strings: chan
 one, compile, see it on the site. Do not translate 1100 strings before the pipe is
 proven.
 
-**Phase 2 — translate.** Fill `zh.po`. Assert nothing; this is content.
+**Phase 2 — translate — DONE (2026-10-13).** All 899 entries are accounted
+for: 898 translated and 1 explicitly marked keep-as-is (a pure HTML snippet with
+no prose). Delivered in six batches of ~150, each compiled and committed as it
+landed, so the site never sat on a half-applied catalog.
 
 **Phase 3 — prove it.** A test that fails if the catalog rots: every `msgid` that
 the extractor finds has a `msgstr` (or an explicit, listed exception). Without it,
