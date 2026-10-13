@@ -178,6 +178,14 @@ for "other languages later".
   新建空间 / 已发布 / 最后更新 / 页面. What is still English is deliberate (the
   product name), not ours (the user name, `CTRL`), a route value (`docs`), or
   out of scope (the browser's relative timestamp, `a day ago`).
+
+**Relative time — DONE (2026-10-14).** The one remaining English string was not
+gettext's job: `dayjsLocal(...).fromNow()` (PageMetaLine, ContributionsPanel) stays
+English because frappe-ui extends the `relativeTime` plugin but never selects a
+locale. `main.js` now loads and selects the dayjs locale for the current language
+before mount (`lib/dayjsLocale.js`, pure mapping + a dynamic `import('dayjs/locale/…')`),
+so "a day ago" becomes "1 天前" on a zh site and stays English in the en-pinned e2e.
+148 frontend unit cases green.
 - **Lesson for the next app-specific SPA surface:** a translation that exists in
   the catalog, compiles into the `.mo`, and is present in the boot payload can
   still never reach the DOM. Check first paint, not just the payload.

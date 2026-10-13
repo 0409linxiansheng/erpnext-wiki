@@ -8,6 +8,7 @@ import { pinia } from './stores';
 import { useSessionStore } from './stores/session';
 import { useUserStore } from './stores/user';
 
+import { resolveDayjsLocale } from './lib/dayjsLocale';
 import { trackPageviews } from './telemetry';
 import translationPlugin, { loadTranslations } from './translation';
 
@@ -18,6 +19,7 @@ import {
 	ErrorMessage,
 	FormControl,
 	TextInput,
+	dayjs,
 	frappeRequest,
 	resourcesPlugin,
 	setConfig,
@@ -69,4 +71,24 @@ for (const key in globalComponents) {
 
 // The catalog has to be in place before the first render, not after it: see
 // loadTranslations(). `finally` keeps a failed fetch from blanking the app.
-loadTranslations().finally(() => app.mount('#app'));
+//
+// dayjs needs the same treatment: `relativeTime` is extended but no locale is
+// selected, so `fromNow()` would stay English on a zh site. Load and select the
+// locale for the current language before mount, alongside the gettext catalog.
+async function loadDayjsLocale() {
+	const locale = resolveDayjsLocale(window.frappe?.boot?.lang);
+	if (!locale || locale === 'en') {
+		dayjs.locale('en');
+		return;
+	}
+	try {
+		await import(`dayjs/locale/${locale}`);
+		dayjs.locale(locale);
+	} catch {
+		// A missing locale leaves the English default; a relative timestamp is not
+		// worth blanking the app over.
+		dayjs.locale('en');
+	}
+}
+
+Promise.all([loadTranslations(), loadDayjsLocale()]).finally(() => app.mount('#app'));
