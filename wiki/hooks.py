@@ -127,7 +127,10 @@ has_permission = {
 doc_events = {
 	"User": {"after_insert": "wiki.utils.add_wiki_user_role"},
 	"Wiki Document": {
-		"on_update": "wiki.frappe_wiki.doctype.wiki_document.wiki_document.on_wiki_document_update",
+		"on_update": [
+			"wiki.frappe_wiki.doctype.wiki_document.wiki_document.on_wiki_document_update",
+			"wiki.frappe_wiki.doctype.wiki_document.wiki_sqlite_search.index_doc_on_save",
+		],
 		"on_trash": "wiki.frappe_wiki.doctype.wiki_document.wiki_document.on_wiki_document_trash",
 	},
 	# A space's roles, route and publish state decide what the crawler indexes

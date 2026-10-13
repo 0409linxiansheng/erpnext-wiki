@@ -37,6 +37,8 @@ def search(query: str, space: str | None = None) -> dict:
 				"route": r.get("route", ""),
 				"content": r["content"],
 				"score": r["score"],
+				"wiki_space": r.get("wiki_space"),
+				"is_published": r.get("is_published"),
 			}
 			for r in hits
 		],
@@ -60,12 +62,12 @@ def _filter_hits_by_space_visibility(hits: list[dict]) -> list[dict]:
 	if not names:
 		return hits
 
-	space_by_name = {
-		row.name: row.wiki_space
+	doc_by_name = {
+		row.name: row
 		for row in frappe.get_all(
 			"Wiki Document",
 			filters={"name": ("in", names)},
-			fields=["name", "wiki_space"],
+			fields=["name", "wiki_space", "is_published"],
 		)
 	}
 
@@ -79,7 +81,13 @@ def _filter_hits_by_space_visibility(hits: list[dict]) -> list[dict]:
 
 	allowed = []
 	for hit in hits:
-		hit_space = space_by_name.get(hit["name"])
+		doc = doc_by_name.get(hit["name"])
+		hit_space = doc.wiki_space if doc else None
 		if not hit_space or _is_visible(hit_space):
+			# The app-side palette needs these to route and badge a result without a
+			# second round-trip per row.
+			if doc:
+				hit["wiki_space"] = doc.wiki_space
+				hit["is_published"] = doc.is_published
 			allowed.append(hit)
 	return allowed

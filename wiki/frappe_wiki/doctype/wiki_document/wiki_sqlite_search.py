@@ -97,6 +97,19 @@ class WikiSQLiteSearch(SQLiteSearch):
 		return wiki_doc.get_root_group() or docname
 
 
+def index_doc_on_save(doc, method=None):
+	"""Index a Wiki Document the moment it is saved.
+
+	Frappe's generic ``update_doc_index`` (the "*" on_update hook) only *queues* the
+	re-index, drained by a 5-minute scheduler job, so a freshly created or edited
+	page is invisible to full-text search for up to five minutes — long enough that
+	the command palette and the reader both look broken. The unpublish path already
+	removes synchronously (``remove_doc_from_index``); publish/edit deserve the
+	same. On Frappe v16 ``enqueue_reindex`` indexes inline, so this is synchronous.
+	"""
+	enqueue_reindex([doc.name])
+
+
 def enqueue_reindex(docnames: list[str]):
 	"""Re-index Wiki Documents after a merge.
 
@@ -118,7 +131,7 @@ def enqueue_reindex(docnames: list[str]):
 	except Exception:
 		frappe.log_error(
 			title="Wiki Search Reindex Error",
-			message=f"Failed to re-index Wiki Documents: {docnames}",
+			message=frappe.get_traceback(),
 		)
 
 
