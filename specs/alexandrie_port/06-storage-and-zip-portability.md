@@ -149,3 +149,22 @@ dedup, which is fine (the return value always carries the real `file_url`).
 
 Verified live on the `docs` space: 5 documents (root group + 4 pages) with the root
 at index 0 and every page pointing `parent: 0`. Revisions are excluded, as decided.
+
+**Phase 3 — DONE (2026-10-13): ZIP import, closing the round-trip.**
+
+`wiki.api.zip_import.import_space(file_url, target_space_name?)` re-creates a space
+from an export: it validates the manifest, creates a new `Wiki Space` (whose
+`before_insert` makes the root group) or rejects a non-empty target, uploads the
+attachments, then rebuilds the document tree with parent references by manifest
+index. Route collisions remap the space route (`docs` → `docs-2`) and every
+document route under it; attachment-name collisions remap the content URLs
+(`/files/x.txt` → `/files/x-hash.txt`), so an import never fails because a name is
+taken.
+
+The pure half (`validate_manifest`, `remap_route`, `remap_content`) is unit-tested
+(14 cases total, covering both export and import). The live round-trip was run end
+to end: export `docs` (5 pages + 1 attachment), import it, and confirm the tree,
+the published state, the remapped routes, the re-created attachment, and the
+remapped content URL. Rejecting a non-empty space raises a clear ValidationError.
+
+This closes Phase 2 + 3; only the S3 runbook (Phase 4) remains for spec 06.

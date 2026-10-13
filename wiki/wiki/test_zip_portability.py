@@ -1,4 +1,4 @@
-"""Unit tests for the pure ZIP-portability module (no site required)."""
+"""Unit tests for the ZIP-portability module (pure; no site required)."""
 
 import io
 import unittest
@@ -9,6 +9,9 @@ from wiki.wiki.zip_portability import (
 	build_zip_bytes,
 	extract_file_refs,
 	read_manifest,
+	remap_content,
+	remap_route,
+	validate_manifest,
 )
 
 
@@ -76,6 +79,55 @@ class TestManifestAndZip(unittest.TestCase):
 		self.assertEqual(manifest["documents"][0]["parent"], None)
 		self.assertEqual(manifest["documents"][1]["parent"], 0)
 		self.assertEqual(manifest["format"], "wiki-space-export")
+
+
+class TestValidateManifest(unittest.TestCase):
+	def test_accepts_a_valid_manifest(self):
+		validate_manifest(
+			{
+				"format": "wiki-space-export",
+				"version": 1,
+				"space": {},
+				"documents": [],
+				"attachments": [],
+			}
+		)
+
+	def test_rejects_unknown_format(self):
+		with self.assertRaises(ValueError):
+			validate_manifest({"format": "nope", "version": 1, "documents": [], "attachments": []})
+
+	def test_rejects_wrong_version(self):
+		with self.assertRaises(ValueError):
+			validate_manifest(
+				{"format": "wiki-space-export", "version": 2, "documents": [], "attachments": []}
+			)
+
+
+class TestRemapRoute(unittest.TestCase):
+	def test_exact_base_is_replaced(self):
+		self.assertEqual(remap_route("docs", "docs", "docs-2"), "docs-2")
+
+	def test_prefix_is_swapped(self):
+		self.assertEqual(
+			remap_route("docs/home/child", "docs", "imported"),
+			"imported/home/child",
+		)
+
+	def test_unrelated_route_is_left_alone(self):
+		self.assertEqual(remap_route("other/page", "docs", "imported"), "other/page")
+
+
+class TestRemapContent(unittest.TestCase):
+	def test_remaps_a_moved_attachment(self):
+		content = "![a](/files/x.png)\n![b](/files/y.png)"
+		remapped = remap_content(content, {"/files/x.png": "/files/x-abc123.png"})
+		self.assertIn("/files/x-abc123.png", remapped)
+		self.assertIn("/files/y.png", remapped)
+		self.assertNotIn("![a](/files/x.png)", remapped)
+
+	def test_no_map_is_a_noop(self):
+		self.assertEqual(remap_content("![a](/files/x.png)", {}), "![a](/files/x.png)")
 
 
 if __name__ == "__main__":

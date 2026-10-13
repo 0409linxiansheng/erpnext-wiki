@@ -91,3 +91,47 @@ def read_manifest(archive_bytes: bytes) -> dict:
 	with zipfile.ZipFile(io.BytesIO(archive_bytes)) as archive:
 		with archive.open("manifest.json") as handle:
 			return json.loads(handle.read().decode("utf-8"))
+
+
+def validate_manifest(manifest: dict) -> None:
+	"""Raise on a manifest this import cannot read. Pure, so the rules are tested."""
+	if not isinstance(manifest, dict):
+		raise ValueError("manifest is not an object")
+	if manifest.get("format") != FORMAT_NAME:
+		raise ValueError(f"unknown format {manifest.get('format')!r}")
+	if manifest.get("version") != FORMAT_VERSION:
+		raise ValueError(f"unsupported version {manifest.get('version')!r}")
+	if not isinstance(manifest.get("documents"), list):
+		raise ValueError("manifest.documents is not a list")
+	if not isinstance(manifest.get("attachments"), list):
+		raise ValueError("manifest.attachments is not a list")
+
+
+def remap_route(route: str | None, old_base: str, new_base: str) -> str | None:
+	"""Rewrite a document route when the space's base route changed on import.
+
+	Mirrors the clone path's `_clone_route`: an exact base match is replaced, a
+	`base/...` prefix is swapped, and anything else is left alone.
+	"""
+	if not route or not old_base or not new_base:
+		return route
+	if route == old_base:
+		return new_base
+	prefix = f"{old_base}/"
+	if route.startswith(prefix):
+		return f"{new_base}{route[len(old_base):]}"
+	return route
+
+
+def remap_content(content: str | None, url_map: dict[str, str]) -> str | None:
+	"""Rewrite attachment URLs in a document's content after the files moved.
+
+	`url_map` maps an original `/files/<name>` URL to the URL the upload actually
+	got (a collision dedup changes it). Plain substring replace is enough because
+	the exporter recorded exactly the `/files/<name>` form.
+	"""
+	if not content or not url_map:
+		return content
+	for old_url, new_url in url_map.items():
+		content = content.replace(old_url, new_url)
+	return content
