@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wiki VERSION\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
-"POT-Creation-Date: 2026-10-13 23:30+0806\n"
-"PO-Revision-Date: 2026-10-13 23:30+0806\n"
+"POT-Creation-Date: 2026-10-13 23:53+0806\n"
+"PO-Revision-Date: 2026-10-13 23:53+0806\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: developers@frappe.io\n"
 "MIME-Version: 1.0\n"
@@ -324,6 +324,10 @@ msgstr ""
 msgid "Assigned to me"
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:164
+msgid "Attach file"
+msgstr ""
+
 #: frontend/src/components/WikiSettings/GeneralPanel.vue:13
 msgid "Auto Convert Image to WebP"
 msgstr ""
@@ -395,7 +399,7 @@ msgstr ""
 msgid "Beta"
 msgstr ""
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:185
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:192
 msgid "Block Math"
 msgstr ""
 
@@ -1069,6 +1073,9 @@ msgstr ""
 msgid "Document not found in change request"
 msgstr ""
 
+#: frontend/src/components/tiptap-extensions/FileBlockView.vue:72
+#: frontend/src/components/tiptap-extensions/FileBlockView.vue:80
+#: frontend/src/components/tiptap-extensions/FileBlockView.vue:87
 #: wiki/templates/wiki/document.html:35
 #: wiki/templates/wiki/macros/buttons.html:80
 msgid "Download"
@@ -1614,7 +1621,7 @@ msgstr ""
 msgid "Header / Robots"
 msgstr ""
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:197
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:204
 msgid "Heading"
 msgstr ""
 
@@ -1696,7 +1703,7 @@ msgstr ""
 msgid "Injected into the <head> of all public wiki pages"
 msgstr ""
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:173
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:180
 msgid "Inline Math"
 msgstr ""
 
@@ -1718,7 +1725,7 @@ msgstr ""
 msgid "Insert PDF"
 msgstr ""
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:165
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:172
 msgid "Insert Video"
 msgstr ""
 
@@ -3999,6 +4006,10 @@ msgstr ""
 
 #: frontend/src/components/PageSettingsPanel.vue:140
 msgid "Upload image"
+msgstr ""
+
+#: frontend/src/components/tiptap-extensions/FileBlockView.vue:59
+msgid "Uploading"
 msgstr ""
 
 #: frontend/src/components/PageSettingsPanel.vue:140

@@ -158,6 +158,13 @@ const InsertPdfItem = {
 	action: (editor) => editor.chain().focus().selectAndUploadPdf().run(),
 };
 
+// Any file that is not an image/video/PDF: audio, text/code, or a download link.
+const InsertFileItem = {
+	icon: 'lucide-paperclip',
+	label: __('Attach file'),
+	action: (editor) => editor.chain().focus().selectAndUploadFile().run(),
+};
+
 // frappe-ui's InsertVideo atom gates on a node named `video`; wiki's video
 // node is `videoBlock`, so the atom hides itself and we roll our own.
 const InsertVideoItem = {
@@ -222,6 +229,7 @@ const toolbarItems = [
 	InsertImageItem,
 	InsertVideoItem,
 	InsertPdfItem,
+	InsertFileItem,
 	Separator,
 	Undo,
 	Redo,

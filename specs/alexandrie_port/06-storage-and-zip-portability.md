@@ -113,3 +113,20 @@ download link is the no-JS/print fallback. 113 markdown unit tests green.
 The editor side (attach-from-toolbar, the optimistic upload flow, the node view)
 is the next slice; until it lands, a text/audio/file is already correctly rendered
 anywhere a `![name](url)` reaches the reader.
+
+**Phase 1, second slice — DONE (2026-10-13): the editor surface, closing Phase 1.**
+
+The editor now has a `fileAttachment` node behind an "Attach file" toolbar item and
+the drop handler (any file that is not image/video/PDF). It shares image syntax and
+is disambiguated by the URL's extension, with the same classification as the server
+(`media-urls.js` mirrors `markdown.py`), so the editor and the reader agree. The
+node view renders audio natively, fetches text/code into a preview, and falls back
+to a download card; the optimistic upload flow is the PDF node's, verbatim.
+
+Round-trip and rendering are pinned: `media-urls` unit cases for the classifier,
+and e2e that parses `![notes](/files/notes.txt)` into a node, round-trips it
+without drift, and asserts the audio/text/download renders. 30 e2e green across
+seven specs. Six new strings are extracted and left untranslated under the
+bulk-translation workflow.
+
+Phase 1 is complete.

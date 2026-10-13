@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wiki VERSION\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
-"POT-Creation-Date: 2026-10-13 23:30+0806\n"
+"POT-Creation-Date: 2026-10-13 23:53+0806\n"
 "PO-Revision-Date: 2026-10-13 19:15+0806\n"
 "Last-Translator: developers@frappe.io\n"
 "Language: zh\n"
@@ -330,6 +330,10 @@ msgstr "分配给"
 msgid "Assigned to me"
 msgstr "指派给我"
 
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:164
+msgid "Attach file"
+msgstr ""
+
 #: frontend/src/components/WikiSettings/GeneralPanel.vue:13
 msgid "Auto Convert Image to WebP"
 msgstr "自动将图片转换为 WebP"
@@ -401,7 +405,7 @@ msgstr "基础修订"
 msgid "Beta"
 msgstr "测试版"
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:185
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:192
 msgid "Block Math"
 msgstr "块级公式"
 
@@ -1075,6 +1079,9 @@ msgstr "文档文件夹"
 msgid "Document not found in change request"
 msgstr "在变更请求中未找到该文档"
 
+#: frontend/src/components/tiptap-extensions/FileBlockView.vue:72
+#: frontend/src/components/tiptap-extensions/FileBlockView.vue:80
+#: frontend/src/components/tiptap-extensions/FileBlockView.vue:87
 #: wiki/templates/wiki/document.html:35
 #: wiki/templates/wiki/macros/buttons.html:80
 msgid "Download"
@@ -1620,7 +1627,7 @@ msgstr "页眉与 Robots"
 msgid "Header / Robots"
 msgstr "页眉 / Robots"
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:197
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:204
 msgid "Heading"
 msgstr "标题"
 
@@ -1702,7 +1709,7 @@ msgstr "包含内部链接？"
 msgid "Injected into the <head> of all public wiki pages"
 msgstr "注入到所有公开 Wiki 页面的 <head> 中"
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:173
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:180
 msgid "Inline Math"
 msgstr "行内公式"
 
@@ -1724,7 +1731,7 @@ msgstr "插入图片"
 msgid "Insert PDF"
 msgstr "插入 PDF"
 
-#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:165
+#: frontend/src/components/tiptap-extensions/WikiToolbar.vue:172
 msgid "Insert Video"
 msgstr "插入视频"
 
@@ -4006,6 +4013,10 @@ msgstr "上传"
 #: frontend/src/components/PageSettingsPanel.vue:140
 msgid "Upload image"
 msgstr "上传图片"
+
+#: frontend/src/components/tiptap-extensions/FileBlockView.vue:59
+msgid "Uploading"
+msgstr ""
 
 #: frontend/src/components/PageSettingsPanel.vue:140
 msgid "Uploading..."

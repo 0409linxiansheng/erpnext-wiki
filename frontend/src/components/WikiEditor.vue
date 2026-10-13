@@ -114,6 +114,7 @@ import {
 	tagDataImagesInSlice,
 } from './tiptap-extensions/paste-data-images.js';
 import { PdfBlock } from './tiptap-extensions/pdf-block.js';
+import { FileAttachment } from './tiptap-extensions/file-attachment.js';
 import { PreserveBlankLines } from './tiptap-extensions/preserve-blank-lines.js';
 import {
 	slashCommands,
@@ -431,6 +432,25 @@ function updatePdfNode(uploadId, attrs) {
 	view.dispatch(tr);
 }
 
+function updateFileNode(uploadId, attrs) {
+	const ed = editor.value;
+	if (!ed) return;
+	const { state, view } = ed;
+	let target = null;
+	state.doc.descendants((node, pos) => {
+		if (node.type.name === 'fileAttachment' && node.attrs.uploadId === uploadId) {
+			target = { node, pos };
+			return false;
+		}
+	});
+	if (!target) return;
+	const tr = state.tr.setNodeMarkup(target.pos, undefined, {
+		...target.node.attrs,
+		...attrs,
+	});
+	view.dispatch(tr);
+}
+
 /**
  * Insert a PDF card immediately with a loading state, upload it in the
  * background, then swap in the final URL (or surface an error).
@@ -453,6 +473,40 @@ async function insertAndUploadPdf(file) {
 		updatePdfNode,
 		'Failed to upload PDF',
 	);
+}
+
+/**
+ * Insert a file-attachment card immediately with a loading state, upload it in the
+ * background, then swap in the final URL — the same flow PDFs use.
+ */
+async function insertAndUploadFile(file) {
+	const ed = editor.value;
+	if (!ed) return;
+
+	const uploadId = newUploadId();
+
+	startUpload(uploadId);
+	ed.chain()
+		.focus()
+		.setFileAttachment({ filename: file.name, uploadId, loading: true })
+		.run();
+
+	await uploadIntoNode(
+		uploadId,
+		() => uploadFile(file),
+		updateFileNode,
+		'Failed to upload file',
+	);
+}
+
+/**
+ * Handle file-attachment upload events from the toolbar / slash command.
+ */
+function handleFileUploadEvent(event) {
+	const file = event.detail?.file;
+	if (file) {
+		insertAndUploadFile(file);
+	}
 }
 
 /**
@@ -523,6 +577,8 @@ function handleDrop(_view, event) {
 			editor.value.commands.uploadVideo(file);
 		} else if (isPdf) {
 			insertAndUploadPdf(file);
+		} else {
+			insertAndUploadFile(file);
 		}
 	}
 
@@ -838,6 +894,7 @@ const editor = useEditor({
 		VideoBlock.configure({
 			uploadFunction: uploadFile,
 		}),
+		FileAttachment,
 		Emoji,
 		// Slash commands
 		SlashCommands.configure({
@@ -1045,6 +1102,8 @@ onMounted(() => {
 	);
 	// Listen for PDF upload events (toolbar + slash command)
 	document.addEventListener('wiki-editor-upload-pdf', handlePdfUploadEvent);
+	// Listen for file-attachment upload events (toolbar + drop)
+	document.addEventListener('wiki-editor-upload-file', handleFileUploadEvent);
 });
 
 onUnmounted(() => {
@@ -1054,6 +1113,7 @@ onUnmounted(() => {
 		handleSlashImageUploadEvent,
 	);
 	document.removeEventListener('wiki-editor-upload-pdf', handlePdfUploadEvent);
+	document.removeEventListener('wiki-editor-upload-file', handleFileUploadEvent);
 	// Nodes leave with the editor, so its uploads can no longer reach the page.
 	draftStore.clearUploads(editorUploadIds);
 	// Hide any open link popup
