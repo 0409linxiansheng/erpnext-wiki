@@ -181,3 +181,28 @@ for "other languages later".
 - **Lesson for the next app-specific SPA surface:** a translation that exists in
   the catalog, compiles into the `.mo`, and is present in the boot payload can
   still never reach the DOM. Check first paint, not just the payload.
+
+**Workflow change (2026-10-13): translate in bulk, not per feature.**
+
+Direction from the maintainer: features come first, and the Chinese text is filled
+in later in one pass through `wlh_translate`, the translation app this bench
+already installs — it scans every installed app, so the wiki's catalog is already
+in its scope.
+
+What that changes here:
+
+- **New UI text still goes through `__()`.** The msgid stays the English source;
+  hardcoding Chinese would leave the translation app without a source to key on and
+  would make a second language impossible without a rewrite.
+- **Extraction is still part of the feature work** — `bench generate-pot-file --app
+  wiki` then `bench update-po-files --app wiki --locale zh`, committed with the
+  feature. That is what "record it" means: the string is in `main.pot` and sits
+  untranslated in `zh.po` until the bulk pass.
+- **Compiling and translating are not.** A new feature may therefore render English
+  on a `zh` site until the pass runs; that is accepted, and it is why the coverage
+  test below became a release gate rather than a per-commit one.
+
+**Phase 3 gate — release, not per commit.** `test_i18n_coverage.py` keeps the orphan
+check unconditional (a translation whose source is gone is stale immediately), and
+turns the coverage check into a skip that reports the backlog, failing only under
+`WIKI_I18N_STRICT=1`. That is the command to run before shipping a Chinese build.
