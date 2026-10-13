@@ -93,9 +93,11 @@ The one piece of discipline left is regenerating `main.pot`
 (`bench generate-pot-file --app wiki`) when strings change; the test then names
 exactly what is new and untranslated.
 
-**Phase 4 — the second language is possible.** `create-po-file de` (or any code)
-produces a working catalog with no code change. This is the actual acceptance test
-for "other languages later".
+**Phase 4 — the second language is possible — DONE (2026-10-14).**
+`create-po-file de` + `update-po-files de` + `compile-po-to-mo de` produced
+`sites/assets/locale/de/LC_MESSAGES/wiki.mo` and a 984-entry `de.po` with no code
+change — the acceptance test for "other languages later", ready for `wlh_translate`
+to fill in the bulk pass. This closes the i18n thread.
 
 ## Tests
 
