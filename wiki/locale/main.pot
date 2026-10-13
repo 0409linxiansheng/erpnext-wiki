@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wiki VERSION\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
-"POT-Creation-Date: 2026-10-13 22:07+0806\n"
-"PO-Revision-Date: 2026-10-13 22:07+0806\n"
+"POT-Creation-Date: 2026-10-13 23:30+0806\n"
+"PO-Revision-Date: 2026-10-13 23:30+0806\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: developers@frappe.io\n"
 "MIME-Version: 1.0\n"
@@ -33,15 +33,15 @@ msgstr ""
 msgid "1 view in last 30 days"
 msgstr ""
 
-#: frontend/src/pages/Overview.vue:196
+#: frontend/src/pages/Overview.vue:202
 msgid "30 days"
 msgstr ""
 
-#: frontend/src/pages/Overview.vue:195
+#: frontend/src/pages/Overview.vue:201
 msgid "7 days"
 msgstr ""
 
-#: frontend/src/pages/Overview.vue:197
+#: frontend/src/pages/Overview.vue:203
 msgid "90 days"
 msgstr ""
 
@@ -126,7 +126,7 @@ msgstr ""
 msgid "Access control updated"
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:398
+#: frontend/src/components/CommandPalette.vue:425
 #: wiki/templates/wiki/includes/search_modal.html:60
 msgid "Actions"
 msgstr ""
@@ -152,7 +152,7 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:224
+#: frontend/src/components/CommandPalette.vue:239
 #: frontend/src/components/LibrarySidebar.vue:273
 #: frontend/src/pages/AllSpaces.vue:3 frontend/src/pages/AllSpaces.vue:21
 #: frontend/src/pages/AllSpaces.vue:402
@@ -167,7 +167,7 @@ msgstr ""
 msgid "All its pages"
 msgstr ""
 
-#: frontend/src/pages/Overview.vue:257
+#: frontend/src/pages/Overview.vue:263
 msgid "All spaces"
 msgstr ""
 
@@ -467,7 +467,7 @@ msgstr ""
 msgid "Change Request"
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:230
+#: frontend/src/components/CommandPalette.vue:245
 #: frontend/src/components/LibrarySidebar.vue:279
 #: frontend/src/layouts/MainLayout.vue:40
 #: frontend/src/pages/Contributions.vue:4
@@ -1002,7 +1002,7 @@ msgid "Diff"
 msgstr ""
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:190
-#: frontend/src/pages/Overview.vue:152
+#: frontend/src/pages/Overview.vue:157
 msgid "Direct"
 msgstr ""
 
@@ -1824,7 +1824,7 @@ msgstr ""
 msgid "Javascript"
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:394
+#: frontend/src/components/CommandPalette.vue:421
 msgid "Jump to"
 msgstr ""
 
@@ -1854,17 +1854,17 @@ msgid "Last 180 days"
 msgstr ""
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:110
-#: frontend/src/pages/Overview.vue:191
+#: frontend/src/pages/Overview.vue:197
 msgid "Last 30 days"
 msgstr ""
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:109
-#: frontend/src/pages/Overview.vue:190
+#: frontend/src/pages/Overview.vue:196
 msgid "Last 7 days"
 msgstr ""
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:111
-#: frontend/src/pages/Overview.vue:192
+#: frontend/src/pages/Overview.vue:198
 msgid "Last 90 days"
 msgstr ""
 
@@ -1986,7 +1986,7 @@ msgstr ""
 msgid "Log"
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:364
+#: frontend/src/components/CommandPalette.vue:391
 #: frontend/src/components/LibrarySidebar.vue:254
 #: frontend/src/components/MobileAppMenu.vue:36
 msgid "Log out"
@@ -2254,7 +2254,7 @@ msgstr ""
 msgid "New group to be created"
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:299
+#: frontend/src/components/CommandPalette.vue:326
 #: frontend/src/components/SpaceWelcome.vue:36
 #: frontend/src/components/WikiDocumentList.vue:90
 #: frontend/src/pages/ContributionReview.vue:272
@@ -2274,13 +2274,13 @@ msgstr ""
 msgid "New snippet"
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:310
+#: frontend/src/components/CommandPalette.vue:337
 msgid "New space"
 msgstr ""
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:44
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:136
-#: frontend/src/pages/Overview.vue:202 frontend/src/pages/Overview.vue:227
+#: frontend/src/pages/Overview.vue:208 frontend/src/pages/Overview.vue:233
 msgid "New visitors"
 msgstr ""
 
@@ -2316,7 +2316,7 @@ msgstr ""
 msgid "No active change request"
 msgstr ""
 
-#: frontend/src/pages/Overview.vue:306
+#: frontend/src/pages/Overview.vue:312
 msgid "No change"
 msgstr ""
 
@@ -2368,7 +2368,8 @@ msgstr ""
 msgid "No repository configured"
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:96
+#: frontend/src/components/CommandPalette.vue:102
+#: frontend/src/components/WikiSearch.vue:23
 msgid "No results"
 msgstr ""
 
@@ -2403,8 +2404,8 @@ msgstr ""
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:74
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:82
-#: frontend/src/pages/Overview.vue:81 frontend/src/pages/Overview.vue:110
-#: frontend/src/pages/Overview.vue:142
+#: frontend/src/pages/Overview.vue:86 frontend/src/pages/Overview.vue:115
+#: frontend/src/pages/Overview.vue:147
 msgid "No views in this range"
 msgstr ""
 
@@ -2507,17 +2508,17 @@ msgstr ""
 
 #. Option for the 'Status' (Select) field in DocType 'Wiki Merge Conflict'
 #. Option for the 'Status' (Select) field in DocType 'Wiki Feedback'
-#: frontend/src/pages/Overview.vue:46
+#: frontend/src/pages/Overview.vue:51
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 msgid "Open"
 msgstr ""
 
-#: frontend/src/pages/Overview.vue:203
+#: frontend/src/pages/Overview.vue:209
 msgid "Open change requests"
 msgstr ""
 
-#: frontend/src/pages/Overview.vue:40
+#: frontend/src/pages/Overview.vue:45
 msgid "Open change requests by space"
 msgstr ""
 
@@ -2584,8 +2585,8 @@ msgid "Outdated"
 msgstr ""
 
 #: frontend/src/components/LibrarySidebar.vue:265
-#: frontend/src/layouts/MainLayout.vue:18 frontend/src/pages/Overview.vue:4
-#: frontend/src/pages/Overview.vue:313
+#: frontend/src/layouts/MainLayout.vue:18 frontend/src/pages/Overview.vue:5
+#: frontend/src/pages/Overview.vue:319
 msgid "Overview"
 msgstr ""
 
@@ -2642,7 +2643,7 @@ msgstr ""
 msgid "Page title"
 msgstr ""
 
-#: frontend/src/pages/Overview.vue:55 frontend/src/pages/Overview.vue:201
+#: frontend/src/pages/Overview.vue:60 frontend/src/pages/Overview.vue:207
 msgid "Page views"
 msgstr ""
 
@@ -2650,7 +2651,7 @@ msgstr ""
 msgid "Page views are not being recorded"
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:396
+#: frontend/src/components/CommandPalette.vue:423
 #: frontend/src/pages/SpaceDetails.vue:12
 #: frontend/src/pages/SpaceDetails.vue:35
 msgid "Pages"
@@ -2896,7 +2897,7 @@ msgstr ""
 msgid "Reason"
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:397
+#: frontend/src/components/CommandPalette.vue:424
 msgid "Recent"
 msgstr ""
 
@@ -3163,7 +3164,7 @@ msgstr ""
 msgid "Right"
 msgstr ""
 
-#: frontend/src/pages/Overview.vue:41
+#: frontend/src/pages/Overview.vue:46
 msgid "Right now"
 msgstr ""
 
@@ -3267,7 +3268,7 @@ msgstr ""
 
 #: frontend/src/components/CommandPalette.vue:9
 #: frontend/src/components/CommandPalette.vue:25
-#: frontend/src/components/CommandPalette.vue:174
+#: frontend/src/components/CommandPalette.vue:180
 #: frontend/src/components/LibrarySidebar.vue:28
 #: wiki/templates/wiki/includes/mobile_header.html:200
 msgid "Search"
@@ -3276,6 +3277,10 @@ msgstr ""
 #: wiki/templates/wiki/includes/header.html:71
 #: wiki/templates/wiki/includes/search_modal.html:52
 msgid "Search documentation"
+msgstr ""
+
+#: frontend/src/components/WikiSearch.vue:6
+msgid "Search documentation…"
 msgstr ""
 
 #: wiki/templates/wiki/includes/mobile_header.html:201
@@ -3310,7 +3315,8 @@ msgstr ""
 msgid "Search spaces..."
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:96
+#: frontend/src/components/CommandPalette.vue:102
+#: frontend/src/components/WikiSearch.vue:20
 msgid "Searching…"
 msgstr ""
 
@@ -3334,7 +3340,7 @@ msgstr ""
 msgid "Select an account or organization"
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:321
+#: frontend/src/components/CommandPalette.vue:348
 #: frontend/src/components/LibrarySidebar.vue:247
 #: frontend/src/components/MobileAppMenu.vue:28
 msgid "Settings"
@@ -3488,7 +3494,7 @@ msgstr ""
 msgid "Space name copied"
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:332
+#: frontend/src/components/CommandPalette.vue:359
 #: frontend/src/components/LibrarySidebar.vue:204
 #: frontend/src/components/SpaceSidebar.vue:114
 #: frontend/src/components/SpaceTreePanel.vue:34
@@ -3496,7 +3502,7 @@ msgstr ""
 msgid "Space settings"
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:395
+#: frontend/src/components/CommandPalette.vue:422
 #: frontend/src/components/LibrarySidebar.vue:185
 #: frontend/src/layouts/MainLayout.vue:29
 msgid "Spaces"
@@ -3715,12 +3721,12 @@ msgstr ""
 msgid "Theirs Payload"
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:348
+#: frontend/src/components/CommandPalette.vue:375
 #: wiki/templates/wiki/includes/search_modal.html:62
 msgid "Theme: Dark"
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:356
+#: frontend/src/components/CommandPalette.vue:383
 #: wiki/templates/wiki/includes/search_modal.html:62
 msgid "Theme: Light"
 msgstr ""
@@ -3839,7 +3845,7 @@ msgstr ""
 msgid "Toggle Theme"
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:341
+#: frontend/src/components/CommandPalette.vue:368
 #: wiki/templates/wiki/includes/header.html:101
 msgid "Toggle theme"
 msgstr ""
@@ -3851,12 +3857,12 @@ msgid "Tokens"
 msgstr ""
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:71
-#: frontend/src/pages/Overview.vue:107
+#: frontend/src/pages/Overview.vue:112
 msgid "Top pages"
 msgstr ""
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:79
-#: frontend/src/pages/Overview.vue:139
+#: frontend/src/pages/Overview.vue:144
 msgid "Top referrers"
 msgstr ""
 
@@ -3933,7 +3939,7 @@ msgstr ""
 msgid "Unpublish"
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:83
+#: frontend/src/components/CommandPalette.vue:89
 #: frontend/src/components/LibrarySidebar.vue:186
 #: frontend/src/components/WikiTree.vue:83
 #: frontend/src/components/WikiTree.vue:84 frontend/src/pages/AllSpaces.vue:186
@@ -4046,11 +4052,11 @@ msgstr ""
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:38
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:135
-#: frontend/src/pages/Overview.vue:226
+#: frontend/src/pages/Overview.vue:232
 msgid "Views"
 msgstr ""
 
-#: frontend/src/pages/Overview.vue:78
+#: frontend/src/pages/Overview.vue:83
 msgid "Views by space"
 msgstr ""
 
@@ -4602,22 +4608,22 @@ msgstr ""
 msgid "theirs"
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:115
+#: frontend/src/components/CommandPalette.vue:121
 #: wiki/templates/wiki/includes/search_modal.html:167
 msgid "to close"
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:107
+#: frontend/src/components/CommandPalette.vue:113
 #: wiki/templates/wiki/includes/search_modal.html:144
 msgid "to navigate"
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:120
+#: frontend/src/components/CommandPalette.vue:126
 #: wiki/templates/wiki/includes/search_modal.html:176
 msgid "to open"
 msgstr ""
 
-#: frontend/src/components/CommandPalette.vue:111
+#: frontend/src/components/CommandPalette.vue:117
 #: wiki/templates/wiki/includes/search_modal.html:150
 msgid "to select"
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wiki VERSION\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
-"POT-Creation-Date: 2026-10-13 22:07+0806\n"
+"POT-Creation-Date: 2026-10-13 23:30+0806\n"
 "PO-Revision-Date: 2026-10-13 19:15+0806\n"
 "Last-Translator: developers@frappe.io\n"
 "Language: zh\n"
@@ -35,15 +35,15 @@ msgstr "1 页"
 msgid "1 view in last 30 days"
 msgstr "最近 30 天 1 次浏览"
 
-#: frontend/src/pages/Overview.vue:196
+#: frontend/src/pages/Overview.vue:202
 msgid "30 days"
 msgstr "30 天"
 
-#: frontend/src/pages/Overview.vue:195
+#: frontend/src/pages/Overview.vue:201
 msgid "7 days"
 msgstr "7 天"
 
-#: frontend/src/pages/Overview.vue:197
+#: frontend/src/pages/Overview.vue:203
 msgid "90 days"
 msgstr "90 天"
 
@@ -132,7 +132,7 @@ msgstr "访问令牌过期时间"
 msgid "Access control updated"
 msgstr "访问权限已更新"
 
-#: frontend/src/components/CommandPalette.vue:398
+#: frontend/src/components/CommandPalette.vue:425
 #: wiki/templates/wiki/includes/search_modal.html:60
 msgid "Actions"
 msgstr "操作"
@@ -158,7 +158,7 @@ msgstr "添加分组或链接"
 msgid "All"
 msgstr "全部"
 
-#: frontend/src/components/CommandPalette.vue:224
+#: frontend/src/components/CommandPalette.vue:239
 #: frontend/src/components/LibrarySidebar.vue:273
 #: frontend/src/pages/AllSpaces.vue:3 frontend/src/pages/AllSpaces.vue:21
 #: frontend/src/pages/AllSpaces.vue:402
@@ -173,7 +173,7 @@ msgstr "全部审阅中"
 msgid "All its pages"
 msgstr "其全部页面"
 
-#: frontend/src/pages/Overview.vue:257
+#: frontend/src/pages/Overview.vue:263
 msgid "All spaces"
 msgstr "全部空间"
 
@@ -473,7 +473,7 @@ msgstr "无法为已终结的变更请求解决冲突。"
 msgid "Change Request"
 msgstr "变更请求"
 
-#: frontend/src/components/CommandPalette.vue:230
+#: frontend/src/components/CommandPalette.vue:245
 #: frontend/src/components/LibrarySidebar.vue:279
 #: frontend/src/layouts/MainLayout.vue:40
 #: frontend/src/pages/Contributions.vue:4
@@ -1008,7 +1008,7 @@ msgid "Diff"
 msgstr "差异"
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:190
-#: frontend/src/pages/Overview.vue:152
+#: frontend/src/pages/Overview.vue:157
 msgid "Direct"
 msgstr "直接访问"
 
@@ -1830,7 +1830,7 @@ msgstr "启用后会在每个 Wiki 页面上显示反馈组件，收集评分、
 msgid "Javascript"
 msgstr "Javascript"
 
-#: frontend/src/components/CommandPalette.vue:394
+#: frontend/src/components/CommandPalette.vue:421
 msgid "Jump to"
 msgstr "跳转到"
 
@@ -1860,17 +1860,17 @@ msgid "Last 180 days"
 msgstr "最近 180 天"
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:110
-#: frontend/src/pages/Overview.vue:191
+#: frontend/src/pages/Overview.vue:197
 msgid "Last 30 days"
 msgstr "最近 30 天"
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:109
-#: frontend/src/pages/Overview.vue:190
+#: frontend/src/pages/Overview.vue:196
 msgid "Last 7 days"
 msgstr "最近 7 天"
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:111
-#: frontend/src/pages/Overview.vue:192
+#: frontend/src/pages/Overview.vue:198
 msgid "Last 90 days"
 msgstr "最近 90 天"
 
@@ -1992,7 +1992,7 @@ msgstr "加载中…"
 msgid "Log"
 msgstr "日志"
 
-#: frontend/src/components/CommandPalette.vue:364
+#: frontend/src/components/CommandPalette.vue:391
 #: frontend/src/components/LibrarySidebar.vue:254
 #: frontend/src/components/MobileAppMenu.vue:36
 msgid "Log out"
@@ -2260,7 +2260,7 @@ msgstr "新增了外部链接"
 msgid "New group to be created"
 msgstr "待创建的新分组"
 
-#: frontend/src/components/CommandPalette.vue:299
+#: frontend/src/components/CommandPalette.vue:326
 #: frontend/src/components/SpaceWelcome.vue:36
 #: frontend/src/components/WikiDocumentList.vue:90
 #: frontend/src/pages/ContributionReview.vue:272
@@ -2280,13 +2280,13 @@ msgstr "新路径与当前路径相同"
 msgid "New snippet"
 msgstr "新建片段"
 
-#: frontend/src/components/CommandPalette.vue:310
+#: frontend/src/components/CommandPalette.vue:337
 msgid "New space"
 msgstr "新建空间"
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:44
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:136
-#: frontend/src/pages/Overview.vue:202 frontend/src/pages/Overview.vue:227
+#: frontend/src/pages/Overview.vue:208 frontend/src/pages/Overview.vue:233
 msgid "New visitors"
 msgstr "新访客"
 
@@ -2322,7 +2322,7 @@ msgstr "暂无 Wiki 空间"
 msgid "No active change request"
 msgstr "无进行中的变更请求"
 
-#: frontend/src/pages/Overview.vue:306
+#: frontend/src/pages/Overview.vue:312
 msgid "No change"
 msgstr "无变化"
 
@@ -2374,7 +2374,8 @@ msgstr "尚无已发布版本。"
 msgid "No repository configured"
 msgstr "未配置仓库"
 
-#: frontend/src/components/CommandPalette.vue:96
+#: frontend/src/components/CommandPalette.vue:102
+#: frontend/src/components/WikiSearch.vue:23
 msgid "No results"
 msgstr "无结果"
 
@@ -2409,8 +2410,8 @@ msgstr "尚无同步记录"
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:74
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:82
-#: frontend/src/pages/Overview.vue:81 frontend/src/pages/Overview.vue:110
-#: frontend/src/pages/Overview.vue:142
+#: frontend/src/pages/Overview.vue:86 frontend/src/pages/Overview.vue:115
+#: frontend/src/pages/Overview.vue:147
 msgid "No views in this range"
 msgstr "该时间范围内没有浏览量"
 
@@ -2513,17 +2514,17 @@ msgstr "只有作者可以撤回此变更请求。"
 
 #. Option for the 'Status' (Select) field in DocType 'Wiki Merge Conflict'
 #. Option for the 'Status' (Select) field in DocType 'Wiki Feedback'
-#: frontend/src/pages/Overview.vue:46
+#: frontend/src/pages/Overview.vue:51
 #: wiki/frappe_wiki/doctype/wiki_merge_conflict/wiki_merge_conflict.json
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 msgid "Open"
 msgstr "打开"
 
-#: frontend/src/pages/Overview.vue:203
+#: frontend/src/pages/Overview.vue:209
 msgid "Open change requests"
 msgstr "打开变更请求"
 
-#: frontend/src/pages/Overview.vue:40
+#: frontend/src/pages/Overview.vue:45
 msgid "Open change requests by space"
 msgstr "按空间查看变更请求"
 
@@ -2590,8 +2591,8 @@ msgid "Outdated"
 msgstr "已过期"
 
 #: frontend/src/components/LibrarySidebar.vue:265
-#: frontend/src/layouts/MainLayout.vue:18 frontend/src/pages/Overview.vue:4
-#: frontend/src/pages/Overview.vue:313
+#: frontend/src/layouts/MainLayout.vue:18 frontend/src/pages/Overview.vue:5
+#: frontend/src/pages/Overview.vue:319
 msgid "Overview"
 msgstr "概览"
 
@@ -2648,7 +2649,7 @@ msgstr "页面设置已保存"
 msgid "Page title"
 msgstr "页面标题"
 
-#: frontend/src/pages/Overview.vue:55 frontend/src/pages/Overview.vue:201
+#: frontend/src/pages/Overview.vue:60 frontend/src/pages/Overview.vue:207
 msgid "Page views"
 msgstr "页面浏览量"
 
@@ -2656,7 +2657,7 @@ msgstr "页面浏览量"
 msgid "Page views are not being recorded"
 msgstr "未在记录页面浏览量"
 
-#: frontend/src/components/CommandPalette.vue:396
+#: frontend/src/components/CommandPalette.vue:423
 #: frontend/src/pages/SpaceDetails.vue:12
 #: frontend/src/pages/SpaceDetails.vue:35
 msgid "Pages"
@@ -2902,7 +2903,7 @@ msgstr "实时同步"
 msgid "Reason"
 msgstr "原因"
 
-#: frontend/src/components/CommandPalette.vue:397
+#: frontend/src/components/CommandPalette.vue:424
 msgid "Recent"
 msgstr "最近"
 
@@ -3169,7 +3170,7 @@ msgstr "修订"
 msgid "Right"
 msgstr "右"
 
-#: frontend/src/pages/Overview.vue:41
+#: frontend/src/pages/Overview.vue:46
 msgid "Right now"
 msgstr "刚刚"
 
@@ -3273,7 +3274,7 @@ msgstr "已计划"
 
 #: frontend/src/components/CommandPalette.vue:9
 #: frontend/src/components/CommandPalette.vue:25
-#: frontend/src/components/CommandPalette.vue:174
+#: frontend/src/components/CommandPalette.vue:180
 #: frontend/src/components/LibrarySidebar.vue:28
 #: wiki/templates/wiki/includes/mobile_header.html:200
 msgid "Search"
@@ -3283,6 +3284,10 @@ msgstr "搜索"
 #: wiki/templates/wiki/includes/search_modal.html:52
 msgid "Search documentation"
 msgstr "搜索文档"
+
+#: frontend/src/components/WikiSearch.vue:6
+msgid "Search documentation…"
+msgstr ""
 
 #: wiki/templates/wiki/includes/mobile_header.html:201
 msgid "Search navigation"
@@ -3316,7 +3321,8 @@ msgstr "搜索片段…"
 msgid "Search spaces..."
 msgstr "搜索空间…"
 
-#: frontend/src/components/CommandPalette.vue:96
+#: frontend/src/components/CommandPalette.vue:102
+#: frontend/src/components/WikiSearch.vue:20
 msgid "Searching…"
 msgstr "正在搜索…"
 
@@ -3340,7 +3346,7 @@ msgstr "在网站上查看"
 msgid "Select an account or organization"
 msgstr "选择账号或组织"
 
-#: frontend/src/components/CommandPalette.vue:321
+#: frontend/src/components/CommandPalette.vue:348
 #: frontend/src/components/LibrarySidebar.vue:247
 #: frontend/src/components/MobileAppMenu.vue:28
 msgid "Settings"
@@ -3494,7 +3500,7 @@ msgstr "空间名称"
 msgid "Space name copied"
 msgstr "空间名称已复制"
 
-#: frontend/src/components/CommandPalette.vue:332
+#: frontend/src/components/CommandPalette.vue:359
 #: frontend/src/components/LibrarySidebar.vue:204
 #: frontend/src/components/SpaceSidebar.vue:114
 #: frontend/src/components/SpaceTreePanel.vue:34
@@ -3502,7 +3508,7 @@ msgstr "空间名称已复制"
 msgid "Space settings"
 msgstr "空间设置"
 
-#: frontend/src/components/CommandPalette.vue:395
+#: frontend/src/components/CommandPalette.vue:422
 #: frontend/src/components/LibrarySidebar.vue:185
 #: frontend/src/layouts/MainLayout.vue:29
 msgid "Spaces"
@@ -3721,12 +3727,12 @@ msgstr "其修订历史"
 msgid "Theirs Payload"
 msgstr "对方数据"
 
-#: frontend/src/components/CommandPalette.vue:348
+#: frontend/src/components/CommandPalette.vue:375
 #: wiki/templates/wiki/includes/search_modal.html:62
 msgid "Theme: Dark"
 msgstr "主题：深色"
 
-#: frontend/src/components/CommandPalette.vue:356
+#: frontend/src/components/CommandPalette.vue:383
 #: wiki/templates/wiki/includes/search_modal.html:62
 msgid "Theme: Light"
 msgstr "主题：浅色"
@@ -3845,7 +3851,7 @@ msgstr "标题为必填项"
 msgid "Toggle Theme"
 msgstr "切换主题"
 
-#: frontend/src/components/CommandPalette.vue:341
+#: frontend/src/components/CommandPalette.vue:368
 #: wiki/templates/wiki/includes/header.html:101
 msgid "Toggle theme"
 msgstr "切换主题"
@@ -3857,12 +3863,12 @@ msgid "Tokens"
 msgstr "令牌"
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:71
-#: frontend/src/pages/Overview.vue:107
+#: frontend/src/pages/Overview.vue:112
 msgid "Top pages"
 msgstr "热门页面"
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:79
-#: frontend/src/pages/Overview.vue:139
+#: frontend/src/pages/Overview.vue:144
 msgid "Top referrers"
 msgstr "主要来源"
 
@@ -3939,7 +3945,7 @@ msgstr "取消置顶"
 msgid "Unpublish"
 msgstr "取消发布"
 
-#: frontend/src/components/CommandPalette.vue:83
+#: frontend/src/components/CommandPalette.vue:89
 #: frontend/src/components/LibrarySidebar.vue:186
 #: frontend/src/components/WikiTree.vue:83
 #: frontend/src/components/WikiTree.vue:84 frontend/src/pages/AllSpaces.vue:186
@@ -4052,11 +4058,11 @@ msgstr "查看空间"
 
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:38
 #: frontend/src/components/Analytics/AnalyticsDashboard.vue:135
-#: frontend/src/pages/Overview.vue:226
+#: frontend/src/pages/Overview.vue:232
 msgid "Views"
 msgstr "浏览量"
 
-#: frontend/src/pages/Overview.vue:78
+#: frontend/src/pages/Overview.vue:83
 msgid "Views by space"
 msgstr "各空间浏览量"
 
@@ -4608,22 +4614,22 @@ msgstr "也将被删除。"
 msgid "theirs"
 msgstr "对方"
 
-#: frontend/src/components/CommandPalette.vue:115
+#: frontend/src/components/CommandPalette.vue:121
 #: wiki/templates/wiki/includes/search_modal.html:167
 msgid "to close"
 msgstr "关闭"
 
-#: frontend/src/components/CommandPalette.vue:107
+#: frontend/src/components/CommandPalette.vue:113
 #: wiki/templates/wiki/includes/search_modal.html:144
 msgid "to navigate"
 msgstr "导航"
 
-#: frontend/src/components/CommandPalette.vue:120
+#: frontend/src/components/CommandPalette.vue:126
 #: wiki/templates/wiki/includes/search_modal.html:176
 msgid "to open"
 msgstr "打开"
 
-#: frontend/src/components/CommandPalette.vue:111
+#: frontend/src/components/CommandPalette.vue:117
 #: wiki/templates/wiki/includes/search_modal.html:150
 msgid "to select"
 msgstr "选择"

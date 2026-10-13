@@ -1,12 +1,17 @@
 <template>
 	<div class="flex h-full flex-col" data-testid="overview-dashboard">
 		<PageHeader>
-			<h2 class="text-lg-semibold text-ink-gray-9">{{ __('Overview') }}</h2>
-			<TabButtons
-				v-model="preset"
-				:options="rangeOptions"
-				data-testid="overview-range"
-			/>
+			<div class="flex items-center gap-4">
+				<h2 class="text-lg-semibold text-ink-gray-9">{{ __('Overview') }}</h2>
+				<TabButtons
+					v-model="preset"
+					:options="rangeOptions"
+					data-testid="overview-range"
+				/>
+			</div>
+			<!-- The app's front door: full-text search with the same results the
+			     reader and the palette surface, instead of a dashboard-only page. -->
+			<WikiSearch data-testid="overview-search" />
 		</PageHeader>
 
 		<ScrollArea class="min-h-0 flex-1">
@@ -163,6 +168,7 @@
 
 <script setup>
 import SpaceAvatar from '@/components/SpaceAvatar.vue';
+import WikiSearch from '@/components/WikiSearch.vue';
 import TrackingNotice from '@/components/Analytics/TrackingNotice.vue';
 import { hasDelta } from '@/lib/analyticsRange';
 import { useAnalytics } from '@/composables/useAnalytics';

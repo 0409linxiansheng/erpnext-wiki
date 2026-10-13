@@ -115,3 +115,17 @@ about adding navigation to the palette.
 Tests: 11 unit cases for the palette grouping (score ordering, space bias, no-NaN
 sort, the client-vs-server filtering split), and 25 e2e green across the palette,
 maths, snippets, voice and mermaid.
+
+**Phase 3 & 4 — DONE (2026-10-13).** The Overview page now carries a search box in
+its header — `WikiSearch.vue`, the same full-text endpoint, the same result shape
+(title, route, snippet), the same `role="listbox"`/`option` semantics as the
+palette, and the kbd affordance the reader teaches. A keystroke of two or more
+characters queries; arrow keys and Enter navigate, and the results are trusted
+only for the query that produced them (the same stale-row guard the palette
+learned).
+
+The e2e drives it end to end: seed a published page, type its name on the
+dashboard, click the one result, land on the page. 26 e2e green across the six
+specs; the i18n guard still skips with the pending count.
+
+This closes spec 03.
