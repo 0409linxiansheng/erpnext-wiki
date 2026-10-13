@@ -168,3 +168,43 @@ the published state, the remapped routes, the re-created attachment, and the
 remapped content URL. Rejecting a non-empty space raises a clear ValidationError.
 
 This closes Phase 2 + 3; only the S3 runbook (Phase 4) remains for spec 06.
+
+**Phase 4 — S3 runbook — DONE (2026-10-13).**
+
+The spec's Phase-0 demotion of S3 from "code" to "runbook" holds, with one
+correction that a runbook must not hide: Frappe's file backend is **hook-driven,
+not config-driven**. `frappe.utils.file_manager.save_file` resolves the backend via
+`get_hook_method("write_file", fallback=save_file_on_filesystem)`; there is no
+`file_backends` key to fill in. So "use S3" means either installing an app that
+registers the `write_file` hook, or adding one to this app. The runbook records
+both, plus the migration of files already on disk.
+
+The `write_file` hook contract (from `frappe/hooks.py`): it receives
+`(fname, content, content_type, is_private)` and must return a dict with at least
+`file_url` and `file_name` (`write_file_keys`). `before_write_file` runs first and
+receives `file_size`.
+
+**Path A — install an S3 backend app** (recommended, no wiki code). Frappe Drive or
+`frappe_s3_attachment` implement the hook plus the two hard parts — private-file
+signed URLs and nginx/CDN proxying — which a hand-rolled hook gets wrong quickly.
+`bench get-app` + its own docs, then skip to "Migrate existing files".
+
+**Path B — a small hook in this app** (public files only). Add to `hooks.py`:
+
+    write_file = "wiki.storage.s3.write_file_to_s3"
+    before_write_file = "wiki.storage.s3.before_write_file"
+
+and a `wiki/storage/s3.py` whose `write_file_to_s3(fname, content, content_type,
+is_private)` uploads to the bucket via boto3 and returns a direct object/CDN URL.
+Public files are straightforward; **private files are not** — a direct S3 URL leaks
+them, and a signed URL expires, so Path B only covers `is_private=0` until the
+nginx/CDN proxying is built. That is precisely why Path A is recommended.
+
+**Migrate existing files.** Files live in `sites/<site>/public/files` and
+`sites/<site>/private/files`. After the backend is live, sync both directories into
+the bucket under the same `public/files/` and `private/files/` prefixes (an S3
+sync/mc cp, not a code change), then upload one new file and confirm it lands in
+the bucket rather than on disk.
+
+Verification for either path: `bench --site <site> execute frappe.utils.file_manager.save_file --kwargs '{"fname":"probe.txt","content":"ok","dt":"","dn":""}'`
+and confirm the returned `file_url` points at the bucket.

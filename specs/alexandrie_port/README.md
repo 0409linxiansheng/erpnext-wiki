@@ -95,7 +95,7 @@ Difficulty is effort on *this* stack, not in Alexandrie.
 | 03 ✅ | [03-search-and-command-palette.md](03-search-and-command-palette.md) | Ranking calibration, action + cross-space results in the palette, Overview search surface | — |
 | 04 | `04-kanban-task-board.md` | `Wiki Task` docType + board view bound to a space | — |
 | 05 | `05-page-level-access-control.md` | Node-scoped 5-level ACL with tree inheritance | **prd.md (change requests) must land first** |
-| 06 | `06-storage-and-zip-portability.md` | S3 file backend, media previews, space ZIP export/import | — |
+| 06 ✅ | [06-storage-and-zip-portability.md](06-storage-and-zip-portability.md) | S3 file backend, media previews, space ZIP export/import | — |
 | 07 | `07-oidc-sso.md` | Social Login Key providers + docs | — |
 | 08 | `08-offline-pwa.md` | Offline shell + sync | **blocked on HTTPS** |
 
