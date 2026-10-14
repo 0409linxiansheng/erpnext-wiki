@@ -6,10 +6,19 @@
 Read access  -> view a space + its pages and raise Change Requests.
 Write access -> additionally merge Change Requests. Write implies Read.
 
-A space with no role rows is open to all logged-in users (backward compatible).
-A space whose Read list contains the built-in ``Guest`` role is publicly readable
-(``frappe.get_roles()`` returns ``Guest`` for anonymous requests). ``System Manager``
-and ``Wiki Manager`` always have full access.
+Read access is decided by the space's ``visibility``:
+
+Roles, when set, restrict the space to those roles (``Public`` overrides).
+Without roles:
+
+``Public``     anyone, anonymous visitors included.
+``Logged in``  any signed-in user (Guests refused) — the default.
+``Private``    wiki managers only.
+
+A ``Private`` space whose Read list contains the built-in ``Guest`` role is still
+publicly readable (``frappe.get_roles()`` returns ``Guest`` for anonymous requests),
+so the older escape hatch keeps working. ``System Manager`` and ``Wiki Manager``
+always have full access.
 """
 
 import frappe
@@ -86,18 +95,39 @@ def _space_role_levels(space) -> dict:
 
 
 def can_read_space(space, user=None) -> bool:
+	"""Can ``user`` read this space? ``visibility`` decides the gate."""
 	user = user or frappe.session.user
+	visibility = _space_visibility(space)
+
+	levels = _space_role_levels(space)
+
+	# An explicit role grant always wins — this is what keeps the legacy `Guest`
+	# role row working as the pre-visibility way to publish a space.
+	if levels and (set(frappe.get_roles(user)) & set(levels)):
+		return True
+
+	if visibility == "Public":
+		return True
+
 	if _is_manager(user):
 		return True
 
-	levels = _space_role_levels(space)
-	if not levels:
-		# Open space: every logged-in user, but not anonymous Guests.
-		return user != "Guest"
+	# Role rows are themselves a gate: a space that names roles is restricted to
+	# them (bar `Public` above), which is exactly the behaviour before visibility
+	# existed. The three states decide the role-less case.
+	if levels:
+		return False
 
-	# Any role row (Read or Write) grants read. Guest/All rows behave naturally
-	# because frappe.get_roles() returns them in the appropriate contexts.
-	return bool(set(frappe.get_roles(user)) & set(levels))
+	return visibility == "Logged in" and user != "Guest"
+
+
+def _space_visibility(space) -> str:
+	"""The space's visibility, defaulting to ``Logged in`` when unset."""
+	name = _resolve_space_name(space)
+	if not name:
+		return "Logged in"
+
+	return frappe.db.get_value("Wiki Space", name, "visibility") or "Logged in"
 
 
 def can_write_space(space, user=None) -> bool:

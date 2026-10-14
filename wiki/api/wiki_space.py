@@ -58,6 +58,27 @@ def set_space_contributions(space_id: str, allow: int | str | bool) -> bool:
 	return bool(value)
 
 
+VISIBILITIES = ("Private", "Logged in", "Public")
+
+
+@frappe.whitelist()
+def set_space_visibility(space_id: str, visibility: str) -> str:
+	"""Set who may read a space.
+
+	Restricted to users who can write it, like every other access-control change.
+	"""
+	space = frappe.get_doc("Wiki Space", space_id)
+	space.check_permission("write")
+
+	value = (visibility or "").strip()
+	if value not in VISIBILITIES:
+		frappe.throw(_("Unknown visibility: {0}").format(value))
+
+	space.visibility = value
+	space.save()
+	return value
+
+
 OPEN_ROLES = {"Guest", "All"}
 
 
@@ -449,3 +470,51 @@ def _rebuild_wiki_node(doctype: str, name: str, left: int, parent_field: str) ->
 	frappe.db.set_value(doctype, name, {"lft": left, "rgt": right}, update_modified=False)
 
 	return right + 1
+
+
+@frappe.whitelist(allow_guest=True)
+def get_public_spaces() -> list[dict]:
+	"""The spaces a public visitor may browse — anonymous visitors included.
+
+	Only ``visibility = Public`` and published spaces are returned; the portal is
+	the one surface that deliberately answers a Guest without a session, so it must
+	never leak a private or signed-in-only space.
+	"""
+	spaces = frappe.get_all(
+		"Wiki Space",
+		filters={"visibility": "Public", "is_published": 1},
+		fields=[
+			"name",
+			"space_name",
+			"route",
+			"space_color",
+			"space_icon",
+			"light_mode_logo",
+			"dark_mode_logo",
+			"avatar",
+			"home_tab_title",
+			"home_tab_icon",
+		],
+		order_by="space_name asc",
+		limit=0,
+	)
+
+	if not spaces:
+		return []
+
+	counts = dict(
+		frappe.db.sql(
+			"""
+			select wiki_space, count(*)
+			from `tabWiki Document`
+			where is_published = 1 and is_group = 0 and wiki_space in %(spaces)s
+			group by wiki_space
+			""",
+			{"spaces": [space.name for space in spaces]},
+		)
+	)
+
+	for space in spaces:
+		space["page_count"] = counts.get(space["name"], 0)
+
+	return spaces

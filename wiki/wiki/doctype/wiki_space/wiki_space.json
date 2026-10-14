@@ -34,6 +34,7 @@
   "access_control_tab",
   "access_control_section",
   "roles",
+  "visibility",
   "contributions_section",
   "allow_contributions",
   "version_3_tab",
@@ -177,6 +178,14 @@
    "fieldtype": "Table",
    "label": "Roles",
    "options": "Wiki Space Role"
+  },
+  {
+   "default": "Logged in",
+   "description": "Who can read this space. Roles, when set, restrict it to those roles. Without Roles: Private = wiki managers only, Logged in = any signed-in user, Public = anyone including anonymous visitors (Public also overrides Roles).",
+   "fieldname": "visibility",
+   "fieldtype": "Select",
+   "label": "Visibility",
+   "options": "Private\nLogged in\nPublic"
   },
   {
    "fieldname": "contributions_section",

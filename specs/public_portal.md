@@ -27,9 +27,11 @@ portal itself is customizable.
   `Wiki Space Role{role: Guest, permission_level: Read}` to a space flipped the guest
   response 404 → 200; deleting it flipped it back. The diagnostic file and the data
   change were both reverted.
-- **Test gap.** The e2e case named "renders the diagram as inline SVG on the public
-  page" runs in an authenticated browser context, so anonymous access has never been
-  covered. That is why this went unnoticed.
+- **Test gap, stated precisely.** The e2e case named "renders the diagram as inline
+  SVG on the public page" runs in an authenticated browser context, so that case
+  never covered anonymous access. The repo *does* have real anonymous coverage in
+  `accept-contributions.spec.ts`, but it publishes a space the legacy way — an
+  explicit `Guest` role row — which is exactly the path this spec must not break.
 - **Reusable material already present**: space display fields (`light_mode_logo`,
   `dark_mode_logo`, `favicon`, `space_color`, `space_icon`, `avatar`,
   `home_tab_title`, `home_tab_icon`), `Wiki Settings` (`default_wiki_space`,
@@ -40,10 +42,12 @@ portal itself is customizable.
 ## Decisions
 
 1. **`Wiki Space.visibility` is an explicit three-state field**, default
-   `Logged in`:
-   - `Private` — only users granted a space role (plus wiki managers).
+   `Logged in`. **Role rows are themselves a gate**: a space that names roles is
+   restricted to them (this is exactly the pre-visibility behaviour, and what keeps
+   the legacy `Guest` row working). The three states decide the **role-less** case:
+   - `Private` — wiki managers only.
    - `Logged in` — any signed-in user (today's "no role rows" behaviour).
-   - `Public` — anyone, anonymous guests included.
+   - `Public` — anyone, anonymous guests included; it also overrides role rows.
 2. **The migration preserves today's behaviour exactly.** Spaces with role rows
    become `Private`; spaces without become `Logged in`. Nothing becomes public
    implicitly — `Public` is opt-in per space.
@@ -105,3 +109,25 @@ spaces. Commit.
 and its data change were reverted. The gap is structural: the app has no "public"
 state at all, which is why a landing page cannot mean anything until a visibility
 model exists.
+
+**Phase 1 — DONE (2026-10-14).** `Wiki Space.visibility` (Private / Logged in /
+Public, default Logged in) with a behaviour-preserving migration patch (spaces with
+role rows → Private, without → Logged in); `can_read_space` rewritten around
+visibility with role rows as the gate; a guest-accessible `get_public_spaces()` and a
+`set_space_visibility()` API; a Visibility select in the space settings panel; 8
+plain-unittest cases; and a **true anonymous** e2e (3 cases) that opens a logged-out
+browser context. Verified live: guest 404 → **200** when a space flips to `Public`,
+and back to 404. Regression: 24 e2e green across the public/access/space specs,
+including `accept-contributions` (the legacy Guest row) and `space-default-page`.
+
+**Two traps found the hard way, both worth keeping:**
+
+- **Frappe defaults an unset `Select` to its *first option*.** The first design
+  derived `Private`/`Logged in` from the role rows when the field was empty — which
+  never happens, because the column comes back pre-filled with whatever option is
+  listed first. The field now carries an explicit default and there is no
+  derive-on-insert; the semantics above replaced that idea.
+- **`accept-contributions.spec.ts` publishes spaces with a `Guest` role row.** An
+  early version of `can_read_space` returned early on `Logged in` and silently
+  ignored that grant, which would have broken a passing spec. Role grants are
+  therefore checked before the visibility switch, and a unit case pins it.

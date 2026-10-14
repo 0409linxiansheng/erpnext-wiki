@@ -1,5 +1,17 @@
 <template>
 	<div class="flex flex-col gap-4">
+		<!-- The broad gate first, the fine-grained roles under it. -->
+		<SettingsRow :title="__('Visibility')" :description="visibilityDescription">
+			<Select
+				size="sm"
+				:options="VISIBILITY_OPTIONS"
+				:modelValue="visibility"
+				:disabled="!canManageAccess || savingVisibility"
+				data-testid="space-visibility"
+				@update:modelValue="updateVisibility"
+			/>
+		</SettingsRow>
+
 		<!-- Add role, above the table. The list is searched on the server as you
 		     type — a site can have far more roles than fit in one page, so a
 		     client-side filter over the first page would hide most of them.
@@ -177,6 +189,42 @@ const contributionsDescription = computed(() => {
 		? `${base} ${__('Synced spaces are read-only, so contributions are always off.')}`
 		: base;
 });
+
+const VISIBILITY_OPTIONS = ['Private', 'Logged in', 'Public'];
+
+const visibility = ref(props.space.doc?.visibility || 'Logged in');
+const savingVisibility = ref(false);
+
+const visibilityDescription = computed(() => {
+	if (visibility.value === 'Public') {
+		return __('Anyone, including anonymous visitors, can read this space.');
+	}
+	if (visibility.value === 'Private') {
+		return __('Only wiki managers can read this space.');
+	}
+	return __(
+		'Any signed-in user can read this space. Roles, when set, restrict it to those roles.',
+	);
+});
+
+const visibilityResource = createResource({
+	url: 'wiki.api.wiki_space.set_space_visibility',
+});
+
+async function updateVisibility(value) {
+	const previous = visibility.value;
+	visibility.value = value;
+	savingVisibility.value = true;
+	try {
+		await visibilityResource.submit({ space_id: props.spaceId, visibility: value });
+		toast.success(__('Visibility updated'));
+	} catch (error) {
+		visibility.value = previous;
+		toast.error(error.messages?.[0] || __('Failed to update visibility'));
+	} finally {
+		savingVisibility.value = false;
+	}
+}
 
 const roleCombobox = ref(null);
 const selectedRole = ref(null);
