@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "creation": "2026-10-14 18:10:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_tab",
+  "title",
+  "subtitle",
+  "logo",
+  "accent_color",
+  "spaces_section",
+  "show_all_spaces",
+  "featured_spaces",
+  "footer_section",
+  "footer_text"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_tab",
+   "fieldtype": "Tab Break",
+   "label": "General"
+  },
+  {
+   "description": "Hero heading on /portal. Left blank, the built-in default is used.",
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "description": "One line under the heading. Left blank, the built-in default is used.",
+   "fieldname": "subtitle",
+   "fieldtype": "Small Text",
+   "label": "Subtitle"
+  },
+  {
+   "description": "Shown above the heading. Optional.",
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo"
+  },
+  {
+   "description": "Tints the heading and the card accents. One of the six wiki palette colours, or blank to inherit the default.",
+   "fieldname": "accent_color",
+   "fieldtype": "Select",
+   "label": "Accent Colour",
+   "options": "\ngray\nblue\ngreen\namber\nred\nviolet"
+  },
+  {
+   "fieldname": "spaces_section",
+   "fieldtype": "Section Break",
+   "label": "Spaces"
+  },
+  {
+   "default": "1",
+   "description": "On: every public space is listed, featured ones first. Off: only the featured ones.",
+   "fieldname": "show_all_spaces",
+   "fieldtype": "Check",
+   "label": "List every public space"
+  },
+  {
+   "description": "Order is the row order. A space that is not Public is skipped, so the portal never advertises something a visitor cannot open.",
+   "fieldname": "featured_spaces",
+   "fieldtype": "Table",
+   "label": "Featured Spaces",
+   "options": "Wiki Portal Space"
+  },
+  {
+   "fieldname": "footer_section",
+   "fieldtype": "Section Break",
+   "label": "Footer"
+  },
+  {
+   "fieldname": "footer_text",
+   "fieldtype": "Small Text",
+   "label": "Footer text"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-10-14 18:10:00.000000",
+ "modified_by": "Administrator",
+ "module": "Wiki",
+ "name": "Wiki Portal",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Wiki Approver",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -231,3 +231,34 @@ export async function docExists(
 		return false;
 	}
 }
+
+
+/**
+ * Update fields on an existing document, or on a Single (whose name is its doctype).
+ *
+ * `frappe.client.set_value` takes a field dict, which is what makes this usable for
+ * a Single like `Wiki Portal`: there is no record to PUT to.
+ */
+export async function setValue(
+	request: APIRequestContext,
+	doctype: string,
+	name: string,
+	fields: Record<string, unknown>,
+): Promise<void> {
+	const csrfToken = getCsrfToken();
+
+	const response = await request.post('/api/method/frappe.client.set_value', {
+		form: {
+			doctype,
+			name,
+			fieldname: JSON.stringify(fields),
+		},
+		headers: {
+			...(csrfToken ? { 'X-Frappe-CSRF-Token': csrfToken } : {}),
+		},
+	});
+
+	if (!response.ok()) {
+		throw new Error(`Failed to set ${doctype}/${name}: ${await response.text()}`);
+	}
+}

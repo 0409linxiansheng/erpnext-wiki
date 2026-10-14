@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wiki VERSION\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
-"POT-Creation-Date: 2026-10-14 18:03+0806\n"
+"POT-Creation-Date: 2026-10-14 18:10+0806\n"
 "PO-Revision-Date: 2026-10-13 19:15+0806\n"
 "Last-Translator: developers@frappe.io\n"
 "Language: zh\n"
@@ -95,6 +95,11 @@ msgstr "空间在创建时连接 GitHub。已连接的空间在编辑器中为�
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:481
 msgid "A tab must stay at the top level. Remove the tab flag first to move it."
 msgstr "标签必须保持在顶层。移动前请先取消标签标记。"
+
+#. Label of the accent_color (Select) field in DocType 'Wiki Portal'
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
+msgid "Accent Colour"
+msgstr ""
 
 #. Label of the allow_contributions (Check) field in DocType 'Wiki Space'
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:106
@@ -454,7 +459,7 @@ msgstr "失效链接"
 msgid "Broken Links Report"
 msgstr "失效链接报表"
 
-#: wiki/www/portal.html:17
+#: wiki/www/portal.py:35
 msgid "Browse the spaces we have published for you."
 msgstr ""
 
@@ -1136,7 +1141,7 @@ msgstr "文档文件夹"
 msgid "Document not found in change request"
 msgstr "在变更请求中未找到该文档"
 
-#: wiki/www/portal.html:5 wiki/www/portal.html:14
+#: wiki/www/portal.py:34
 msgid "Documentation"
 msgstr ""
 
@@ -1488,6 +1493,11 @@ msgstr "图标上传失败"
 msgid "Favicon"
 msgstr "网站图标"
 
+#. Label of the featured_spaces (Table) field in DocType 'Wiki Portal'
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
+msgid "Featured Spaces"
+msgstr ""
+
 #. Label of the feedback (Small Text) field in DocType 'Wiki Feedback'
 #. Label of the feedback_section (Section Break) field in DocType 'Wiki
 #. Settings'
@@ -1523,6 +1533,16 @@ msgstr "结束时间"
 msgid "Folder in the repo to sync. Supports nested paths like docs/guide."
 msgstr "要同步的仓库文件夹。支持 docs/guide 这样的嵌套路径。"
 
+#. Label of the footer_section (Section Break) field in DocType 'Wiki Portal'
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
+msgid "Footer"
+msgstr ""
+
+#. Label of the footer_text (Small Text) field in DocType 'Wiki Portal'
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
+msgid "Footer text"
+msgstr ""
+
 #: wiki/wiki/git_sync.py:571
 msgid "Found {0}. Keep only one sidebar config file."
 msgstr "找到 {0}。请只保留一个侧边栏配置文件。"
@@ -1540,12 +1560,14 @@ msgstr "开始日期不能晚于结束日期"
 msgid "From the repo"
 msgstr "来自仓库"
 
+#. Label of the general_tab (Tab Break) field in DocType 'Wiki Portal'
 #. Label of the general_tab (Tab Break) field in DocType 'Wiki Settings'
 #. Label of the general_tab (Tab Break) field in DocType 'Wiki Space'
 #: frontend/src/components/PageSettingsPanel.vue:34
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:26
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:167
 #: frontend/src/components/WikiSettings/WikiSettings.vue:97
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "General"
@@ -1718,6 +1740,11 @@ msgstr "标题 2"
 #: frontend/src/components/tiptap-extensions/slash-commands.js:50
 msgid "Heading 3"
 msgstr "标题 3"
+
+#. Description of the 'Title' (Data) field in DocType 'Wiki Portal'
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
+msgid "Hero heading on /portal. Left blank, the built-in default is used."
+msgstr ""
 
 #. Label of the hide_on_sidebar (Check) field in DocType 'Wiki Group Item'
 #: wiki/wiki/doctype/wiki_group_item/wiki_group_item.json
@@ -2060,6 +2087,11 @@ msgstr ""
 msgid "Linked Documents"
 msgstr "关联文档"
 
+#. Label of the show_all_spaces (Check) field in DocType 'Wiki Portal'
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
+msgid "List every public space"
+msgstr ""
+
 #: frontend/src/components/SpaceSettings/NavigationPanel.vue:6
 msgid "List this space in the switcher and on the overview page"
 msgstr "在空间切换器和概览页中列出此空间"
@@ -2103,7 +2135,9 @@ msgstr "退出登录"
 msgid "Logged in"
 msgstr ""
 
+#. Label of the logo (Attach Image) field in DocType 'Wiki Portal'
 #. Label of the logo_section (Section Break) field in DocType 'Wiki Space'
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Logo"
 msgstr "图标"
@@ -2574,7 +2608,7 @@ msgstr "说明"
 msgid "Nothing assigned to you"
 msgstr "没有指派给你的内容"
 
-#: wiki/www/portal.html:41
+#: wiki/www/portal.html:47
 msgid "Nothing has been published yet."
 msgstr ""
 
@@ -2604,6 +2638,17 @@ msgstr "原父级"
 #: wiki/templates/wiki/includes/toc.html:17
 msgid "On this page"
 msgstr "本页内容"
+
+#. Description of the 'List every public space' (Check) field in DocType 'Wiki
+#. Portal'
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
+msgid "On: every public space is listed, featured ones first. Off: only the featured ones."
+msgstr ""
+
+#. Description of the 'Subtitle' (Small Text) field in DocType 'Wiki Portal'
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
+msgid "One line under the heading. Left blank, the built-in default is used."
+msgstr ""
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:323
 msgid "Only a group can be marked as a tab."
@@ -2687,6 +2732,11 @@ msgstr "排序"
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
 msgid "Order Index"
 msgstr "排序索引"
+
+#. Description of the 'Featured Spaces' (Table) field in DocType 'Wiki Portal'
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
+msgid "Order is the row order. A space that is not Public is skipped, so the portal never advertises something a visitor cannot open."
+msgstr ""
 
 #: frontend/src/composables/useChangeTypeDisplay.js:87
 msgid "Order updated"
@@ -3539,6 +3589,11 @@ msgstr "在切换器中显示？"
 msgid "Show the whole space"
 msgstr "显示整个空间"
 
+#. Description of the 'Logo' (Attach Image) field in DocType 'Wiki Portal'
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
+msgid "Shown above the heading. Optional."
+msgstr ""
+
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:41
 msgid "Shown in the reader header and on generated social preview images"
 msgstr "显示在读者页页眉和生成的社交预览图片上"
@@ -3661,9 +3716,11 @@ msgstr "空间名称已复制"
 msgid "Space settings"
 msgstr "空间设置"
 
+#. Label of the spaces_section (Section Break) field in DocType 'Wiki Portal'
 #: frontend/src/components/CommandPalette.vue:422
 #: frontend/src/components/LibrarySidebar.vue:185
 #: frontend/src/layouts/MainLayout.vue:29
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
 msgid "Spaces"
 msgstr "空间"
 
@@ -3729,6 +3786,11 @@ msgstr "提交"
 #: frontend/src/components/SubmitForReviewButton.vue:26
 msgid "Submit for review"
 msgstr "提交审阅"
+
+#. Label of the subtitle (Small Text) field in DocType 'Wiki Portal'
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
+msgid "Subtitle"
+msgstr ""
 
 #. Option for the 'Status' (Select) field in DocType 'Wiki Git Sync Log'
 #. Option for the 'Last Sync Status' (Select) field in DocType 'Wiki Space'
@@ -3818,6 +3880,7 @@ msgstr "正在同步…"
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 #: wiki/wiki/doctype/wiki_page_revision/wiki_page_revision.json
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 #: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -3988,6 +4051,11 @@ msgstr "这会将侧边栏同步为基于目录树的 Wiki 文档。是否继续
 msgid "Tint behind the space icon: one of gray, blue, green, amber, red, violet."
 msgstr "空间图标底色：gray、blue、green、amber、red、violet 之一。"
 
+#. Description of the 'Accent Colour' (Select) field in DocType 'Wiki Portal'
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
+msgid "Tints the heading and the card accents. One of the six wiki palette colours, or blank to inherit the default."
+msgstr ""
+
 #: frontend/src/components/tiptap-extensions/slash-commands.js:223
 msgid "Tip"
 msgstr "提示"
@@ -3996,6 +4064,7 @@ msgstr "提示"
 #. Label of the title (Small Text) field in DocType 'Wiki Document'
 #. Label of the title (Small Text) field in DocType 'Wiki Revision Item'
 #. Label of the title (Data) field in DocType 'Wiki Page'
+#. Label of the title (Data) field in DocType 'Wiki Portal'
 #. Label of the title (Data) field in DocType 'Wiki Snippet'
 #. Label of the title (Data) field in DocType 'Wiki Task'
 #: frontend/src/components/PageSettingsPanel.vue:42
@@ -4008,6 +4077,7 @@ msgstr "提示"
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.json
 #: wiki/frappe_wiki/doctype/wiki_revision_item/wiki_revision_item.json
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
 #: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
 #: wiki/wiki/doctype/wiki_task/wiki_task.json
 msgid "Title"
@@ -4378,6 +4448,7 @@ msgstr "Wiki 应用切换器列表"
 #: wiki/wiki/doctype/wiki_page/wiki_page.json
 #: wiki/wiki/doctype/wiki_page_patch/wiki_page_patch.json
 #: wiki/wiki/doctype/wiki_page_revision/wiki_page_revision.json
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Wiki Approver"
@@ -4513,6 +4584,16 @@ msgid "Wiki Pages"
 msgstr "Wiki 页面"
 
 #. Name of a DocType
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
+msgid "Wiki Portal"
+msgstr ""
+
+#. Name of a DocType
+#: wiki/wiki/doctype/wiki_portal_space/wiki_portal_space.json
+msgid "Wiki Portal Space"
+msgstr ""
+
+#. Name of a DocType
 #: wiki/frappe_wiki/doctype/wiki_revision/wiki_revision.json
 msgid "Wiki Revision"
 msgstr "Wiki 修订"
@@ -4551,6 +4632,7 @@ msgstr "Wiki 片段"
 #. Label of the wiki_space (Link) field in DocType 'Wiki App Switcher List
 #. Table'
 #. Label of the wiki_space (Link) field in DocType 'Wiki Git Sync Log'
+#. Label of the wiki_space (Link) field in DocType 'Wiki Portal Space'
 #. Label of the section_break_vefv (Section Break) field in DocType 'Wiki
 #. Settings'
 #. Label of the wiki_space (Link) field in DocType 'Wiki Snippet'
@@ -4562,6 +4644,7 @@ msgstr "Wiki 片段"
 #: wiki/frappe_wiki/doctype/wiki_revision/wiki_revision.json
 #: wiki/wiki/doctype/wiki_app_switcher_list_table/wiki_app_switcher_list_table.json
 #: wiki/wiki/doctype/wiki_git_sync_log/wiki_git_sync_log.json
+#: wiki/wiki/doctype/wiki_portal_space/wiki_portal_space.json
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 #: wiki/wiki/doctype/wiki_snippet/wiki_snippet.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -4686,9 +4769,19 @@ msgstr "你的变更请求“{0}”已合并。"
 msgid "Your change request “{0}” was rejected."
 msgstr "你的变更请求“{0}”已拒绝。"
 
+#. Option for the 'Accent Colour' (Select) field in DocType 'Wiki Portal'
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
+msgid "amber"
+msgstr ""
+
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1139
 msgid "base_version must be an integer"
 msgstr "base_version 必须是整数"
+
+#. Option for the 'Accent Colour' (Select) field in DocType 'Wiki Portal'
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
+msgid "blue"
+msgstr ""
 
 #. Option for the 'Git Reference Type' (Select) field in DocType 'Wiki GitHub
 #. Webhook Log'
@@ -4737,6 +4830,16 @@ msgstr "delete_node operation 需要 doc_key"
 #: frontend/src/components/NewSpaceDialog.vue:166
 msgid "docs"
 msgstr "docs"
+
+#. Option for the 'Accent Colour' (Select) field in DocType 'Wiki Portal'
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
+msgid "gray"
+msgstr ""
+
+#. Option for the 'Accent Colour' (Select) field in DocType 'Wiki Portal'
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
+msgid "green"
+msgstr ""
 
 #: frontend/src/components/WikiDocumentList.vue:142
 msgid "group"
@@ -4800,6 +4903,11 @@ msgstr "page-route"
 #: frontend/src/pages/AllSpaces.vue:375
 msgid "pages"
 msgstr "页"
+
+#. Option for the 'Accent Colour' (Select) field in DocType 'Wiki Portal'
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
+msgid "red"
+msgstr ""
 
 #: frontend/src/pages/ContributionReview.vue:92
 msgid "resolved"
@@ -4874,6 +4982,11 @@ msgstr "update_content operation 需要 doc_key"
 msgid "update_node operation requires doc_key"
 msgstr "update_node operation 需要 doc_key"
 
+#. Option for the 'Accent Colour' (Select) field in DocType 'Wiki Portal'
+#: wiki/wiki/doctype/wiki_portal/wiki_portal.json
+msgid "violet"
+msgstr ""
+
 #. Description of the 'Assets Prepend' (Data) field in DocType 'Migrate To
 #. Wiki'
 #: wiki/wiki/doctype/migrate_to_wiki/migrate_to_wiki.json
@@ -4909,7 +5022,7 @@ msgid "{0} new conflict(s) detected during merge retry."
 msgstr "合并重试时检测到 {0} 个新冲突。"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:177
-#: wiki/www/portal.html:33
+#: wiki/www/portal.html:39
 msgid "{0} pages"
 msgstr "{0} 页"
 

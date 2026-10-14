@@ -150,3 +150,22 @@ Two things deliberately not done yet: the portal is not linked from anywhere (th
 reader's header is Phase 4's business), and `sitemap = 1` is set on the page but the
 wiki's own `/sitemap.xml` renderer takes over that path, so whether the portal and
 the public spaces appear there is Phase 4's check, not an assumption.
+
+**Phase 3 — DONE (2026-10-14).** The portal is configurable from a `Wiki Portal`
+single: heading, subtitle, logo, an accent colour drawn from the same six-colour
+wiki palette the space marks use, a `Featured Spaces` child table whose row order is
+the display order, `show all public spaces` (off = featured only), and a footer line.
+Access mirrors `Wiki Settings` (System Manager + Wiki Approver).
+
+The rules live in `wiki/wiki/portal_config.py` — pure, so they are unit-tested (7
+cases) rather than read out of Jinja: featured spaces lead in row order, a featured
+space that is **not** public is dropped (the portal must never advertise something a
+visitor cannot open), duplicates collapse, `show all` off narrows the list to the
+featured ones, and a blank field falls back. The fallback heading and subtitle are
+**passed in** by `portal.py`, already translated, instead of being English literals
+buried in a module that has no language context.
+
+Verified live (a configured heading, subtitle and footer rendered on `/portal`, then
+reverted) and by e2e: the config drives the page, and that case restores the config
+in its `finally` so the suite leaves the install as it found it. 31 e2e green across
+the portal, public, settings, sidebar and wiki suites.

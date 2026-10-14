@@ -1,8 +1,11 @@
 {% extends "templates/wiki/layout.html" %}
 {% from "templates/wiki/macros/space.html" import render_space_mark %}
 
+{% set accent = portal.accent_color %}
+{% set heading_style = "color: var(--ink-%s-7)" % accent if accent else "" %}
+
 {% block title %}
-    {{ _("Documentation") }}
+    {{ portal.title }}
 {% endblock %}
 
 {% block content %}
@@ -10,17 +13,20 @@
     <div class="mx-auto flex w-full max-w-5xl flex-col gap-10">
 
         <header class="flex flex-col gap-3">
-            <h1 class="text-2xl-semibold text-ink-gray-9 sm:text-3xl" data-testid="portal-title">
-                {{ _("Documentation") }}
+            {% if portal.logo %}
+            <img class="h-10 w-auto object-contain" src="{{ portal.logo | e }}" alt=""/>
+            {% endif %}
+            <h1 class="text-2xl-semibold text-ink-gray-9 sm:text-3xl"
+                {% if heading_style %}style="{{ heading_style }}"{% endif %}
+                data-testid="portal-title">
+                {{ portal.title }}
             </h1>
-            <p class="max-w-2xl text-base text-ink-gray-6">
-                {{ _("Browse the spaces we have published for you.") }}
-            </p>
+            <p class="max-w-2xl text-base text-ink-gray-6">{{ portal.subtitle }}</p>
         </header>
 
-        {% if spaces %}
+        {% if portal.spaces %}
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {% for space in spaces %}
+            {% for space in portal.spaces %}
             <a class="flex items-start gap-3 rounded-6 border border-outline-gray-2 p-4 no-underline transition-colors hover:bg-surface-gray-1"
                href="/{{ space.route | e }}"
                data-testid="portal-space-card">
@@ -40,6 +46,13 @@
         <p class="py-16 text-center text-ink-gray-5" data-testid="portal-empty">
             {{ _("Nothing has been published yet.") }}
         </p>
+        {% endif %}
+
+        {% if portal.footer_text %}
+        <footer class="border-t border-outline-gray-1 pt-6 text-sm text-ink-gray-5"
+                data-testid="portal-footer">
+            {{ portal.footer_text }}
+        </footer>
         {% endif %}
 
     </div>

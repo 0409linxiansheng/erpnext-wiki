@@ -1,4 +1,5 @@
 import { expect, test } from '../fixtures';
+import { setValue } from '../helpers/frappe';
 
 /**
  * The public portal (specs/public_portal.md, Phase 2).
@@ -55,6 +56,36 @@ test.describe('Public portal', () => {
 			await expect(guestPage.getByText(`${token} Handbook`)).toHaveCount(0);
 		} finally {
 			await guest.close();
+		}
+	});
+
+	test('the Wiki Portal config drives the page', async ({ browser, baseURL, request }) => {
+		const token = `PortalCfg${Date.now().toString(36)}`;
+
+		await setValue(request, 'Wiki Portal', 'Wiki Portal', {
+			title: `${token} Centre`,
+			subtitle: `${token} subtitle`,
+			footer_text: `${token} footer`,
+		});
+
+		const guest = await browser.newContext({
+			baseURL,
+			storageState: { cookies: [], origins: [] },
+		});
+		const guestPage = await guest.newPage();
+		try {
+			await guestPage.goto('/portal');
+
+			await expect(guestPage.getByTestId('portal-title')).toHaveText(`${token} Centre`);
+			await expect(guestPage.getByTestId('portal-footer')).toContainText(`${token} footer`);
+		} finally {
+			await guest.close();
+			// The config is global; leave the install as it was found.
+			await setValue(request, 'Wiki Portal', 'Wiki Portal', {
+				title: '',
+				subtitle: '',
+				footer_text: '',
+			});
 		}
 	});
 });
