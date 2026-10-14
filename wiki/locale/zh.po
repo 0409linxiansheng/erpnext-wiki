@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wiki VERSION\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
-"POT-Creation-Date: 2026-10-14 18:19+0806\n"
+"POT-Creation-Date: 2026-10-14 18:40+0806\n"
 "PO-Revision-Date: 2026-10-13 19:15+0806\n"
 "Last-Translator: developers@frappe.io\n"
 "Language: zh\n"
@@ -88,6 +88,10 @@ msgstr "来自精选图标列表的 lucide 类名，例如 lucide-book-open-text
 msgid "A short summary shown in search results and link previews"
 msgstr "显示在搜索结果和链接预览中的简短摘要"
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:59
+msgid "A single line at the bottom. Blank hides it."
+msgstr ""
+
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:100
 msgid "A space is connected to GitHub when it is created. A connected space is read-only in the editor — its pages come from the repository."
 msgstr "空间在创建时连接 GitHub。已连接的空间在编辑器中为只读 — 其页面来自仓库。"
@@ -99,6 +103,10 @@ msgstr "标签必须保持在顶层。移动前请先取消标签标记。"
 #. Label of the accent_color (Select) field in DocType 'Wiki Portal'
 #: wiki/wiki/doctype/wiki_portal/wiki_portal.json
 msgid "Accent Colour"
+msgstr ""
+
+#: frontend/src/components/WikiSettings/PortalPanel.vue:51
+msgid "Accent colour"
 msgstr ""
 
 #. Label of the allow_contributions (Check) field in DocType 'Wiki Space'
@@ -145,6 +153,7 @@ msgstr "操作"
 #: frontend/src/components/NewSpaceDialog.vue:124
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:34
 #: frontend/src/components/SpaceTasks.vue:67
+#: frontend/src/components/WikiSettings/PortalPanel.vue:92
 msgid "Add"
 msgstr "添加"
 
@@ -155,6 +164,10 @@ msgstr "添加外部链接"
 #: frontend/src/components/WikiDocumentList.vue:96
 msgid "Add a group or link"
 msgstr "添加分组或链接"
+
+#: frontend/src/components/WikiSettings/PortalPanel.vue:87
+msgid "Add a public space"
+msgstr ""
 
 #: frontend/src/components/SpaceTasks.vue:78
 msgid "Add a task"
@@ -1141,6 +1154,7 @@ msgstr "文档文件夹"
 msgid "Document not found in change request"
 msgstr "在变更请求中未找到该文档"
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:10
 #: wiki/www/portal.py:34
 msgid "Documentation"
 msgstr ""
@@ -1468,6 +1482,10 @@ msgstr "更新反馈设置失败"
 msgid "Failed to update the order"
 msgstr "更新排序失败"
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:282
+msgid "Failed to update the portal"
+msgstr ""
+
 #: frontend/src/composables/useSpaceIdentitySaver.js:26
 msgid "Failed to update the space logo"
 msgstr "更新空间图标失败"
@@ -1488,6 +1506,10 @@ msgstr "图片上传失败"
 msgid "Failed to upload logo"
 msgstr "图标上传失败"
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:258
+msgid "Failed to upload the logo"
+msgstr ""
+
 #. Label of the favicon (Attach Image) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Favicon"
@@ -1498,11 +1520,15 @@ msgstr "网站图标"
 msgid "Featured Spaces"
 msgstr ""
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:73
+msgid "Featured spaces"
+msgstr ""
+
 #. Label of the feedback (Small Text) field in DocType 'Wiki Feedback'
 #. Label of the feedback_section (Section Break) field in DocType 'Wiki
 #. Settings'
 #. Label of the feedback_tab (Tab Break) field in DocType 'Wiki Settings'
-#: frontend/src/components/WikiSettings/WikiSettings.vue:103
+#: frontend/src/components/WikiSettings/WikiSettings.vue:110
 #: frontend/src/pages/ContributionReview.vue:354
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
@@ -1539,6 +1565,7 @@ msgid "Footer"
 msgstr ""
 
 #. Label of the footer_text (Small Text) field in DocType 'Wiki Portal'
+#: frontend/src/components/WikiSettings/PortalPanel.vue:58
 #: wiki/wiki/doctype/wiki_portal/wiki_portal.json
 msgid "Footer text"
 msgstr ""
@@ -1566,7 +1593,7 @@ msgstr "来自仓库"
 #: frontend/src/components/PageSettingsPanel.vue:34
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:26
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:167
-#: frontend/src/components/WikiSettings/WikiSettings.vue:97
+#: frontend/src/components/WikiSettings/WikiSettings.vue:98
 #: wiki/wiki/doctype/wiki_portal/wiki_portal.json
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -1656,7 +1683,7 @@ msgid "GitHub Login"
 msgstr "GitHub 登录名"
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:6
-#: frontend/src/components/WikiSettings/WikiSettings.vue:115
+#: frontend/src/components/WikiSettings/WikiSettings.vue:122
 msgid "GitHub Sync"
 msgstr "GitHub 同步"
 
@@ -1716,7 +1743,7 @@ msgstr "哈希已过期"
 msgid "Head Revision"
 msgstr "最新修订"
 
-#: frontend/src/components/WikiSettings/WikiSettings.vue:109
+#: frontend/src/components/WikiSettings/WikiSettings.vue:116
 msgid "Header & Robots"
 msgstr "页眉与 Robots"
 
@@ -1725,6 +1752,7 @@ msgstr "页眉与 Robots"
 msgid "Header / Robots"
 msgstr "页眉 / Robots"
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:4
 #: frontend/src/components/tiptap-extensions/WikiToolbar.vue:204
 msgid "Heading"
 msgstr "标题"
@@ -2088,6 +2116,7 @@ msgid "Linked Documents"
 msgstr "关联文档"
 
 #. Label of the show_all_spaces (Check) field in DocType 'Wiki Portal'
+#: frontend/src/components/WikiSettings/PortalPanel.vue:65
 #: wiki/wiki/doctype/wiki_portal/wiki_portal.json
 msgid "List every public space"
 msgstr ""
@@ -2137,6 +2166,7 @@ msgstr ""
 
 #. Label of the logo (Attach Image) field in DocType 'Wiki Portal'
 #. Label of the logo_section (Section Break) field in DocType 'Wiki Space'
+#: frontend/src/components/WikiSettings/PortalPanel.vue:23
 #: wiki/wiki/doctype/wiki_portal/wiki_portal.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Logo"
@@ -2485,6 +2515,10 @@ msgstr "此变更请求中没有修改。"
 msgid "No description set"
 msgstr "未设置描述"
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:128
+msgid "No featured spaces yet."
+msgstr ""
+
 #: frontend/src/components/Autocomplete.vue:76
 msgid "No matches"
 msgstr "无匹配结果"
@@ -2508,6 +2542,10 @@ msgstr "暂无页面"
 #: frontend/src/components/SpaceModeStrip.vue:252
 msgid "No pending changes"
 msgstr "无待处理修改"
+
+#: frontend/src/components/WikiSettings/PortalPanel.vue:88
+msgid "No public spaces yet"
+msgstr ""
 
 #: frontend/src/pages/ContributionReview.vue:276
 msgid "No published version yet."
@@ -2624,6 +2662,10 @@ msgstr "尚未同步任何内容"
 msgid "Numbered List"
 msgstr "编号列表"
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:66
+msgid "Off shows only the featured spaces below."
+msgstr ""
+
 #. Option for the 'Type' (Select) field in DocType 'Wiki Feedback'
 #: wiki/templates/wiki/includes/feedback_widget.html:9
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
@@ -2647,6 +2689,10 @@ msgstr "本页内容"
 #. Portal'
 #: wiki/wiki/doctype/wiki_portal/wiki_portal.json
 msgid "On: every public space is listed, featured ones first. Off: only the featured ones."
+msgstr ""
+
+#: frontend/src/components/WikiSettings/PortalPanel.vue:17
+msgid "One line under the heading."
 msgstr ""
 
 #. Description of the 'Subtitle' (Small Text) field in DocType 'Wiki Portal'
@@ -2971,6 +3017,14 @@ msgstr "请说明需要修改的内容。该反馈会发回给作者。"
 msgid "Please wait for reordering to finish before merging"
 msgstr "请等待重新排序完成后再合并"
 
+#: frontend/src/components/WikiSettings/WikiSettings.vue:104
+msgid "Portal"
+msgstr ""
+
+#: frontend/src/components/WikiSettings/PortalPanel.vue:280
+msgid "Portal updated"
+msgstr ""
+
 #: frontend/src/pages/ContributionReview.vue:702
 msgid "Position"
 msgstr "位置"
@@ -3177,6 +3231,7 @@ msgstr "{0}前请先重新加载最新"
 
 #: frontend/src/components/PageSettingsPanel.vue:121
 #: frontend/src/components/SpaceIdentityPicker.vue:109
+#: frontend/src/components/WikiSettings/PortalPanel.vue:37
 #: frontend/src/components/tiptap-extensions/IframeBlockView.vue:103
 #: frontend/src/components/tiptap-extensions/LinkPopup.vue:74
 msgid "Remove"
@@ -3223,6 +3278,7 @@ msgstr "已重新排序"
 
 #: frontend/src/components/PageSettingsPanel.vue:118
 #: frontend/src/components/SpaceIdentityPicker.vue:88
+#: frontend/src/components/WikiSettings/PortalPanel.vue:34
 msgid "Replace"
 msgstr "替换"
 
@@ -3449,6 +3505,7 @@ msgstr "正在运行"
 #: frontend/src/components/WikiDocumentList.vue:239
 #: frontend/src/components/WikiSettings/CodePanel.vue:22
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:43
+#: frontend/src/components/WikiSettings/PortalPanel.vue:140
 msgid "Save"
 msgstr "保存"
 
@@ -3593,9 +3650,17 @@ msgstr "在切换器中显示？"
 msgid "Show the whole space"
 msgstr "显示整个空间"
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:24
+msgid "Shown above the heading."
+msgstr ""
+
 #. Description of the 'Logo' (Attach Image) field in DocType 'Wiki Portal'
 #: wiki/wiki/doctype/wiki_portal/wiki_portal.json
 msgid "Shown above the heading. Optional."
+msgstr ""
+
+#: frontend/src/components/WikiSettings/PortalPanel.vue:5
+msgid "Shown at the top of the public portal. Blank uses the built-in default."
 msgstr ""
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:41
@@ -3776,6 +3841,10 @@ msgstr ""
 msgid "Stored secrets are never shown. Leave a field blank to keep its current value."
 msgstr "已存储的密钥不会显示。留空则保持当前值不变。"
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:16
+msgid "Subheading"
+msgstr ""
+
 #: frontend/src/components/ContributionsPanel.vue:201
 msgid "Subject"
 msgstr "主题"
@@ -3952,6 +4021,10 @@ msgstr "以下文档存在冲突修改。请为每个冲突选择要保留的版
 msgid "The most recently loaded sidebar config (.wiki.yml, .wiki.yaml or .wiki.json) from the repo, shown as JSON. Empty when the structure is inferred."
 msgstr "最近一次从仓库加载的侧边栏配置（.wiki.yml、.wiki.yaml 或 .wiki.json），以 JSON 显示。当结构为推断得出时为空。"
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:76
+msgid "The order here is the order on the portal. Only public spaces can be featured — publish one first."
+msgstr ""
+
 #: frontend/src/components/WikiDocumentPanel.vue:180
 msgid "The page is removed from the space when this change request is merged."
 msgstr "此变更请求合并后，该页面将从空间中移除。"
@@ -4054,6 +4127,10 @@ msgstr "这会将侧边栏同步为基于目录树的 Wiki 文档。是否继续
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Tint behind the space icon: one of gray, blue, green, amber, red, violet."
 msgstr "空间图标底色：gray、blue、green、amber、red、violet 之一。"
+
+#: frontend/src/components/WikiSettings/PortalPanel.vue:52
+msgid "Tints the heading and the card accents."
+msgstr ""
 
 #. Description of the 'Accent Colour' (Select) field in DocType 'Wiki Portal'
 #: wiki/wiki/doctype/wiki_portal/wiki_portal.json
@@ -4225,6 +4302,7 @@ msgstr "未发布"
 #: frontend/src/components/WikiDocumentPanel.vue:89
 #: frontend/src/components/WikiSettings/CodePanel.vue:14
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:35
+#: frontend/src/components/WikiSettings/PortalPanel.vue:132
 #: frontend/src/composables/useSyncState.js:33
 msgid "Unsaved changes"
 msgstr "未保存的更改"
@@ -4265,6 +4343,7 @@ msgstr "正在更新路径…"
 
 #: frontend/src/components/SpaceIdentityPicker.vue:88
 #: frontend/src/components/SpaceIdentityPicker.vue:168
+#: frontend/src/components/WikiSettings/PortalPanel.vue:34
 msgid "Upload"
 msgstr "上传"
 

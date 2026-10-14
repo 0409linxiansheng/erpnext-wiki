@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wiki VERSION\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
-"POT-Creation-Date: 2026-10-14 18:19+0806\n"
-"PO-Revision-Date: 2026-10-14 18:19+0806\n"
+"POT-Creation-Date: 2026-10-14 18:40+0806\n"
+"PO-Revision-Date: 2026-10-14 18:40+0806\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: developers@frappe.io\n"
 "MIME-Version: 1.0\n"
@@ -82,6 +82,10 @@ msgstr ""
 msgid "A short summary shown in search results and link previews"
 msgstr ""
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:59
+msgid "A single line at the bottom. Blank hides it."
+msgstr ""
+
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:100
 msgid "A space is connected to GitHub when it is created. A connected space is read-only in the editor — its pages come from the repository."
 msgstr ""
@@ -93,6 +97,10 @@ msgstr ""
 #. Label of the accent_color (Select) field in DocType 'Wiki Portal'
 #: wiki/wiki/doctype/wiki_portal/wiki_portal.json
 msgid "Accent Colour"
+msgstr ""
+
+#: frontend/src/components/WikiSettings/PortalPanel.vue:51
+msgid "Accent colour"
 msgstr ""
 
 #. Label of the allow_contributions (Check) field in DocType 'Wiki Space'
@@ -139,6 +147,7 @@ msgstr ""
 #: frontend/src/components/NewSpaceDialog.vue:124
 #: frontend/src/components/SpaceSettings/AccessPanel.vue:34
 #: frontend/src/components/SpaceTasks.vue:67
+#: frontend/src/components/WikiSettings/PortalPanel.vue:92
 msgid "Add"
 msgstr ""
 
@@ -148,6 +157,10 @@ msgstr ""
 
 #: frontend/src/components/WikiDocumentList.vue:96
 msgid "Add a group or link"
+msgstr ""
+
+#: frontend/src/components/WikiSettings/PortalPanel.vue:87
+msgid "Add a public space"
 msgstr ""
 
 #: frontend/src/components/SpaceTasks.vue:78
@@ -1135,6 +1148,7 @@ msgstr ""
 msgid "Document not found in change request"
 msgstr ""
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:10
 #: wiki/www/portal.py:34
 msgid "Documentation"
 msgstr ""
@@ -1462,6 +1476,10 @@ msgstr ""
 msgid "Failed to update the order"
 msgstr ""
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:282
+msgid "Failed to update the portal"
+msgstr ""
+
 #: frontend/src/composables/useSpaceIdentitySaver.js:26
 msgid "Failed to update the space logo"
 msgstr ""
@@ -1482,6 +1500,10 @@ msgstr ""
 msgid "Failed to upload logo"
 msgstr ""
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:258
+msgid "Failed to upload the logo"
+msgstr ""
+
 #. Label of the favicon (Attach Image) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Favicon"
@@ -1492,11 +1514,15 @@ msgstr ""
 msgid "Featured Spaces"
 msgstr ""
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:73
+msgid "Featured spaces"
+msgstr ""
+
 #. Label of the feedback (Small Text) field in DocType 'Wiki Feedback'
 #. Label of the feedback_section (Section Break) field in DocType 'Wiki
 #. Settings'
 #. Label of the feedback_tab (Tab Break) field in DocType 'Wiki Settings'
-#: frontend/src/components/WikiSettings/WikiSettings.vue:103
+#: frontend/src/components/WikiSettings/WikiSettings.vue:110
 #: frontend/src/pages/ContributionReview.vue:354
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
@@ -1533,6 +1559,7 @@ msgid "Footer"
 msgstr ""
 
 #. Label of the footer_text (Small Text) field in DocType 'Wiki Portal'
+#: frontend/src/components/WikiSettings/PortalPanel.vue:58
 #: wiki/wiki/doctype/wiki_portal/wiki_portal.json
 msgid "Footer text"
 msgstr ""
@@ -1560,7 +1587,7 @@ msgstr ""
 #: frontend/src/components/PageSettingsPanel.vue:34
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:26
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:167
-#: frontend/src/components/WikiSettings/WikiSettings.vue:97
+#: frontend/src/components/WikiSettings/WikiSettings.vue:98
 #: wiki/wiki/doctype/wiki_portal/wiki_portal.json
 #: wiki/wiki/doctype/wiki_settings/wiki_settings.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -1650,7 +1677,7 @@ msgid "GitHub Login"
 msgstr ""
 
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:6
-#: frontend/src/components/WikiSettings/WikiSettings.vue:115
+#: frontend/src/components/WikiSettings/WikiSettings.vue:122
 msgid "GitHub Sync"
 msgstr ""
 
@@ -1710,7 +1737,7 @@ msgstr ""
 msgid "Head Revision"
 msgstr ""
 
-#: frontend/src/components/WikiSettings/WikiSettings.vue:109
+#: frontend/src/components/WikiSettings/WikiSettings.vue:116
 msgid "Header & Robots"
 msgstr ""
 
@@ -1719,6 +1746,7 @@ msgstr ""
 msgid "Header / Robots"
 msgstr ""
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:4
 #: frontend/src/components/tiptap-extensions/WikiToolbar.vue:204
 msgid "Heading"
 msgstr ""
@@ -2082,6 +2110,7 @@ msgid "Linked Documents"
 msgstr ""
 
 #. Label of the show_all_spaces (Check) field in DocType 'Wiki Portal'
+#: frontend/src/components/WikiSettings/PortalPanel.vue:65
 #: wiki/wiki/doctype/wiki_portal/wiki_portal.json
 msgid "List every public space"
 msgstr ""
@@ -2131,6 +2160,7 @@ msgstr ""
 
 #. Label of the logo (Attach Image) field in DocType 'Wiki Portal'
 #. Label of the logo_section (Section Break) field in DocType 'Wiki Space'
+#: frontend/src/components/WikiSettings/PortalPanel.vue:23
 #: wiki/wiki/doctype/wiki_portal/wiki_portal.json
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Logo"
@@ -2479,6 +2509,10 @@ msgstr ""
 msgid "No description set"
 msgstr ""
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:128
+msgid "No featured spaces yet."
+msgstr ""
+
 #: frontend/src/components/Autocomplete.vue:76
 msgid "No matches"
 msgstr ""
@@ -2501,6 +2535,10 @@ msgstr ""
 
 #: frontend/src/components/SpaceModeStrip.vue:252
 msgid "No pending changes"
+msgstr ""
+
+#: frontend/src/components/WikiSettings/PortalPanel.vue:88
+msgid "No public spaces yet"
 msgstr ""
 
 #: frontend/src/pages/ContributionReview.vue:276
@@ -2618,6 +2656,10 @@ msgstr ""
 msgid "Numbered List"
 msgstr ""
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:66
+msgid "Off shows only the featured spaces below."
+msgstr ""
+
 #. Option for the 'Type' (Select) field in DocType 'Wiki Feedback'
 #: wiki/templates/wiki/includes/feedback_widget.html:9
 #: wiki/wiki/doctype/wiki_feedback/wiki_feedback.json
@@ -2641,6 +2683,10 @@ msgstr ""
 #. Portal'
 #: wiki/wiki/doctype/wiki_portal/wiki_portal.json
 msgid "On: every public space is listed, featured ones first. Off: only the featured ones."
+msgstr ""
+
+#: frontend/src/components/WikiSettings/PortalPanel.vue:17
+msgid "One line under the heading."
 msgstr ""
 
 #. Description of the 'Subtitle' (Small Text) field in DocType 'Wiki Portal'
@@ -2965,6 +3011,14 @@ msgstr ""
 msgid "Please wait for reordering to finish before merging"
 msgstr ""
 
+#: frontend/src/components/WikiSettings/WikiSettings.vue:104
+msgid "Portal"
+msgstr ""
+
+#: frontend/src/components/WikiSettings/PortalPanel.vue:280
+msgid "Portal updated"
+msgstr ""
+
 #: frontend/src/pages/ContributionReview.vue:702
 msgid "Position"
 msgstr ""
@@ -3171,6 +3225,7 @@ msgstr ""
 
 #: frontend/src/components/PageSettingsPanel.vue:121
 #: frontend/src/components/SpaceIdentityPicker.vue:109
+#: frontend/src/components/WikiSettings/PortalPanel.vue:37
 #: frontend/src/components/tiptap-extensions/IframeBlockView.vue:103
 #: frontend/src/components/tiptap-extensions/LinkPopup.vue:74
 msgid "Remove"
@@ -3217,6 +3272,7 @@ msgstr ""
 
 #: frontend/src/components/PageSettingsPanel.vue:118
 #: frontend/src/components/SpaceIdentityPicker.vue:88
+#: frontend/src/components/WikiSettings/PortalPanel.vue:34
 msgid "Replace"
 msgstr ""
 
@@ -3443,6 +3499,7 @@ msgstr ""
 #: frontend/src/components/WikiDocumentList.vue:239
 #: frontend/src/components/WikiSettings/CodePanel.vue:22
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:43
+#: frontend/src/components/WikiSettings/PortalPanel.vue:140
 msgid "Save"
 msgstr ""
 
@@ -3587,9 +3644,17 @@ msgstr ""
 msgid "Show the whole space"
 msgstr ""
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:24
+msgid "Shown above the heading."
+msgstr ""
+
 #. Description of the 'Logo' (Attach Image) field in DocType 'Wiki Portal'
 #: wiki/wiki/doctype/wiki_portal/wiki_portal.json
 msgid "Shown above the heading. Optional."
+msgstr ""
+
+#: frontend/src/components/WikiSettings/PortalPanel.vue:5
+msgid "Shown at the top of the public portal. Blank uses the built-in default."
 msgstr ""
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:41
@@ -3770,6 +3835,10 @@ msgstr ""
 msgid "Stored secrets are never shown. Leave a field blank to keep its current value."
 msgstr ""
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:16
+msgid "Subheading"
+msgstr ""
+
 #: frontend/src/components/ContributionsPanel.vue:201
 msgid "Subject"
 msgstr ""
@@ -3946,6 +4015,10 @@ msgstr ""
 msgid "The most recently loaded sidebar config (.wiki.yml, .wiki.yaml or .wiki.json) from the repo, shown as JSON. Empty when the structure is inferred."
 msgstr ""
 
+#: frontend/src/components/WikiSettings/PortalPanel.vue:76
+msgid "The order here is the order on the portal. Only public spaces can be featured — publish one first."
+msgstr ""
+
 #: frontend/src/components/WikiDocumentPanel.vue:180
 msgid "The page is removed from the space when this change request is merged."
 msgstr ""
@@ -4047,6 +4120,10 @@ msgstr ""
 #. Description of the 'Space Color' (Data) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Tint behind the space icon: one of gray, blue, green, amber, red, violet."
+msgstr ""
+
+#: frontend/src/components/WikiSettings/PortalPanel.vue:52
+msgid "Tints the heading and the card accents."
 msgstr ""
 
 #. Description of the 'Accent Colour' (Select) field in DocType 'Wiki Portal'
@@ -4219,6 +4296,7 @@ msgstr ""
 #: frontend/src/components/WikiDocumentPanel.vue:89
 #: frontend/src/components/WikiSettings/CodePanel.vue:14
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:35
+#: frontend/src/components/WikiSettings/PortalPanel.vue:132
 #: frontend/src/composables/useSyncState.js:33
 msgid "Unsaved changes"
 msgstr ""
@@ -4259,6 +4337,7 @@ msgstr ""
 
 #: frontend/src/components/SpaceIdentityPicker.vue:88
 #: frontend/src/components/SpaceIdentityPicker.vue:168
+#: frontend/src/components/WikiSettings/PortalPanel.vue:34
 msgid "Upload"
 msgstr ""
 

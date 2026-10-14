@@ -192,3 +192,20 @@ being bounced straight into a page.
 
 Housekeeping: two stray spaces left behind by the Phase-1 diagnostic were deleted,
 leaving only the three real ones.
+
+**Post-Phase-3 — the config moved into the app's own settings (2026-10-14).** The
+owner asked for it there rather than in the Desk, so the settings dialog gained a
+**Portal** tab (`WikiSettings/PortalPanel.vue`, between General and Feedback):
+heading, subheading, logo upload, accent colour, footer line, list-everything, and a
+featured-spaces list with add / remove / move-up / move-down. It saves through
+`wiki.api.wiki_portal.update_portal_settings`, which re-checks that every featured
+space is still `Public` — so what is stored can never disagree with what the portal
+can show — and refuses to write without write permission on the single. The Desk form
+still exists and is untouched; it is now the fallback rather than the way in.
+
+**A bug this exposed in my own tests.** The e2e that drives the config used to blank
+it in its `finally`, which would have wiped the owner's own text (they had already
+edited the single by hand from the Desk — the reason they asked for the panel). It
+now snapshots the single with `getDoc` and restores exactly the fields it changed.
+Verified afterwards: the owner's configuration is byte-identical to the snapshot
+taken before the run. Any future test that writes a global single must do the same.

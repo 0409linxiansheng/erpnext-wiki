@@ -57,6 +57,7 @@ import { computed, markRaw, ref, watch } from 'vue';
 import CodePanel from './CodePanel.vue';
 import FeedbackPanel from './FeedbackPanel.vue';
 import GeneralPanel from './GeneralPanel.vue';
+import PortalPanel from './PortalPanel.vue';
 import GitHubAppPanel from './GitHubAppPanel.vue';
 
 const props = defineProps({
@@ -98,6 +99,12 @@ const tabs = [
 		value: 'general',
 		icon: 'lucide-settings',
 		component: markRaw(GeneralPanel),
+	},
+	{
+		label: __('Portal'),
+		value: 'portal',
+		icon: 'lucide-globe',
+		component: markRaw(PortalPanel),
 	},
 	{
 		label: __('Feedback'),
