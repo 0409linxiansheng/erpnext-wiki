@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wiki VERSION\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
-"POT-Creation-Date: 2026-10-14 01:35+0806\n"
+"POT-Creation-Date: 2026-10-14 18:03+0806\n"
 "PO-Revision-Date: 2026-10-13 19:15+0806\n"
 "Last-Translator: developers@frappe.io\n"
 "Language: zh\n"
@@ -97,12 +97,12 @@ msgid "A tab must stay at the top level. Remove the tab flag first to move it."
 msgstr "标签必须保持在顶层。移动前请先取消标签标记。"
 
 #. Label of the allow_contributions (Check) field in DocType 'Wiki Space'
-#: frontend/src/components/SpaceSettings/AccessPanel.vue:94
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:106
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
 msgid "Accept Contributions"
 msgstr "接受投稿"
 
-#: frontend/src/components/SpaceSettings/AccessPanel.vue:32
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:44
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:46
 #: frontend/src/components/SpaceSettings/SpaceSettings.vue:169
 msgid "Access"
@@ -128,7 +128,7 @@ msgstr "访问令牌"
 msgid "Access Token Expires At"
 msgstr "访问令牌过期时间"
 
-#: frontend/src/components/SpaceSettings/AccessPanel.vue:345
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:393
 msgid "Access control updated"
 msgstr "访问权限已更新"
 
@@ -138,7 +138,7 @@ msgid "Actions"
 msgstr "操作"
 
 #: frontend/src/components/NewSpaceDialog.vue:124
-#: frontend/src/components/SpaceSettings/AccessPanel.vue:22
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:34
 #: frontend/src/components/SpaceTasks.vue:67
 msgid "Add"
 msgstr "添加"
@@ -207,6 +207,14 @@ msgstr "分析"
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:216
 msgid "Another page with the route '{0}' already exists: {1}"
 msgstr "已存在使用路径 '{0}' 的另一个页面：{1}"
+
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:205
+msgid "Any signed-in user can read this space. Roles, when set, restrict it to those roles."
+msgstr ""
+
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:200
+msgid "Anyone, including anonymous visitors, can read this space."
+msgstr ""
 
 #: wiki/templates/wiki/includes/feedback_widget.html:44
 msgid "Anything you'd like to add?"
@@ -446,6 +454,10 @@ msgstr "失效链接"
 msgid "Broken Links Report"
 msgstr "失效链接报表"
 
+#: wiki/www/portal.html:17
+msgid "Browse the spaces we have published for you."
+msgstr ""
+
 #: wiki/wiki/doctype/wiki_space/wiki_space.js:37
 msgid "Bulk Update Routes"
 msgstr "批量更新路径"
@@ -665,7 +677,7 @@ msgstr "代码块"
 msgid "Collapse"
 msgstr "折叠"
 
-#: frontend/src/components/SpaceSettings/AccessPanel.vue:105
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:117
 msgid "Collect Feedback"
 msgstr "收集反馈"
 
@@ -774,11 +786,11 @@ msgstr "内容或元数据已更新"
 msgid "Contributions"
 msgstr "投稿"
 
-#: frontend/src/components/SpaceSettings/AccessPanel.vue:309
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:357
 msgid "Contributions disabled"
 msgstr "已关闭投稿"
 
-#: frontend/src/components/SpaceSettings/AccessPanel.vue:309
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:357
 msgid "Contributions enabled"
 msgstr "已开启投稿"
 
@@ -1124,6 +1136,10 @@ msgstr "文档文件夹"
 msgid "Document not found in change request"
 msgstr "在变更请求中未找到该文档"
 
+#: wiki/www/portal.html:5 wiki/www/portal.html:14
+msgid "Documentation"
+msgstr ""
+
 #. Option for the 'Status' (Select) field in DocType 'Wiki Task'
 #: wiki/wiki/doctype/wiki_task/wiki_task.json
 msgid "Done"
@@ -1431,15 +1447,15 @@ msgstr "保存配置失败"
 msgid "Failed to save secrets"
 msgstr "保存密钥失败"
 
-#: frontend/src/components/SpaceSettings/AccessPanel.vue:347
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:395
 msgid "Failed to update access control"
 msgstr "更新访问权限失败"
 
-#: frontend/src/components/SpaceSettings/AccessPanel.vue:314
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:362
 msgid "Failed to update contributions setting"
 msgstr "更新投稿设置失败"
 
-#: frontend/src/components/SpaceSettings/AccessPanel.vue:330
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:378
 msgid "Failed to update the feedback setting"
 msgstr "更新反馈设置失败"
 
@@ -1454,6 +1470,10 @@ msgstr "更新空间图标失败"
 #: frontend/src/components/SpaceSettings/NavigationPanel.vue:66
 msgid "Failed to update the switcher"
 msgstr "更新空间切换器失败"
+
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:223
+msgid "Failed to update visibility"
+msgstr ""
 
 #: frontend/src/components/PageSettingsPanel.vue:475
 msgid "Failed to upload image"
@@ -2014,7 +2034,7 @@ msgstr "留空则使用页面标题"
 msgid "Left"
 msgstr "左"
 
-#: frontend/src/components/SpaceSettings/AccessPanel.vue:173
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:185
 msgid "Let readers propose edits via change requests. Users with write access can always edit."
 msgstr "允许读者通过变更请求提出修改。具有写入权限的用户始终可以直接编辑。"
 
@@ -2077,6 +2097,11 @@ msgstr "日志"
 #: frontend/src/components/MobileAppMenu.vue:36
 msgid "Log out"
 msgstr "退出登录"
+
+#. Option for the 'Visibility' (Select) field in DocType 'Wiki Space'
+#: wiki/wiki/doctype/wiki_space/wiki_space.json
+msgid "Logged in"
+msgstr ""
 
 #. Label of the logo_section (Section Break) field in DocType 'Wiki Space'
 #: wiki/wiki/doctype/wiki_space/wiki_space.json
@@ -2468,11 +2493,11 @@ msgstr "无结果"
 msgid "No results for"
 msgstr "无结果："
 
-#: frontend/src/components/SpaceSettings/AccessPanel.vue:76
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:88
 msgid "No roles configured (open to all logged-in users)."
 msgstr "未配置角色（对所有已登录用户开放）。"
 
-#: frontend/src/components/SpaceSettings/AccessPanel.vue:17
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:29
 msgid "No roles found"
 msgstr "未找到角色"
 
@@ -2549,6 +2574,10 @@ msgstr "说明"
 msgid "Nothing assigned to you"
 msgstr "没有指派给你的内容"
 
+#: wiki/www/portal.html:41
+msgid "Nothing has been published yet."
+msgstr ""
+
 #: frontend/src/components/SpaceWelcome.vue:83
 msgid "Nothing synced yet"
 msgstr "尚未同步任何内容"
@@ -2584,17 +2613,21 @@ msgstr "只有分组可以标记为标签。"
 msgid "Only a top-level group can be marked as a tab. Nested tabs are not supported."
 msgstr "只有顶层分组可以标记为标签。不支持嵌套标签。"
 
-#: frontend/src/components/SpaceSettings/AccessPanel.vue:88
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:100
 msgid "Only space admins can change access control."
 msgstr "只有空间管理员可以修改访问权限。"
 
-#: wiki/permissions.py:163
+#: wiki/permissions.py:193
 msgid "Only space editors can create or change tabs."
 msgstr "只有空间编辑者可以创建或修改标签。"
 
 #: wiki/frappe_wiki/doctype/wiki_change_request/wiki_change_request.py:1517
 msgid "Only the author can withdraw this change request."
 msgstr "只有作者可以撤回此变更请求。"
+
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:203
+msgid "Only wiki managers can read this space."
+msgstr ""
 
 #. Option for the 'Status' (Select) field in DocType 'Wiki Merge Conflict'
 #. Option for the 'Status' (Select) field in DocType 'Wiki Feedback'
@@ -2909,6 +2942,11 @@ msgstr "预览"
 msgid "Preview unavailable"
 msgstr ""
 
+#. Option for the 'Visibility' (Select) field in DocType 'Wiki Space'
+#: wiki/wiki/doctype/wiki_space/wiki_space.json
+msgid "Private"
+msgstr ""
+
 #. Label of the github_app_private_key (Password) field in DocType 'Wiki
 #. Settings'
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:101
@@ -2919,6 +2957,11 @@ msgstr "私钥"
 #: frontend/src/pages/ContributionReview.vue:283
 msgid "Proposed"
 msgstr "提议"
+
+#. Option for the 'Visibility' (Select) field in DocType 'Wiki Space'
+#: wiki/wiki/doctype/wiki_space/wiki_space.json
+msgid "Public"
+msgstr ""
 
 #. Description of the 'App Public Link' (Data) field in DocType 'Wiki Settings'
 #: frontend/src/components/WikiSettings/GitHubAppPanel.vue:30
@@ -2984,7 +3027,7 @@ msgstr "读取"
 msgid "Read-only"
 msgstr "只读"
 
-#: frontend/src/components/SpaceSettings/AccessPanel.vue:85
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:97
 msgid "Readable by all logged-in users if no roles are set. Add the Guest role for public/anonymous access."
 msgstr "未设置角色时，所有已登录用户均可阅读。如需公开/匿名访问，请添加 Guest 角色。"
 
@@ -3283,7 +3326,7 @@ msgid "Right now"
 msgstr "刚刚"
 
 #. Label of the role (Link) field in DocType 'Wiki Space Role'
-#: frontend/src/components/SpaceSettings/AccessPanel.vue:31
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:43
 #: wiki/wiki/doctype/wiki_space_role/wiki_space_role.json
 msgid "Role"
 msgstr "角色"
@@ -3345,7 +3388,7 @@ msgstr "正在运行"
 
 #: frontend/src/components/PageSettingsPanel.vue:249
 #: frontend/src/components/SnippetPickerDialog.vue:91
-#: frontend/src/components/SpaceSettings/AccessPanel.vue:127
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:139
 #: frontend/src/components/WikiDocumentList.vue:126
 #: frontend/src/components/WikiDocumentList.vue:191
 #: frontend/src/components/WikiDocumentList.vue:215
@@ -3417,7 +3460,7 @@ msgstr "搜索仓库…"
 msgid "Search results"
 msgstr "搜索结果"
 
-#: frontend/src/components/SpaceSettings/AccessPanel.vue:15
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:27
 msgid "Search role to add"
 msgstr "搜索要添加的角色"
 
@@ -3475,7 +3518,7 @@ msgstr "应为逗号分隔的列表"
 msgid "Show a feedback widget on every wiki page to collect ratings and comments"
 msgstr "在每个 Wiki 页面上显示反馈组件，以收集评分和评论"
 
-#: frontend/src/components/SpaceSettings/AccessPanel.vue:107
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:119
 msgid "Show a feedback widget on wiki pages to collect user reactions"
 msgstr "在 Wiki 页面上显示反馈组件以收集用户反馈"
 
@@ -3751,7 +3794,7 @@ msgstr "从 GitHub 同步"
 msgid "Synced from GitHub?"
 msgstr "从 GitHub 同步？"
 
-#: frontend/src/components/SpaceSettings/AccessPanel.vue:177
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:189
 msgid "Synced spaces are read-only, so contributions are always off."
 msgstr "同步的空间为只读，因此投稿始终关闭。"
 
@@ -3928,7 +3971,7 @@ msgstr "此空间还没有任何页面。"
 msgid "This wiki space is not accepting contributions."
 msgstr "此 Wiki 空间未开放投稿。"
 
-#: wiki/permissions.py:40
+#: wiki/permissions.py:49
 msgid "This wiki space is synced from GitHub and is read-only."
 msgstr "此 Wiki 空间从 GitHub 同步，为只读。"
 
@@ -4080,6 +4123,10 @@ msgstr "下划线"
 msgid "Unknown operation type: {0}"
 msgstr "未知的 operation 类型：{0}"
 
+#: wiki/api/wiki_space.py:75
+msgid "Unknown visibility: {0}"
+msgstr ""
+
 #: frontend/src/components/LibrarySidebar.vue:199
 msgid "Unpin from top"
 msgstr "取消置顶"
@@ -4223,6 +4270,16 @@ msgstr "各空间浏览量"
 msgid "Views over time"
 msgstr "浏览量趋势"
 
+#. Label of the visibility (Select) field in DocType 'Wiki Space'
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:4
+#: wiki/wiki/doctype/wiki_space/wiki_space.json
+msgid "Visibility"
+msgstr ""
+
+#: frontend/src/components/SpaceSettings/AccessPanel.vue:220
+msgid "Visibility updated"
+msgstr ""
+
 #: frontend/src/components/PageSettingsPanel.vue:58
 msgid "Visible on the public site"
 msgstr "在公开站点可见"
@@ -4287,6 +4344,11 @@ msgstr "启用后，此空间将从 GitHub 仓库单向同步，并在 Wiki 中�
 #: wiki/wiki/doctype/wiki_github_connection/wiki_github_connection.json
 msgid "When the access token expires (blank = non-expiring)."
 msgstr "访问令牌的过期时间（留空表示不过期）。"
+
+#. Description of the 'Visibility' (Select) field in DocType 'Wiki Space'
+#: wiki/wiki/doctype/wiki_space/wiki_space.json
+msgid "Who can read this space. Roles, when set, restrict it to those roles. Without Roles: Private = wiki managers only, Logged in = any signed-in user, Public = anyone including anonymous visitors (Public also overrides Roles)."
+msgstr ""
 
 #. Label of a Desktop Icon
 #. Name of a Workspace
@@ -4574,7 +4636,7 @@ msgstr "你无权在此空间合并变更请求。"
 msgid "You do not have permission to merge in this space."
 msgstr "你无权在此空间执行合并。"
 
-#: wiki/api/wiki_space.py:257
+#: wiki/api/wiki_space.py:278
 msgid "You do not have permission to reorder this document"
 msgstr "你无权重新排序此文档"
 
@@ -4847,6 +4909,7 @@ msgid "{0} new conflict(s) detected during merge retry."
 msgstr "合并重试时检测到 {0} 个新冲突。"
 
 #: frontend/src/components/SpaceSettings/GeneralPanel.vue:177
+#: wiki/www/portal.html:33
 msgid "{0} pages"
 msgstr "{0} 页"
 

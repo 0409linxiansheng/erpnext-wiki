@@ -131,3 +131,22 @@ including `accept-contributions` (the legacy Guest row) and `space-default-page`
   early version of `can_read_space` returned early on `Logged in` and silently
   ignored that grant, which would have broken a passing spec. Role grants are
   therefore checked before the visibility switch, and a unit case pins it.
+
+**Phase 2 — DONE (2026-10-14).** `/portal` is a Jinja page (`wiki/www/portal.py` +
+`portal.html`) that extends the **reader's layout** with `hide_chrome` set: the
+reader's sidebar is a per-page tree, which means nothing on a landing page, while
+the layout still brings the theme, fonts and asset pipeline. It lists
+`get_public_spaces()` — the same guest API Phase 1 added — as cards that reuse the
+reader's `render_space_mark` macro, so a space's mark on the portal is the same mark
+it shows everywhere else (the macro and `SpaceAvatar.vue` already agree by design).
+An empty state covers "nothing published yet".
+
+Verified as a **logged-out** visitor: the card shows the space name and its page
+count, clicking it lands on the space, and a non-public space never appears. 28 e2e
+green across the portal, public, sidebar and wiki suites. The four new strings are
+extracted and left untranslated under the bulk-translation workflow.
+
+Two things deliberately not done yet: the portal is not linked from anywhere (the
+reader's header is Phase 4's business), and `sitemap = 1` is set on the page but the
+wiki's own `/sitemap.xml` renderer takes over that path, so whether the portal and
+the public spaces appear there is Phase 4's check, not an assumption.

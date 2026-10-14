@@ -1,0 +1,47 @@
+{% extends "templates/wiki/layout.html" %}
+{% from "templates/wiki/macros/space.html" import render_space_mark %}
+
+{% block title %}
+    {{ _("Documentation") }}
+{% endblock %}
+
+{% block content %}
+<main class="flex-1 min-w-0 px-4 py-10 lg:px-6 lg:py-14 xl:px-12">
+    <div class="mx-auto flex w-full max-w-5xl flex-col gap-10">
+
+        <header class="flex flex-col gap-3">
+            <h1 class="text-2xl-semibold text-ink-gray-9 sm:text-3xl" data-testid="portal-title">
+                {{ _("Documentation") }}
+            </h1>
+            <p class="max-w-2xl text-base text-ink-gray-6">
+                {{ _("Browse the spaces we have published for you.") }}
+            </p>
+        </header>
+
+        {% if spaces %}
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {% for space in spaces %}
+            <a class="flex items-start gap-3 rounded-6 border border-outline-gray-2 p-4 no-underline transition-colors hover:bg-surface-gray-1"
+               href="/{{ space.route | e }}"
+               data-testid="portal-space-card">
+                {{ render_space_mark(space, size="md") }}
+                <span class="flex min-w-0 flex-col gap-1">
+                    <span class="truncate font-medium text-ink-gray-9">
+                        {{ space.space_name or space.name }}
+                    </span>
+                    <span class="text-sm text-ink-gray-5">
+                        {{ _("{0} pages").format(space.page_count) }}
+                    </span>
+                </span>
+            </a>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="py-16 text-center text-ink-gray-5" data-testid="portal-empty">
+            {{ _("Nothing has been published yet.") }}
+        </p>
+        {% endif %}
+
+    </div>
+</main>
+{% endblock %}
