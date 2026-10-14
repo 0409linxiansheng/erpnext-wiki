@@ -77,4 +77,55 @@ test.describe('Public visibility', () => {
 			await guest.close();
 		}
 	});
+
+	test('a Public space route is a browsable directory for a guest', async ({
+		browser,
+		baseURL,
+		wiki,
+	}) => {
+		const space = await wiki.space({
+			visibility: 'Public',
+			pages: [{ title: 'Alpha' }, { title: 'Beta' }],
+		});
+
+		const guest = await browser.newContext({
+			baseURL,
+			storageState: { cookies: [], origins: [] },
+		});
+		const guestPage = await guest.newPage();
+		try {
+			// The space's own route, with no page of its own.
+			const response = await guestPage.goto(`/${space.route}`);
+
+			expect(response?.status()).toBe(200);
+			await expect(guestPage.getByTestId('space-directory-list')).toBeVisible();
+			await expect(guestPage.getByTestId('space-directory-page')).toHaveCount(2);
+			await expect(guestPage.getByText('Alpha')).toBeVisible();
+		} finally {
+			await guest.close();
+		}
+	});
+
+	test('a non-public space route is not a directory for a guest', async ({
+		browser,
+		baseURL,
+		wiki,
+	}) => {
+		const space = await wiki.space({ pages: [{ title: 'Members' }] });
+
+		const guest = await browser.newContext({
+			baseURL,
+			storageState: { cookies: [], origins: [] },
+		});
+		const guestPage = await guest.newPage();
+		try {
+			// Bounced to the first page, which this visitor may not read.
+			const response = await guestPage.goto(`/${space.route}`);
+
+			expect(response?.status()).not.toBe(200);
+			await expect(guestPage.getByTestId('space-directory-list')).toHaveCount(0);
+		} finally {
+			await guest.close();
+		}
+	});
 });

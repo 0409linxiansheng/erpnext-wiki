@@ -798,6 +798,8 @@ class WikiDocument(NestedSet):
 
 class WikiDocumentRenderer(BaseRenderer):
 	def can_render(self) -> bool:
+		self.directory_space = None
+
 		if self.path == APP_ROUTE or self.path.startswith(APP_ROUTE + "/"):
 			return False
 
@@ -813,6 +815,15 @@ class WikiDocumentRenderer(BaseRenderer):
 			self.wiki_doc_name = leaf
 			return True
 
+		# A public space's own route gets a browsable directory instead of the bounce
+		# below: a visitor arriving from the portal wants to see what is inside, and
+		# a redirect hides that. Non-public spaces keep the bounce, so nothing a
+		# signed-in reader already knows changes.
+		directory = get_public_directory_space(self.path)
+		if directory:
+			self.directory_space = directory
+			return True
+
 		# A group / Wiki Space route with no page of its own: redirect to the first
 		# page in sidebar order (sort_order at each level), so the space URL lands
 		# on the same document the sidebar shows first.
@@ -823,6 +834,9 @@ class WikiDocumentRenderer(BaseRenderer):
 		return False
 
 	def render(self):
+		if self.directory_space:
+			return self.render_directory()
+
 		doc = frappe.get_cached_doc("Wiki Document", self.wiki_doc_name)
 
 		# Return plain markdown for AI agents and other markdown-aware clients
@@ -850,6 +864,56 @@ class WikiDocumentRenderer(BaseRenderer):
 		# included -- has to tell caches which header picked this one.
 		response.headers["Vary"] = "Accept"
 		return response
+
+
+	def render_directory(self):
+		"""The listing a public space shows at its own route."""
+		context = frappe._dict(
+			hide_chrome=True,
+			space=self.directory_space,
+			pages=get_space_directory_pages(self.directory_space),
+		)
+		html = frappe.render_template("templates/wiki/space_directory.html", context)
+		return self.build_response(html)
+
+
+def get_public_directory_space(route: str):
+	"""The space whose own route is ``route``, when a visitor may browse it.
+
+	Only ``Public`` spaces get a directory. Everyone else keeps the redirect to
+	their first page, which is what a signed-in reader already expects.
+	"""
+	if not route:
+		return None
+
+	return frappe.db.get_value(
+		"Wiki Space",
+		{"route": route, "is_published": 1, "visibility": "Public"},
+		["name", "space_name", "route", "root_group"],
+		as_dict=True,
+	)
+
+
+def get_space_directory_pages(space) -> list[dict]:
+	"""A space's published pages in tree order, groups included as headings.
+
+	Only `is_published` rows: a draft inside a public space stays out of its
+	directory, exactly as it stays out of the reader.
+	"""
+	rows = frappe.get_all(
+		"Wiki Document",
+		filters={
+			"wiki_space": space.name,
+			"is_published": 1,
+			"is_external_link": 0,
+		},
+		fields=["name", "title", "route", "is_group"],
+		order_by="lft asc",
+		limit=0,
+	)
+
+	root = space.get("root_group")
+	return [row for row in rows if row.route and row.name != root]
 
 
 def build_markdown_response(doc) -> Response:

@@ -169,3 +169,26 @@ Verified live (a configured heading, subtitle and footer rendered on `/portal`, 
 reverted) and by e2e: the config drives the page, and that case restores the config
 in its `finally` so the suite leaves the install as it found it. 31 e2e green across
 the portal, public, settings, sidebar and wiki suites.
+
+**Phase 4 — DONE (2026-10-14).** A public space's own route now serves a browsable
+directory (`templates/wiki/space_directory.html`: the space's mark and name, then its
+published pages in tree order with groups as headings) instead of bouncing to the
+first page. `can_render` claims the route only when **no page occupies it** and the
+space is `Public`, so a non-public space keeps the redirect a signed-in reader
+already expects — verified live: `/docs` is a 302 for `Logged in` and a 200 directory
+listing 7 pages for `Public`, back to 302 after reverting. A draft inside a public
+space stays out of the directory, exactly as it stays out of the reader.
+
+**The crawler question is answered, not assumed.** `sitemap.py` builds its wiki
+links from `public_spaces()`, and `llms_txt.py` drives that from
+`can_read_space(space, "Guest")` — the same gate Phase 1 rewrote. So public spaces
+flow into both with no further change, which the live check confirmed: with the
+space flipped to `Public`, `/sitemap.xml` listed its 7 pages and `/llms.txt` listed
+the space; `/portal` itself is in the sitemap through its `sitemap = 1`.
+
+One consequence worth naming: the portal's cards link to the space route, which for
+a public space is now the directory — a visitor lands on the contents rather than
+being bounced straight into a page.
+
+Housekeeping: two stray spaces left behind by the Phase-1 diagnostic were deleted,
+leaving only the three real ones.

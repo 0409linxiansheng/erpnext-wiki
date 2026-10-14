@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wiki VERSION\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
-"POT-Creation-Date: 2026-10-14 18:10+0806\n"
-"PO-Revision-Date: 2026-10-14 18:10+0806\n"
+"POT-Creation-Date: 2026-10-14 18:19+0806\n"
+"PO-Revision-Date: 2026-10-14 18:19+0806\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: developers@frappe.io\n"
 "MIME-Version: 1.0\n"
@@ -2602,6 +2602,10 @@ msgstr ""
 msgid "Nothing assigned to you"
 msgstr ""
 
+#: wiki/templates/wiki/space_directory.html:42
+msgid "Nothing has been published here yet."
+msgstr ""
+
 #: wiki/www/portal.html:47
 msgid "Nothing has been published yet."
 msgstr ""
@@ -2794,8 +2798,8 @@ msgstr ""
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:445
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:454
 #: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:464
-#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:1139
-#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:1151
+#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:1203
+#: wiki/frappe_wiki/doctype/wiki_document/wiki_document.py:1215
 msgid "Page not found"
 msgstr ""
 

@@ -1,0 +1,48 @@
+{% extends "templates/wiki/layout.html" %}
+{% from "templates/wiki/macros/space.html" import render_space_mark %}
+
+{% block title %}
+    {{ space.space_name or space.name }}
+{% endblock %}
+
+{% block content %}
+<main class="flex-1 min-w-0 px-4 py-10 lg:px-6 lg:py-14 xl:px-12">
+    <div class="mx-auto flex w-full max-w-3xl flex-col gap-8">
+
+        <header class="flex items-center gap-3">
+            {{ render_space_mark(space, size="md") }}
+            <h1 class="text-xl-semibold text-ink-gray-9 sm:text-2xl" data-testid="space-directory-title">
+                {{ space.space_name or space.name }}
+            </h1>
+        </header>
+
+        {% if pages %}
+        <ul class="flex flex-col divide-y divide-outline-gray-1 border-y border-outline-gray-1"
+            data-testid="space-directory-list">
+            {% for page in pages %}
+            {% if page.is_group %}
+            <li class="px-1 pt-6 pb-1 text-sm-medium text-ink-gray-5"
+                data-testid="space-directory-group">
+                {{ page.title }}
+            </li>
+            {% else %}
+            <li>
+                <a class="flex items-center gap-2 py-3 text-base text-ink-gray-8 no-underline hover:text-ink-gray-9"
+                   href="/{{ page.route | e }}"
+                   data-testid="space-directory-page">
+                    <span class="lucide-file-text size-4 shrink-0 text-ink-gray-5" aria-hidden="true"></span>
+                    <span class="truncate">{{ page.title }}</span>
+                </a>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="py-16 text-center text-ink-gray-5" data-testid="space-directory-empty">
+            {{ _("Nothing has been published here yet.") }}
+        </p>
+        {% endif %}
+
+    </div>
+</main>
+{% endblock %}
