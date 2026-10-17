@@ -2,7 +2,7 @@ import re
 from typing import ClassVar
 
 import frappe
-from frappe.search.sqlite_search import SQLiteSearch
+from frappe.search.sqlite_search import MIN_WORD_LENGTH, SQLiteSearch
 
 from wiki.cjk import has_cjk, segment_cjk
 
@@ -71,8 +71,28 @@ class WikiSQLiteSearch(SQLiteSearch):
 		return super()._expand_query_with_corrections(query)
 
 	def _prepare_fts_query(self, query):
-		"""Expand CJK runs into overlapping bigrams before FTS5 quoting."""
-		return super()._prepare_fts_query(segment_cjk(query))
+		"""Expand CJK runs into overlapping bigrams before FTS5 quoting.
+
+		The bigrams are OR-ed rather than space-separated (which FTS5 reads as
+		AND): a question like "库存盘点怎么做" yields 点怎/怎么/么做 as well, and
+		requiring every one of them would match nothing. OR keeps recall and lets
+		BM25 rank the pages that cover more of the question first.
+		"""
+		if not has_cjk(query):
+			return super()._prepare_fts_query(query)
+
+		terms = segment_cjk(query).split()
+		cjk_terms = [term for term in terms if has_cjk(term)]
+		ascii_terms = [term for term in terms if not has_cjk(term)]
+
+		parts = []
+		if cjk_terms:
+			group = " OR ".join(f'"{term}"*' for term in cjk_terms)
+			parts.append(f"({group})")
+		for term in ascii_terms:
+			escaped = term.replace('"', '""')
+			parts.append(f'"{escaped}"*' if len(term) > MIN_WORD_LENGTH - 1 else f'"{escaped}"')
+		return " ".join(parts)
 
 	def index_doc(self, doctype, docname):
 		if INDEX_DOC_APPENDS:
