@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import re
+
 import frappe
 
 from wiki.wiki.markdown import render_markdown
@@ -77,5 +79,14 @@ def _excerpt(markdown: str, length: int = 180) -> str:
 	return text[:length] + ("…" if len(text) > length else "")
 
 
+_HEADING_RE = re.compile(r"<(/?)h([1-5])([ >])")
+
+
+def demote_headings(html: str) -> str:
+	"""Shift h1–h5 down one level (h6 stays) so a `# ` in body text cannot
+	produce a second <h1> beside the page template's own title."""
+	return _HEADING_RE.sub(lambda m: f"<{m.group(1)}h{int(m.group(2)) + 1}{m.group(3)}", html)
+
+
 def html(post: dict) -> str:
-	return render_markdown(post.get("content") or "")
+	return demote_headings(render_markdown(post.get("content") or ""))

@@ -1,7 +1,8 @@
 <template>
 	<button
 		type="button"
-		class="fixed bottom-6 right-6 z-40 flex h-11 items-center gap-2 rounded-full bg-surface-gray-10 px-4 text-sm font-medium text-ink-base shadow-lg transition-colors hover:bg-surface-gray-9"
+		class="fixed right-6 z-40 flex h-11 items-center gap-2 rounded-full bg-surface-gray-10 px-4 text-sm font-medium text-ink-base shadow-lg transition-colors hover:bg-surface-gray-9"
+		:class="isMobile ? 'bottom-24' : 'bottom-6'"
 		@click="open = true"
 	>
 		<span class="lucide-sparkles size-4" aria-hidden="true" />
@@ -67,6 +68,9 @@
 <script setup>
 import { Button, Dialog, ErrorMessage, FormControl, createResource } from 'frappe-ui';
 import { ref } from 'vue';
+import { useMobile } from '../composables/useMobile';
+
+const { isMobile } = useMobile();
 
 const open = ref(false);
 const question = ref('');

@@ -126,13 +126,43 @@
 	--outline-gray-8: #b9bec6;
 	--outline-gray-9: #c6cdd6;
 
-	/* Accent */
+	/* Accent (Alexandrie dark). Dark mode inverts the ramp — blue-1 is the
+	   deepest tint, blue-10 the lightest — and the accent stays at blue-6,
+	   mirroring the light theme's #0c60d9. Previously only four tokens were
+	   overridden, so the scale mixed frappe-ui's default oklch values with
+	   these hexes and the ramp broke at the 5→6 boundary. */
+	--surface-blue-1: #182442;
+	--surface-blue-2: #1d2d55;
+	--surface-blue-3: #223766;
+	--surface-blue-4: #28427a;
+	--surface-blue-5: #2f4e8e;
 	--surface-blue-6: #4a7aff;
-	--surface-blue-7: #3d68e6;
-	--surface-blue-8: #3157cc;
-	--ink-blue-9: #7fa9ff;
+	--surface-blue-7: #6d95ff;
+	--surface-blue-8: #92b1ff;
+	--surface-blue-9: #b3cbff;
+	--surface-blue-10: #d9e6ff;
+
+	--ink-blue-1: #223766;
+	--ink-blue-2: #28427a;
+	--ink-blue-3: #2f4e8e;
+	--ink-blue-4: #3a5cb0;
+	--ink-blue-5: #4a7aff;
+	--ink-blue-6: #6d95ff;
+	--ink-blue-7: #92b1ff;
+	--ink-blue-8: #b3cbff;
+	--ink-blue-9: #d9e6ff;
 	--ink-blue-link: #7fa9ff;
-	--outline-blue-9: #4a7aff;
+
+	--outline-blue-1: #223766;
+	--outline-blue-2: #28427a;
+	--outline-blue-3: #2f4e8e;
+	--outline-blue-4: #3a5cb0;
+	--outline-blue-5: #4a7aff;
+	--outline-blue-6: #6d95ff;
+	--outline-blue-7: #92b1ff;
+	--outline-blue-8: #b3cbff;
+	--outline-blue-9: #d9e6ff;
+	--outline-blue-10: #e6eeff;
 }
 
 /* --------------------------------------------------------------- typography -- */

@@ -5,8 +5,12 @@
 	<header
 		class="flex h-14 shrink-0 items-center gap-3 border-b border-outline-gray-2 bg-surface-base px-4"
 	>
-		<router-link :to="{ name: 'Overview' }" class="flex items-center gap-2.5">
-			<span class="brand-mark">{{ brand.mark }}</span>
+		<router-link
+			:to="{ name: 'Overview' }"
+			:aria-label="brand.name"
+			class="flex items-center gap-2.5"
+		>
+			<span class="brand-mark" aria-hidden="true">{{ brand.mark }}</span>
 			<span class="text-[15px] font-semibold tracking-tight text-ink-gray-9">
 				{{ brand.name }}
 			</span>
@@ -44,6 +48,7 @@
 				type="button"
 				class="flex size-8 items-center justify-center rounded-6 text-ink-gray-5 hover:bg-surface-gray-2 hover:text-ink-gray-8"
 				:title="resolvedColorScheme === 'dark' ? __('Light mode') : __('Dark mode')"
+				:aria-label="resolvedColorScheme === 'dark' ? __('Light mode') : __('Dark mode')"
 				@click="toggleColorScheme"
 			>
 				<span
@@ -57,6 +62,7 @@
 				type="button"
 				class="flex size-8 items-center justify-center rounded-6 text-ink-gray-5 hover:bg-surface-gray-2 hover:text-ink-gray-8"
 				:title="__('Settings')"
+				:aria-label="__('Settings')"
 				@click="openSettings()"
 			>
 				<span class="lucide-settings size-4" aria-hidden="true" />

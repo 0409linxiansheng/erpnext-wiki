@@ -21,6 +21,7 @@
 						:model-value="mode"
 						:options="modeOptions"
 						:disabled="!canEdit"
+						:aria-label="__('Who can read it')"
 						@update:model-value="mode = $event"
 					/>
 				</div>
@@ -36,6 +37,7 @@
 							:options="roleOptions"
 							:disabled="!canEdit"
 							:placeholder="__('Choose roles')"
+							:aria-label="__('Roles')"
 						/>
 					</div>
 
@@ -46,12 +48,18 @@
 							:options="userOptions"
 							:disabled="!canEdit"
 							:placeholder="__('Choose people')"
+							:aria-label="__('People')"
 						/>
 					</div>
 
 					<div class="flex flex-col gap-1.5">
 						<label class="text-sm text-ink-gray-7">{{ __('Level') }}</label>
-						<Select v-model="level" :options="levelOptions" :disabled="!canEdit" />
+						<Select
+							v-model="level"
+							:options="levelOptions"
+							:disabled="!canEdit"
+							:aria-label="__('Level')"
+						/>
 					</div>
 
 					<p class="text-p-sm text-ink-gray-5">
@@ -99,7 +107,7 @@ const modeOptions = [
 	{ label: __('Only the people and roles below'), value: 'Restricted' },
 ];
 const levelOptions = [
-	{ label: __('Read'), value: 'Read' },
+	{ label: __('Read only'), value: 'Read' },
 	{ label: __('Read and edit'), value: 'Write' },
 	{ label: __('Read, edit and manage access'), value: 'Admin' },
 ];

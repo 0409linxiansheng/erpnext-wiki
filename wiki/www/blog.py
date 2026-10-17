@@ -13,7 +13,9 @@ def get_context(context):
 	context.no_cache = 1
 	context.page_title = "博客"
 	context.meta_description = "产品更新、使用教程与实践分享。"
-	context.canonical = frappe.utils.get_url("/blog" if page == 1 else f"/blog?page={page}")
+	# `canonical` is a reserved key — Frappe's page renderer overwrites it with the
+	# resolved route, so a custom page must use its own key to survive.
+	context.canonical_url = frappe.utils.get_url("/blog" if page == 1 else f"/blog?page={page}")
 	context.posts = posts
 	context.page_number = page
 	context.has_next = len(posts) == PER_PAGE

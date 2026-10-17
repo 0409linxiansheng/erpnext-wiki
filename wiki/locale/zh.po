@@ -5135,3 +5135,134 @@ msgstr "{} 已发布"
 msgid "{} Under Review"
 msgstr "{} 审阅中"
 
+
+#: frontend/src/components/TopBar.vue (brand / utility additions)
+msgid "Search documents"
+msgstr "搜索文档"
+
+msgid "Blog"
+msgstr "博客"
+
+msgid "Dark mode"
+msgstr "深色模式"
+
+msgid "Light mode"
+msgstr "浅色模式"
+
+#: frontend/src/components/ShareButton.vue
+msgid "Share this page"
+msgstr "分享此页面"
+
+msgid "Public link"
+msgstr "公开链接"
+
+msgid "Anyone with the link can read this page without signing in."
+msgstr "任何持有链接的人无需登录即可阅读此页面。"
+
+msgid "Rotating the link stops every copy of the old one from working."
+msgstr "轮换链接后，旧链接的所有副本都会立即失效。"
+
+msgid "Rotate link"
+msgstr "轮换链接"
+
+msgid "Could not update sharing."
+msgstr "无法更新分享设置。"
+
+msgid "Could not rotate the link."
+msgstr "无法轮换链接。"
+
+msgid "Could not load sharing settings."
+msgstr "无法加载分享设置。"
+
+msgid "Could not copy the link. Select it and copy manually."
+msgstr "无法复制链接，请手动选择并复制。"
+
+#: frontend/src/components/PageAccessButton.vue
+msgid "Page access"
+msgstr "访问权限"
+
+msgid "Only wiki managers can change who can read this page."
+msgstr "只有 Wiki 管理员可以更改此页面的阅读权限。"
+
+msgid "Who can read it"
+msgstr "谁可以阅读"
+
+msgid "Inherit the space"
+msgstr "继承空间设置"
+
+msgid "Only the people and roles below"
+msgstr "仅以下成员和角色"
+
+msgid "People"
+msgstr "成员"
+
+msgid "Choose roles"
+msgstr "选择角色"
+
+msgid "Choose people"
+msgstr "选择成员"
+
+msgid "Level"
+msgstr "权限级别"
+
+msgid "Read only"
+msgstr "只读"
+
+msgid "Read and edit"
+msgstr "可读可编辑"
+
+msgid "Read, edit and manage access"
+msgstr "可读可编辑并管理权限"
+
+msgid "Child pages inherit this list. Wiki managers always keep access."
+msgstr "子页面会继承这份名单，Wiki 管理员始终保留访问权限。"
+
+msgid "Could not save access."
+msgstr "无法保存访问设置。"
+
+msgid "Could not load page access."
+msgstr "无法加载访问设置。"
+
+#: frontend/src/components/CommentsButton.vue
+msgid "No comments yet. Start the discussion."
+msgstr "还没有评论，开始讨论吧。"
+
+msgid "Write a comment. Use @name@example.com to notify someone."
+msgstr "写下评论，用 @name@example.com 可通知某人。"
+
+msgid "Could not post the comment."
+msgstr "无法发布评论。"
+
+msgid "Could not load comments."
+msgstr "无法加载评论。"
+
+#: frontend/src/components/ExportButton.vue
+msgid "Download as Markdown"
+msgstr "下载 Markdown"
+
+#: frontend/src/components/AssistantButton.vue
+msgid "Ask the knowledge base"
+msgstr "询问知识库"
+
+msgid "Retrieval only — add a model key in the site config for a written answer."
+msgstr "仅检索结果——在站点配置中添加模型 Key 后可生成回答。"
+
+msgid "Sources"
+msgstr "来源"
+
+msgid "Could not answer that."
+msgstr "无法回答。"
+
+#: frontend/src/components/tiptap-extensions/slash-commands.js
+msgid "ERPNext Data"
+msgstr "ERPNext 数据"
+
+msgid "Report name, exactly as it appears in ERPNext"
+msgstr "报表名称（与 ERPNext 中一致）"
+
+#: frontend/src/composables/useTreeDialogs.js
+msgid "Start from a template"
+msgstr "从模板开始"
+
+msgid "Blank page"
+msgstr "空白页"

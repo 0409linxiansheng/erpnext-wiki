@@ -1,5 +1,6 @@
 import frappe
 
+from wiki.blog import demote_headings
 from wiki.page_access import page_for_token, record_share_visit
 from wiki.wiki.markdown import render_markdown_with_toc
 
@@ -16,6 +17,7 @@ def get_context(context):
 
 	record_share_visit(doc, token)
 	html, _toc = render_markdown_with_toc(doc.content or "")
+	html = demote_headings(html)
 
 	context.no_cache = 1
 	context.page_title = doc.title

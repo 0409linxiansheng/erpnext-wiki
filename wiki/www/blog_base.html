@@ -5,11 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>{% block title %}{{ page_title }} · 知识库{% endblock %}</title>
 		<meta name="description" content="{{ meta_description or '' }}" />
-		{% if canonical %}<link rel="canonical" href="{{ canonical }}" />{% endif %}
+		{% if canonical_url %}<link rel="canonical" href="{{ canonical_url }}" />{% endif %}
 		<meta property="og:type" content="{% block og_type %}website{% endblock %}" />
 		<meta property="og:title" content="{{ page_title }}" />
 		<meta property="og:description" content="{{ meta_description or '' }}" />
-		{% if canonical %}<meta property="og:url" content="{{ canonical }}" />{% endif %}
+		{% if canonical_url %}<meta property="og:url" content="{{ canonical_url }}" />{% endif %}
 		{% if og_image %}<meta property="og:image" content="{{ frappe.utils.get_url(og_image) }}" />{% endif %}
 		<link rel="alternate" type="application/rss+xml" title="博客 RSS" href="/api/method/wiki.api.blog.rss" />
 		{% block head %}{% endblock %}
@@ -33,6 +33,12 @@
 			}
 			a { color: var(--accent); text-decoration: none; }
 			a:hover { text-decoration: underline; }
+			.skip-link {
+				position: absolute; left: -9999px; top: 0;
+				background: var(--accent); color: #fff; padding: 8px 16px; z-index: 100;
+				border-radius: 0 0 8px 0;
+			}
+			.skip-link:focus { left: 0; }
 			header.site { border-bottom: 1px solid var(--border); background: var(--surface); }
 			.bar { max-width: 900px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; gap: 10px; }
 			.mark {
@@ -41,6 +47,8 @@
 				background: linear-gradient(135deg, #0c60d9, #4a7aff);
 				color: #fff; font-weight: 700; font-size: 13px;
 			}
+			.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink-strong); font-weight: 600; }
+			.brand:hover { text-decoration: none; }
 			.bar nav { margin-left: auto; display: flex; gap: 18px; font-size: 14px; }
 			.bar nav a { color: var(--ink-muted); }
 			main { max-width: 900px; margin: 32px auto 72px; padding: 0 24px; }
@@ -77,17 +85,20 @@
 		</style>
 	</head>
 	<body class="{{ body_class or '' }}">
+		<a class="skip-link" href="#main">跳到内容</a>
 		<header class="site">
 			<div class="bar">
-				<span class="mark">K</span>
-				<span>知识库</span>
+				<a href="/wiki-app" class="brand" aria-label="知识库">
+					<span class="mark" aria-hidden="true">K</span>
+					<span>知识库</span>
+				</a>
 				<nav>
 					<a href="/wiki-app">文档</a>
 					<a href="/blog">博客</a>
 				</nav>
 			</div>
 		</header>
-		<main>{% block content %}{% endblock %}</main>
+		<main id="main">{% block content %}{% endblock %}</main>
 		<footer class="site">© 知识库 · 产品更新、教程与实践</footer>
 	</body>
 </html>

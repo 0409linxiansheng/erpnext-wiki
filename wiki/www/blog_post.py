@@ -14,7 +14,7 @@ def get_context(context):
 	context.no_cache = 1
 	context.page_title = post["title"]
 	context.meta_description = post["description"]
-	context.canonical = frappe.utils.get_url(post["url"])
+	context.canonical_url = frappe.utils.get_url(post["url"])
 	context.og_image = post.get("meta_image") or post.get("cover_image")
 	context.post = post
 	context.post_html = blog.html(post)
@@ -29,6 +29,6 @@ def get_context(context):
 		"dateModified": str(post.get("modified") or ""),
 		"author": {"@type": "Person", "name": post.get("author_name") or "知识库"},
 		"description": post.get("description") or "",
-		"mainEntityOfPage": context.canonical,
+		"mainEntityOfPage": context.canonical_url,
 	}
 	return context

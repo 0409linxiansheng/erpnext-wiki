@@ -21,6 +21,7 @@
 					<Switch
 						:model-value="enabled"
 						:disabled="busy"
+						:aria-label="__('Public link')"
 						@update:model-value="toggle"
 					/>
 				</div>
