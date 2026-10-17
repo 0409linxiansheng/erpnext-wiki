@@ -61,6 +61,17 @@ def _share_url(doc) -> str:
 
 
 @frappe.whitelist()
+def get_share_state(docname: str) -> dict:
+	"""Sharing state for the page's share dialog."""
+	from wiki.page_access import can_admin
+
+	doc = frappe.get_doc("Wiki Document", docname)
+	if not can_admin(doc):
+		frappe.throw(_("You are not allowed to view sharing for this page."), frappe.PermissionError)
+	return share_state(doc)
+
+
+@frappe.whitelist()
 def update_sharing(docname: str, enabled: bool) -> dict:
 	"""Turn the public link on or off for a page the caller may administer."""
 	from wiki.page_access import can_admin, ensure_share_token

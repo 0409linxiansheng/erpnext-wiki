@@ -24,6 +24,7 @@
 					<!-- Shown for a synced page too: its meta title, description and
 					     social card are wiki-side fields the repo never carries, so
 					     they are still this app's to edit. -->
+					<ShareButton v-if="wikiDoc.doc" :page-id="wikiDoc.doc.name" />
 					<Tooltip :text="__('Page settings')">
 						<Button
 							:variant="showPageSettings ? 'subtle' : 'ghost'"
@@ -227,6 +228,7 @@ import { useRouter } from 'vue-router';
 import { useRecentPages } from '../composables/useRecentPages';
 import PageMetaLine from './PageMetaLine.vue';
 import PageSettingsPanel from './PageSettingsPanel.vue';
+import ShareButton from './ShareButton.vue';
 import SubmitForReviewButton from './SubmitForReviewButton.vue';
 import WikiEditor from './WikiEditor.vue';
 
