@@ -52,9 +52,17 @@ def _restricted_ancestor(doc):
 
 
 def level_for(doc, user: str | None = None) -> int:
-	"""The strongest level ``user`` holds on ``doc``: 0, Read, Write or Admin."""
+	"""The strongest level ``user`` holds on ``doc``.
+
+	Five levels, the same vocabulary Alexandrie uses: **None** (no entry and not
+	inherited), **Read**, **Write**, **Admin** (edit the access list), and
+	**Owner** — the page's creator, who keeps Admin even after the page stops
+	inheriting, so nobody can lock themselves out of their own page.
+	"""
 	user = user or frappe.session.user
 	if user == "Administrator" or (MANAGER_ROLES & _roles_of(user)):
+		return ADMIN
+	if doc.get("owner") and user == doc.get("owner"):
 		return ADMIN
 
 	gate = _restricted_ancestor(doc)
