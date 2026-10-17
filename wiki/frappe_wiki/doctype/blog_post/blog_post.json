@@ -1,0 +1,99 @@
+{
+	"actions": [],
+	"allow_rename": 0,
+	"autoname": "hash",
+	"creation": "2026-10-17 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"title",
+		"slug",
+		"column_break_main",
+		"author",
+		"published_on",
+		"is_published",
+		"excerpt",
+		"content",
+		"cover_image",
+		"tags",
+		"meta_section",
+		"meta_description",
+		"meta_image"
+	],
+	"fields": [
+		{
+			"fieldname": "title",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Title",
+			"reqd": 1
+		},
+		{
+			"description": "URL segment: /blog/<slug>. Leave blank to derive it from the title.",
+			"fieldname": "slug",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Slug",
+			"unique": 1
+		},
+		{"fieldname": "column_break_main", "fieldtype": "Column Break"},
+		{
+			"fieldname": "author",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Author",
+			"options": "User"
+		},
+		{
+			"default": "Today",
+			"fieldname": "published_on",
+			"fieldtype": "Date",
+			"in_list_view": 1,
+			"label": "Published On"
+		},
+		{
+			"default": "0",
+			"fieldname": "is_published",
+			"fieldtype": "Check",
+			"in_list_view": 1,
+			"label": "Published"
+		},
+		{
+			"fieldname": "excerpt",
+			"fieldtype": "Small Text",
+			"label": "Excerpt",
+			"description": "Shown in the list and as the meta description when none is set."
+		},
+		{
+			"fieldname": "content",
+			"fieldtype": "Code",
+			"label": "Content",
+			"options": "Markdown",
+			"reqd": 1
+		},
+		{"fieldname": "cover_image", "fieldtype": "Attach Image", "label": "Cover Image"},
+		{
+			"description": "Comma-separated tags.",
+			"fieldname": "tags",
+			"fieldtype": "Small Text",
+			"label": "Tags"
+		},
+		{"fieldname": "meta_section", "fieldtype": "Section Break", "label": "SEO"},
+		{"fieldname": "meta_description", "fieldtype": "Small Text", "label": "Meta Description"},
+		{"fieldname": "meta_image", "fieldtype": "Attach Image", "label": "Meta Image"}
+	],
+	"index_web_pages_for_search": 0,
+	"links": [],
+	"modified": "2026-10-17 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Frappe Wiki",
+	"name": "Blog Post",
+	"owner": "Administrator",
+	"permissions": [
+		{"create": 1, "delete": 1, "email": 1, "print": 1, "read": 1, "role": "System Manager", "share": 1, "write": 1},
+		{"create": 1, "delete": 1, "email": 1, "print": 1, "read": 1, "role": "Wiki Manager", "share": 1, "write": 1}
+	],
+	"sort_field": "published_on",
+	"sort_order": "DESC",
+	"states": []
+}

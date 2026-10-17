@@ -17,9 +17,16 @@
 			</span>
 		</router-link>
 
+		<a
+			href="/blog"
+			class="ml-1 rounded-6 px-2 py-1 text-sm text-ink-gray-6 hover:bg-surface-gray-2 hover:text-ink-gray-9"
+		>
+			{{ __('Blog') }}
+		</a>
+
 		<button
 			type="button"
-			class="topbar-search ml-2 lg:ml-6"
+			class="topbar-search ml-2 lg:ml-4"
 			:aria-label="__('Search documents')"
 			@click="openPalette"
 		>

@@ -1,0 +1,29 @@
+{% extends "www/blog_base.html" %}
+
+{% block content %}
+<h1>博客</h1>
+<p class="sub">产品更新、使用教程与实践分享。</p>
+
+{% for post in posts %}
+<article class="card">
+	{% if post.cover_image %}<img class="cover" src="{{ post.cover_image }}" alt="{{ post.title }}" />{% endif %}
+	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+	<p class="meta">
+		{{ post.published_label }}{% if post.author_name %} · {{ post.author_name }}{% endif %}
+		{% if post.tag_list %} · {{ post.tag_list | join(", ") }}{% endif %}
+	</p>
+	<p class="excerpt">{{ post.excerpt }}</p>
+</article>
+{% endfor %}
+
+{% if not posts %}
+<p class="sub">还没有发布文章。</p>
+{% endif %}
+
+{% if page_number > 1 or has_next %}
+<div class="pager">
+	<span>{% if page_number > 1 %}<a href="/blog?page={{ page_number - 1 }}">← 较新的文章</a>{% endif %}</span>
+	<span>{% if has_next %}<a href="/blog?page={{ page_number + 1 }}">较早的文章 →</a>{% endif %}</span>
+</div>
+{% endif %}
+{% endblock %}

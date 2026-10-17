@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{% block title %}{{ page_title }} · 知识库{% endblock %}</title>
+		<meta name="description" content="{{ meta_description or '' }}" />
+		{% if canonical %}<link rel="canonical" href="{{ canonical }}" />{% endif %}
+		<meta property="og:type" content="{% block og_type %}website{% endblock %}" />
+		<meta property="og:title" content="{{ page_title }}" />
+		<meta property="og:description" content="{{ meta_description or '' }}" />
+		{% if canonical %}<meta property="og:url" content="{{ canonical }}" />{% endif %}
+		{% if og_image %}<meta property="og:image" content="{{ frappe.utils.get_url(og_image) }}" />{% endif %}
+		<link rel="alternate" type="application/rss+xml" title="博客 RSS" href="/api/method/wiki.api.blog.rss" />
+		{% block head %}{% endblock %}
+		<style>
+			:root {
+				--ink: #3c4450;
+				--ink-strong: #3d3a3f;
+				--ink-muted: #62748e;
+				--border: #e2e8f0;
+				--accent: #0c60d9;
+				--surface: #ffffff;
+				--surface-raised: #f7f9fc;
+			}
+			* { box-sizing: border-box; }
+			body {
+				margin: 0;
+				background: var(--surface-raised);
+				color: var(--ink);
+				font: 16px/1.7 "Inter", "Noto Sans SC", -apple-system, "Segoe UI", sans-serif;
+				-webkit-font-smoothing: antialiased;
+			}
+			a { color: var(--accent); text-decoration: none; }
+			a:hover { text-decoration: underline; }
+			header.site { border-bottom: 1px solid var(--border); background: var(--surface); }
+			.bar { max-width: 900px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; gap: 10px; }
+			.mark {
+				width: 26px; height: 26px; border-radius: 7px;
+				display: inline-flex; align-items: center; justify-content: center;
+				background: linear-gradient(135deg, #0c60d9, #4a7aff);
+				color: #fff; font-weight: 700; font-size: 13px;
+			}
+			.bar nav { margin-left: auto; display: flex; gap: 18px; font-size: 14px; }
+			.bar nav a { color: var(--ink-muted); }
+			main { max-width: 900px; margin: 32px auto 72px; padding: 0 24px; }
+			h1 { font-size: 32px; line-height: 1.25; letter-spacing: -0.01em; color: var(--ink-strong); margin: 0 0 8px; }
+			.sub { color: var(--ink-muted); margin: 0 0 32px; }
+			.card {
+				background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+				padding: 22px 24px; margin-bottom: 16px;
+			}
+			.card img.cover { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 14px; }
+			.card h2 { margin: 0 0 6px; font-size: 21px; line-height: 1.35; letter-spacing: -0.01em; }
+			.card h2 a { color: var(--ink-strong); }
+			.card .meta, .post .meta { color: var(--ink-muted); font-size: 13px; margin: 0 0 10px; }
+			.card p.excerpt { margin: 0; color: var(--ink); }
+			.pager { display: flex; justify-content: space-between; margin-top: 24px; font-size: 14px; }
+			article.post .back { display: inline-block; margin-bottom: 18px; font-size: 14px; color: var(--ink-muted); }
+			article.post h1 { font-size: 34px; }
+			article.post img.cover { width: 100%; border-radius: 12px; margin: 8px 0 28px; }
+			.prose h2 { margin-top: 36px; font-size: 23px; letter-spacing: -0.01em; }
+			.prose h3 { margin-top: 28px; font-size: 19px; }
+			.prose p { margin: 14px 0; }
+			.prose code { padding: 2px 6px; border-radius: 5px; background: rgba(8, 8, 8, 0.05); font: 0.875em/1.5 ui-monospace, monospace; }
+			.prose pre { overflow: auto; padding: 16px 18px; border-radius: 10px; background: #292d3e; color: #e6e6e6; }
+			.prose pre code { background: none; padding: 0; color: inherit; }
+			.prose blockquote { margin: 18px 0; padding: 2px 18px; border-left: 3px solid var(--border); color: var(--ink-muted); }
+			.prose img { max-width: 100%; border-radius: 8px; }
+			.prose table { width: 100%; border-collapse: collapse; margin: 18px 0; }
+			.prose th, .prose td { padding: 8px 12px; border: 1px solid var(--border); text-align: left; }
+			footer.site { max-width: 900px; margin: 0 auto 40px; padding: 0 24px; color: var(--ink-muted); font-size: 13px; }
+			@media (max-width: 640px) {
+				main { padding: 0 16px; margin-top: 20px; }
+				article.post h1 { font-size: 26px; }
+			}
+		</style>
+	</head>
+	<body class="{{ body_class or '' }}">
+		<header class="site">
+			<div class="bar">
+				<span class="mark">K</span>
+				<span>知识库</span>
+				<nav>
+					<a href="/wiki-app">文档</a>
+					<a href="/blog">博客</a>
+				</nav>
+			</div>
+		</header>
+		<main>{% block content %}{% endblock %}</main>
+		<footer class="site">© 知识库 · 产品更新、教程与实践</footer>
+	</body>
+</html>

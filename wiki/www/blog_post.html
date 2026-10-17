@@ -1,0 +1,26 @@
+{% extends "www/blog_base.html" %}
+
+{% block og_type %}article{% endblock %}
+
+{% block title %}{{ post.title }} · 博客{% endblock %}
+
+{% block head %}
+<meta property="article:published_time" content="{{ post.published_on }}" />
+{% if post.author_name %}<meta property="article:author" content="{{ post.author_name }}" />{% endif %}
+<script type="application/ld+json">
+	{{ structured_data | tojson }}
+</script>
+{% endblock %}
+
+{% block content %}
+<article class="post">
+	<a class="back" href="/blog">← 返回博客</a>
+	<h1>{{ post.title }}</h1>
+	<p class="meta">
+		{{ post.published_label }}{% if post.author_name %} · {{ post.author_name }}{% endif %}
+		{% if post.tag_list %} · {{ post.tag_list | join(", ") }}{% endif %}
+	</p>
+	{% if post.cover_image %}<img class="cover" src="{{ post.cover_image }}" alt="{{ post.title }}" />{% endif %}
+	<div class="prose">{{ post_html | safe }}</div>
+</article>
+{% endblock %}

@@ -220,4 +220,8 @@ website_route_rules = [
 	{"from_route": "/wiki-app/<path:app_path>", "to_route": "wiki-app"},
 	# Public share links: /s/<token> renders a standalone, login-free page.
 	{"from_route": "/s/<path:token>", "to_route": "shared"},
+	# Blog: the list, then one post. The detail rule must stay last so /blog
+	# itself is not swallowed by it.
+	{"from_route": "/blog", "to_route": "blog"},
+	{"from_route": "/blog/<path:slug>", "to_route": "blog_post"},
 ]
