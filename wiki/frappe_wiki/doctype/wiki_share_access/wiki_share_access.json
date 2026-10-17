@@ -1,0 +1,68 @@
+{
+	"actions": [],
+	"allow_rename": 0,
+	"autoname": "hash",
+	"creation": "2026-10-17 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": ["wiki_document", "token", "ip_address", "user", "accessed_at"],
+	"fields": [
+		{
+			"fieldname": "wiki_document",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"in_standard_filter": 1,
+			"label": "Wiki Document",
+			"options": "Wiki Document",
+			"reqd": 1
+		},
+		{
+			"fieldname": "token",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Share Token",
+			"read_only": 1
+		},
+		{
+			"fieldname": "ip_address",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "IP Address",
+			"read_only": 1
+		},
+		{
+			"fieldname": "user",
+			"fieldtype": "Data",
+			"label": "User",
+			"read_only": 1
+		},
+		{
+			"default": "now",
+			"fieldname": "accessed_at",
+			"fieldtype": "Datetime",
+			"in_list_view": 1,
+			"label": "Accessed At",
+			"read_only": 1
+		}
+	],
+	"in_create": 1,
+	"links": [],
+	"modified": "2026-10-17 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Frappe Wiki",
+	"name": "Wiki Share Access",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"read": 1,
+			"role": "System Manager"
+		},
+		{
+			"read": 1,
+			"role": "Wiki Manager"
+		}
+	],
+	"sort_field": "accessed_at",
+	"sort_order": "DESC",
+	"states": []
+}

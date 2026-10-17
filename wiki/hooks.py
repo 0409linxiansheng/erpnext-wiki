@@ -218,4 +218,6 @@ scheduler_events = {
 
 website_route_rules = [
 	{"from_route": "/wiki-app/<path:app_path>", "to_route": "wiki-app"},
+	# Public share links: /s/<token> renders a standalone, login-free page.
+	{"from_route": "/s/<path:token>", "to_route": "shared"},
 ]

@@ -25,7 +25,7 @@ def search(query: str, space: str | None = None) -> dict:
 
 	result = search_engine.search(query, filters=filters)
 
-	hits = _filter_hits_by_space_visibility(result["results"])
+	hits = _filter_hits_by_page_access(result["results"])
 
 	capture("search_performed", interval="1d", surface="reader", hits=bool(hits))
 
@@ -46,48 +46,29 @@ def search(query: str, space: str | None = None) -> dict:
 	}
 
 
-def _filter_hits_by_space_visibility(hits: list[dict]) -> list[dict]:
+def _filter_hits_by_page_access(hits: list[dict]) -> list[dict]:
 	"""Drop search hits the current user couldn't open as a page.
 
-	The SQLite index is built without user context, so titles/snippets from
-	restricted spaces can surface here. Resolve each hit's denormalized
-	wiki_space and gate it through the same checks as page rendering: the
-	space must be published (`check_published`) and readable by the current
-	user (`check_space_access`). Orphan documents (no wiki_space) stay
-	readable by all.
+	The SQLite index is built without user context, so titles and snippets from
+	restricted pages or spaces can surface here. Every hit goes through the same
+	gate the page itself uses — ``page_access.can_read`` (nearest restricted
+	ancestor, then the space's roles) — plus the space's published flag, so a
+	page-level restriction cannot leak through search.
 	"""
-	from wiki.permissions import can_read_space
-
-	names = [hit["name"] for hit in hits]
-	if not names:
-		return hits
-
-	doc_by_name = {
-		row.name: row
-		for row in frappe.get_all(
-			"Wiki Document",
-			filters={"name": ("in", names)},
-			fields=["name", "wiki_space", "is_published"],
-		)
-	}
-
-	visible: dict[str, bool] = {}
-
-	def _is_visible(space_name: str) -> bool:
-		if space_name not in visible:
-			space_published = frappe.get_cached_value("Wiki Space", space_name, "is_published")
-			visible[space_name] = bool(space_published) and can_read_space(space_name)
-		return visible[space_name]
+	from wiki.page_access import can_read
 
 	allowed = []
 	for hit in hits:
-		doc = doc_by_name.get(hit["name"])
-		hit_space = doc.wiki_space if doc else None
-		if not hit_space or _is_visible(hit_space):
-			# The app-side palette needs these to route and badge a result without a
-			# second round-trip per row.
-			if doc:
-				hit["wiki_space"] = doc.wiki_space
-				hit["is_published"] = doc.is_published
-			allowed.append(hit)
+		if not frappe.db.exists("Wiki Document", hit["name"]):
+			continue
+		doc = frappe.get_doc("Wiki Document", hit["name"])
+		if not doc.is_published or not can_read(doc):
+			continue
+		if doc.wiki_space and not frappe.get_cached_value("Wiki Space", doc.wiki_space, "is_published"):
+			continue
+		# The app-side palette needs these to route and badge a result without a
+		# second round-trip per row.
+		hit["wiki_space"] = doc.wiki_space
+		hit["is_published"] = doc.is_published
+		allowed.append(hit)
 	return allowed

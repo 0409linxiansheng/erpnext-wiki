@@ -427,20 +427,19 @@ class WikiDocument(NestedSet):
 		)
 
 	def check_space_access(self, ptype="read", user=None):
-		"""Gate content access by the owning Wiki Space's role configuration.
+		"""Gate content access through the page's effective access level.
+
+		A page inherits its nearest restricted ancestor's entries, then the owning
+		space's roles (`wiki.page_access.level_for`). Keeping one entry point means
+		the reader API, search and change requests all agree on who may see a page.
 
 		On failure we raise a 404 (DoesNotExistError) rather than PermissionError
 		so we don't leak the existence of restricted pages to unauthorized users
 		(especially anonymous Guests).
 		"""
-		from wiki.permissions import can_read_space, can_write_space
+		from wiki.page_access import can_read, can_write
 
-		space = self.get_space_name()
-		if not space:
-			# Orphan documents stay readable by all (preserves chromeless pages).
-			return
-
-		allowed = can_write_space(space, user) if ptype == "write" else can_read_space(space, user)
+		allowed = can_write(self, user) if ptype == "write" else can_read(self, user)
 		if not allowed:
 			frappe.throw(_("Page not found"), frappe.DoesNotExistError)
 
