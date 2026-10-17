@@ -147,6 +147,25 @@ function buildCommands() {
 		},
 	},
 	{
+		title: __('ERPNext Data'),
+		icon: 'lucide-table-2',
+		group: __('Insert'),
+		keywords: ['report', '报表', '数据', 'table'],
+		command: ({ editor, range }) => {
+			const report = window.prompt(
+				__('Report name, exactly as it appears in ERPNext'),
+				'',
+			);
+			if (!report || !report.trim()) return;
+			editor
+				.chain()
+				.focus()
+				.deleteRange(range)
+				.setFrappeReport({ report: report.trim() })
+				.run();
+		},
+	},
+	{
 		title: __('Diagram'),
 		icon: 'lucide-network',
 		group: __('Insert'),

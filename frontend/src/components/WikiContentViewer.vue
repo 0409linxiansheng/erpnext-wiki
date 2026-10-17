@@ -18,6 +18,7 @@ import { CodeBlock, EditorContent, useEditor } from 'frappe-ui/editor';
 import { ref, watch } from 'vue';
 import { CalloutBlock } from './tiptap-extensions/callout-block.js';
 import { IframeBlock } from './tiptap-extensions/iframe-block.js';
+import { FrappeReportBlock } from './tiptap-extensions/frappe-report-block.js';
 import { WikiImage } from './tiptap-extensions/image-extension.js';
 import { WikiLink } from './tiptap-extensions/link-extension.js';
 import { WikiBlockMath } from './tiptap-extensions/math-block.js';
@@ -72,6 +73,7 @@ const editor = useEditor({
 		CodeBlock,
 		CalloutBlock,
 		IframeBlock,
+		FrappeReportBlock,
 		MermaidBlock,
 		WikiInlineMath.configure({ katexOptions: MATH_KATEX_OPTIONS }),
 		WikiBlockMath.configure({ katexOptions: MATH_KATEX_OPTIONS }),

@@ -93,6 +93,7 @@ import WikiToolbar from './tiptap-extensions/WikiToolbar.vue';
 // Import custom extensions
 import { CalloutBlock } from './tiptap-extensions/callout-block.js';
 import { IframeBlock } from './tiptap-extensions/iframe-block.js';
+import { FrappeReportBlock } from './tiptap-extensions/frappe-report-block.js';
 import { isEmbedUrlPaste } from './tiptap-extensions/iframe-embed.js';
 import { WikiImage } from './tiptap-extensions/image-extension.js';
 import { WikiLink } from './tiptap-extensions/link-extension.js';
@@ -891,6 +892,7 @@ const editor = useEditor({
 		// Custom extensions
 		CalloutBlock,
 		IframeBlock,
+		FrappeReportBlock,
 		MermaidBlock,
 		WikiInlineMath.configure({ katexOptions: MATH_KATEX_OPTIONS }),
 		WikiBlockMath.configure({ katexOptions: MATH_KATEX_OPTIONS }),
