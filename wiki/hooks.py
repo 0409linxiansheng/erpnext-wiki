@@ -131,7 +131,10 @@ doc_events = {
 			"wiki.frappe_wiki.doctype.wiki_document.wiki_document.on_wiki_document_update",
 			"wiki.frappe_wiki.doctype.wiki_document.wiki_sqlite_search.index_doc_on_save",
 		],
-		"on_trash": "wiki.frappe_wiki.doctype.wiki_document.wiki_document.on_wiki_document_trash",
+		"on_trash": [
+			"wiki.frappe_wiki.doctype.wiki_document.wiki_document.on_wiki_document_trash",
+			"wiki.frappe_wiki.doctype.wiki_document.wiki_sqlite_search.remove_doc_on_trash",
+		],
 	},
 	# A space's roles, route and publish state decide what the crawler indexes
 	# list, and none of them touch a Wiki Document.

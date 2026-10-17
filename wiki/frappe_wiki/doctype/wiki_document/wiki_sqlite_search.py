@@ -4,15 +4,25 @@ from typing import ClassVar
 import frappe
 from frappe.search.sqlite_search import SQLiteSearch
 
+from wiki.cjk import has_cjk, segment_cjk
+
 # Frappe v15 inserts a new row on every index_doc and never drops the old one.
 INDEX_DOC_APPENDS = int(frappe.__version__.split(".", 1)[0]) < 16
 
 
 class WikiSQLiteSearch(SQLiteSearch):
-	INDEX_NAME = "wiki_search.db"
+	# Bumped when INDEX_SCHEMA changes: the FTS table is created with a fixed set
+	# of columns, so an old file would silently reject inserts that carry the
+	# `*_cjk` fields. A new name makes the next build start from scratch instead
+	# of requiring operators to remember `rm …/wiki_search.db`.
+	INDEX_NAME = "wiki_search_v2.db"
 
 	INDEX_SCHEMA: ClassVar[dict] = {
-		"text_fields": ["title", "content"],
+		# The `*_cjk` columns hold the bigram shadow of their source column (see
+		# wiki/cjk.py): SQLite's unicode61 tokenizer treats a whole Chinese
+		# sentence as one token, so without them only exact full-sentence queries
+		# match. The originals stay indexed and displayed, so snippets are clean.
+		"text_fields": ["title", "content", "title_cjk", "content_cjk"],
 		"metadata_fields": ["doctype", "name", "route", "space", "published", "modified"],
 		"tokenizer": "unicode61 remove_diacritics 2 tokenchars '-_'",
 	}
@@ -42,7 +52,27 @@ class WikiSQLiteSearch(SQLiteSearch):
 			prepared["space"] = self._get_root_space(doc.get("name"))
 			if prepared.get("content"):
 				prepared["content"] = self._strip_markdown(prepared["content"])
+			# Bigram shadows for CJK search, computed after markdown stripping so
+			# syntax never contributes tokens.
+			prepared["title_cjk"] = segment_cjk(prepared.get("title") or "")
+			prepared["content_cjk"] = segment_cjk(prepared.get("content") or "")
 		return prepared
+
+	def _expand_query_with_corrections(self, query):
+		"""Skip spelling correction for CJK queries.
+
+		The correction pass compares whitespace-separated words against the
+		indexed vocabulary. Chinese has no spaces, so the whole query would be
+		treated as one "word" and either left alone or "corrected" into an
+		unrelated CJK run. Bigram expansion below is the CJK equivalent.
+		"""
+		if has_cjk(query):
+			return query, None
+		return super()._expand_query_with_corrections(query)
+
+	def _prepare_fts_query(self, query):
+		"""Expand CJK runs into overlapping bigrams before FTS5 quoting."""
+		return super()._prepare_fts_query(segment_cjk(query))
 
 	def index_doc(self, doctype, docname):
 		if INDEX_DOC_APPENDS:
@@ -95,6 +125,17 @@ class WikiSQLiteSearch(SQLiteSearch):
 		"""Get the root wiki space for a document"""
 		wiki_doc = frappe.get_doc("Wiki Document", docname)
 		return wiki_doc.get_root_group() or docname
+
+
+def remove_doc_on_trash(doc, method=None):
+	"""Drop a deleted page from the index once the delete has committed.
+
+	Frappe's generic delete path removes the queue row, not the SQLite index row,
+	so without this a deleted page keeps answering searches (and the reader API
+	then surfaces a hit whose page 404s). Deferred through after_commit so a
+	rolled-back delete never costs the live entry.
+	"""
+	frappe.db.after_commit.add(lambda: remove_doc_from_index(doc.name))
 
 
 def index_doc_on_save(doc, method=None):
