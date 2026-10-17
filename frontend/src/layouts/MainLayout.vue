@@ -5,9 +5,11 @@
 	     positioned stray — frappe-ui Tree's aria-live region, for one — when the
 	     frame is its containing block. Without `relative` the stray resolves
 	     against the page, grows the document, and drags the whole chrome up. -->
-	<div class="relative h-screen w-full overflow-hidden bg-surface-sidebar">
+	<div class="relative flex h-screen w-full flex-col overflow-hidden bg-surface-sidebar">
 		<template v-if="isLoading"></template>
 		<template v-else-if="hasAccess">
+			<TopBar v-if="!isMobile" />
+			<div class="relative min-h-0 flex-1">
 			<MobileShell v-if="isMobile" class="wiki-mobile-shell">
 				<slot></slot>
 
@@ -59,6 +61,7 @@
 				</template>
 				<slot></slot>
 			</DesktopShell>
+			</div>
 		</template>
 		<div
 			v-else
@@ -104,6 +107,7 @@ import { DesktopShell, MobileNav, MobileNavItem, MobileShell } from 'frappe-ui';
 import { computed, ref, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import CommandPalette from '../components/CommandPalette.vue';
+import TopBar from '../components/TopBar.vue';
 import LibrarySidebar from '../components/LibrarySidebar.vue';
 import SpaceSidebar from '../components/SpaceSidebar.vue';
 import WikiSettings from '../components/WikiSettings/WikiSettings.vue';

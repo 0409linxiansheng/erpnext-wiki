@@ -1,0 +1,184 @@
+/**
+ * Brand layer for our knowledge base.
+ *
+ * frappe-ui paints every component through CSS variables (`--surface-*`,
+ * `--ink-*`, `--outline-*`, `--*-blue-*`). Overriding those variables re-skins
+ * the whole app — components, editor, dialogs — without touching frappe-ui
+ * itself, so `yarn install` and upstream upgrades can never wipe the look.
+ *
+ * Palette follows Alexandrie's light/dark themes: white base surface, a cool
+ * raised sidebar, #3c4450 body text, #62748e secondary text, #0c60d9 accent.
+ *
+ * Loaded after frappe-ui/style.css, so these win at equal specificity.
+ */
+
+/* ------------------------------------------------------------------ light -- */
+:root,
+[data-theme='light'] {
+	/* Surfaces: base → raised → overlay */
+	--surface-base: #ffffff;
+	--surface-sidebar: #f7f9fc;
+	--surface-gray-1: #f7f9fc;
+	--surface-gray-2: #f1f5f9;
+	--surface-gray-3: #e9eff6;
+	--surface-gray-4: #e2e8f0;
+	--surface-gray-5: #cbd5e1;
+	--surface-gray-6: #94a3b8;
+	--surface-gray-7: #64748b;
+	--surface-gray-8: #475569;
+	--surface-gray-9: #334155;
+	--surface-gray-10: #1e293b;
+
+	/* Text: 1 = faintest, 9 = strongest */
+	--ink-base: #ffffff;
+	--ink-gray-1: #f1f5f9;
+	--ink-gray-2: #e2e8f0;
+	--ink-gray-3: #cbd5e1;
+	--ink-gray-4: #94a3b8;
+	--ink-gray-5: #62748e;
+	--ink-gray-6: #55657a;
+	--ink-gray-7: #445064;
+	--ink-gray-8: #3c4450;
+	--ink-gray-9: #3d3a3f;
+
+	/* Borders */
+	--outline-base: #ffffff;
+	--outline-gray-1: #eef2f7;
+	--outline-gray-2: #e2e8f0;
+	--outline-gray-3: #cbd5e1;
+	--outline-gray-4: #b6c2d2;
+	--outline-gray-5: #94a3b8;
+	--outline-gray-6: #64748b;
+	--outline-gray-7: #475569;
+	--outline-gray-8: #334155;
+	--outline-gray-9: #1e293b;
+
+	/* Accent (Alexandrie blue) */
+	--surface-blue-1: #eef4ff;
+	--surface-blue-2: #e0ebff;
+	--surface-blue-3: #c7dbff;
+	--surface-blue-4: #a6c6ff;
+	--surface-blue-5: #7fa9ff;
+	--surface-blue-6: #0c60d9;
+	--surface-blue-7: #0a53bd;
+	--surface-blue-8: #08489f;
+	--surface-blue-9: #073b84;
+	--surface-blue-10: #062f6a;
+	--ink-blue-1: #eef4ff;
+	--ink-blue-2: #d6e6ff;
+	--ink-blue-3: #b9d4ff;
+	--ink-blue-4: #8fb8ff;
+	--ink-blue-5: #5f94ff;
+	--ink-blue-6: #3374f2;
+	--ink-blue-7: #1f5fd6;
+	--ink-blue-8: #144db4;
+	--ink-blue-9: #0c60d9;
+	--ink-blue-link: #0c60d9;
+	--outline-blue-1: #e0ebff;
+	--outline-blue-2: #c7dbff;
+	--outline-blue-3: #a6c6ff;
+	--outline-blue-4: #7fa9ff;
+	--outline-blue-5: #5f94ff;
+	--outline-blue-6: #3374f2;
+	--outline-blue-7: #1f5fd6;
+	--outline-blue-8: #144db4;
+	--outline-blue-9: #0c60d9;
+	--outline-blue-10: #073b84;
+}
+
+/* ------------------------------------------------------------------- dark -- */
+[data-theme='dark'] {
+	/* Surfaces */
+	--surface-base: #212830;
+	--surface-sidebar: #1b2129;
+	--surface-gray-1: #1b2129;
+	--surface-gray-2: #262c36;
+	--surface-gray-3: #2d3443;
+	--surface-gray-4: #343c4a;
+	--surface-gray-5: #3f4859;
+	--surface-gray-6: #4a4f5c;
+	--surface-gray-7: #5a616e;
+	--surface-gray-8: #6d7484;
+	--surface-gray-9: #8a9099;
+	--surface-gray-10: #c6cdd6;
+
+	/* Text */
+	--ink-base: #f4f4f4;
+	--ink-gray-1: #2d3443;
+	--ink-gray-2: #3a4250;
+	--ink-gray-3: #4a4f5c;
+	--ink-gray-4: #5f6773;
+	--ink-gray-5: #8a9099;
+	--ink-gray-6: #a2a8b1;
+	--ink-gray-7: #b9bec6;
+	--ink-gray-8: #c6cdd6;
+	--ink-gray-9: #d1d2d5;
+
+	/* Borders */
+	--outline-base: #212830;
+	--outline-gray-1: #2d3443;
+	--outline-gray-2: #3a4250;
+	--outline-gray-3: #4a4f5c;
+	--outline-gray-4: #5a616e;
+	--outline-gray-5: #6d7484;
+	--outline-gray-6: #8a9099;
+	--outline-gray-7: #a2a8b1;
+	--outline-gray-8: #b9bec6;
+	--outline-gray-9: #c6cdd6;
+
+	/* Accent */
+	--surface-blue-6: #4a7aff;
+	--surface-blue-7: #3d68e6;
+	--surface-blue-8: #3157cc;
+	--ink-blue-9: #7fa9ff;
+	--ink-blue-link: #7fa9ff;
+	--outline-blue-9: #4a7aff;
+}
+
+/* --------------------------------------------------------------- typography -- */
+
+/* Alexandrie's reading rhythm: tighter headings, roomier body. Applies to the
+   rendered document body only; chrome keeps frappe-ui's own scale. */
+.wiki-rendered,
+.wiki-rendered h1,
+.wiki-rendered h2,
+.wiki-rendered h3 {
+	letter-spacing: -0.01em;
+}
+
+/* --------------------------------------------------------------- top bar -- */
+
+.brand-mark {
+	display: inline-flex;
+	height: 1.75rem;
+	width: 1.75rem;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0.5rem;
+	background: linear-gradient(135deg, #0c60d9 0%, #4a7aff 100%);
+	color: #fff;
+	font-size: 0.875rem;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+}
+
+.topbar-search {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	height: 2rem;
+	min-width: 16rem;
+	padding: 0 0.75rem;
+	border: 1px solid var(--outline-gray-2);
+	border-radius: 0.5rem;
+	background: var(--surface-gray-1);
+	color: var(--ink-gray-5);
+	font-size: 0.8125rem;
+	transition: border-color 120ms ease, background 120ms ease;
+}
+
+.topbar-search:hover {
+	border-color: var(--outline-gray-3);
+	background: var(--surface-base);
+	color: var(--ink-gray-7);
+}

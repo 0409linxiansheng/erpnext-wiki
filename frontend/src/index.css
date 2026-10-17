@@ -5,6 +5,10 @@
    barrels are marked side-effectful, so each family's CSS ships with the
    subpath import itself. */
 @import "./wiki-rendered.css";
+/* Our brand layer: frappe-ui paints through CSS variables, so overriding them
+   re-skins the whole app without forking the component library. Must come after
+   frappe-ui/style.css to win at equal specificity. */
+@import "./styles/brand.css";
 
 /* Tell the browser which theme its native UI (scrollbars, form controls)
    should use — without this, dark mode gets glaring light scrollbars. */
