@@ -24,6 +24,8 @@
 					<!-- Shown for a synced page too: its meta title, description and
 					     social card are wiki-side fields the repo never carries, so
 					     they are still this app's to edit. -->
+					<CommentsButton v-if="wikiDoc.doc" :page-id="wikiDoc.doc.name" />
+					<ExportButton v-if="wikiDoc.doc" :page-id="wikiDoc.doc.name" />
 					<PageAccessButton v-if="wikiDoc.doc" :page-id="wikiDoc.doc.name" />
 					<ShareButton v-if="wikiDoc.doc" :page-id="wikiDoc.doc.name" />
 					<Tooltip :text="__('Page settings')">
@@ -229,6 +231,8 @@ import { useRouter } from 'vue-router';
 import { useRecentPages } from '../composables/useRecentPages';
 import PageMetaLine from './PageMetaLine.vue';
 import PageSettingsPanel from './PageSettingsPanel.vue';
+import CommentsButton from './CommentsButton.vue';
+import ExportButton from './ExportButton.vue';
 import PageAccessButton from './PageAccessButton.vue';
 import ShareButton from './ShareButton.vue';
 import SubmitForReviewButton from './SubmitForReviewButton.vue';
