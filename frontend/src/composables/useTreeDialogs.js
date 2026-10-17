@@ -1,7 +1,7 @@
 import { useDraftWorkspaceStore } from '@/stores/draftWorkspace';
 import { slugify } from '@/stores/draftWorkspace/utils';
 import { useDebounceFn } from '@vueuse/core';
-import { createResource, toast } from 'frappe-ui';
+import { createListResource, createResource, toast } from 'frappe-ui';
 import { ref, unref, watch } from 'vue';
 import { useRouter } from 'vue-router';
 
@@ -25,6 +25,17 @@ export function useTreeDialogs(
 	const createRoutePrefix = ref('');
 	const createRouteError = ref('');
 	const routeManuallyEdited = ref(false);
+	// Optional starting point for a new page. The content travels with the create
+	// call, so the draft buffer is seeded in one round-trip.
+	const templates = createListResource({
+		doctype: 'Wiki Template',
+		fields: ['name', 'title', 'description', 'content'],
+		filters: { is_active: 1 },
+		order_by: 'sort_order asc, title asc',
+		pageLength: 100,
+		auto: false,
+	});
+	const createTemplateId = ref('');
 
 	const showDeleteDialog = ref(false);
 	const deleteNode = ref(null);
@@ -122,6 +133,8 @@ export function useTreeDialogs(
 		// Retire any check still in flight from the previous dialog.
 		latestRouteCheck++;
 		routeManuallyEdited.value = false;
+		createTemplateId.value = '';
+		templates.fetch();
 		showCreateDialog.value = true;
 	}
 
@@ -142,6 +155,12 @@ export function useTreeDialogs(
 	// Local-first create: store inserts a temp node into the tree immediately,
 	// the dialog closes right away, and the backend call runs in the
 	// background. Failure is surfaced through the store's mutation queue.
+	function selectedTemplateContent() {
+		if (!createTemplateId.value) return '';
+		const template = (templates.data || []).find((row) => row.name === createTemplateId.value);
+		return template?.content || '';
+	}
+
 	async function createDocument(close) {
 		const title = createTitle.value.trim();
 		if (!title) {
@@ -167,6 +186,7 @@ export function useTreeDialogs(
 				title,
 				isGroup,
 				route,
+				content: selectedTemplateContent(),
 			});
 			// Open the new page for editing immediately. The DraftContributionPanel
 			// reads its content from pagesByKey (seeded by createNode), and the
@@ -317,6 +337,8 @@ export function useTreeDialogs(
 		createIsGroup,
 		createRoute,
 		createRouteError,
+		createTemplateId,
+		templates,
 		handleCreateRouteInput,
 		showDeleteDialog,
 		deleteNode,

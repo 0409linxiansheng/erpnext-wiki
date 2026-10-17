@@ -111,6 +111,9 @@
 				<div class="space-y-4">
 					<FormControl v-model="createTitle" :label="__('Title')" type="text"
 						:placeholder="createPlaceholder" autofocus />
+					<FormControl v-if="!createIsGroup && templateOptions.length" :label="__('Start from a template')"
+						type="select" :model-value="createTemplateId" :options="templateOptions"
+						@update:model-value="createTemplateId = $event" />
 					<div>
 						<FormControl :label="__('Route')" type="text" :model-value="createRoute"
 							:placeholder="__('space/page-url')"
@@ -379,6 +382,8 @@ const {
 	createIsGroup,
 	createRoute,
 	createRouteError,
+	createTemplateId,
+	templates,
 	handleCreateRouteInput,
 	showDeleteDialog,
 	deleteNode,
@@ -446,6 +451,16 @@ const addOptions = [
 const createDialogTitle = computed(() =>
 	createIsGroup.value ? __('Create New Group') : __('Create New Page'),
 );
+
+// A blank page is always the first choice; templates only appear when someone
+// has actually defined one.
+const templateOptions = computed(() => [
+	{ label: __('Blank page'), value: '' },
+	...(templates.data || []).map((template) => ({
+		label: template.title,
+		value: template.name,
+	})),
+]);
 
 const createPlaceholder = computed(() =>
 	createIsGroup.value ? __('Enter group name') : __('Enter page title'),

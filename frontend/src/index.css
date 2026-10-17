@@ -34,3 +34,49 @@ html[data-theme="light"] {
 .dialog-content[data-state] {
 	animation: none !important;
 }
+
+/* Printing a page: drop the app chrome and the fixed-height scroll frame so the
+   document flows onto paper in one column. The top bar and the sidebar are the
+   two elements that would otherwise repeat or clip on every page. */
+@media print {
+	html,
+	body {
+		height: auto !important;
+		overflow: visible !important;
+		background: #fff !important;
+	}
+
+	header,
+	[data-slot="desktop-shell"] > *:not([data-slot="desktop-shell-content"]) {
+		display: none !important;
+	}
+
+	[data-slot="desktop-shell"],
+	[data-slot="desktop-shell-content"],
+	[data-reka-scroll-area-viewport],
+	[data-reka-scroll-area-viewport] > div {
+		display: block !important;
+		height: auto !important;
+		overflow: visible !important;
+	}
+
+	.wiki-rendered {
+		max-width: none !important;
+	}
+
+	a {
+		color: inherit !important;
+		text-decoration: none !important;
+	}
+
+	pre,
+	blockquote,
+	table,
+	img {
+		break-inside: avoid;
+	}
+
+	@page {
+		margin: 18mm 16mm;
+	}
+}

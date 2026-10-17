@@ -1,0 +1,58 @@
+{
+	"actions": [],
+	"allow_rename": 0,
+	"autoname": "hash",
+	"creation": "2026-10-17 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": ["title", "is_active", "sort_order", "description", "content"],
+	"fields": [
+		{
+			"fieldname": "title",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Title",
+			"reqd": 1
+		},
+		{
+			"default": "1",
+			"fieldname": "is_active",
+			"fieldtype": "Check",
+			"in_list_view": 1,
+			"label": "Active"
+		},
+		{
+			"default": "0",
+			"fieldname": "sort_order",
+			"fieldtype": "Int",
+			"label": "Sort Order"
+		},
+		{
+			"fieldname": "description",
+			"fieldtype": "Small Text",
+			"label": "Description",
+			"description": "Shown next to the template in the new-page dialog."
+		},
+		{
+			"fieldname": "content",
+			"fieldtype": "Code",
+			"label": "Content",
+			"options": "Markdown",
+			"reqd": 1
+		}
+	],
+	"links": [],
+	"modified": "2026-10-17 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Frappe Wiki",
+	"name": "Wiki Template",
+	"owner": "Administrator",
+	"permissions": [
+		{"create": 1, "delete": 1, "email": 1, "print": 1, "read": 1, "role": "System Manager", "share": 1, "write": 1},
+		{"create": 1, "delete": 1, "email": 1, "print": 1, "read": 1, "role": "Wiki Manager", "share": 1, "write": 1},
+		{"read": 1, "role": "Wiki User"}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": []
+}
